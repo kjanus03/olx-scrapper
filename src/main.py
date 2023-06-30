@@ -3,6 +3,7 @@ from scraper import scrap_data
 
 
 def main() -> None:
+    """"""
     # jazzmaster
     url1 = get_url("jazzmaster gitara", "legnica")
     # jaguar
@@ -28,7 +29,7 @@ def main() -> None:
     sheetNames = ["Jazzmaster", "Jaguar", "Stratocaster", "Telecaster", "Amps", "Ibanez Tube Screamer",
                   "Proco Rat Distortion", "MXR Micro Amp", "Boss DS-1", "Boss DS-2"]
 
-    create_spreadsheets(dataFrames, sheetNames)
+    create_spreadsheets(dataFrames, sheetNames, "guitars")
 
 if __name__ == "__main__":
     main()

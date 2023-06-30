@@ -5,7 +5,7 @@ import bs4 as BeautifulSoup
 import pandas as pd
 import requests
 
-from utils import format_price, format_location_date
+from src.utils import format_price, format_location_date
 
 
 def scrap_data(url_string: str) -> pd.DataFrame:

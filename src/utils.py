@@ -39,13 +39,13 @@ def create_hyperlink(url, name):
     return f'=HYPERLINK("{url}", "{name}")'
 
 
-def create_spreadsheets(dataFrames: list[pd.DataFrame], sheetNames: list[str]) -> None:
-    """Creates an excel file with the given dataFrames and sheetNames."""
+def create_spreadsheets(dataFrames: list[pd.DataFrame], sheetNames: list[str], filename: str) -> None:
+    """Creates an MS Excel file with the given dataFrames and sheetNames."""
 
     for df in dataFrames:
         df['url'] = df.apply(lambda row: create_hyperlink(row['url'], 'Link'), axis=1)
         df['photo'] = df.apply(lambda row: create_hyperlink(row['photo'], 'Photo'), axis=1)
 
-    with pd.ExcelWriter("../guitars.xlsx") as writer:
+    with pd.ExcelWriter(f"../{filename}.xlsx") as writer:
         for i, df in enumerate(dataFrames):
             df.to_excel(writer, sheet_name=sheetNames[i], index=False)
