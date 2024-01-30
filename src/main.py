@@ -1,35 +1,33 @@
-from utils import get_url, create_spreadsheets
-from scraper import scrap_data
+from scraper import Scraper
+from urlbuilder import URLBuilder  # Import your URLBuilder class
 
 
 def main() -> None:
-    """"""
-    # jazzmaster
-    url1 = get_url("jazzmaster gitara", "legnica")
-    # jaguar
-    url2 = get_url("jaguar gitara", "legnica")
-    # stratocaster
-    url3 = get_url("stratocaster gitara", "legnica")
-    # telecaster
-    url4 = get_url("telecaster gitara", "legnica")
-    # amps
-    url5 = get_url("wzmacniacz", "legnica")
-    # Ibanez tube screamer
-    url6 = get_url("ibanez tube screamer")
-    # proco rat distortion
-    url7 = get_url("proco rat distortion")
-    # mxr micro amp
-    url8 = get_url("mxr micro amp")
-    # boss ds-1
-    url9 = get_url("boss ds-1")
-    # boss ds-2
-    url10 = get_url("boss ds-2")
+    # Define the guitars and amps to search for as a list of URLBuilder instances
+    search_items = [
+        URLBuilder(item_query="wzmacniacz gitarowy", city="legnica", distance=100),
+        URLBuilder(item_query="kolumna gitarowa", city="legnica", distance=100),
+        URLBuilder(item_query="wmzacniacz gitarowy", city="zagan", distance=100),
+        URLBuilder(item_query="kolumna gitarowa", city="zagan", distance=100),
+        URLBuilder(item_query="orange gitarowy", city="legnica", distance=100),
+        URLBuilder("mxr micro amp"),
+        URLBuilder("boss chorus"),
+        URLBuilder("electro-harmonix small clone"),
+        URLBuilder("mxr chorus"),
+        URLBuilder("electro harmonix holy grail reverb"),
+        URLBuilder("boss reverb"),
+        URLBuilder("tc electronic hall of fame reverb"),
+    ]
 
-    dataFrames = [scrap_data(url) for url in [url1, url2, url3, url4, url5, url6, url7, url8, url9, url10]]
-    sheetNames = ["Jazzmaster", "Jaguar", "Stratocaster", "Telecaster", "Amps", "Ibanez Tube Screamer",
-                  "Proco Rat Distortion", "MXR Micro Amp", "Boss DS-1", "Boss DS-2"]
+    # Create a single Scraper instance
+    scraper_instance = Scraper(search_items)
 
-    create_spreadsheets(dataFrames, sheetNames, "guitars")
+    # Scrape data and create data frames
+    data_frames = scraper_instance.scrap_data()
+
+    # Create spreadsheets
+    scraper_instance.create_spreadsheets("guitars_and_amps", format_column_widths=True)
+
 
 if __name__ == "__main__":
     main()
