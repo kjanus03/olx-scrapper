@@ -1,8 +1,9 @@
 from urllib.parse import urlparse, urljoin
-import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import openpyxl
+import aiohttp
+import asyncio
 
 from src.formatting import apply_hyperlinking, format_price, format_location_date, format_columns
 from urlbuilder import URLBuilder
@@ -17,12 +18,15 @@ class Scraper:
         """Adds a new URL to the list of URLs to be scraped."""
         self.url_list.append(url)
 
-    def scrape_data(self) -> pd.Series:
+    async def scrape_data(self) -> pd.Series:
         """Returns a pandas Series of pandas DataFrames with scraped data from the list of URLs."""
-        for url_builder in self.url_list:
-            data = self._fetch_data_from_url(url_builder)
+        tasks = [self._fetch_data_from_url(url_builder) for url_builder in self.url_list]
+        # the data is returned in the same order as the tasks
+        data = await asyncio.gather(*tasks)
+
+        for result, url_builder in zip(data, self.url_list):
             key = self._generate_data_key(url_builder)
-            self.data_frames[key] = data
+            self.data_frames[key] = result
 
         apply_hyperlinking(self, {"item_url", "photo"})
         return self.data_frames
@@ -36,17 +40,16 @@ class Scraper:
         if format_column_widths:
             self._format_excel_columns(filename)
 
-    def _fetch_data_from_url(self, url_builder: URLBuilder) -> pd.DataFrame:
-        """Returns a pandas DataFrame with scraped data from the given URL."""
-        site_url = urlparse(url_builder.build_url())
-        response = requests.get(site_url.geturl())
-
-        #TODO: Add error handling
-        if response.status_code == 200:
-            soup = BeautifulSoup.BeautifulSoup(response.text, "html.parser")
-            items = soup.find_all("div", {"data-cy": "l-card"})
-
-            return pd.DataFrame(self._process_item(item) for item in items)
+    async def _fetch_data_from_url(self, url_builder: URLBuilder) -> pd.DataFrame:
+        """Returns a pandas DataFrame with scraped data from the given URL asynchronously."""
+        async with aiohttp.ClientSession() as session:
+            site_url = urlparse(url_builder.build_url())
+            async with session.get(site_url.geturl()) as response:
+                # TODO: Handle errors
+                if response.status == 200:
+                    soup = BeautifulSoup(await response.text(), "html.parser")
+                    items = soup.find_all("div", {"data-cy": "l-card"})
+                    return pd.DataFrame(self._process_item(item) for item in items)
 
     @staticmethod
     def _process_item(item) -> dict:

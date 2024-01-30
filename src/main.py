@@ -1,5 +1,6 @@
 from scraper import Scraper
-from urlbuilder import URLBuilder  # Import your URLBuilder class
+from urlbuilder import URLBuilder
+import asyncio
 
 
 def main() -> None:
@@ -22,8 +23,9 @@ def main() -> None:
     # Create a single Scraper instance
     scraper_instance = Scraper(search_items)
 
-    # Scrape data and create data frames
-    scraper_instance.scrape_data()
+    # Concurrently scrape data and create data frames
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(scraper_instance.scrape_data())
 
     # Create spreadsheets
     scraper_instance.create_spreadsheets("upgrade", format_column_widths=True)
