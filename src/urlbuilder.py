@@ -20,3 +20,10 @@ class URLBuilder:
         item_query = self.item_query.replace(" ", "-")
         url = f"https://www.olx.pl/{city}/q-{item_query}/?{distance_string}search%5Border%5D=created_at%3Adesc"
         return url
+
+    def generate_data_key(self) -> str:
+        """Returns a key for the data frame that will be created from the scraped data."""
+        key = f"{self.item_query.capitalize()}"
+        if self.city:
+            key += f" - {self.city.capitalize()}"
+        return key

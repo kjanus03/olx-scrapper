@@ -1,11 +1,12 @@
 from urllib.parse import urlparse, urljoin
+
+import bs4.element
 from bs4 import BeautifulSoup
 import pandas as pd
-import openpyxl
 import aiohttp
 import asyncio
 
-from src.formatting import apply_hyperlinking, format_price, format_location_date, format_columns
+from src.formatting import format_price, format_location_date
 from urlbuilder import URLBuilder
 
 
@@ -25,20 +26,10 @@ class Scraper:
         data = await asyncio.gather(*tasks)
 
         for result, url_builder in zip(data, self.url_list):
-            key = self._generate_data_key(url_builder)
+            key = url_builder.generate_data_key()
             self.data_frames[key] = result
 
-        apply_hyperlinking(self, {"item_url", "photo"})
         return self.data_frames
-
-    def create_spreadsheets(self, filename: str, format_column_widths: bool = True) -> None:
-        """Creates an MS Excel file with the scraped DataFrames."""
-        with pd.ExcelWriter(f"../{filename}.xlsx") as writer:
-            for key, df in self.data_frames.items():
-                df.to_excel(writer, sheet_name=key, index=False)
-
-        if format_column_widths:
-            self._format_excel_columns(filename)
 
     async def _fetch_data_from_url(self, url_builder: URLBuilder) -> pd.DataFrame:
         """Returns a pandas DataFrame with scraped data from the given URL asynchronously."""
@@ -49,10 +40,14 @@ class Scraper:
                 if response.status == 200:
                     soup = BeautifulSoup(await response.text(), "html.parser")
                     items = soup.find_all("div", {"data-cy": "l-card"})
+                    print(type(items[0]))
                     return pd.DataFrame(self._process_item(item) for item in items)
+                else:
+                    print(f"Error: {response.status} for {site_url.geturl()}")
+                    return pd.DataFrame()
 
     @staticmethod
-    def _process_item(item) -> dict:
+    def _process_item(item: bs4.element.Tag) -> dict:
         """Returns a dictionary with the processed data from the given item."""
         title = item.find("h6").text.strip()
         price = format_price(item.find("p").text)
@@ -64,17 +59,3 @@ class Scraper:
             "title": title, "price": price, "location": location, "date": date,
             "item_url": item_url, "photo": photo
         }
-
-    @staticmethod
-    def _generate_data_key(url_builder: URLBuilder) -> str:
-        key = f"{url_builder.item_query.capitalize()}"
-        if url_builder.city:
-            key += f" - {url_builder.city.capitalize()}"
-        return key
-
-    @staticmethod
-    def _format_excel_columns(filename: str) -> None:
-        workbook = openpyxl.load_workbook(f"../{filename}.xlsx")
-        for sheet in workbook.worksheets:
-            format_columns(sheet)
-        workbook.save(f"../{filename}.xlsx")

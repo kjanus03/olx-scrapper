@@ -1,26 +1,21 @@
+import asyncio
+import json
+
 from scraper import Scraper
 from urlbuilder import URLBuilder
-import asyncio
+from spreadsheet_manager import SpreadsheetManager
+
+
+def load_config(file_path):
+    with open(file_path, 'r') as file:
+        return json.load(file)
 
 
 def main() -> None:
-    # Define the guitars and amps to search for as a list of URLBuilder instances
-    search_items = [
-        URLBuilder(item_query="wzmacniacz gitarowy", city="legnica", distance=100),
-        URLBuilder(item_query="kolumna gitarowa", city="legnica", distance=100),
-        URLBuilder(item_query="wzmacniacz gitarowy", city="zagan", distance=100),
-        URLBuilder(item_query="kolumna gitarowa", city="zagan", distance=100),
-        URLBuilder(item_query="orange gitarowy", city="legnica", distance=100),
-        URLBuilder("mxr micro amp"),
-        URLBuilder("boss chorus"),
-        URLBuilder("electro-harmonix small clone"),
-        URLBuilder("mxr chorus"),
-        URLBuilder("electro harmonix holy grail reverb"),
-        URLBuilder("boss reverb"),
-        URLBuilder("tc electronic hall of fame reverb"),
-    ]
+    config = load_config('config.json')
 
-    # Create a single Scraper instance
+    # Create Scraper instance
+    search_items = [URLBuilder(**query) for query in config['search_queries']]
     scraper_instance = Scraper(search_items)
 
     # Concurrently scrape data and create data frames
@@ -28,7 +23,10 @@ def main() -> None:
     loop.run_until_complete(scraper_instance.scrape_data())
 
     # Create spreadsheets
-    scraper_instance.create_spreadsheets("upgrade", format_column_widths=True)
+    output_config = config['output']
+    spreadsheet_manager = SpreadsheetManager(scraper_instance.data_frames, output_config['filename'])
+    spreadsheet_manager.initialize_spreadsheets(set(output_config['hyperlinked_columns']),
+                                                output_config['format_column_widths'])
 
 
 if __name__ == "__main__":
