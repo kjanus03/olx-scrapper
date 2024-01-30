@@ -1,12 +1,11 @@
 from urllib.parse import urlparse, urljoin
-from urlbuilder import URLBuilder
-import bs4 as BeautifulSoup
+import requests
+from bs4 import BeautifulSoup
 import pandas as pd
 import openpyxl
-import requests
-import datetime
 
 from src.formatting import apply_hyperlinking, format_price, format_location_date, format_columns
+from urlbuilder import URLBuilder
 
 
 class Scraper:
@@ -18,52 +17,61 @@ class Scraper:
         """Adds a new URL to the list of URLs to be scraped."""
         self.url_list.append(url)
 
-    def scrap_data(self) -> pd.Series:
-        """Returns a pandas Series of pandas DataFrames with scrapped data from the list of URLs."""
-
+    def scrape_data(self) -> pd.Series:
+        """Returns a pandas Series of pandas DataFrames with scraped data from the list of URLs."""
         for url_builder in self.url_list:
+            data = self._fetch_data_from_url(url_builder)
+            key = self._generate_data_key(url_builder)
+            self.data_frames[key] = data
 
-            site_url = urlparse(url_builder.build_url())
-            response = requests.get(site_url.geturl())
-
-            if response.status_code == 200:
-                soup = BeautifulSoup.BeautifulSoup(response.text, "html.parser")
-                added_today = []
-                items = soup.find_all("div", {"data-cy": "l-card"})
-                df = pd.DataFrame(columns=["title", "price", "location", "date", "item_url", "photo"])
-
-                for item in items:
-                    title = item.find("h6").text.strip()
-                    price = format_price(item.find("p").text)
-                    location, date = format_location_date(item.find("p", {"data-testid": "location-date"}).text)
-                    photo = item.find("img").get("src")
-                    item_url = urljoin("https://www.olx.pl", item.find("a").get("href"))
-
-                    new_data = pd.DataFrame(
-                        {"title": title, "price": price, "location": location, "date": date, "item_url": item_url,
-                         "photo": photo}, index=[0])
-
-                    if date == datetime.datetime.now().strftime("%d %B %Y"):
-                        added_today.append(new_data)
-                    df = pd.concat([df, new_data], ignore_index=True)
-
-                key = f"{url_builder.item_query.capitalize()} - {url_builder.city.capitalize()}" if url_builder.city else url_builder.item_query.capitalize()
-                self.data_frames[key] = df
-
-        apply_hyperlinking(self, ["item_url", "photo"])
+        apply_hyperlinking(self, {"item_url", "photo"})
         return self.data_frames
 
     def create_spreadsheets(self, filename: str, format_column_widths: bool = True) -> None:
-        """Creates an MS Excel file with the scrapped dataFrames and filename."""
-
+        """Creates an MS Excel file with the scraped DataFrames."""
         with pd.ExcelWriter(f"../{filename}.xlsx") as writer:
             for key, df in self.data_frames.items():
                 df.to_excel(writer, sheet_name=key, index=False)
 
-        # formatting column widths
         if format_column_widths:
-            workbook = openpyxl.load_workbook(f"../{filename}.xlsx")
-            for sheet in workbook.worksheets:
-                print(type(sheet))
-                format_columns(sheet)
-            workbook.save(f"../{filename}.xlsx")
+            self._format_excel_columns(filename)
+
+    def _fetch_data_from_url(self, url_builder: URLBuilder) -> pd.DataFrame:
+        """Returns a pandas DataFrame with scraped data from the given URL."""
+        site_url = urlparse(url_builder.build_url())
+        response = requests.get(site_url.geturl())
+
+        #TODO: Add error handling
+        if response.status_code == 200:
+            soup = BeautifulSoup.BeautifulSoup(response.text, "html.parser")
+            items = soup.find_all("div", {"data-cy": "l-card"})
+
+            return pd.DataFrame(self._process_item(item) for item in items)
+
+    @staticmethod
+    def _process_item(item) -> dict:
+        """Returns a dictionary with the processed data from the given item."""
+        title = item.find("h6").text.strip()
+        price = format_price(item.find("p").text)
+        location, date = format_location_date(item.find("p", {"data-testid": "location-date"}).text)
+        photo = item.find("img").get("src")
+        item_url = urljoin("https://www.olx.pl", item.find("a").get("href"))
+
+        return {
+            "title": title, "price": price, "location": location, "date": date,
+            "item_url": item_url, "photo": photo
+        }
+
+    @staticmethod
+    def _generate_data_key(url_builder: URLBuilder) -> str:
+        key = f"{url_builder.item_query.capitalize()}"
+        if url_builder.city:
+            key += f" - {url_builder.city.capitalize()}"
+        return key
+
+    @staticmethod
+    def _format_excel_columns(filename: str) -> None:
+        workbook = openpyxl.load_workbook(f"../{filename}.xlsx")
+        for sheet in workbook.worksheets:
+            format_columns(sheet)
+        workbook.save(f"../{filename}.xlsx")

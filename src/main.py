@@ -7,7 +7,7 @@ def main() -> None:
     search_items = [
         URLBuilder(item_query="wzmacniacz gitarowy", city="legnica", distance=100),
         URLBuilder(item_query="kolumna gitarowa", city="legnica", distance=100),
-        URLBuilder(item_query="wmzacniacz gitarowy", city="zagan", distance=100),
+        URLBuilder(item_query="wzmacniacz gitarowy", city="zagan", distance=100),
         URLBuilder(item_query="kolumna gitarowa", city="zagan", distance=100),
         URLBuilder(item_query="orange gitarowy", city="legnica", distance=100),
         URLBuilder("mxr micro amp"),
@@ -23,10 +23,10 @@ def main() -> None:
     scraper_instance = Scraper(search_items)
 
     # Scrape data and create data frames
-    data_frames = scraper_instance.scrap_data()
+    scraper_instance.scrape_data()
 
     # Create spreadsheets
-    scraper_instance.create_spreadsheets("guitars_and_amps", format_column_widths=True)
+    scraper_instance.create_spreadsheets("upgrade", format_column_widths=True)
 
 
 if __name__ == "__main__":

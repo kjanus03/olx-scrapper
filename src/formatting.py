@@ -32,7 +32,7 @@ def create_hyperlink(url, name):
 Scraper = ForwardRef("Scraper")
 
 
-def apply_hyperlinking(scraper_inst: Scraper, columns_to_hyperlink: list[str]) -> None:
+def apply_hyperlinking(scraper_inst: Scraper, columns_to_hyperlink: set[str]) -> None:
     """Applies hyperlinking to the given columns in the data frames that have been scrapped by the given Scraper instance
     For instance the photo and item_url columns may get hyperlinked."""
 
