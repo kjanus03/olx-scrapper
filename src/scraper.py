@@ -40,7 +40,6 @@ class Scraper:
                 if response.status == 200:
                     soup = BeautifulSoup(await response.text(), "html.parser")
                     items = soup.find_all("div", {"data-cy": "l-card"})
-                    print(type(items[0]))
                     return pd.DataFrame(self._process_item(item) for item in items)
                 else:
                     print(f"Error: {response.status} for {site_url.geturl()}")

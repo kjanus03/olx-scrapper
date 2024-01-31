@@ -8,7 +8,7 @@ class SpreadsheetManager:
         self.data_frames = data_frames
         self.filename = filename
 
-    def initialize_spreadsheets(self, hyperlinked_columns: set[str], format_column_widths: bool = True)-> None:
+    def initialize_spreadsheets(self, hyperlinked_columns: set[str], format_column_widths: bool = True) -> None:
         """Creates and formats an MS Excel file with the provided DataFrames."""
         self._create_spreadsheets()
         self._apply_hyperlinking(hyperlinked_columns)
@@ -29,8 +29,9 @@ class SpreadsheetManager:
         workbook.save(f"../{self.filename}.xlsx")
 
     def _apply_hyperlinking(self, columns_to_hyperlink: set[str]) -> None:
-        """Applies hyperlinking to the given columns in the data frames that have been scrapped by the given Scraper instance
-        For instance the photo and item_url columns may get hyperlinked."""
+        """Applies hyperlinking to the given columns in the data frames that have been scrapped
+        by the given Scraper instance.
+        For example the photo and item_url columns may get hyperlinked."""
 
         for key, df in self.data_frames.items():
             for column_name in columns_to_hyperlink:
@@ -48,7 +49,7 @@ class SpreadsheetManager:
         for column_cells in sheet.columns:
             column_title = column_cells[0].value
             if column_title is not None:
-                length = max(
+                column_width = max(
                     len(str(cell.value)) if column_title not in hyperlinked_columns else hyperlinked_columns_width for
                     cell in column_cells)
-                sheet.column_dimensions[column_cells[0].column_letter].width = length
+                sheet.column_dimensions[column_cells[0].column_letter].width = column_width
