@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import aiohttp
 import asyncio
+import re
 
 from src.formatting import format_price, format_location_date
 from urlbuilder import URLBuilder
@@ -14,6 +15,8 @@ class Scraper:
     def __init__(self, url_strings: list[URLBuilder] = None):
         self.url_list = url_strings if url_strings else []
         self.data_frames = pd.Series(dtype=object)
+        self.count_pattern = re.compile(r'Znaleźliśmy\s+(\d+)\s+ogłosze(?:ń|nie|nia)')
+        self.listings_counts = []
 
     def add_url(self, url: URLBuilder) -> None:
         """Adds a new URL to the list of URLs to be scraped."""
@@ -39,8 +42,11 @@ class Scraper:
                 # TODO: Handle errors
                 if response.status == 200:
                     soup = BeautifulSoup(await response.text(), "html.parser")
+
+                    # Find the number of listings, if it's 0 we don't want to scrape the default OLX page
+                    count = self.find_count(soup)
                     items = soup.find_all("div", {"data-cy": "l-card"})
-                    return pd.DataFrame(self._process_item(item) for item in items)
+                    return pd.DataFrame(self._process_item(item) for item in items) if count != 0 else pd.DataFrame()
                 else:
                     print(f"Error: {response.status} for {site_url.geturl()}")
                     return pd.DataFrame()
@@ -49,7 +55,7 @@ class Scraper:
     def _process_item(item: bs4.element.Tag) -> dict:
         """Returns a dictionary with the processed data from the given item."""
         title = item.find("h6").text.strip()
-        price = format_price(item.find("p").text)
+        price = format_price(item.find("p").text)[:-3]
         location, date = format_location_date(item.find("p", {"data-testid": "location-date"}).text)
         photo = item.find("img").get("src")
         item_url = urljoin("https://www.olx.pl", item.find("a").get("href"))
@@ -58,3 +64,9 @@ class Scraper:
             "title": title, "price": price, "location": location, "date": date,
             "item_url": item_url, "photo": photo
         }
+
+    def find_count(self, soup: BeautifulSoup) -> int:
+        count_element = soup.find("span", {"data-testid": "total-count"})
+        count = int(self.count_pattern.search(count_element.text).group(1))
+        self.listings_counts.append(count)
+        return count
