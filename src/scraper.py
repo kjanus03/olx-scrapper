@@ -66,6 +66,7 @@ class Scraper:
         }
 
     def find_count(self, soup: BeautifulSoup) -> int:
+        """Returns the number of listings found on the page."""
         count_element = soup.find("span", {"data-testid": "total-count"})
         count = int(self.count_pattern.search(count_element.text).group(1))
         self.listings_counts.append(count)

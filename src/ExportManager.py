@@ -2,6 +2,7 @@ from enum import Enum
 from SpreadsheetManager import SpreadsheetManager
 
 import pandas as pd
+from fpdf import FPDF
 
 
 class ExportFormat(Enum):
@@ -40,11 +41,32 @@ class ExportManager:
         spreadsheet_manager.initialize_spreadsheets(set(self.output_config['hyperlinked_columns']),
                                                     self.output_config['format_column_widths'])
 
-    # TODO: Implement the export to PDF functionality.
     def _export_to_csv(self) -> None:
-        pass
+        """Exports the data to a CSV file."""
+        for key, df in self.data_frames.items():
+            filename = f"{self.output_filename}_{key}.csv"
+            df.to_csv(filename, index=False)
 
-    # TODO: Implement the export to PDF functionality.
     def _export_to_pdf(self) -> None:
-        pass
+        """Exports the data to a PDF file."""
+        pdf = FPDF()
+        pdf.set_auto_page_break(auto=True, margin=15)
+
+        for key, df in self.data_frames.items():
+            pdf.add_page()
+            pdf.set_font("Arial", size=12)
+            pdf.cell(200, 10, txt=str(key), ln=True, align='C')
+
+            # Add table headers
+            for column in df.columns:
+                pdf.cell(40, 10, column, border=1)
+            pdf.ln()
+
+            # Add table rows
+            for _, row in df.iterrows():
+                for item in row:
+                    pdf.cell(40, 10, str(item), border=1)
+                pdf.ln()
+
+        pdf.output(f"{self.output_filename}.pdf")
 
