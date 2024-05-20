@@ -1,11 +1,10 @@
-from PyQt5.QtCore import QObject, QEvent
-from PyQt5.QtGui import QIcon, QFont
-from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QPushButton, QTableView, QVBoxLayout, QWidget, QStackedLayout, \
-    QHBoxLayout, QLabel, QInputDialog
+from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QPushButton, QVBoxLayout, QWidget, QStackedLayout, QHBoxLayout, \
+    QLabel, QDialog, QTableView
+from PyQt5.QtGui import QFont, QIcon
 from src.GUI.DataFrameModel import DataFrameModel
 from src.GUI.Controller import Controller
 from src.GUI.ClickableDelegate import ClickableDelegate
-
+from src.GUI.ExportDialog import ExportDialog
 
 class MainWindow(QMainWindow):
     def __init__(self, title: str, width: int, height: int, controller: Controller):
@@ -14,8 +13,6 @@ class MainWindow(QMainWindow):
         self.init_ui(title, width, height)
 
     def init_ui(self, title: str, width: int, height: int):
-
-
         # Setup action to exit the application
         exit_act = QAction(QIcon('exit.png'), '&Exit', self)
         exit_act.setShortcut('Ctrl+Q')
@@ -76,10 +73,11 @@ class MainWindow(QMainWindow):
         self.show()
 
     def show_export_dialog(self):
-        items = ["Excel", "CSV", "PDF"]
-        item, ok = QInputDialog.getItem(self, "Select Export Format", "Format:", items, 0, False)
-        if ok and item:
-            self.controller.export_data(item.lower())
+        export_dialog = ExportDialog(self)
+        if export_dialog.exec_() == QDialog.Accepted:
+            export_format, save_path = export_dialog.get_export_details()
+            if save_path:
+                self.controller.export_data(export_format.lower(), save_path)
 
     def update_last_scrape_label(self):
         last_scrape_date = self.controller.scraper.last_scrape_date

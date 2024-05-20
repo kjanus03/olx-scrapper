@@ -1,13 +1,17 @@
 from enum import Enum
-from SpreadsheetManager import SpreadsheetManager
-import pandas as pd
 from fpdf import FPDF
+import pandas as pd
+import json
+import dicttoxml
+from src.SpreadsheetManager import SpreadsheetManager
 
 
 class ExportFormat(Enum):
     EXCEL = "excel"
     CSV = "csv"
     PDF = "pdf"
+    JSON = "json"
+    XML = "xml"
 
 
 class ExportManager:
@@ -31,6 +35,10 @@ class ExportManager:
             self._export_to_csv()
         elif self.export_format == ExportFormat.PDF:
             self._export_to_pdf()
+        elif self.export_format == ExportFormat.JSON:
+            self._export_to_json()
+        elif self.export_format == ExportFormat.XML:
+            self._export_to_xml()
         else:
             raise ValueError(f"Unsupported export format: {self.export_format}")
 
@@ -48,23 +56,60 @@ class ExportManager:
 
     def _export_to_pdf(self) -> None:
         """Exports the data to a PDF file."""
-        pdf = FPDF()
-        pdf.set_auto_page_break(auto=True, margin=15)
-
-        for key, df in self.data_frames.items():
+        try:
+            pdf = FPDF()
             pdf.add_page()
-            pdf.set_font("Arial", size=12)
-            pdf.cell(200, 10, txt=str(key), ln=True, align='C')
+            pdf.add_font('DejaVu', '', 'DejaVuSans.ttf', uni=True)
+            pdf.set_font('DejaVu', '', 12)
+            pdf.set_auto_page_break(auto=True, margin=15)
 
-            # Add table headers
-            for column in df.columns:
-                pdf.cell(40, 10, column, border=1)
-            pdf.ln()
+            col_widths = {}
+            for key, df in self.data_frames.items():
+                # Calculate column widths
+                for col in df.columns:
+                    max_length = max(df[col].astype(str).map(len).max(), len(col)) + 2
+                    col_widths[col] = pdf.get_string_width(col) + 4  # Column name width + padding
+                    for val in df[col]:
+                        col_width = pdf.get_string_width(str(val)) + 4
+                        if col_width > col_widths[col]:
+                            col_widths[col] = col_width
 
-            # Add table rows
-            for _, row in df.iterrows():
-                for item in row:
-                    pdf.cell(40, 10, str(item), border=1)
+                pdf.add_page()
+                pdf.set_font('DejaVu', '', 12)
+                pdf.cell(200, 10, txt=str(key), ln=True, align='C')
+
+                for col in df.columns:
+                    pdf.cell(col_widths[col], 10, col, border=1)
                 pdf.ln()
 
-        pdf.output(f"{self.output_filename}.pdf")
+                for index, row in df.iterrows():
+                    if pdf.get_y() > pdf.page_break_trigger - 20:
+                        pdf.add_page()
+                        # Re-add table headers on new page
+                        for col in df.columns:
+                            pdf.cell(col_widths[col], 10, col, border=1)
+                        pdf.ln()
+                    for col in df.columns:
+                        pdf.cell(col_widths[col], 10, str(row[col]), border=1)
+                    pdf.ln()
+
+            pdf_output_path = f"{self.output_filename}.pdf"
+            pdf.output(pdf_output_path)
+            print(f"PDF exported successfully to {pdf_output_path}")
+        except Exception as e:
+            print(f"Error exporting to PDF: {e}")
+
+    def _export_to_json(self) -> None:
+        """Exports the data to a JSON file."""
+        json_data = {key: df.to_dict(orient='records') for key, df in self.data_frames.items()}
+        with open(f"{self.output_filename}.json", 'w', encoding='utf-8') as json_file:
+            json.dump(json_data, json_file, ensure_ascii=False, indent=4)
+        print(f"JSON exported successfully to {self.output_filename}.json")
+
+    def _export_to_xml(self) -> None:
+        """Exports the data to an XML file."""
+        xml_data = {key: df.to_dict(orient='records') for key, df in self.data_frames.items()}
+        xml_bytes = dicttoxml.dicttoxml(xml_data, custom_root='data', attr_type=False)
+        with open(f"{self.output_filename}.xml", 'wb') as xml_file:
+            xml_file.write(xml_bytes)
+        print(f"XML exported successfully to {self.output_filename}.xml")
