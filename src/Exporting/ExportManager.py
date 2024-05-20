@@ -3,7 +3,7 @@ from fpdf import FPDF
 import pandas as pd
 import json
 import dicttoxml
-from src.SpreadsheetManager import SpreadsheetManager
+from src.Exporting.SpreadsheetManager import SpreadsheetManager
 
 
 class ExportFormat(Enum):

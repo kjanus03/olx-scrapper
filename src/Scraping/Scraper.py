@@ -1,4 +1,5 @@
 import json
+import os
 from datetime import datetime
 from typing import Union
 from urllib.parse import urlparse, urljoin
@@ -10,8 +11,8 @@ import aiohttp
 import asyncio
 import re
 
-from src.formatting import format_price, format_location_date
-from URLBuilder import URLBuilder
+from src.Exporting.formatting import format_price, format_location_date
+from src.Scraping.URLBuilder import URLBuilder
 
 
 class Scraper:
@@ -20,6 +21,7 @@ class Scraper:
         self.data_frames = dict()
         self.count_pattern = re.compile(r'Znaleźliśmy\s+(\d+)\s+ogłosze(?:ń|nie|nia)')
         self.listings_counts = []
+        self.resources_dir = os.path.join(os.path.dirname(__file__), '../Resources')
         self.last_scrape_date = self.load_last_scrape_date()
 
     def add_url(self, url: URLBuilder) -> None:
@@ -76,12 +78,12 @@ class Scraper:
         return count
 
     def save_last_scrape_date(self) -> None:
-        with open('last_scrape.json', 'w') as file:
+        with open(os.path.join(self.resources_dir, 'last_scrape.json'), 'w') as file:
             json.dump({'last_scrape_date': self.last_scrape_date.isoformat()}, file)
 
     def load_last_scrape_date(self) -> Union[datetime, None]:
         try:
-            with open('last_scrape.json', 'r') as file:
+            with open(os.path.join(self.resources_dir, 'last_scrape.json'), 'r') as file:
                 data = json.load(file)
                 self.last_scrape_date = datetime.fromisoformat(data['last_scrape_date'])
                 return datetime.fromisoformat(data['last_scrape_date'])

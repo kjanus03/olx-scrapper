@@ -1,7 +1,7 @@
 import asyncio
 from pathlib import Path
 
-from src.ExportManager import ExportFormat, ExportManager
+from src.Exporting.ExportManager import ExportFormat, ExportManager
 from PyQt5.QtCore import QObject, pyqtSlot
 
 

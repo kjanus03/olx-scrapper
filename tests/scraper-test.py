@@ -1,6 +1,6 @@
 import unittest
-from src.Scraper import Scraper
-from src.URLBuilder import URLBuilder
+from src.Scraping.Scraper import Scraper
+from src.Scraping.URLBuilder import URLBuilder
 
 
 class TestScraper(unittest.TestCase):

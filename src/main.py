@@ -3,8 +3,8 @@ import sys
 
 from PyQt5.QtGui import QFont
 
-from Scraper import Scraper
-from URLBuilder import URLBuilder
+from src.Scraping.Scraper import Scraper
+from src.Scraping.URLBuilder import URLBuilder
 from src.GUI.Controller import Controller
 from src.GUI.MainWindow import MainWindow
 from PyQt5.QtWidgets import QApplication
@@ -28,7 +28,7 @@ def create_app(app_title: str, width: int, height: int, fontsize:int, controller
 
 
 def main() -> None:
-    config = load_config('config2.json')
+    config = load_config('Resources/config2.json')
 
     search_items = [URLBuilder(**query) for query in config['search_queries']]
     scraper_instance = Scraper(search_items)

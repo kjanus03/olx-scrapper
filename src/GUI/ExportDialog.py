@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QDialog, QVBoxLayout, QHBoxLayout, QLabel, QComboBox, QLineEdit, QPushButton, QFileDialog
-from src.ExportManager import ExportFormat
+from src.Exporting.ExportManager import ExportFormat
 
 class ExportDialog(QDialog):
     def __init__(self, parent=None):
