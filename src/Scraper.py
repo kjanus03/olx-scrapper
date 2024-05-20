@@ -1,3 +1,6 @@
+import json
+from datetime import datetime
+from typing import Union
 from urllib.parse import urlparse, urljoin
 
 import bs4.element
@@ -17,6 +20,7 @@ class Scraper:
         self.data_frames = dict()
         self.count_pattern = re.compile(r'Znaleźliśmy\s+(\d+)\s+ogłosze(?:ń|nie|nia)')
         self.listings_counts = []
+        self.last_scrape_date = self.load_last_scrape_date()
 
     def add_url(self, url: URLBuilder) -> None:
         """Adds a new URL to the list of URLs to be scraped."""
@@ -30,6 +34,9 @@ class Scraper:
         for result, url_builder in zip(data, self.url_list):
             key = url_builder.generate_data_key()
             self.data_frames[key] = result
+            # print data type of each column of result
+        self.last_scrape_date = datetime.now()
+        self.save_last_scrape_date()
         return self.data_frames
 
     async def _fetch_data_from_url(self, url_builder: URLBuilder) -> pd.DataFrame:
@@ -53,15 +60,13 @@ class Scraper:
     def _process_item(item: bs4.element.Tag) -> dict:
         """Returns a dictionary with the processed data from the given item."""
         title = item.find("h6").text.strip()
-        price = format_price(item.find("p").text)[:-3]
+        price = format_price(item.find("p").text)
         location, date = format_location_date(item.find("p", {"data-testid": "location-date"}).text)
         photo = item.find("img").get("src")
         item_url = urljoin("https://www.olx.pl", item.find("a").get("href"))
 
-        return {
-            "title": title, "price": price, "location": location, "date": date,
-            "item_url": item_url, "photo": photo
-        }
+        return {"title": title, "price": price, "location": location, "date": date, "item_url": item_url,
+                "photo": photo}
 
     def find_count(self, soup: BeautifulSoup) -> int:
         """Returns the number of listings found on the page."""
@@ -69,3 +74,16 @@ class Scraper:
         count = int(self.count_pattern.search(count_element.text).group(1))
         self.listings_counts.append(count)
         return count
+
+    def save_last_scrape_date(self) -> None:
+        with open('last_scrape.json', 'w') as file:
+            json.dump({'last_scrape_date': self.last_scrape_date.isoformat()}, file)
+
+    def load_last_scrape_date(self) -> Union[datetime, None]:
+        try:
+            with open('last_scrape.json', 'r') as file:
+                data = json.load(file)
+                self.last_scrape_date = datetime.fromisoformat(data['last_scrape_date'])
+                return datetime.fromisoformat(data['last_scrape_date'])
+        except (FileNotFoundError, KeyError, ValueError):
+            return None

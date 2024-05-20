@@ -1,6 +1,5 @@
 from enum import Enum
 from SpreadsheetManager import SpreadsheetManager
-
 import pandas as pd
 from fpdf import FPDF
 
@@ -69,4 +68,3 @@ class ExportManager:
                 pdf.ln()
 
         pdf.output(f"{self.output_filename}.pdf")
-
