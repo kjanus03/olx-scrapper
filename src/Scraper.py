@@ -8,13 +8,13 @@ import asyncio
 import re
 
 from src.formatting import format_price, format_location_date
-from urlbuilder import URLBuilder
+from URLBuilder import URLBuilder
 
 
 class Scraper:
     def __init__(self, url_strings: list[URLBuilder] = None):
         self.url_list = url_strings if url_strings else []
-        self.data_frames = pd.Series(dtype=object)
+        self.data_frames = dict()
         self.count_pattern = re.compile(r'Znaleźliśmy\s+(\d+)\s+ogłosze(?:ń|nie|nia)')
         self.listings_counts = []
 
@@ -22,16 +22,14 @@ class Scraper:
         """Adds a new URL to the list of URLs to be scraped."""
         self.url_list.append(url)
 
-    async def scrape_data(self) -> pd.Series:
-        """Returns a pandas Series of pandas DataFrames with scraped data from the list of URLs."""
+    async def scrape_data(self) -> dict[str, pd.DataFrame]:
+        """Returns a dictionary of pandas DataFrames with scraped data from the list of URLs."""
         tasks = [self._fetch_data_from_url(url_builder) for url_builder in self.url_list]
-        # the data is returned in the same order as the tasks
-        data = await asyncio.gather(*tasks)
 
+        data = await asyncio.gather(*tasks)
         for result, url_builder in zip(data, self.url_list):
             key = url_builder.generate_data_key()
             self.data_frames[key] = result
-
         return self.data_frames
 
     async def _fetch_data_from_url(self, url_builder: URLBuilder) -> pd.DataFrame:

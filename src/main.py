@@ -2,21 +2,22 @@ import asyncio
 import json
 import sys
 
-from scraper import Scraper
-from urlbuilder import URLBuilder
+from Scraper import Scraper
+from URLBuilder import URLBuilder
+from Controller import Controller
 from ExportManager import ExportFormat, ExportManager
 from MainWindow import MainWindow
 from PyQt5.QtWidgets import QApplication
 
 
-def load_config(file_path):
+def load_config(file_path: str) -> dict:
     with open(file_path, 'r') as file:
         return json.load(file)
 
 
-def create_app(app_title: str, width: int, height: int) -> None:
+def create_app(app_title: str, width: int, height: int, controller: Controller) -> None:
     app = QApplication(sys.argv)
-    main_window = MainWindow(app_title, width, height)
+    main_window = MainWindow(app_title, width, height, controller)
     sys.exit(app.exec_())
 
 
@@ -37,7 +38,8 @@ def main() -> None:
 
     # Create the main window
     gui_config = config['gui_config']
-    create_app(gui_config['app_title'], gui_config['width'], gui_config['height'])
+    controller = Controller(scraper_instance)
+    create_app(gui_config['app_title'], gui_config['width'], gui_config['height'], controller)
 
 
 if __name__ == "__main__":

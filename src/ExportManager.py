@@ -12,13 +12,13 @@ class ExportFormat(Enum):
 
 
 class ExportManager:
-    def __init__(self, export_format: ExportFormat, output_config: dict, data_frames: pd.Series):
+    def __init__(self, export_format: ExportFormat, output_config: dict, data_frames: dict[str, pd.DataFrame]):
         if not isinstance(export_format, ExportFormat):
             raise TypeError("export_format must be an instance of ExportFormat Enum")
         if not isinstance(output_config, dict):
             raise TypeError("output_config must be a dictionary")
-        if not isinstance(data_frames, pd.Series):
-            raise TypeError("data_frames must be a pandas Series")
+        if not isinstance(data_frames, dict):
+            raise TypeError("data_frames must be a dictionary")
         self.export_format = export_format
         self.output_config = output_config
         self.data_frames = data_frames
