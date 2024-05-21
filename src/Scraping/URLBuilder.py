@@ -22,7 +22,8 @@ class URLBuilder:
             city = self.city.replace(" ", "-")
             distance_string = f"search%5Bdist%5D={self.distance}&"
         item_query = self.item_query.replace(" ", "-")
-        url = f"https://www.olx.pl/{city}/q-monitor {item_query}/?{distance_string}search%5Border%5D=created_at%3Adesc"
+        url = f"https://www.olx.pl/{city}/q-{item_query}/?{distance_string}search%5Border%5D=created_at%3Adesc"
+        print(url)
         return url
 
     def generate_data_key(self) -> str:

@@ -6,6 +6,7 @@ from src.GUI.Controller import Controller
 from src.GUI.ClickableDelegate import ClickableDelegate
 from src.GUI.ExportDialog import ExportDialog
 
+
 class MainWindow(QMainWindow):
     def __init__(self, title: str, width: int, height: int, controller: Controller):
         super().__init__()
@@ -48,21 +49,30 @@ class MainWindow(QMainWindow):
         self.next_button.clicked.connect(self.show_next)
         self.button_layout.addWidget(self.next_button)
 
-        scrape_button = QPushButton('Scrape Data', self)
-        scrape_button.setToolTip('Start scraping data from OLX')
-        scrape_button.clicked.connect(self.controller.scrape_data)
-        scrape_button.clicked.connect(self.update_last_scrape_label)
-        self.button_layout.addWidget(scrape_button)
+        self.scrape_button = QPushButton('Scrape Data', self)
+        self.scrape_button.setToolTip('Start scraping data from OLX')
+        self.scrape_button.clicked.connect(self.controller.scrape_data)
+        self.scrape_button.clicked.connect(self.update_last_scrape_label)
+        self.button_layout.addWidget(self.scrape_button)
 
-        view_button = QPushButton('View Data', self)
-        view_button.setToolTip('View the scraped data')
-        view_button.clicked.connect(lambda: self.show_data())
-        self.button_layout.addWidget(view_button)
+        self.view_button = QPushButton('View Data', self)
+        self.view_button.setToolTip('View the scraped data')
+        self.view_button.clicked.connect(lambda: self.show_data())
+        self.button_layout.addWidget(self.view_button)
 
-        export_button = QPushButton('Export Data', self)
-        export_button.setToolTip('Export the scraped data')
-        export_button.clicked.connect(self.show_export_dialog)
-        self.button_layout.addWidget(export_button)
+        self.export_button = QPushButton('Export Data', self)
+        self.export_button.setToolTip('Export the scraped data')
+        self.export_button.clicked.connect(self.show_export_dialog)
+        self.button_layout.addWidget(self.export_button)
+
+        self.view_search_queries_button = QPushButton('View Search Queries', self)
+        self.view_search_queries_button.setToolTip('View the search queries')
+        self.view_search_queries_button.clicked.connect(self.controller.view_search_queries)
+        self.button_layout.addWidget(self.view_search_queries_button)
+
+        self.prev_button.setVisible(False)
+        self.next_button.setVisible(False)
+        self.export_button.setVisible(False)
 
         # Initialize QStackedLayout for table views
         self.stacked_layout = QStackedLayout()
@@ -87,6 +97,9 @@ class MainWindow(QMainWindow):
             self.last_scrape_label.setText("Last Scrape: Never")
 
     def show_data(self):
+        if not self.controller.scraper.data_frames:
+            return
+
         # Clear existing views
         while self.stacked_layout.count():
             widget = self.stacked_layout.widget(0)
@@ -120,6 +133,11 @@ class MainWindow(QMainWindow):
 
         # Show the first table
         self.stacked_layout.setCurrentIndex(0)
+
+        # Show buttons after data is loaded
+        self.prev_button.setVisible(True)
+        self.next_button.setVisible(True)
+        self.export_button.setVisible(True)
 
     def show_next(self):
         current_index = self.stacked_layout.currentIndex()

@@ -1,4 +1,3 @@
-import json
 import sys
 
 from PyQt5.QtGui import QFont
@@ -7,12 +6,8 @@ from src.Scraping.Scraper import Scraper
 from src.Scraping.URLBuilder import URLBuilder
 from src.GUI.Controller import Controller
 from src.GUI.MainWindow import MainWindow
+from src.Resources.utils import load_config
 from PyQt5.QtWidgets import QApplication
-
-
-def load_config(file_path: str) -> dict:
-    with open(file_path, 'r') as file:
-        return json.load(file)
 
 
 def create_app(app_title: str, width: int, height: int, fontsize:int, controller: Controller) -> None:

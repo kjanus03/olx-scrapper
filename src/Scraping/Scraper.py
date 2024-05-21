@@ -19,7 +19,7 @@ class Scraper:
     def __init__(self, url_strings: list[URLBuilder] = None):
         self.url_list = url_strings if url_strings else []
         self.data_frames = dict()
-        self.count_pattern = re.compile(r'Znaleźliśmy\s+(\d+)\s+ogłosze(?:ń|nie|nia)')
+        self.count_pattern = re.compile(r'Znaleźliśmy\s+(?:ponad\s+)?(\d+)\s+ogłosze(?:ń|nie|nia)')
         self.listings_counts = []
         self.resources_dir = os.path.join(os.path.dirname(__file__), '../Resources')
         self.last_scrape_date = self.load_last_scrape_date()
@@ -29,6 +29,7 @@ class Scraper:
         self.url_list.append(url)
 
     async def scrape_data(self) -> dict[str, pd.DataFrame]:
+        self.data_frames = dict()
         """Returns a dictionary of pandas DataFrames with scraped data from the list of URLs."""
         tasks = [self._fetch_data_from_url(url_builder) for url_builder in self.url_list]
 
@@ -39,6 +40,7 @@ class Scraper:
             # print data type of each column of result
         self.last_scrape_date = datetime.now()
         self.save_last_scrape_date()
+        print("scraped data")
         return self.data_frames
 
     async def _fetch_data_from_url(self, url_builder: URLBuilder) -> pd.DataFrame:
@@ -89,3 +91,6 @@ class Scraper:
                 return datetime.fromisoformat(data['last_scrape_date'])
         except (FileNotFoundError, KeyError, ValueError):
             return None
+
+    def update_url_list(self, config: dict) -> None:
+        self.url_list = [URLBuilder(**query) for query in config['search_queries']]
