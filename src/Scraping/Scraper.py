@@ -54,7 +54,7 @@ class Scraper:
 
                     # Find the number of listings, if it's 0 we don't want to scrape the default OLX page
                     count = self.find_count(soup)
-                    items = soup.find_all("div", {"data-cy": "l-card"})
+                    items = soup.find_all("div", {"data-cy": "l-card"})[:count]
                     return pd.DataFrame(self._process_item(item) for item in items) if count != 0 else pd.DataFrame()
                 else:
                     print(f"Error: {response.status} for {site_url.geturl()}")

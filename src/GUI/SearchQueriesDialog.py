@@ -3,6 +3,7 @@ import re
 from typing import List
 
 from PyQt5.QtCore import Qt, QAbstractTableModel, QModelIndex, QVariant
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QDialog, QVBoxLayout, QHBoxLayout, QTableView, QPushButton, QAbstractItemView, QMessageBox
 
 
@@ -105,14 +106,26 @@ class SearchQueriesDialog(QDialog):
         self.table_view.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.table_view.resizeColumnsToContents()
         self.table_view.resizeRowsToContents()
+
+        self.table_view.setColumnWidth(0, 200)  # Width for "Item Query"
+        self.table_view.setColumnWidth(1, 150)  # Width for "City"
+        self.table_view.setColumnWidth(2, 100)
+
         layout.addWidget(self.table_view)
 
         button_layout = QHBoxLayout()
-        self.add_button = QPushButton("Add New Query")
+
+        self.add_button = QPushButton()
+        self.add_button.setIcon(QIcon("GUI/icons/add_icon.png"))
+        self.add_button.setFixedSize(40, 40)
+        self.add_button.setStyleSheet("background-color: lightgreen; color: white; border: none;")
         self.add_button.clicked.connect(self.add_query)
         button_layout.addWidget(self.add_button)
 
-        self.delete_button = QPushButton("Delete Selected Query")
+        self.delete_button = QPushButton()
+        self.delete_button.setIcon(QIcon("GUI/icons/remove_icon.png"))
+        self.delete_button.setFixedSize(40, 40)
+        self.delete_button.setStyleSheet("background-color: lightcoral; color: white; border: none;")
         self.delete_button.clicked.connect(self.delete_query)
         button_layout.addWidget(self.delete_button)
 
