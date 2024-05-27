@@ -1,0 +1,58 @@
+{
+    "search_queries": [
+        {
+            "item_query": "AOC 24G2"
+        },
+        {
+            "item_query": "Acer Nitro"
+        },
+        {
+            "item_query": "LG 24GN650-B"
+        },
+        {
+            "item_query": "LG 27GP850-B"
+        },
+        {
+            "item_query": "LG 34GP83-AB"
+        },
+        {
+            "item_query": "ASUS VG27AQ"
+        },
+        {
+            "item_query": "ASUS VA24EQSB"
+        },
+        {
+            "item_query": "Lenovo G27Q-20"
+        },
+        {
+            "item_query": "Lenovo G24-20"
+        },
+        {
+            "item_query": " Lenovo Legion Y25-25",
+            "city": "wroclaw",
+            "distance": "10"
+        },
+        {
+            "item_query": "BenQ EX2710U"
+        },
+        {
+            "item_query": "BenQ Mobiuz EX2510",
+            "city": "wroclaw",
+            "distance": "10"
+        }
+    ],
+    "output": {
+        "filename": "scraped_data",
+        "format_column_widths": true,
+        "hyperlinked_columns": [
+            "item_url",
+            "photo"
+        ]
+    },
+    "gui_config": {
+        "app_title": "olx-scrapper",
+        "fontsize": 10,
+        "width": 1400,
+        "height": 900
+    }
+}
