@@ -65,8 +65,9 @@ class Scraper:
         """Returns a dictionary with the processed data from the given item."""
         title = item.find("h6").text.strip()
         price = format_price(item.find("p").text)
-        location, date = format_location_date(item.find("p", {"data-testid": "location-date"}).text)
-        photo = item.find("img").get("src")
+        location, date = format_location_date(item.find("p", {"data-testid": "location-date"}).text) if item.find(
+            "p", {"data-testid": "location-date"}) else ("", "")
+        photo = item.find("img").get("src") if item.find("img") else ""
         item_url = urljoin("https://www.olx.pl", item.find("a").get("href"))
 
         return {"title": title, "price": price, "location": location, "date": date, "item_url": item_url,

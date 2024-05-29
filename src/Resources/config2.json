@@ -1,44 +1,24 @@
 {
     "search_queries": [
         {
-            "item_query": "AOC 24G2"
+            "item_query": "rower gravel",
+            "city": "zagan",
+            "distance": "40"
         },
         {
-            "item_query": "Acer Nitro"
+            "item_query": "rower trekkingowy",
+            "city": "zagan",
+            "distance": "30"
         },
         {
-            "item_query": "LG 24GN650-B"
+            "item_query": "rower elektryczny",
+            "city": "legnica",
+            "distance": "50"
         },
         {
-            "item_query": "LG 27GP850-B"
-        },
-        {
-            "item_query": "LG 34GP83-AB"
-        },
-        {
-            "item_query": "ASUS VG27AQ"
-        },
-        {
-            "item_query": "ASUS VA24EQSB"
-        },
-        {
-            "item_query": "Lenovo G27Q-20"
-        },
-        {
-            "item_query": "Lenovo G24-20"
-        },
-        {
-            "item_query": " Lenovo Legion Y25-25",
-            "city": "wroclaw",
-            "distance": "10"
-        },
-        {
-            "item_query": "BenQ EX2710U"
-        },
-        {
-            "item_query": "BenQ Mobiuz EX2510",
-            "city": "wroclaw",
-            "distance": "10"
+            "item_query": "rower gravel",
+            "city": "",
+            "distance": ""
         }
     ],
     "output": {
