@@ -1,13 +1,15 @@
 import asyncio
+from datetime import datetime
 from pathlib import Path
 from src.Scraping.Scraper import Scraper
 
 from src.Exporting.ExportManager import ExportFormat, ExportManager
-from PyQt5.QtCore import QObject, pyqtSlot
+from PyQt5.QtCore import QObject, pyqtSlot, pyqtSignal
 from src.GUI.SearchQueriesDialog import SearchQueriesDialog
 
 
 class Controller(QObject):
+    progress_updated = pyqtSignal(int)
     def __init__(self, scraper: Scraper):
         super().__init__()
         self.scraper = scraper
@@ -15,9 +17,16 @@ class Controller(QObject):
         self.loop = asyncio.get_event_loop()
 
     @pyqtSlot()
-    def scrape_data(self) -> None:
-        """Scrape data from the URLs and create data frames."""
-        self.loop.run_until_complete(self.scraper.scrape_data())
+    def scrape_data(self):
+        # Ensure progress bar is visible and reset to 0
+        self.progress_updated.emit(0)
+        result = self.loop.run_until_complete(self.scrape_and_update_progress())
+        print(result)
+        self.progress_updated.emit(100)  # Ensure progress is 100% when done
+
+    async def scrape_and_update_progress(self):
+        await self.scraper.scrape_data(self.progress_updated.emit)
+        return self.scraper.data_frames
 
     def export_data(self, format: str, directory: str) -> None:
         export_format = ExportFormat[format.upper()]

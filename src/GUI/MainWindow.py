@@ -11,6 +11,7 @@ class MainWindow(QMainWindow):
     def __init__(self, title: str, width: int, height: int, controller: Controller):
         super().__init__()
         self.controller = controller
+        self.controller.progress_updated.connect(self.update_progress_bar)
         self.init_ui(title, width, height)
 
     def init_ui(self, title: str, width: int, height: int):
@@ -34,11 +35,10 @@ class MainWindow(QMainWindow):
 
         # Add a label to display the last scrape date
         self.last_scrape_label = QLabel(self)
-        main_layout.addWidget(self.last_scrape_label)
         self.update_last_scrape_label()
 
         # Navigation and action buttons layout
-        self.button_layout = QHBoxLayout()
+        self.button_layout = QVBoxLayout()
         main_layout.addLayout(self.button_layout)
 
         self.prev_button = QPushButton("Previous", self)
@@ -53,6 +53,7 @@ class MainWindow(QMainWindow):
 
         self.scrape_button = QPushButton('Scrape Data', self)
         self.scrape_button.setToolTip('Start scraping data from OLX')
+        self.scrape_button.clicked.connect(self.show_progress_bar)
         self.scrape_button.clicked.connect(self.controller.scrape_data)
         self.scrape_button.clicked.connect(self.update_last_scrape_label)
         self.button_layout.addWidget(self.scrape_button)
@@ -76,6 +77,7 @@ class MainWindow(QMainWindow):
         self.menu_button = QToolButton(self)
         self.menu_button.setText('Menu')
         self.menu_button.setPopupMode(QToolButton.InstantPopup)
+        self.menu_button.setMinimumSize(100, 50)  # Adjust these values as needed
         self.menu = QMenu(self.menu_button)
 
         self.scrape_action = QAction('Scrape Data', self)
@@ -100,14 +102,18 @@ class MainWindow(QMainWindow):
         self.menu_button.setVisible(False)  # Initially hidden
         self.button_layout.addWidget(self.menu_button)
 
-        self.progress_bar = QProgressBar(self)
-        self.progress_bar.setMaximum(100)
-        self.progress_bar.setVisible(False)  # Initially hidden
-        self.button_layout.addWidget(self.progress_bar)
-
         # Initialize QStackedLayout for table views
         self.stacked_layout = QStackedLayout()
         main_layout.addLayout(self.stacked_layout)
+
+        # Progress bar layout
+        self.progress_layout = QHBoxLayout()
+        self.progress_bar = QProgressBar(self)
+        self.progress_bar.setMaximum(100)
+        self.progress_bar.setVisible(False)  # Initially hidden
+        self.progress_layout.addWidget(self.last_scrape_label)
+        self.progress_layout.addWidget(self.progress_bar)
+        main_layout.addLayout(self.progress_layout)
 
         self.setGeometry(100, 100, width, height)
         self.setWindowTitle(title)
@@ -115,6 +121,9 @@ class MainWindow(QMainWindow):
 
     def show_progress_bar(self):
         self.progress_bar.setVisible(True)
+
+    def update_progress_bar(self, value):
+        self.progress_bar.setValue(value)
 
     def show_export_dialog(self):
         export_dialog = ExportDialog(self)
@@ -178,6 +187,7 @@ class MainWindow(QMainWindow):
         self.view_button.setVisible(False)
         self.export_button.setVisible(False)
         self.view_search_queries_button.setVisible(False)
+        self.update_button_layout_to_horizontal()
 
     def show_next(self):
         current_index = self.stacked_layout.currentIndex()
@@ -188,3 +198,16 @@ class MainWindow(QMainWindow):
         current_index = self.stacked_layout.currentIndex()
         if current_index > 0:
             self.stacked_layout.setCurrentIndex(current_index - 1)
+
+    def update_button_layout_to_horizontal(self):
+        # Clear current button layout
+        while self.button_layout.count():
+            button = self.button_layout.takeAt(0).widget()
+            if button:
+                button.setParent(None)
+
+        horizontal_layout = QHBoxLayout()
+        horizontal_layout.addWidget(self.prev_button)
+        horizontal_layout.addWidget(self.next_button)
+        horizontal_layout.addWidget(self.menu_button)
+        self.button_layout.addLayout(horizontal_layout)

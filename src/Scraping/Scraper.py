@@ -1,7 +1,7 @@
 import json
 import os
 from datetime import datetime
-from typing import Union
+from typing import Union, Callable
 from urllib.parse import urlparse, urljoin
 
 import bs4.element
@@ -28,16 +28,21 @@ class Scraper:
         """Adds a new URL to the list of URLs to be scraped."""
         self.url_list.append(url)
 
-    async def scrape_data(self) -> dict[str, pd.DataFrame]:
+    async def scrape_data(self, progress_callback: Callable[[int], None] = None) -> dict[str, pd.DataFrame]:
         self.data_frames = dict()
         """Returns a dictionary of pandas DataFrames with scraped data from the list of URLs."""
-        tasks = [self._fetch_data_from_url(url_builder) for url_builder in self.url_list]
+        num_urls = len(self.url_list)
+        tasks = []
+        for i, url in enumerate(self.url_list):
+            tasks.append(self._fetch_data_from_url(url))
+            if progress_callback:
+                progress_callback(int((i + 1) / num_urls * 100))
+            await asyncio.sleep(0.1)  # Small delay to allow UI update
 
         data = await asyncio.gather(*tasks)
         for result, url_builder in zip(data, self.url_list):
             key = url_builder.generate_data_key()
             self.data_frames[key] = result
-            # print data type of each column of result
         self.last_scrape_date = datetime.now()
         self.save_last_scrape_date()
         print("scraped data")
