@@ -16,7 +16,7 @@ from src.Scraping.URLBuilder import URLBuilder
 
 
 class Scraper:
-    def __init__(self, url_strings: list[URLBuilder] = None):
+    def __init__(self, url_strings: list[URLBuilder] = None) -> None:
         self.url_list = url_strings if url_strings else []
         self.data_frames = dict()
         self.count_pattern = re.compile(r'Znaleźliśmy\s+(?:ponad\s+)?(\d+)\s+ogłosze(?:ń|nie|nia)')

@@ -19,6 +19,11 @@
             "item_query": "rower gravel",
             "city": "",
             "distance": ""
+        },
+        {
+            "item_query": "rower gorski",
+            "city": "warszawa",
+            "distance": ""
         }
     ],
     "output": {

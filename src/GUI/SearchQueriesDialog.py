@@ -1,6 +1,6 @@
 import json
 import re
-from typing import List
+from typing import List, Union, Any, Optional
 
 from PyQt5.QtCore import Qt, QAbstractTableModel, QModelIndex, QVariant
 from PyQt5.QtGui import QIcon
@@ -8,17 +8,17 @@ from PyQt5.QtWidgets import QDialog, QVBoxLayout, QHBoxLayout, QTableView, QPush
 
 
 class SearchQueryTableModel(QAbstractTableModel):
-    def __init__(self, queries: List[dict], parent=None):
+    def __init__(self, queries: List[dict], parent: Optional[Any] = None) -> None:
         super(SearchQueryTableModel, self).__init__(parent)
         self.queries = queries
 
-    def rowCount(self, parent=QModelIndex()):
+    def rowCount(self, parent: QModelIndex = QModelIndex()) -> int:
         return len(self.queries)
 
-    def columnCount(self, parent=QModelIndex()):
-        return 3  # "item_query", "city", "distance"
+    def columnCount(self, parent: QModelIndex = QModelIndex()) -> int:
+        return 3
 
-    def data(self, index, role=Qt.DisplayRole):
+    def data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> Union[QVariant, str, dict]:
         if not index.isValid():
             return QVariant()
 
@@ -34,18 +34,18 @@ class SearchQueryTableModel(QAbstractTableModel):
 
         return QVariant()
 
-    def headerData(self, section, orientation, role=Qt.DisplayRole):
+    def headerData(self, section: int, orientation: Qt.Orientation, role: int = Qt.DisplayRole) -> Union[str, QVariant]:
         headers = ["Item Query", "City", "Distance"]
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             return headers[section]
         return QVariant()
 
-    def flags(self, index):
+    def flags(self, index: QModelIndex) -> Qt.ItemFlags:
         if not index.isValid():
             return Qt.ItemIsEnabled
         return Qt.ItemFlags(QAbstractTableModel.flags(self, index) | Qt.ItemIsEditable)
 
-    def setData(self, index, value, role=Qt.EditRole):
+    def setData(self, index: QModelIndex, value: Any, role: int = Qt.EditRole) -> bool:
         if index.isValid() and role == Qt.EditRole:
             value = self.remove_polish_signs(value.strip().lower())
             if not self.validate_input(value):
@@ -63,22 +63,22 @@ class SearchQueryTableModel(QAbstractTableModel):
             return True
         return False
 
-    def addQuery(self, query):
+    def addQuery(self, query: dict) -> None:
         self.beginInsertRows(QModelIndex(), self.rowCount(), self.rowCount())
         self.queries.append(query)
         self.endInsertRows()
 
-    def removeQuery(self, row):
+    def removeQuery(self, row: int) -> None:
         self.beginRemoveRows(QModelIndex(), row, row)
         self.queries.pop(row)
         self.endRemoveRows()
 
-    def validate_input(self, text):
+    def validate_input(self, text: str) -> bool:
         # Validate input to ensure it only contains characters that are valid for URLs
         pattern = re.compile(r'^[a-z0-9\-_\sąćęłńóśźż]+$')
         return bool(pattern.match(text))
 
-    def remove_polish_signs(self, text):
+    def remove_polish_signs(self, text: str) -> str:
         # Remove Polish signs from the text
         polish_signs = {'ą': 'a', 'ć': 'c', 'ę': 'e', 'ł': 'l', 'ń': 'n', 'ó': 'o', 'ś': 's', 'ź': 'z', 'ż': 'z'}
         for sign, replacement in polish_signs.items():
@@ -87,17 +87,17 @@ class SearchQueryTableModel(QAbstractTableModel):
 
 
 class SearchQueriesDialog(QDialog):
-    def __init__(self, config_path, parent=None):
+    def __init__(self, config_path: str, parent: Optional[Any] = None) -> None:
         super(SearchQueriesDialog, self).__init__(parent)
         self.setWindowTitle("Search Queries")
         self.setModal(True)
         self.config_path = config_path
-        self.config_data = {}  # To store the entire JSON data
+        self.config_data: dict = {}  # To store the entire JSON data
         self.init_ui()
         self.load_queries()
         self.adjust_size()
 
-    def init_ui(self):
+    def init_ui(self) -> None:
         layout = QVBoxLayout(self)
 
         self.table_model = SearchQueryTableModel([])
@@ -140,18 +140,18 @@ class SearchQueriesDialog(QDialog):
         layout.addLayout(button_layout)
         self.setLayout(layout)
 
-    def load_queries(self):
+    def load_queries(self) -> None:
         with open(self.config_path, 'r') as file:
             self.config_data = json.load(file)
         self.table_model.queries = self.config_data.get('search_queries', [])
         self.table_model.layoutChanged.emit()
 
-    def add_query(self):
+    def add_query(self) -> None:
         new_query = {"item_query": "", "city": "", "distance": ""}
         self.table_model.addQuery(new_query)
         self.adjust_size()
 
-    def delete_query(self):
+    def delete_query(self) -> None:
         selected_indexes = self.table_view.selectionModel().selectedRows()
         if not selected_indexes:
             QMessageBox.warning(self, "Warning", "No query selected for deletion.")
@@ -160,13 +160,13 @@ class SearchQueriesDialog(QDialog):
             self.table_model.removeQuery(index.row())
         self.adjust_size()
 
-    def accept(self):
+    def accept(self) -> None:
         self.config_data['search_queries'] = self.table_model.queries  # Update only the search_queries part
         with open(self.config_path, 'w') as file:
             json.dump(self.config_data, file, indent=4)
         super().accept()
 
-    def adjust_size(self):
+    def adjust_size(self) -> None:
         # Adjust the dialog size based on the number of rows in the table view
         row_height = self.table_view.verticalHeader().defaultSectionSize()
         num_rows = self.table_model.rowCount(QModelIndex())

@@ -119,27 +119,27 @@ class MainWindow(QMainWindow):
         self.setWindowTitle(title)
         self.show()
 
-    def show_progress_bar(self):
+    def show_progress_bar(self) -> None:
         self.progress_bar.setVisible(True)
 
-    def update_progress_bar(self, value):
+    def update_progress_bar(self, value: float) -> None:
         self.progress_bar.setValue(value)
 
-    def show_export_dialog(self):
+    def show_export_dialog(self) -> None:
         export_dialog = ExportDialog(self)
         if export_dialog.exec_() == QDialog.Accepted:
             export_format, save_path = export_dialog.get_export_details()
             if save_path:
                 self.controller.export_data(export_format.lower(), save_path)
 
-    def update_last_scrape_label(self):
+    def update_last_scrape_label(self) -> None:
         last_scrape_date = self.controller.scraper.last_scrape_date
         if last_scrape_date:
             self.last_scrape_label.setText(f"Last Scrape: {last_scrape_date.strftime('%Y-%m-%d %H:%M:%S')}")
         else:
             self.last_scrape_label.setText("Last Scrape: Never")
 
-    def show_data(self):
+    def show_data(self) -> None:
         if not self.controller.scraper.data_frames:
             return
 
@@ -189,17 +189,17 @@ class MainWindow(QMainWindow):
         self.view_search_queries_button.setVisible(False)
         self.update_button_layout_to_horizontal()
 
-    def show_next(self):
+    def show_next(self) -> None:
         current_index = self.stacked_layout.currentIndex()
         if current_index < self.stacked_layout.count() - 1:
             self.stacked_layout.setCurrentIndex(current_index + 1)
 
-    def show_previous(self):
+    def show_previous(self) -> None:
         current_index = self.stacked_layout.currentIndex()
         if current_index > 0:
             self.stacked_layout.setCurrentIndex(current_index - 1)
 
-    def update_button_layout_to_horizontal(self):
+    def update_button_layout_to_horizontal(self) -> None:
         # Clear current button layout
         while self.button_layout.count():
             button = self.button_layout.takeAt(0).widget()
