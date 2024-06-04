@@ -24,6 +24,11 @@
             "item_query": "rower gorski",
             "city": "warszawa",
             "distance": ""
+        },
+        {
+            "item_query": "rower zagan",
+            "city": "",
+            "distance": ""
         }
     ],
     "output": {
@@ -36,7 +41,7 @@
     },
     "gui_config": {
         "app_title": "olx-scrapper",
-        "fontsize": 10,
+        "fontsize": 12,
         "width": 1400,
         "height": 900
     }

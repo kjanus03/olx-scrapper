@@ -1,14 +1,18 @@
-from PyQt5.QtWidgets import QDialog, QVBoxLayout, QHBoxLayout, QLabel, QComboBox, QLineEdit, QPushButton, QFileDialog
+from typing import Optional
+
+from PyQt5.QtWidgets import QDialog, QVBoxLayout, QHBoxLayout, QLabel, QComboBox, QLineEdit, QPushButton, QFileDialog, \
+    QWidget
 from src.Exporting.ExportManager import ExportFormat
 
+
 class ExportDialog(QDialog):
-    def __init__(self, parent=None):
+    def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
         self.setWindowTitle("Export Data")
         self.setModal(True)
         self.init_ui()
 
-    def init_ui(self):
+    def init_ui(self) -> None:
         layout = QVBoxLayout(self)
 
         # Format selection
@@ -43,11 +47,11 @@ class ExportDialog(QDialog):
 
         self.setLayout(layout)
 
-    def browse_save_path(self):
+    def browse_save_path(self) -> None:
         options = QFileDialog.Options()
         directory = QFileDialog.getExistingDirectory(self, "Select Directory", options=options)
         if directory:
             self.path_line_edit.setText(directory)
 
-    def get_export_details(self):
+    def get_export_details(self) -> tuple[str, str]:
         return self.format_combo.currentText(), self.path_line_edit.text()

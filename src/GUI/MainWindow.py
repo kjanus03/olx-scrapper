@@ -170,6 +170,10 @@ class MainWindow(QMainWindow):
             table_view.setItemDelegateForColumn(5, click_delegate)
             table_view.resizeColumnsToContents()
             table_view.resizeRowsToContents()
+
+            table_view.setShowGrid(True)
+            table_view.setAlternatingRowColors(True)
+            table_view.setEditTriggers(QTableView.NoEditTriggers)
             container_layout.addWidget(table_view)
 
             self.stacked_layout.addWidget(container_widget)

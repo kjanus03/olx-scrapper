@@ -10,11 +10,12 @@ from src.Resources.utils import load_config
 from PyQt5.QtWidgets import QApplication
 
 
-def create_app(app_title: str, width: int, height: int, fontsize:int, controller: Controller) -> None:
+def create_app(app_title: str, width: int, height: int, fontsize: int, controller: Controller) -> None:
     app = QApplication(sys.argv)
 
-    # Set the global font size to 12
+    # import montserrat font from file
     font = QFont()
+    font.setFamily("Montserrat")
     font.setPointSize(fontsize)
     app.setFont(font)
     app.setStyle("Windows")
