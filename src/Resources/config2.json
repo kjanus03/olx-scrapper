@@ -3,7 +3,7 @@
         {
             "item_query": "rower gravel",
             "city": "zagan",
-            "distance": "40"
+            "distance": "10"
         },
         {
             "item_query": "rower trekkingowy",
@@ -43,6 +43,7 @@
         "app_title": "olx-scrapper",
         "fontsize": 12,
         "width": 1400,
-        "height": 900
+        "height": 900,
+        "page_limit": 3
     }
 }

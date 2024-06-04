@@ -23,8 +23,7 @@ class Controller(QObject):
     def scrape_data(self) -> None:
         # Ensure progress bar is visible and reset to 0
         self.progress_updated.emit(0)
-        result = self.loop.run_until_complete(self.scrape_and_update_progress())
-        print(result)
+        self.loop.run_until_complete(self.scrape_and_update_progress())
         self.progress_updated.emit(100)  # Ensure progress is 100% when done
 
     async def scrape_and_update_progress(self) -> dict[str, pd.DataFrame]:

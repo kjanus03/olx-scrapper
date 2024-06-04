@@ -26,12 +26,13 @@ def create_app(app_title: str, width: int, height: int, fontsize: int, controlle
 
 def main() -> None:
     config = load_config('Resources/config2.json')
+    gui_config = config['gui_config']
 
     search_items = [URLBuilder(**query) for query in config['search_queries']]
-    scraper_instance = Scraper(search_items)
+    scraper_instance = Scraper(search_items, gui_config['page_limit'])
 
     # Create the main window
-    gui_config = config['gui_config']
+
     controller = Controller(scraper_instance)
     create_app(gui_config['app_title'], gui_config['width'], gui_config['height'], gui_config['fontsize'], controller)
 

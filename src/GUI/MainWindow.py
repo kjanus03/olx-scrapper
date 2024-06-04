@@ -1,10 +1,12 @@
 from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QPushButton, QVBoxLayout, QWidget, QStackedLayout, QHBoxLayout, \
-    QLabel, QDialog, QTableView, QProgressBar, QMenu, QToolButton
-from PyQt5.QtGui import QFont, QIcon
+    QLabel, QDialog, QTableView, QProgressBar, QMenu, QToolButton, QMessageBox
+from PyQt5.QtGui import QFont, QIcon, QPixmap
+from PyQt5.QtCore import Qt, QPoint, QModelIndex
 from src.GUI.DataFrameModel import DataFrameModel
 from src.GUI.Controller import Controller
 from src.GUI.ClickableDelegate import ClickableDelegate
 from src.GUI.ExportDialog import ExportDialog
+import requests
 
 
 class MainWindow(QMainWindow):
@@ -174,6 +176,11 @@ class MainWindow(QMainWindow):
             table_view.setShowGrid(True)
             table_view.setAlternatingRowColors(True)
             table_view.setEditTriggers(QTableView.NoEditTriggers)
+
+            # Set up the context menu
+            table_view.setContextMenuPolicy(Qt.CustomContextMenu)
+            table_view.customContextMenuRequested.connect(self.show_context_menu)
+
             container_layout.addWidget(table_view)
 
             self.stacked_layout.addWidget(container_widget)
@@ -215,3 +222,39 @@ class MainWindow(QMainWindow):
         horizontal_layout.addWidget(self.next_button)
         horizontal_layout.addWidget(self.menu_button)
         self.button_layout.addLayout(horizontal_layout)
+
+    def show_context_menu(self, position: QPoint) -> None:
+        indexes = self.sender().selectedIndexes()
+        if indexes:
+            context_menu = QMenu(self)
+            show_image_action = QAction('Show Image', self)
+            show_image_action.triggered.connect(lambda: self.show_image(indexes[0]))
+            context_menu.addAction(show_image_action)
+            context_menu.exec_(self.sender().viewport().mapToGlobal(position))
+
+    def show_image(self, index: QModelIndex) -> None:
+        """Show the image from the selected row in a dialog."""
+        image_url = index.sibling(index.row(), 5).data()
+
+        if not image_url:
+            QMessageBox.warning(self, "No Image", "No image URL found in the selected row.")
+            return
+
+        try:
+            response = requests.get(image_url)
+            response.raise_for_status()
+            image_data = response.content
+
+            pixmap = QPixmap()
+            pixmap.loadFromData(image_data)
+
+            image_dialog = QDialog(self)
+            image_dialog.setWindowTitle("Image")
+            image_label = QLabel(image_dialog)
+            image_label.setPixmap(pixmap)
+            image_dialog.setLayout(QVBoxLayout())
+            image_dialog.layout().addWidget(image_label)
+            image_dialog.exec_()
+
+        except Exception as e:
+            QMessageBox.critical(self, "Error", f"Could not load image: {e}")
