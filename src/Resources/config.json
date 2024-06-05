@@ -31,8 +31,9 @@
             "distance": ""
         }
     ],
-    "output": {
+    "output_config": {
         "filename": "scraped_data",
+        "format": "csv",
         "format_column_widths": true,
         "hyperlinked_columns": [
             "item_url",
@@ -41,9 +42,10 @@
     },
     "gui_config": {
         "app_title": "olx-scrapper",
-        "fontsize": 12,
-        "width": 1400,
+        "fontsize": 14,
+        "width": 1600,
         "height": 900,
-        "page_limit": 2
+        "page_limit": 2,
+        "dark_mode": true
     }
 }

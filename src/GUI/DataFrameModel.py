@@ -101,7 +101,7 @@ class DataFrameModel(QtCore.QAbstractTableModel):
                  DataFrameModel.ValueRole: b'value'}
         return roles
 
-    def removeRow(self, row: int, parent: QModelIndex = QModelIndex()) -> bool:
+    def removeRow(self, row: int, parent: Optional[QModelIndex] = QModelIndex()) -> bool:
         if 0 <= row < self.rowCount():
             self.beginRemoveRows(parent, row, row)
             self._dataframe.drop(self._dataframe.index[row], inplace=True)

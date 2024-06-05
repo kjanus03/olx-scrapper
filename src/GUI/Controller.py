@@ -11,14 +11,14 @@ from src.GUI.SearchQueriesDialog import SearchQueriesDialog
 
 
 class Controller(QObject):
-    progress_updated = pyqtSignal(int)
+    progress_updated = pyqtSignal(int) # Signa to notify that progress updated
     scraping_done = pyqtSignal()  # Signal to notify when scraping is done
 
-    def __init__(self, scraper: Scraper) -> None:
+    def __init__(self, scraper: Scraper, output_config: dict[str]) -> None:
         super().__init__()
         self.scraper = scraper
-        self.export_manager = None
         self.loop = asyncio.get_event_loop()
+        self.output_config = output_config
 
     @pyqtSlot()
     def scrape_data(self) -> None:
@@ -34,9 +34,10 @@ class Controller(QObject):
 
     def export_data(self, format: str, directory: str) -> None:
         export_format = ExportFormat[format.upper()]
-        output_config = {'filename': str(Path(directory) / 'scraped_data'), 'hyperlinked_columns': ['item_url'],
-                         'format_column_widths': True}
-        export_manager = ExportManager(export_format, output_config, self.scraper.data_frames)
+        if not self.output_config['filename'].startswith(str(Path(directory))):
+            self.output_config['filename'] = str(Path(directory) / self.output_config['filename'])
+
+        export_manager = ExportManager(export_format, self.output_config, self.scraper.data_frames)
         export_manager.export_data()
 
     def view_search_queries(self) -> None:
