@@ -64,8 +64,8 @@ The Resources directory contains essential configuration files and utility scrip
 ### Manage Search Queries
 Click on the 'View Search Queries' button to edit the scrape queries.
 
-![image](https://github.com/kjanus03/olx-scrapper/assets/61358355/1c3d6de5-d9d9-4389-9063-1e909daa5477)
-![image](https://github.com/kjanus03/olx-scrapper/assets/61358355/c8e4fac6-5cef-48f4-9c3c-7354483e6092)
+![image](https://github.com/kjanus03/olx-scrapper/assets/61358355/0280c5ab-eec9-45d8-be66-664ef7b04485)
+![image](https://github.com/kjanus03/olx-scrapper/assets/61358355/c6ea207b-7cb4-439c-8c8d-273441c08eea)
 
 ### Scrape Data
 Click on the 'Scrape Data' button to start scraping data based on the search queries.
