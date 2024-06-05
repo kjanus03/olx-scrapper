@@ -137,10 +137,6 @@ olx-scrapper
 - PyQt5_sip==12.13.0
 - Requests==2.32.3
 
-
-## Documentation
-
-The documentation for the project is available at the following links:
 ## Documentation
 
 The documentation for the project is available at the following links:
