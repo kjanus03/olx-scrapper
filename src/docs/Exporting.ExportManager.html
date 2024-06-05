@@ -1,0 +1,112 @@
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="Exporting.html"><font color="#ffffff">Exporting</font></a>.ExportManager</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cexporting%5Cexportmanager.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\exporting\exportmanager.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="dicttoxml.html">dicttoxml</a><br>
+</td><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Exporting.ExportManager.html#ExportManager">ExportManager</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="enum.html#Enum">enum.Enum</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Exporting.ExportManager.html#ExportFormat">ExportFormat</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExportFormat">class <strong>ExportFormat</strong></a>(<a href="enum.html#Enum">enum.Enum</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ExportFormat">ExportFormat</a>(value,&nbsp;names=None,&nbsp;*,&nbsp;module=None,&nbsp;qualname=None,&nbsp;type=None,&nbsp;start=1)<br>
+&nbsp;<br>
+<a href="enum.html#Enum">Enum</a>&nbsp;class&nbsp;for&nbsp;supported&nbsp;export&nbsp;formats.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Exporting.ExportManager.html#ExportFormat">ExportFormat</a></dd>
+<dd><a href="enum.html#Enum">enum.Enum</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>CSV</strong> = &lt;ExportFormat.CSV: 'csv'&gt;</dl>
+
+<dl><dt><strong>EXCEL</strong> = &lt;ExportFormat.EXCEL: 'excel'&gt;</dl>
+
+<dl><dt><strong>JSON</strong> = &lt;ExportFormat.JSON: 'json'&gt;</dl>
+
+<dl><dt><strong>PDF</strong> = &lt;ExportFormat.PDF: 'pdf'&gt;</dl>
+
+<dl><dt><strong>XML</strong> = &lt;ExportFormat.XML: 'xml'&gt;</dl>
+
+<hr>
+Data descriptors inherited from <a href="enum.html#Enum">enum.Enum</a>:<br>
+<dl><dt><strong>name</strong></dt>
+<dd><tt>The&nbsp;name&nbsp;of&nbsp;the&nbsp;Enum&nbsp;member.</tt></dd>
+</dl>
+<dl><dt><strong>value</strong></dt>
+<dd><tt>The&nbsp;value&nbsp;of&nbsp;the&nbsp;Enum&nbsp;member.</tt></dd>
+</dl>
+<hr>
+Readonly properties inherited from <a href="enum.html#EnumMeta">enum.EnumMeta</a>:<br>
+<dl><dt><strong>__members__</strong></dt>
+<dd><tt>Returns&nbsp;a&nbsp;mapping&nbsp;of&nbsp;member&nbsp;name-&gt;value.<br>
+&nbsp;<br>
+This&nbsp;mapping&nbsp;lists&nbsp;all&nbsp;enum&nbsp;members,&nbsp;including&nbsp;aliases.&nbsp;Note&nbsp;that&nbsp;this<br>
+is&nbsp;a&nbsp;read-only&nbsp;view&nbsp;of&nbsp;the&nbsp;internal&nbsp;mapping.</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExportManager">class <strong>ExportManager</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ExportManager">ExportManager</a>(export_format:&nbsp;Exporting.<a href="#ExportManager">ExportManager</a>.<a href="#ExportFormat">ExportFormat</a>,&nbsp;output_config:&nbsp;dict,&nbsp;data_frames:&nbsp;dict[str,&nbsp;pandas.core.frame.DataFrame])<br>
+&nbsp;<br>
+Class&nbsp;for&nbsp;exporting&nbsp;data&nbsp;to&nbsp;various&nbsp;formats.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ExportManager-__init__"><strong>__init__</strong></a>(self, export_format: Exporting.ExportManager.ExportFormat, output_config: dict, data_frames: dict[str, pandas.core.frame.DataFrame])</dt><dd><tt>Initializes&nbsp;the&nbsp;<a href="#ExportManager">ExportManager</a>&nbsp;with&nbsp;the&nbsp;specified&nbsp;export&nbsp;format,&nbsp;output&nbsp;configuration,&nbsp;and&nbsp;data&nbsp;frames.<br>
+:param&nbsp;export_format:&nbsp;The&nbsp;format&nbsp;to&nbsp;export&nbsp;the&nbsp;data&nbsp;to<br>
+:param&nbsp;output_config:&nbsp;The&nbsp;configuration&nbsp;for&nbsp;the&nbsp;output&nbsp;file<br>
+:param&nbsp;data_frames:&nbsp;The&nbsp;data&nbsp;frames&nbsp;to&nbsp;export</tt></dd></dl>
+
+<dl><dt><a name="ExportManager-export_data"><strong>export_data</strong></a>(self) -&gt; None</dt><dd><tt>Exports&nbsp;the&nbsp;data&nbsp;to&nbsp;the&nbsp;specified&nbsp;format.<br>
+:return:</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>

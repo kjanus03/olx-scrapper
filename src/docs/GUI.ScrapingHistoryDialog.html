@@ -1,0 +1,819 @@
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="GUI.html"><font color="#ffffff">GUI</font></a>.ScrapingHistoryDialog</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cgui%5Cscrapinghistorydialog.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\gui\scrapinghistorydialog.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>(<a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="GUI.ScrapingHistoryDialog.html#ScrapingHistoryDialog">ScrapingHistoryDialog</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ScrapingHistoryDialog">class <strong>ScrapingHistoryDialog</strong></a>(<a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ScrapingHistoryDialog">ScrapingHistoryDialog</a>(history_path:&nbsp;str,&nbsp;parent=None)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Dialog&nbsp;to&nbsp;display&nbsp;the&nbsp;scraping&nbsp;history&nbsp;of&nbsp;the&nbsp;application.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.ScrapingHistoryDialog.html#ScrapingHistoryDialog">ScrapingHistoryDialog</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ScrapingHistoryDialog-__init__"><strong>__init__</strong></a>(self, history_path: str, parent=None) -&gt; None</dt><dd><tt>:param&nbsp;history_path:&nbsp;Path&nbsp;to&nbsp;the&nbsp;file&nbsp;containing&nbsp;the&nbsp;scraping&nbsp;history.<br>
+:param&nbsp;parent:&nbsp;Parent&nbsp;widget.</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-apply_stylesheet"><strong>apply_stylesheet</strong></a>(self)</dt><dd><tt>Apply&nbsp;the&nbsp;stylesheet&nbsp;to&nbsp;the&nbsp;dialog.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-init_ui"><strong>init_ui</strong></a>(self) -&gt; None</dt><dd><tt>Initialize&nbsp;the&nbsp;UI.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-load_history"><strong>load_history</strong></a>(self) -&gt; list[str]</dt><dd><tt>Load&nbsp;the&nbsp;scraping&nbsp;history&nbsp;from&nbsp;the&nbsp;file.<br>
+:return:</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>:<br>
+<dl><dt><a name="ScrapingHistoryDialog-accept"><strong>accept</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-accept">accept</a>(self)</tt></dd></dl>
+
+<strong>accepted</strong> = &lt;unbound PYQT_SIGNAL accepted()&gt;
+<dl><dt><a name="ScrapingHistoryDialog-actionEvent"><strong>actionEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-changeEvent"><strong>changeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-closeEvent"><strong>closeEvent</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-closeEvent">closeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QCloseEvent])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-contextMenuEvent"><strong>contextMenuEvent</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-contextMenuEvent">contextMenuEvent</a>(self,&nbsp;a0:&nbsp;Optional[QContextMenuEvent])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-create"><strong>create</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-destroy"><strong>destroy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-done"><strong>done</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-done">done</a>(self,&nbsp;a0:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-dragEnterEvent"><strong>dragEnterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-dragLeaveEvent"><strong>dragLeaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-dragMoveEvent"><strong>dragMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-dropEvent"><strong>dropEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-enterEvent"><strong>enterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-event"><strong>event</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-exec"><strong>exec</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-exec">exec</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-exec_"><strong>exec_</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-exec_">exec_</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<strong>finished</strong> = &lt;unbound PYQT_SIGNAL finished(int)&gt;
+<dl><dt><a name="ScrapingHistoryDialog-focusInEvent"><strong>focusInEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-focusNextChild"><strong>focusNextChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-focusNextPrevChild"><strong>focusNextPrevChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-focusOutEvent"><strong>focusOutEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-focusPreviousChild"><strong>focusPreviousChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-hideEvent"><strong>hideEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-initPainter"><strong>initPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-inputMethodEvent"><strong>inputMethodEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isSizeGripEnabled"><strong>isSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isSizeGripEnabled">isSizeGripEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-keyPressEvent"><strong>keyPressEvent</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-keyPressEvent">keyPressEvent</a>(self,&nbsp;a0:&nbsp;Optional[QKeyEvent])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-keyReleaseEvent"><strong>keyReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-leaveEvent"><strong>leaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-metric"><strong>metric</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-minimumSizeHint"><strong>minimumSizeHint</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-minimumSizeHint">minimumSizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mouseDoubleClickEvent"><strong>mouseDoubleClickEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mouseMoveEvent"><strong>mouseMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mousePressEvent"><strong>mousePressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mouseReleaseEvent"><strong>mouseReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-moveEvent"><strong>moveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-nativeEvent"><strong>nativeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-open"><strong>open</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-open">open</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-paintEvent"><strong>paintEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-reject"><strong>reject</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-reject">reject</a>(self)</tt></dd></dl>
+
+<strong>rejected</strong> = &lt;unbound PYQT_SIGNAL rejected()&gt;
+<dl><dt><a name="ScrapingHistoryDialog-resizeEvent"><strong>resizeEvent</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-resizeEvent">resizeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QResizeEvent])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-result"><strong>result</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-result">result</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setModal"><strong>setModal</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setModal">setModal</a>(self,&nbsp;modal:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setResult"><strong>setResult</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setResult">setResult</a>(self,&nbsp;r:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setSizeGripEnabled"><strong>setSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setSizeGripEnabled">setSizeGripEnabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setVisible"><strong>setVisible</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setVisible">setVisible</a>(self,&nbsp;visible:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-sharedPainter"><strong>sharedPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-showEvent"><strong>showEvent</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-showEvent">showEvent</a>(self,&nbsp;a0:&nbsp;Optional[QShowEvent])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-sizeHint"><strong>sizeHint</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-sizeHint">sizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-tabletEvent"><strong>tabletEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-updateMicroFocus"><strong>updateMicroFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-wheelEvent"><strong>wheelEvent</strong></a>(...)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>:<br>
+<dl><dt><strong>Accepted</strong> = 1</dl>
+
+<dl><dt><strong>DialogCode</strong> = &lt;class 'PyQt5.QtWidgets.QDialog.DialogCode'&gt;</dl>
+
+<dl><dt><strong>Rejected</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><a name="ScrapingHistoryDialog-acceptDrops"><strong>acceptDrops</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-acceptDrops">acceptDrops</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-accessibleDescription"><strong>accessibleDescription</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-accessibleDescription">accessibleDescription</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-accessibleName"><strong>accessibleName</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-accessibleName">accessibleName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-actions"><strong>actions</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-actions">actions</a>(self)&nbsp;-&gt;&nbsp;List[QAction]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-activateWindow"><strong>activateWindow</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-activateWindow">activateWindow</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-addAction"><strong>addAction</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-addAction">addAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-addActions"><strong>addActions</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-addActions">addActions</a>(self,&nbsp;actions:&nbsp;Iterable[QAction])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-adjustSize"><strong>adjustSize</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-adjustSize">adjustSize</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-autoFillBackground"><strong>autoFillBackground</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-autoFillBackground">autoFillBackground</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-backgroundRole"><strong>backgroundRole</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-backgroundRole">backgroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-baseSize"><strong>baseSize</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-baseSize">baseSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-childAt"><strong>childAt</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-childAt">childAt</a>(self,&nbsp;p:&nbsp;QPoint)&nbsp;-&gt;&nbsp;Optional[QWidget]<br>
+<a href="#ScrapingHistoryDialog-childAt">childAt</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-childrenRect"><strong>childrenRect</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-childrenRect">childrenRect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-childrenRegion"><strong>childrenRegion</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-childrenRegion">childrenRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-clearFocus"><strong>clearFocus</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-clearFocus">clearFocus</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-clearMask"><strong>clearMask</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-clearMask">clearMask</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-close"><strong>close</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-close">close</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-contentsMargins"><strong>contentsMargins</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-contentsMargins">contentsMargins</a>(self)&nbsp;-&gt;&nbsp;QMargins</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-contentsRect"><strong>contentsRect</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-contentsRect">contentsRect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-contextMenuPolicy"><strong>contextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-contextMenuPolicy">contextMenuPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.ContextMenuPolicy</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-createWindowContainer"><strong>createWindowContainer</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-createWindowContainer">createWindowContainer</a>(window:&nbsp;Optional[QWindow],&nbsp;parent:&nbsp;Optional[QWidget]&nbsp;=&nbsp;None,&nbsp;flags:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType]&nbsp;=&nbsp;0)&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-cursor"><strong>cursor</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-cursor">cursor</a>(self)&nbsp;-&gt;&nbsp;QCursor</tt></dd></dl>
+
+<strong>customContextMenuRequested</strong> = &lt;unbound PYQT_SIGNAL customContextMenuRequested(QPoint)&gt;
+<dl><dt><a name="ScrapingHistoryDialog-devType"><strong>devType</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-devType">devType</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-effectiveWinId"><strong>effectiveWinId</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-effectiveWinId">effectiveWinId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-ensurePolished"><strong>ensurePolished</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-ensurePolished">ensurePolished</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-find"><strong>find</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-find">find</a>(a0:&nbsp;PyQt5.sip.voidptr)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-focusPolicy"><strong>focusPolicy</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-focusPolicy">focusPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.FocusPolicy</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-focusProxy"><strong>focusProxy</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-focusProxy">focusProxy</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-focusWidget"><strong>focusWidget</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-focusWidget">focusWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-font"><strong>font</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-font">font</a>(self)&nbsp;-&gt;&nbsp;QFont</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-fontInfo"><strong>fontInfo</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-fontInfo">fontInfo</a>(self)&nbsp;-&gt;&nbsp;QFontInfo</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-fontMetrics"><strong>fontMetrics</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-fontMetrics">fontMetrics</a>(self)&nbsp;-&gt;&nbsp;QFontMetrics</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-foregroundRole"><strong>foregroundRole</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-foregroundRole">foregroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-frameGeometry"><strong>frameGeometry</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-frameGeometry">frameGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-frameSize"><strong>frameSize</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-frameSize">frameSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-geometry"><strong>geometry</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-geometry">geometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-getContentsMargins"><strong>getContentsMargins</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-getContentsMargins">getContentsMargins</a>(self)&nbsp;-&gt;&nbsp;(Optional[int],&nbsp;Optional[int],&nbsp;Optional[int],&nbsp;Optional[int])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-grab"><strong>grab</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-grab">grab</a>(self,&nbsp;rectangle:&nbsp;QRect&nbsp;=&nbsp;QRect(QPoint(0,&nbsp;0),&nbsp;QSize(-1,&nbsp;-1)))&nbsp;-&gt;&nbsp;QPixmap</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-grabGesture"><strong>grabGesture</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-grabGesture">grabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType,&nbsp;flags:&nbsp;Union[Qt.GestureFlags,&nbsp;Qt.GestureFlag]&nbsp;=&nbsp;Qt.GestureFlags())</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-grabKeyboard"><strong>grabKeyboard</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-grabKeyboard">grabKeyboard</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-grabMouse"><strong>grabMouse</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-grabMouse">grabMouse</a>(self)<br>
+<a href="#ScrapingHistoryDialog-grabMouse">grabMouse</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-grabShortcut"><strong>grabShortcut</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-grabShortcut">grabShortcut</a>(self,&nbsp;key:&nbsp;Union[QKeySequence,&nbsp;QKeySequence.StandardKey,&nbsp;Optional[str],&nbsp;int],&nbsp;context:&nbsp;Qt.ShortcutContext&nbsp;=&nbsp;Qt.WindowShortcut)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-graphicsEffect"><strong>graphicsEffect</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-graphicsEffect">graphicsEffect</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsEffect]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-graphicsProxyWidget"><strong>graphicsProxyWidget</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-graphicsProxyWidget">graphicsProxyWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsProxyWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-hasFocus"><strong>hasFocus</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-hasFocus">hasFocus</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-hasHeightForWidth"><strong>hasHeightForWidth</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-hasHeightForWidth">hasHeightForWidth</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-hasMouseTracking"><strong>hasMouseTracking</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-hasMouseTracking">hasMouseTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-hasTabletTracking"><strong>hasTabletTracking</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-hasTabletTracking">hasTabletTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-height"><strong>height</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-height">height</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-heightForWidth"><strong>heightForWidth</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-heightForWidth">heightForWidth</a>(self,&nbsp;a0:&nbsp;int)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-hide"><strong>hide</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-hide">hide</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-inputMethodHints"><strong>inputMethodHints</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-inputMethodHints">inputMethodHints</a>(self)&nbsp;-&gt;&nbsp;Qt.InputMethodHints</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-inputMethodQuery"><strong>inputMethodQuery</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-inputMethodQuery">inputMethodQuery</a>(self,&nbsp;a0:&nbsp;Qt.InputMethodQuery)&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-insertAction"><strong>insertAction</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-insertAction">insertAction</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-insertActions"><strong>insertActions</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-insertActions">insertActions</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;actions:&nbsp;Iterable[QAction])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isActiveWindow"><strong>isActiveWindow</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isActiveWindow">isActiveWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isAncestorOf"><strong>isAncestorOf</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isAncestorOf">isAncestorOf</a>(self,&nbsp;child:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isEnabled"><strong>isEnabled</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isEnabled">isEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isEnabledTo"><strong>isEnabledTo</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isEnabledTo">isEnabledTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isFullScreen"><strong>isFullScreen</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isFullScreen">isFullScreen</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isHidden"><strong>isHidden</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isHidden">isHidden</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isLeftToRight"><strong>isLeftToRight</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isLeftToRight">isLeftToRight</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isMaximized"><strong>isMaximized</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isMaximized">isMaximized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isMinimized"><strong>isMinimized</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isMinimized">isMinimized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isModal"><strong>isModal</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isModal">isModal</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isRightToLeft"><strong>isRightToLeft</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isRightToLeft">isRightToLeft</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isVisible"><strong>isVisible</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isVisible">isVisible</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isVisibleTo"><strong>isVisibleTo</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isVisibleTo">isVisibleTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isWindow"><strong>isWindow</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isWindow">isWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isWindowModified"><strong>isWindowModified</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isWindowModified">isWindowModified</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-keyboardGrabber"><strong>keyboardGrabber</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-keyboardGrabber">keyboardGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-layout"><strong>layout</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-layout">layout</a>(self)&nbsp;-&gt;&nbsp;Optional[QLayout]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-layoutDirection"><strong>layoutDirection</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-layoutDirection">layoutDirection</a>(self)&nbsp;-&gt;&nbsp;Qt.LayoutDirection</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-locale"><strong>locale</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-locale">locale</a>(self)&nbsp;-&gt;&nbsp;QLocale</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-lower"><strong>lower</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-lower">lower</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mapFrom"><strong>mapFrom</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-mapFrom">mapFrom</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mapFromGlobal"><strong>mapFromGlobal</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-mapFromGlobal">mapFromGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mapFromParent"><strong>mapFromParent</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-mapFromParent">mapFromParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mapTo"><strong>mapTo</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-mapTo">mapTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mapToGlobal"><strong>mapToGlobal</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-mapToGlobal">mapToGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mapToParent"><strong>mapToParent</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-mapToParent">mapToParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mask"><strong>mask</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-mask">mask</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-maximumHeight"><strong>maximumHeight</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-maximumHeight">maximumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-maximumSize"><strong>maximumSize</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-maximumSize">maximumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-maximumWidth"><strong>maximumWidth</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-maximumWidth">maximumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-minimumHeight"><strong>minimumHeight</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-minimumHeight">minimumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-minimumSize"><strong>minimumSize</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-minimumSize">minimumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-minimumWidth"><strong>minimumWidth</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-minimumWidth">minimumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-mouseGrabber"><strong>mouseGrabber</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-mouseGrabber">mouseGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-move"><strong>move</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-move">move</a>(self,&nbsp;a0:&nbsp;QPoint)<br>
+<a href="#ScrapingHistoryDialog-move">move</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-nativeParentWidget"><strong>nativeParentWidget</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-nativeParentWidget">nativeParentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-nextInFocusChain"><strong>nextInFocusChain</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-nextInFocusChain">nextInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-normalGeometry"><strong>normalGeometry</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-normalGeometry">normalGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-overrideWindowFlags"><strong>overrideWindowFlags</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-overrideWindowFlags">overrideWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-overrideWindowState"><strong>overrideWindowState</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-overrideWindowState">overrideWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-paintEngine"><strong>paintEngine</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-paintEngine">paintEngine</a>(self)&nbsp;-&gt;&nbsp;Optional[QPaintEngine]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-palette"><strong>palette</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-palette">palette</a>(self)&nbsp;-&gt;&nbsp;QPalette</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-parentWidget"><strong>parentWidget</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-parentWidget">parentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-pos"><strong>pos</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-pos">pos</a>(self)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-previousInFocusChain"><strong>previousInFocusChain</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-previousInFocusChain">previousInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-raise_"><strong>raise_</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-raise_">raise_</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-rect"><strong>rect</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-rect">rect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-releaseKeyboard"><strong>releaseKeyboard</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-releaseKeyboard">releaseKeyboard</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-releaseMouse"><strong>releaseMouse</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-releaseMouse">releaseMouse</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-releaseShortcut"><strong>releaseShortcut</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-releaseShortcut">releaseShortcut</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-removeAction"><strong>removeAction</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-removeAction">removeAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-render"><strong>render</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-render">render</a>(self,&nbsp;target:&nbsp;Optional[QPaintDevice],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#ScrapingHistoryDialog-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))<br>
+<a href="#ScrapingHistoryDialog-render">render</a>(self,&nbsp;painter:&nbsp;Optional[QPainter],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#ScrapingHistoryDialog-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-repaint"><strong>repaint</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-repaint">repaint</a>(self)<br>
+<a href="#ScrapingHistoryDialog-repaint">repaint</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#ScrapingHistoryDialog-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#ScrapingHistoryDialog-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRegion)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-resize"><strong>resize</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-resize">resize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#ScrapingHistoryDialog-resize">resize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-restoreGeometry"><strong>restoreGeometry</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-restoreGeometry">restoreGeometry</a>(self,&nbsp;geometry:&nbsp;Union[QByteArray,&nbsp;bytes,&nbsp;bytearray])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-saveGeometry"><strong>saveGeometry</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-saveGeometry">saveGeometry</a>(self)&nbsp;-&gt;&nbsp;QByteArray</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-screen"><strong>screen</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-screen">screen</a>(self)&nbsp;-&gt;&nbsp;Optional[QScreen]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-scroll"><strong>scroll</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int)<br>
+<a href="#ScrapingHistoryDialog-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int,&nbsp;a2:&nbsp;QRect)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setAcceptDrops"><strong>setAcceptDrops</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setAcceptDrops">setAcceptDrops</a>(self,&nbsp;on:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setAccessibleDescription"><strong>setAccessibleDescription</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setAccessibleDescription">setAccessibleDescription</a>(self,&nbsp;description:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setAccessibleName"><strong>setAccessibleName</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setAccessibleName">setAccessibleName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setAttribute"><strong>setAttribute</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setAttribute">setAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setAutoFillBackground"><strong>setAutoFillBackground</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setAutoFillBackground">setAutoFillBackground</a>(self,&nbsp;enabled:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setBackgroundRole"><strong>setBackgroundRole</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setBackgroundRole">setBackgroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setBaseSize"><strong>setBaseSize</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setBaseSize">setBaseSize</a>(self,&nbsp;basew:&nbsp;int,&nbsp;baseh:&nbsp;int)<br>
+<a href="#ScrapingHistoryDialog-setBaseSize">setBaseSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setContentsMargins"><strong>setContentsMargins</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setContentsMargins">setContentsMargins</a>(self,&nbsp;left:&nbsp;int,&nbsp;top:&nbsp;int,&nbsp;right:&nbsp;int,&nbsp;bottom:&nbsp;int)<br>
+<a href="#ScrapingHistoryDialog-setContentsMargins">setContentsMargins</a>(self,&nbsp;margins:&nbsp;QMargins)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setContextMenuPolicy"><strong>setContextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setContextMenuPolicy">setContextMenuPolicy</a>(self,&nbsp;policy:&nbsp;Qt.ContextMenuPolicy)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setCursor"><strong>setCursor</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setCursor">setCursor</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setDisabled"><strong>setDisabled</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setDisabled">setDisabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setEnabled"><strong>setEnabled</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setEnabled">setEnabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setFixedHeight"><strong>setFixedHeight</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setFixedHeight">setFixedHeight</a>(self,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setFixedSize"><strong>setFixedSize</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setFixedSize">setFixedSize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#ScrapingHistoryDialog-setFixedSize">setFixedSize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setFixedWidth"><strong>setFixedWidth</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setFixedWidth">setFixedWidth</a>(self,&nbsp;w:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setFocus"><strong>setFocus</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setFocus">setFocus</a>(self)<br>
+<a href="#ScrapingHistoryDialog-setFocus">setFocus</a>(self,&nbsp;reason:&nbsp;Qt.FocusReason)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setFocusPolicy"><strong>setFocusPolicy</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setFocusPolicy">setFocusPolicy</a>(self,&nbsp;policy:&nbsp;Qt.FocusPolicy)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setFocusProxy"><strong>setFocusProxy</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setFocusProxy">setFocusProxy</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setFont"><strong>setFont</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setFont">setFont</a>(self,&nbsp;a0:&nbsp;QFont)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setForegroundRole"><strong>setForegroundRole</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setForegroundRole">setForegroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setGeometry"><strong>setGeometry</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setGeometry">setGeometry</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#ScrapingHistoryDialog-setGeometry">setGeometry</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setGraphicsEffect"><strong>setGraphicsEffect</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setGraphicsEffect">setGraphicsEffect</a>(self,&nbsp;effect:&nbsp;Optional[QGraphicsEffect])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setHidden"><strong>setHidden</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setHidden">setHidden</a>(self,&nbsp;hidden:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setInputMethodHints"><strong>setInputMethodHints</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setInputMethodHints">setInputMethodHints</a>(self,&nbsp;hints:&nbsp;Union[Qt.InputMethodHints,&nbsp;Qt.InputMethodHint])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setLayout"><strong>setLayout</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setLayout">setLayout</a>(self,&nbsp;a0:&nbsp;Optional[QLayout])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setLayoutDirection"><strong>setLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setLayoutDirection">setLayoutDirection</a>(self,&nbsp;direction:&nbsp;Qt.LayoutDirection)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setLocale"><strong>setLocale</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setLocale">setLocale</a>(self,&nbsp;locale:&nbsp;QLocale)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setMask"><strong>setMask</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QBitmap)<br>
+<a href="#ScrapingHistoryDialog-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QRegion)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setMaximumHeight"><strong>setMaximumHeight</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setMaximumHeight">setMaximumHeight</a>(self,&nbsp;maxh:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setMaximumSize"><strong>setMaximumSize</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setMaximumSize">setMaximumSize</a>(self,&nbsp;maxw:&nbsp;int,&nbsp;maxh:&nbsp;int)<br>
+<a href="#ScrapingHistoryDialog-setMaximumSize">setMaximumSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setMaximumWidth"><strong>setMaximumWidth</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setMaximumWidth">setMaximumWidth</a>(self,&nbsp;maxw:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setMinimumHeight"><strong>setMinimumHeight</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setMinimumHeight">setMinimumHeight</a>(self,&nbsp;minh:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setMinimumSize"><strong>setMinimumSize</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setMinimumSize">setMinimumSize</a>(self,&nbsp;minw:&nbsp;int,&nbsp;minh:&nbsp;int)<br>
+<a href="#ScrapingHistoryDialog-setMinimumSize">setMinimumSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setMinimumWidth"><strong>setMinimumWidth</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setMinimumWidth">setMinimumWidth</a>(self,&nbsp;minw:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setMouseTracking"><strong>setMouseTracking</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setMouseTracking">setMouseTracking</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setPalette"><strong>setPalette</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setPalette">setPalette</a>(self,&nbsp;a0:&nbsp;QPalette)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget])<br>
+<a href="#ScrapingHistoryDialog-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget],&nbsp;f:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setShortcutAutoRepeat"><strong>setShortcutAutoRepeat</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setShortcutAutoRepeat">setShortcutAutoRepeat</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setShortcutEnabled"><strong>setShortcutEnabled</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setShortcutEnabled">setShortcutEnabled</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setSizeIncrement"><strong>setSizeIncrement</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#ScrapingHistoryDialog-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setSizePolicy"><strong>setSizePolicy</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setSizePolicy">setSizePolicy</a>(self,&nbsp;a0:&nbsp;QSizePolicy)<br>
+<a href="#ScrapingHistoryDialog-setSizePolicy">setSizePolicy</a>(self,&nbsp;hor:&nbsp;QSizePolicy.Policy,&nbsp;ver:&nbsp;QSizePolicy.Policy)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setStatusTip"><strong>setStatusTip</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setStatusTip">setStatusTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setStyle"><strong>setStyle</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setStyle">setStyle</a>(self,&nbsp;a0:&nbsp;Optional[QStyle])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setStyleSheet"><strong>setStyleSheet</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setStyleSheet">setStyleSheet</a>(self,&nbsp;styleSheet:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setTabOrder"><strong>setTabOrder</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setTabOrder">setTabOrder</a>(a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setTabletTracking"><strong>setTabletTracking</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setTabletTracking">setTabletTracking</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setToolTip"><strong>setToolTip</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setToolTip">setToolTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setToolTipDuration"><strong>setToolTipDuration</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setToolTipDuration">setToolTipDuration</a>(self,&nbsp;msec:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setUpdatesEnabled"><strong>setUpdatesEnabled</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setUpdatesEnabled">setUpdatesEnabled</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWhatsThis"><strong>setWhatsThis</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWhatsThis">setWhatsThis</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowFilePath"><strong>setWindowFilePath</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowFilePath">setWindowFilePath</a>(self,&nbsp;filePath:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowFlag"><strong>setWindowFlag</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowFlag">setWindowFlag</a>(self,&nbsp;a0:&nbsp;Qt.WindowType,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowFlags"><strong>setWindowFlags</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowFlags">setWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowIcon"><strong>setWindowIcon</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowIcon">setWindowIcon</a>(self,&nbsp;icon:&nbsp;QIcon)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowIconText"><strong>setWindowIconText</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowIconText">setWindowIconText</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowModality"><strong>setWindowModality</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowModality">setWindowModality</a>(self,&nbsp;windowModality:&nbsp;Qt.WindowModality)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowModified"><strong>setWindowModified</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowModified">setWindowModified</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowOpacity"><strong>setWindowOpacity</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowOpacity">setWindowOpacity</a>(self,&nbsp;level:&nbsp;float)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowRole"><strong>setWindowRole</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowRole">setWindowRole</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowState"><strong>setWindowState</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowState">setWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setWindowTitle"><strong>setWindowTitle</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setWindowTitle">setWindowTitle</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-show"><strong>show</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-show">show</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-showFullScreen"><strong>showFullScreen</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-showFullScreen">showFullScreen</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-showMaximized"><strong>showMaximized</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-showMaximized">showMaximized</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-showMinimized"><strong>showMinimized</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-showMinimized">showMinimized</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-showNormal"><strong>showNormal</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-showNormal">showNormal</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-size"><strong>size</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-size">size</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-sizeIncrement"><strong>sizeIncrement</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-sizeIncrement">sizeIncrement</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-sizePolicy"><strong>sizePolicy</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-sizePolicy">sizePolicy</a>(self)&nbsp;-&gt;&nbsp;QSizePolicy</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-stackUnder"><strong>stackUnder</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-stackUnder">stackUnder</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-statusTip"><strong>statusTip</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-statusTip">statusTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-style"><strong>style</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-style">style</a>(self)&nbsp;-&gt;&nbsp;Optional[QStyle]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-styleSheet"><strong>styleSheet</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-styleSheet">styleSheet</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-testAttribute"><strong>testAttribute</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-testAttribute">testAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-toolTip"><strong>toolTip</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-toolTip">toolTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-toolTipDuration"><strong>toolTipDuration</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-toolTipDuration">toolTipDuration</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-underMouse"><strong>underMouse</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-underMouse">underMouse</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-ungrabGesture"><strong>ungrabGesture</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-ungrabGesture">ungrabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-unsetCursor"><strong>unsetCursor</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-unsetCursor">unsetCursor</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-unsetLayoutDirection"><strong>unsetLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-unsetLayoutDirection">unsetLayoutDirection</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-unsetLocale"><strong>unsetLocale</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-unsetLocale">unsetLocale</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-update"><strong>update</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-update">update</a>(self)<br>
+<a href="#ScrapingHistoryDialog-update">update</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#ScrapingHistoryDialog-update">update</a>(self,&nbsp;a0:&nbsp;QRegion)<br>
+<a href="#ScrapingHistoryDialog-update">update</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-updateGeometry"><strong>updateGeometry</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-updateGeometry">updateGeometry</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-updatesEnabled"><strong>updatesEnabled</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-updatesEnabled">updatesEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-visibleRegion"><strong>visibleRegion</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-visibleRegion">visibleRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-whatsThis"><strong>whatsThis</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-whatsThis">whatsThis</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-width"><strong>width</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-width">width</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-winId"><strong>winId</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-winId">winId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-window"><strong>window</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-window">window</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-windowFilePath"><strong>windowFilePath</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowFilePath">windowFilePath</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-windowFlags"><strong>windowFlags</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowFlags">windowFlags</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowFlags</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-windowHandle"><strong>windowHandle</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowHandle">windowHandle</a>(self)&nbsp;-&gt;&nbsp;Optional[QWindow]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-windowIcon"><strong>windowIcon</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowIcon">windowIcon</a>(self)&nbsp;-&gt;&nbsp;QIcon</tt></dd></dl>
+
+<strong>windowIconChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconChanged(QIcon)&gt;
+<dl><dt><a name="ScrapingHistoryDialog-windowIconText"><strong>windowIconText</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowIconText">windowIconText</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowIconTextChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconTextChanged(QString)&gt;
+<dl><dt><a name="ScrapingHistoryDialog-windowModality"><strong>windowModality</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowModality">windowModality</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowModality</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-windowOpacity"><strong>windowOpacity</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowOpacity">windowOpacity</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-windowRole"><strong>windowRole</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowRole">windowRole</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-windowState"><strong>windowState</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowState">windowState</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowStates</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-windowTitle"><strong>windowTitle</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowTitle">windowTitle</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowTitleChanged</strong> = &lt;unbound PYQT_SIGNAL windowTitleChanged(QString)&gt;
+<dl><dt><a name="ScrapingHistoryDialog-windowType"><strong>windowType</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-windowType">windowType</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowType</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-x"><strong>x</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-x">x</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-y"><strong>y</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-y">y</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><strong>DrawChildren</strong> = 2</dl>
+
+<dl><dt><strong>DrawWindowBackground</strong> = 1</dl>
+
+<dl><dt><strong>IgnoreMask</strong> = 4</dl>
+
+<dl><dt><strong>RenderFlag</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlag'&gt;</dl>
+
+<dl><dt><strong>RenderFlags</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlags'&gt;<dd><tt>QWidget.<a href="#ScrapingHistoryDialog-RenderFlags">RenderFlags</a>()<br>
+QWidget.<a href="#ScrapingHistoryDialog-RenderFlags">RenderFlags</a>(f:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag])<br>
+QWidget.<a href="#ScrapingHistoryDialog-RenderFlags">RenderFlags</a>(a0:&nbsp;QWidget.RenderFlags)</tt></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="ScrapingHistoryDialog-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-children"><strong>children</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-deleteLater">deleteLater</a>(self)</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="ScrapingHistoryDialog-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#ScrapingHistoryDialog-disconnect">disconnect</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-dumpObjectInfo">dumpObjectInfo</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-dumpObjectTree">dumpObjectTree</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#ScrapingHistoryDialog-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ScrapingHistoryDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ScrapingHistoryDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ScrapingHistoryDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ScrapingHistoryDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ScrapingHistoryDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="ScrapingHistoryDialog-parent"><strong>parent</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-property"><strong>property</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><tt>QObject.<a href="#ScrapingHistoryDialog-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-thread"><strong>thread</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-tr"><strong>tr</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="ScrapingHistoryDialog-colorCount"><strong>colorCount</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-colorCount">colorCount</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-depth"><strong>depth</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-depth">depth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-devicePixelRatio"><strong>devicePixelRatio</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-devicePixelRatio">devicePixelRatio</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-devicePixelRatioF"><strong>devicePixelRatioF</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-devicePixelRatioF">devicePixelRatioF</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-devicePixelRatioFScale"><strong>devicePixelRatioFScale</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-devicePixelRatioFScale">devicePixelRatioFScale</a>()&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-heightMM"><strong>heightMM</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-heightMM">heightMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-logicalDpiX"><strong>logicalDpiX</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-logicalDpiX">logicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-logicalDpiY"><strong>logicalDpiY</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-logicalDpiY">logicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-paintingActive"><strong>paintingActive</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-paintingActive">paintingActive</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-physicalDpiX"><strong>physicalDpiX</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-physicalDpiX">physicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-physicalDpiY"><strong>physicalDpiY</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-physicalDpiY">physicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ScrapingHistoryDialog-widthMM"><strong>widthMM</strong></a>(...)</dt><dd><tt><a href="#ScrapingHistoryDialog-widthMM">widthMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>PaintDeviceMetric</strong> = &lt;class 'PyQt5.QtGui.QPaintDevice.PaintDeviceMetric'&gt;</dl>
+
+<dl><dt><strong>PdmDepth</strong> = 6</dl>
+
+<dl><dt><strong>PdmDevicePixelRatio</strong> = 11</dl>
+
+<dl><dt><strong>PdmDevicePixelRatioScaled</strong> = 12</dl>
+
+<dl><dt><strong>PdmDpiX</strong> = 7</dl>
+
+<dl><dt><strong>PdmDpiY</strong> = 8</dl>
+
+<dl><dt><strong>PdmHeight</strong> = 2</dl>
+
+<dl><dt><strong>PdmHeightMM</strong> = 4</dl>
+
+<dl><dt><strong>PdmNumColors</strong> = 5</dl>
+
+<dl><dt><strong>PdmPhysicalDpiX</strong> = 9</dl>
+
+<dl><dt><strong>PdmPhysicalDpiY</strong> = 10</dl>
+
+<dl><dt><strong>PdmWidth</strong> = 1</dl>
+
+<dl><dt><strong>PdmWidthMM</strong> = 3</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="ScrapingHistoryDialog-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="PyQt5.sip.html#wrappertype">sip.wrappertype</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table>

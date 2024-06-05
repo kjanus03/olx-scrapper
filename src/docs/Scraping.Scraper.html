@@ -1,0 +1,92 @@
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="Scraping.html"><font color="#ffffff">Scraping</font></a>.Scraper</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cscraping%5Cscraper.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\scraping\scraper.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="aiohttp.html">aiohttp</a><br>
+<a href="asyncio.html">asyncio</a><br>
+</td><td width="25%" valign=top><a href="bs4.html">bs4</a><br>
+<a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="pandas.html">pandas</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Scraping.Scraper.html#Scraper">Scraper</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Scraper">class <strong>Scraper</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Scraper">Scraper</a>(url_strings:&nbsp;list[src.Scraping.URLBuilder.URLBuilder],&nbsp;page_limit:&nbsp;int)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Scraper-__init__"><strong>__init__</strong></a>(self, url_strings: list[src.Scraping.URLBuilder.URLBuilder], page_limit: int) -&gt; None</dt><dd><tt><a href="#Scraper">Scraper</a>&nbsp;class&nbsp;for&nbsp;scraping&nbsp;data&nbsp;from&nbsp;OLX.<br>
+:param&nbsp;url_strings:&nbsp;List&nbsp;of&nbsp;URLBuilder&nbsp;objects&nbsp;for&nbsp;scraping&nbsp;data.<br>
+:param&nbsp;page_limit:&nbsp;Limit&nbsp;of&nbsp;pages&nbsp;to&nbsp;scrape&nbsp;for&nbsp;each&nbsp;URL.</tt></dd></dl>
+
+<dl><dt><a name="Scraper-add_url"><strong>add_url</strong></a>(self, url: src.Scraping.URLBuilder.URLBuilder) -&gt; None</dt><dd><tt>Adds&nbsp;a&nbsp;URLBuilder&nbsp;<a href="builtins.html#object">object</a>&nbsp;to&nbsp;the&nbsp;list&nbsp;of&nbsp;URLs&nbsp;to&nbsp;scrape.<br>
+:param&nbsp;url:&nbsp;URLBuilder&nbsp;<a href="builtins.html#object">object</a>&nbsp;to&nbsp;add.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="Scraper-find_count"><strong>find_count</strong></a>(self, soup: bs4.BeautifulSoup) -&gt; int</dt><dd><tt>Finds&nbsp;the&nbsp;number&nbsp;of&nbsp;listings&nbsp;on&nbsp;the&nbsp;page.<br>
+:param&nbsp;soup:&nbsp;Soup&nbsp;<a href="builtins.html#object">object</a>&nbsp;to&nbsp;search&nbsp;for&nbsp;the&nbsp;count.<br>
+:return:&nbsp;Number&nbsp;of&nbsp;listings&nbsp;on&nbsp;the&nbsp;page.</tt></dd></dl>
+
+<dl><dt><a name="Scraper-load_scraping_history"><strong>load_scraping_history</strong></a>(self) -&gt; list[dict[str, typing.Union[str, datetime.datetime]]]</dt><dd><tt>Loads&nbsp;the&nbsp;scraping&nbsp;history&nbsp;from&nbsp;the&nbsp;scraping&nbsp;history&nbsp;file.<br>
+:return:&nbsp;List&nbsp;of&nbsp;scraping&nbsp;history&nbsp;entries.</tt></dd></dl>
+
+<dl><dt><a name="Scraper-save_scrape_date"><strong>save_scrape_date</strong></a>(self) -&gt; None</dt><dd><tt>Saves&nbsp;the&nbsp;date&nbsp;of&nbsp;the&nbsp;last&nbsp;scrape&nbsp;to&nbsp;the&nbsp;scraping&nbsp;history&nbsp;file.<br>
+:return:</tt></dd></dl>
+
+<dl><dt>async <a name="Scraper-scrape_data"><strong>scrape_data</strong></a>(self, progress_callback: Callable[[int], NoneType] = None) -&gt; dict[str, pandas.core.frame.DataFrame]</dt><dd><tt>Scrapes&nbsp;data&nbsp;from&nbsp;the&nbsp;URLs&nbsp;asynchronously.<br>
+:param&nbsp;progress_callback:&nbsp;Callback&nbsp;function&nbsp;to&nbsp;update&nbsp;the&nbsp;progress&nbsp;bar.<br>
+:return:&nbsp;Dictionary&nbsp;of&nbsp;data&nbsp;frames&nbsp;with&nbsp;scraped&nbsp;data.</tt></dd></dl>
+
+<dl><dt><a name="Scraper-update_url_list"><strong>update_url_list</strong></a>(self, config: dict) -&gt; None</dt><dd><tt>Updates&nbsp;the&nbsp;URL&nbsp;list&nbsp;with&nbsp;the&nbsp;given&nbsp;configuration.<br>
+:param&nbsp;config:&nbsp;Configuration&nbsp;dictionary.<br>
+:return:</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Callable</strong> = typing.Callable<br>
+<strong>Union</strong> = typing.Union</td></tr></table>

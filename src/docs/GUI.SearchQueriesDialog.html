@@ -1,0 +1,1180 @@
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="GUI.html"><font color="#ffffff">GUI</font></a>.SearchQueriesDialog</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cgui%5Csearchqueriesdialog.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\gui\searchqueriesdialog.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="PyQt5.QtCore.html#QAbstractTableModel">PyQt5.QtCore.QAbstractTableModel</a>(<a href="PyQt5.QtCore.html#QAbstractItemModel">PyQt5.QtCore.QAbstractItemModel</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="GUI.SearchQueriesDialog.html#SearchQueryTableModel">SearchQueryTableModel</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>(<a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="GUI.SearchQueriesDialog.html#SearchQueriesDialog">SearchQueriesDialog</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SearchQueriesDialog">class <strong>SearchQueriesDialog</strong></a>(<a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#SearchQueriesDialog">SearchQueriesDialog</a>(config_path:&nbsp;str,&nbsp;parent:&nbsp;Optional[Any]&nbsp;=&nbsp;None)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Dialog&nbsp;for&nbsp;managing&nbsp;search&nbsp;queries.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.SearchQueriesDialog.html#SearchQueriesDialog">SearchQueriesDialog</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SearchQueriesDialog-__init__"><strong>__init__</strong></a>(self, config_path: str, parent: Optional[Any] = None) -&gt; None</dt><dd><tt>Initialize&nbsp;the&nbsp;dialog<br>
+:param&nbsp;config_path:&nbsp;Configuration&nbsp;file&nbsp;path<br>
+:param&nbsp;parent:&nbsp;Parent&nbsp;widget</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-accept"><strong>accept</strong></a>(self) -&gt; None</dt><dd><tt>Save&nbsp;the&nbsp;search&nbsp;queries&nbsp;to&nbsp;the&nbsp;configuration&nbsp;file&nbsp;and&nbsp;close&nbsp;the&nbsp;dialog<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-add_query"><strong>add_query</strong></a>(self) -&gt; None</dt><dd><tt>Add&nbsp;a&nbsp;new&nbsp;query&nbsp;to&nbsp;the&nbsp;table&nbsp;view<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-adjust_size"><strong>adjust_size</strong></a>(self) -&gt; None</dt><dd><tt>Adjust&nbsp;the&nbsp;size&nbsp;of&nbsp;the&nbsp;dialog&nbsp;to&nbsp;fit&nbsp;the&nbsp;table&nbsp;view<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-apply_stylesheet"><strong>apply_stylesheet</strong></a>(self) -&gt; None</dt><dd><tt>Apply&nbsp;the&nbsp;stylesheet&nbsp;to&nbsp;the&nbsp;dialog<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-delete_query"><strong>delete_query</strong></a>(self) -&gt; None</dt><dd><tt>Delete&nbsp;the&nbsp;selected&nbsp;query&nbsp;from&nbsp;the&nbsp;table&nbsp;view<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-init_ui"><strong>init_ui</strong></a>(self) -&gt; None</dt><dd><tt>Initialize&nbsp;the&nbsp;user&nbsp;interface<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-load_queries"><strong>load_queries</strong></a>(self) -&gt; None</dt><dd><tt>Load&nbsp;the&nbsp;search&nbsp;queries&nbsp;from&nbsp;the&nbsp;configuration&nbsp;file<br>
+:return:</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>:<br>
+<strong>accepted</strong> = &lt;unbound PYQT_SIGNAL accepted()&gt;
+<dl><dt><a name="SearchQueriesDialog-actionEvent"><strong>actionEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-changeEvent"><strong>changeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-closeEvent"><strong>closeEvent</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-closeEvent">closeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QCloseEvent])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-contextMenuEvent"><strong>contextMenuEvent</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-contextMenuEvent">contextMenuEvent</a>(self,&nbsp;a0:&nbsp;Optional[QContextMenuEvent])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-create"><strong>create</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-destroy"><strong>destroy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-done"><strong>done</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-done">done</a>(self,&nbsp;a0:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-dragEnterEvent"><strong>dragEnterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-dragLeaveEvent"><strong>dragLeaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-dragMoveEvent"><strong>dragMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-dropEvent"><strong>dropEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-enterEvent"><strong>enterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-event"><strong>event</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-exec"><strong>exec</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-exec">exec</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-exec_"><strong>exec_</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-exec_">exec_</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<strong>finished</strong> = &lt;unbound PYQT_SIGNAL finished(int)&gt;
+<dl><dt><a name="SearchQueriesDialog-focusInEvent"><strong>focusInEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-focusNextChild"><strong>focusNextChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-focusNextPrevChild"><strong>focusNextPrevChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-focusOutEvent"><strong>focusOutEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-focusPreviousChild"><strong>focusPreviousChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-hideEvent"><strong>hideEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-initPainter"><strong>initPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-inputMethodEvent"><strong>inputMethodEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isSizeGripEnabled"><strong>isSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isSizeGripEnabled">isSizeGripEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-keyPressEvent"><strong>keyPressEvent</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-keyPressEvent">keyPressEvent</a>(self,&nbsp;a0:&nbsp;Optional[QKeyEvent])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-keyReleaseEvent"><strong>keyReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-leaveEvent"><strong>leaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-metric"><strong>metric</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-minimumSizeHint"><strong>minimumSizeHint</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-minimumSizeHint">minimumSizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mouseDoubleClickEvent"><strong>mouseDoubleClickEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mouseMoveEvent"><strong>mouseMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mousePressEvent"><strong>mousePressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mouseReleaseEvent"><strong>mouseReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-moveEvent"><strong>moveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-nativeEvent"><strong>nativeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-open"><strong>open</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-open">open</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-paintEvent"><strong>paintEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-reject"><strong>reject</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-reject">reject</a>(self)</tt></dd></dl>
+
+<strong>rejected</strong> = &lt;unbound PYQT_SIGNAL rejected()&gt;
+<dl><dt><a name="SearchQueriesDialog-resizeEvent"><strong>resizeEvent</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-resizeEvent">resizeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QResizeEvent])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-result"><strong>result</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-result">result</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setModal"><strong>setModal</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setModal">setModal</a>(self,&nbsp;modal:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setResult"><strong>setResult</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setResult">setResult</a>(self,&nbsp;r:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setSizeGripEnabled"><strong>setSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setSizeGripEnabled">setSizeGripEnabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setVisible"><strong>setVisible</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setVisible">setVisible</a>(self,&nbsp;visible:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-sharedPainter"><strong>sharedPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-showEvent"><strong>showEvent</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-showEvent">showEvent</a>(self,&nbsp;a0:&nbsp;Optional[QShowEvent])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-sizeHint"><strong>sizeHint</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-sizeHint">sizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-tabletEvent"><strong>tabletEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-updateMicroFocus"><strong>updateMicroFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueriesDialog-wheelEvent"><strong>wheelEvent</strong></a>(...)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>:<br>
+<dl><dt><strong>Accepted</strong> = 1</dl>
+
+<dl><dt><strong>DialogCode</strong> = &lt;class 'PyQt5.QtWidgets.QDialog.DialogCode'&gt;</dl>
+
+<dl><dt><strong>Rejected</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><a name="SearchQueriesDialog-acceptDrops"><strong>acceptDrops</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-acceptDrops">acceptDrops</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-accessibleDescription"><strong>accessibleDescription</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-accessibleDescription">accessibleDescription</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-accessibleName"><strong>accessibleName</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-accessibleName">accessibleName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-actions"><strong>actions</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-actions">actions</a>(self)&nbsp;-&gt;&nbsp;List[QAction]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-activateWindow"><strong>activateWindow</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-activateWindow">activateWindow</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-addAction"><strong>addAction</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-addAction">addAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-addActions"><strong>addActions</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-addActions">addActions</a>(self,&nbsp;actions:&nbsp;Iterable[QAction])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-adjustSize"><strong>adjustSize</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-adjustSize">adjustSize</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-autoFillBackground"><strong>autoFillBackground</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-autoFillBackground">autoFillBackground</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-backgroundRole"><strong>backgroundRole</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-backgroundRole">backgroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-baseSize"><strong>baseSize</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-baseSize">baseSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-childAt"><strong>childAt</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-childAt">childAt</a>(self,&nbsp;p:&nbsp;QPoint)&nbsp;-&gt;&nbsp;Optional[QWidget]<br>
+<a href="#SearchQueriesDialog-childAt">childAt</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-childrenRect"><strong>childrenRect</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-childrenRect">childrenRect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-childrenRegion"><strong>childrenRegion</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-childrenRegion">childrenRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-clearFocus"><strong>clearFocus</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-clearFocus">clearFocus</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-clearMask"><strong>clearMask</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-clearMask">clearMask</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-close"><strong>close</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-close">close</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-contentsMargins"><strong>contentsMargins</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-contentsMargins">contentsMargins</a>(self)&nbsp;-&gt;&nbsp;QMargins</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-contentsRect"><strong>contentsRect</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-contentsRect">contentsRect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-contextMenuPolicy"><strong>contextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-contextMenuPolicy">contextMenuPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.ContextMenuPolicy</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-createWindowContainer"><strong>createWindowContainer</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-createWindowContainer">createWindowContainer</a>(window:&nbsp;Optional[QWindow],&nbsp;parent:&nbsp;Optional[QWidget]&nbsp;=&nbsp;None,&nbsp;flags:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType]&nbsp;=&nbsp;0)&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-cursor"><strong>cursor</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-cursor">cursor</a>(self)&nbsp;-&gt;&nbsp;QCursor</tt></dd></dl>
+
+<strong>customContextMenuRequested</strong> = &lt;unbound PYQT_SIGNAL customContextMenuRequested(QPoint)&gt;
+<dl><dt><a name="SearchQueriesDialog-devType"><strong>devType</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-devType">devType</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-effectiveWinId"><strong>effectiveWinId</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-effectiveWinId">effectiveWinId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-ensurePolished"><strong>ensurePolished</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-ensurePolished">ensurePolished</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-find"><strong>find</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-find">find</a>(a0:&nbsp;PyQt5.sip.voidptr)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-focusPolicy"><strong>focusPolicy</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-focusPolicy">focusPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.FocusPolicy</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-focusProxy"><strong>focusProxy</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-focusProxy">focusProxy</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-focusWidget"><strong>focusWidget</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-focusWidget">focusWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-font"><strong>font</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-font">font</a>(self)&nbsp;-&gt;&nbsp;QFont</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-fontInfo"><strong>fontInfo</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-fontInfo">fontInfo</a>(self)&nbsp;-&gt;&nbsp;QFontInfo</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-fontMetrics"><strong>fontMetrics</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-fontMetrics">fontMetrics</a>(self)&nbsp;-&gt;&nbsp;QFontMetrics</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-foregroundRole"><strong>foregroundRole</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-foregroundRole">foregroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-frameGeometry"><strong>frameGeometry</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-frameGeometry">frameGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-frameSize"><strong>frameSize</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-frameSize">frameSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-geometry"><strong>geometry</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-geometry">geometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-getContentsMargins"><strong>getContentsMargins</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-getContentsMargins">getContentsMargins</a>(self)&nbsp;-&gt;&nbsp;(Optional[int],&nbsp;Optional[int],&nbsp;Optional[int],&nbsp;Optional[int])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-grab"><strong>grab</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-grab">grab</a>(self,&nbsp;rectangle:&nbsp;QRect&nbsp;=&nbsp;QRect(QPoint(0,&nbsp;0),&nbsp;QSize(-1,&nbsp;-1)))&nbsp;-&gt;&nbsp;QPixmap</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-grabGesture"><strong>grabGesture</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-grabGesture">grabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType,&nbsp;flags:&nbsp;Union[Qt.GestureFlags,&nbsp;Qt.GestureFlag]&nbsp;=&nbsp;Qt.GestureFlags())</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-grabKeyboard"><strong>grabKeyboard</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-grabKeyboard">grabKeyboard</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-grabMouse"><strong>grabMouse</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-grabMouse">grabMouse</a>(self)<br>
+<a href="#SearchQueriesDialog-grabMouse">grabMouse</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-grabShortcut"><strong>grabShortcut</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-grabShortcut">grabShortcut</a>(self,&nbsp;key:&nbsp;Union[QKeySequence,&nbsp;QKeySequence.StandardKey,&nbsp;Optional[str],&nbsp;int],&nbsp;context:&nbsp;Qt.ShortcutContext&nbsp;=&nbsp;Qt.WindowShortcut)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-graphicsEffect"><strong>graphicsEffect</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-graphicsEffect">graphicsEffect</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsEffect]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-graphicsProxyWidget"><strong>graphicsProxyWidget</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-graphicsProxyWidget">graphicsProxyWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsProxyWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-hasFocus"><strong>hasFocus</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-hasFocus">hasFocus</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-hasHeightForWidth"><strong>hasHeightForWidth</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-hasHeightForWidth">hasHeightForWidth</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-hasMouseTracking"><strong>hasMouseTracking</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-hasMouseTracking">hasMouseTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-hasTabletTracking"><strong>hasTabletTracking</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-hasTabletTracking">hasTabletTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-height"><strong>height</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-height">height</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-heightForWidth"><strong>heightForWidth</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-heightForWidth">heightForWidth</a>(self,&nbsp;a0:&nbsp;int)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-hide"><strong>hide</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-hide">hide</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-inputMethodHints"><strong>inputMethodHints</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-inputMethodHints">inputMethodHints</a>(self)&nbsp;-&gt;&nbsp;Qt.InputMethodHints</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-inputMethodQuery"><strong>inputMethodQuery</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-inputMethodQuery">inputMethodQuery</a>(self,&nbsp;a0:&nbsp;Qt.InputMethodQuery)&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-insertAction"><strong>insertAction</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-insertAction">insertAction</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-insertActions"><strong>insertActions</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-insertActions">insertActions</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;actions:&nbsp;Iterable[QAction])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isActiveWindow"><strong>isActiveWindow</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isActiveWindow">isActiveWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isAncestorOf"><strong>isAncestorOf</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isAncestorOf">isAncestorOf</a>(self,&nbsp;child:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isEnabled"><strong>isEnabled</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isEnabled">isEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isEnabledTo"><strong>isEnabledTo</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isEnabledTo">isEnabledTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isFullScreen"><strong>isFullScreen</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isFullScreen">isFullScreen</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isHidden"><strong>isHidden</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isHidden">isHidden</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isLeftToRight"><strong>isLeftToRight</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isLeftToRight">isLeftToRight</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isMaximized"><strong>isMaximized</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isMaximized">isMaximized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isMinimized"><strong>isMinimized</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isMinimized">isMinimized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isModal"><strong>isModal</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isModal">isModal</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isRightToLeft"><strong>isRightToLeft</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isRightToLeft">isRightToLeft</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isVisible"><strong>isVisible</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isVisible">isVisible</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isVisibleTo"><strong>isVisibleTo</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isVisibleTo">isVisibleTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isWindow"><strong>isWindow</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isWindow">isWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isWindowModified"><strong>isWindowModified</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isWindowModified">isWindowModified</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-keyboardGrabber"><strong>keyboardGrabber</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-keyboardGrabber">keyboardGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-layout"><strong>layout</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-layout">layout</a>(self)&nbsp;-&gt;&nbsp;Optional[QLayout]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-layoutDirection"><strong>layoutDirection</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-layoutDirection">layoutDirection</a>(self)&nbsp;-&gt;&nbsp;Qt.LayoutDirection</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-locale"><strong>locale</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-locale">locale</a>(self)&nbsp;-&gt;&nbsp;QLocale</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-lower"><strong>lower</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-lower">lower</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mapFrom"><strong>mapFrom</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-mapFrom">mapFrom</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mapFromGlobal"><strong>mapFromGlobal</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-mapFromGlobal">mapFromGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mapFromParent"><strong>mapFromParent</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-mapFromParent">mapFromParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mapTo"><strong>mapTo</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-mapTo">mapTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mapToGlobal"><strong>mapToGlobal</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-mapToGlobal">mapToGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mapToParent"><strong>mapToParent</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-mapToParent">mapToParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mask"><strong>mask</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-mask">mask</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-maximumHeight"><strong>maximumHeight</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-maximumHeight">maximumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-maximumSize"><strong>maximumSize</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-maximumSize">maximumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-maximumWidth"><strong>maximumWidth</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-maximumWidth">maximumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-minimumHeight"><strong>minimumHeight</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-minimumHeight">minimumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-minimumSize"><strong>minimumSize</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-minimumSize">minimumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-minimumWidth"><strong>minimumWidth</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-minimumWidth">minimumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-mouseGrabber"><strong>mouseGrabber</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-mouseGrabber">mouseGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-move"><strong>move</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-move">move</a>(self,&nbsp;a0:&nbsp;QPoint)<br>
+<a href="#SearchQueriesDialog-move">move</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-nativeParentWidget"><strong>nativeParentWidget</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-nativeParentWidget">nativeParentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-nextInFocusChain"><strong>nextInFocusChain</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-nextInFocusChain">nextInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-normalGeometry"><strong>normalGeometry</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-normalGeometry">normalGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-overrideWindowFlags"><strong>overrideWindowFlags</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-overrideWindowFlags">overrideWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-overrideWindowState"><strong>overrideWindowState</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-overrideWindowState">overrideWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-paintEngine"><strong>paintEngine</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-paintEngine">paintEngine</a>(self)&nbsp;-&gt;&nbsp;Optional[QPaintEngine]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-palette"><strong>palette</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-palette">palette</a>(self)&nbsp;-&gt;&nbsp;QPalette</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-parentWidget"><strong>parentWidget</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-parentWidget">parentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-pos"><strong>pos</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-pos">pos</a>(self)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-previousInFocusChain"><strong>previousInFocusChain</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-previousInFocusChain">previousInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-raise_"><strong>raise_</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-raise_">raise_</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-rect"><strong>rect</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-rect">rect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-releaseKeyboard"><strong>releaseKeyboard</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-releaseKeyboard">releaseKeyboard</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-releaseMouse"><strong>releaseMouse</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-releaseMouse">releaseMouse</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-releaseShortcut"><strong>releaseShortcut</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-releaseShortcut">releaseShortcut</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-removeAction"><strong>removeAction</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-removeAction">removeAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-render"><strong>render</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-render">render</a>(self,&nbsp;target:&nbsp;Optional[QPaintDevice],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#SearchQueriesDialog-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))<br>
+<a href="#SearchQueriesDialog-render">render</a>(self,&nbsp;painter:&nbsp;Optional[QPainter],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#SearchQueriesDialog-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-repaint"><strong>repaint</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-repaint">repaint</a>(self)<br>
+<a href="#SearchQueriesDialog-repaint">repaint</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#SearchQueriesDialog-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#SearchQueriesDialog-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRegion)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-resize"><strong>resize</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-resize">resize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#SearchQueriesDialog-resize">resize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-restoreGeometry"><strong>restoreGeometry</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-restoreGeometry">restoreGeometry</a>(self,&nbsp;geometry:&nbsp;Union[QByteArray,&nbsp;bytes,&nbsp;bytearray])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-saveGeometry"><strong>saveGeometry</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-saveGeometry">saveGeometry</a>(self)&nbsp;-&gt;&nbsp;QByteArray</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-screen"><strong>screen</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-screen">screen</a>(self)&nbsp;-&gt;&nbsp;Optional[QScreen]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-scroll"><strong>scroll</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int)<br>
+<a href="#SearchQueriesDialog-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int,&nbsp;a2:&nbsp;QRect)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setAcceptDrops"><strong>setAcceptDrops</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setAcceptDrops">setAcceptDrops</a>(self,&nbsp;on:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setAccessibleDescription"><strong>setAccessibleDescription</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setAccessibleDescription">setAccessibleDescription</a>(self,&nbsp;description:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setAccessibleName"><strong>setAccessibleName</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setAccessibleName">setAccessibleName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setAttribute"><strong>setAttribute</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setAttribute">setAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setAutoFillBackground"><strong>setAutoFillBackground</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setAutoFillBackground">setAutoFillBackground</a>(self,&nbsp;enabled:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setBackgroundRole"><strong>setBackgroundRole</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setBackgroundRole">setBackgroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setBaseSize"><strong>setBaseSize</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setBaseSize">setBaseSize</a>(self,&nbsp;basew:&nbsp;int,&nbsp;baseh:&nbsp;int)<br>
+<a href="#SearchQueriesDialog-setBaseSize">setBaseSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setContentsMargins"><strong>setContentsMargins</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setContentsMargins">setContentsMargins</a>(self,&nbsp;left:&nbsp;int,&nbsp;top:&nbsp;int,&nbsp;right:&nbsp;int,&nbsp;bottom:&nbsp;int)<br>
+<a href="#SearchQueriesDialog-setContentsMargins">setContentsMargins</a>(self,&nbsp;margins:&nbsp;QMargins)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setContextMenuPolicy"><strong>setContextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setContextMenuPolicy">setContextMenuPolicy</a>(self,&nbsp;policy:&nbsp;Qt.ContextMenuPolicy)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setCursor"><strong>setCursor</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setCursor">setCursor</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setDisabled"><strong>setDisabled</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setDisabled">setDisabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setEnabled"><strong>setEnabled</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setEnabled">setEnabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setFixedHeight"><strong>setFixedHeight</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setFixedHeight">setFixedHeight</a>(self,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setFixedSize"><strong>setFixedSize</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setFixedSize">setFixedSize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#SearchQueriesDialog-setFixedSize">setFixedSize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setFixedWidth"><strong>setFixedWidth</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setFixedWidth">setFixedWidth</a>(self,&nbsp;w:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setFocus"><strong>setFocus</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setFocus">setFocus</a>(self)<br>
+<a href="#SearchQueriesDialog-setFocus">setFocus</a>(self,&nbsp;reason:&nbsp;Qt.FocusReason)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setFocusPolicy"><strong>setFocusPolicy</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setFocusPolicy">setFocusPolicy</a>(self,&nbsp;policy:&nbsp;Qt.FocusPolicy)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setFocusProxy"><strong>setFocusProxy</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setFocusProxy">setFocusProxy</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setFont"><strong>setFont</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setFont">setFont</a>(self,&nbsp;a0:&nbsp;QFont)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setForegroundRole"><strong>setForegroundRole</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setForegroundRole">setForegroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setGeometry"><strong>setGeometry</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setGeometry">setGeometry</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#SearchQueriesDialog-setGeometry">setGeometry</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setGraphicsEffect"><strong>setGraphicsEffect</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setGraphicsEffect">setGraphicsEffect</a>(self,&nbsp;effect:&nbsp;Optional[QGraphicsEffect])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setHidden"><strong>setHidden</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setHidden">setHidden</a>(self,&nbsp;hidden:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setInputMethodHints"><strong>setInputMethodHints</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setInputMethodHints">setInputMethodHints</a>(self,&nbsp;hints:&nbsp;Union[Qt.InputMethodHints,&nbsp;Qt.InputMethodHint])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setLayout"><strong>setLayout</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setLayout">setLayout</a>(self,&nbsp;a0:&nbsp;Optional[QLayout])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setLayoutDirection"><strong>setLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setLayoutDirection">setLayoutDirection</a>(self,&nbsp;direction:&nbsp;Qt.LayoutDirection)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setLocale"><strong>setLocale</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setLocale">setLocale</a>(self,&nbsp;locale:&nbsp;QLocale)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setMask"><strong>setMask</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QBitmap)<br>
+<a href="#SearchQueriesDialog-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QRegion)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setMaximumHeight"><strong>setMaximumHeight</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setMaximumHeight">setMaximumHeight</a>(self,&nbsp;maxh:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setMaximumSize"><strong>setMaximumSize</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setMaximumSize">setMaximumSize</a>(self,&nbsp;maxw:&nbsp;int,&nbsp;maxh:&nbsp;int)<br>
+<a href="#SearchQueriesDialog-setMaximumSize">setMaximumSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setMaximumWidth"><strong>setMaximumWidth</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setMaximumWidth">setMaximumWidth</a>(self,&nbsp;maxw:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setMinimumHeight"><strong>setMinimumHeight</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setMinimumHeight">setMinimumHeight</a>(self,&nbsp;minh:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setMinimumSize"><strong>setMinimumSize</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setMinimumSize">setMinimumSize</a>(self,&nbsp;minw:&nbsp;int,&nbsp;minh:&nbsp;int)<br>
+<a href="#SearchQueriesDialog-setMinimumSize">setMinimumSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setMinimumWidth"><strong>setMinimumWidth</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setMinimumWidth">setMinimumWidth</a>(self,&nbsp;minw:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setMouseTracking"><strong>setMouseTracking</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setMouseTracking">setMouseTracking</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setPalette"><strong>setPalette</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setPalette">setPalette</a>(self,&nbsp;a0:&nbsp;QPalette)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget])<br>
+<a href="#SearchQueriesDialog-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget],&nbsp;f:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setShortcutAutoRepeat"><strong>setShortcutAutoRepeat</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setShortcutAutoRepeat">setShortcutAutoRepeat</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setShortcutEnabled"><strong>setShortcutEnabled</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setShortcutEnabled">setShortcutEnabled</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setSizeIncrement"><strong>setSizeIncrement</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#SearchQueriesDialog-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setSizePolicy"><strong>setSizePolicy</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setSizePolicy">setSizePolicy</a>(self,&nbsp;a0:&nbsp;QSizePolicy)<br>
+<a href="#SearchQueriesDialog-setSizePolicy">setSizePolicy</a>(self,&nbsp;hor:&nbsp;QSizePolicy.Policy,&nbsp;ver:&nbsp;QSizePolicy.Policy)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setStatusTip"><strong>setStatusTip</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setStatusTip">setStatusTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setStyle"><strong>setStyle</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setStyle">setStyle</a>(self,&nbsp;a0:&nbsp;Optional[QStyle])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setStyleSheet"><strong>setStyleSheet</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setStyleSheet">setStyleSheet</a>(self,&nbsp;styleSheet:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setTabOrder"><strong>setTabOrder</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setTabOrder">setTabOrder</a>(a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setTabletTracking"><strong>setTabletTracking</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setTabletTracking">setTabletTracking</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setToolTip"><strong>setToolTip</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setToolTip">setToolTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setToolTipDuration"><strong>setToolTipDuration</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setToolTipDuration">setToolTipDuration</a>(self,&nbsp;msec:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setUpdatesEnabled"><strong>setUpdatesEnabled</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setUpdatesEnabled">setUpdatesEnabled</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWhatsThis"><strong>setWhatsThis</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWhatsThis">setWhatsThis</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowFilePath"><strong>setWindowFilePath</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowFilePath">setWindowFilePath</a>(self,&nbsp;filePath:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowFlag"><strong>setWindowFlag</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowFlag">setWindowFlag</a>(self,&nbsp;a0:&nbsp;Qt.WindowType,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowFlags"><strong>setWindowFlags</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowFlags">setWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowIcon"><strong>setWindowIcon</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowIcon">setWindowIcon</a>(self,&nbsp;icon:&nbsp;QIcon)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowIconText"><strong>setWindowIconText</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowIconText">setWindowIconText</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowModality"><strong>setWindowModality</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowModality">setWindowModality</a>(self,&nbsp;windowModality:&nbsp;Qt.WindowModality)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowModified"><strong>setWindowModified</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowModified">setWindowModified</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowOpacity"><strong>setWindowOpacity</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowOpacity">setWindowOpacity</a>(self,&nbsp;level:&nbsp;float)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowRole"><strong>setWindowRole</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowRole">setWindowRole</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowState"><strong>setWindowState</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowState">setWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setWindowTitle"><strong>setWindowTitle</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setWindowTitle">setWindowTitle</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-show"><strong>show</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-show">show</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-showFullScreen"><strong>showFullScreen</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-showFullScreen">showFullScreen</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-showMaximized"><strong>showMaximized</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-showMaximized">showMaximized</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-showMinimized"><strong>showMinimized</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-showMinimized">showMinimized</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-showNormal"><strong>showNormal</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-showNormal">showNormal</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-size"><strong>size</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-size">size</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-sizeIncrement"><strong>sizeIncrement</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-sizeIncrement">sizeIncrement</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-sizePolicy"><strong>sizePolicy</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-sizePolicy">sizePolicy</a>(self)&nbsp;-&gt;&nbsp;QSizePolicy</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-stackUnder"><strong>stackUnder</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-stackUnder">stackUnder</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-statusTip"><strong>statusTip</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-statusTip">statusTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-style"><strong>style</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-style">style</a>(self)&nbsp;-&gt;&nbsp;Optional[QStyle]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-styleSheet"><strong>styleSheet</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-styleSheet">styleSheet</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-testAttribute"><strong>testAttribute</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-testAttribute">testAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-toolTip"><strong>toolTip</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-toolTip">toolTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-toolTipDuration"><strong>toolTipDuration</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-toolTipDuration">toolTipDuration</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-underMouse"><strong>underMouse</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-underMouse">underMouse</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-ungrabGesture"><strong>ungrabGesture</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-ungrabGesture">ungrabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-unsetCursor"><strong>unsetCursor</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-unsetCursor">unsetCursor</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-unsetLayoutDirection"><strong>unsetLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-unsetLayoutDirection">unsetLayoutDirection</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-unsetLocale"><strong>unsetLocale</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-unsetLocale">unsetLocale</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-update"><strong>update</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-update">update</a>(self)<br>
+<a href="#SearchQueriesDialog-update">update</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#SearchQueriesDialog-update">update</a>(self,&nbsp;a0:&nbsp;QRegion)<br>
+<a href="#SearchQueriesDialog-update">update</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-updateGeometry"><strong>updateGeometry</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-updateGeometry">updateGeometry</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-updatesEnabled"><strong>updatesEnabled</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-updatesEnabled">updatesEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-visibleRegion"><strong>visibleRegion</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-visibleRegion">visibleRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-whatsThis"><strong>whatsThis</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-whatsThis">whatsThis</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-width"><strong>width</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-width">width</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-winId"><strong>winId</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-winId">winId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-window"><strong>window</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-window">window</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-windowFilePath"><strong>windowFilePath</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowFilePath">windowFilePath</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-windowFlags"><strong>windowFlags</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowFlags">windowFlags</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowFlags</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-windowHandle"><strong>windowHandle</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowHandle">windowHandle</a>(self)&nbsp;-&gt;&nbsp;Optional[QWindow]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-windowIcon"><strong>windowIcon</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowIcon">windowIcon</a>(self)&nbsp;-&gt;&nbsp;QIcon</tt></dd></dl>
+
+<strong>windowIconChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconChanged(QIcon)&gt;
+<dl><dt><a name="SearchQueriesDialog-windowIconText"><strong>windowIconText</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowIconText">windowIconText</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowIconTextChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconTextChanged(QString)&gt;
+<dl><dt><a name="SearchQueriesDialog-windowModality"><strong>windowModality</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowModality">windowModality</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowModality</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-windowOpacity"><strong>windowOpacity</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowOpacity">windowOpacity</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-windowRole"><strong>windowRole</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowRole">windowRole</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-windowState"><strong>windowState</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowState">windowState</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowStates</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-windowTitle"><strong>windowTitle</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowTitle">windowTitle</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowTitleChanged</strong> = &lt;unbound PYQT_SIGNAL windowTitleChanged(QString)&gt;
+<dl><dt><a name="SearchQueriesDialog-windowType"><strong>windowType</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-windowType">windowType</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowType</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-x"><strong>x</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-x">x</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-y"><strong>y</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-y">y</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><strong>DrawChildren</strong> = 2</dl>
+
+<dl><dt><strong>DrawWindowBackground</strong> = 1</dl>
+
+<dl><dt><strong>IgnoreMask</strong> = 4</dl>
+
+<dl><dt><strong>RenderFlag</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlag'&gt;</dl>
+
+<dl><dt><strong>RenderFlags</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlags'&gt;<dd><tt>QWidget.<a href="#SearchQueriesDialog-RenderFlags">RenderFlags</a>()<br>
+QWidget.<a href="#SearchQueriesDialog-RenderFlags">RenderFlags</a>(f:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag])<br>
+QWidget.<a href="#SearchQueriesDialog-RenderFlags">RenderFlags</a>(a0:&nbsp;QWidget.RenderFlags)</tt></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="SearchQueriesDialog-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-children"><strong>children</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-deleteLater">deleteLater</a>(self)</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="SearchQueriesDialog-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#SearchQueriesDialog-disconnect">disconnect</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-dumpObjectInfo">dumpObjectInfo</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-dumpObjectTree">dumpObjectTree</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#SearchQueriesDialog-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SearchQueriesDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SearchQueriesDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SearchQueriesDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SearchQueriesDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SearchQueriesDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="SearchQueriesDialog-parent"><strong>parent</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-property"><strong>property</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><tt>QObject.<a href="#SearchQueriesDialog-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-thread"><strong>thread</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-tr"><strong>tr</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="SearchQueriesDialog-colorCount"><strong>colorCount</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-colorCount">colorCount</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-depth"><strong>depth</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-depth">depth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-devicePixelRatio"><strong>devicePixelRatio</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-devicePixelRatio">devicePixelRatio</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-devicePixelRatioF"><strong>devicePixelRatioF</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-devicePixelRatioF">devicePixelRatioF</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-devicePixelRatioFScale"><strong>devicePixelRatioFScale</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-devicePixelRatioFScale">devicePixelRatioFScale</a>()&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-heightMM"><strong>heightMM</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-heightMM">heightMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-logicalDpiX"><strong>logicalDpiX</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-logicalDpiX">logicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-logicalDpiY"><strong>logicalDpiY</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-logicalDpiY">logicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-paintingActive"><strong>paintingActive</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-paintingActive">paintingActive</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-physicalDpiX"><strong>physicalDpiX</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-physicalDpiX">physicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-physicalDpiY"><strong>physicalDpiY</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-physicalDpiY">physicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueriesDialog-widthMM"><strong>widthMM</strong></a>(...)</dt><dd><tt><a href="#SearchQueriesDialog-widthMM">widthMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>PaintDeviceMetric</strong> = &lt;class 'PyQt5.QtGui.QPaintDevice.PaintDeviceMetric'&gt;</dl>
+
+<dl><dt><strong>PdmDepth</strong> = 6</dl>
+
+<dl><dt><strong>PdmDevicePixelRatio</strong> = 11</dl>
+
+<dl><dt><strong>PdmDevicePixelRatioScaled</strong> = 12</dl>
+
+<dl><dt><strong>PdmDpiX</strong> = 7</dl>
+
+<dl><dt><strong>PdmDpiY</strong> = 8</dl>
+
+<dl><dt><strong>PdmHeight</strong> = 2</dl>
+
+<dl><dt><strong>PdmHeightMM</strong> = 4</dl>
+
+<dl><dt><strong>PdmNumColors</strong> = 5</dl>
+
+<dl><dt><strong>PdmPhysicalDpiX</strong> = 9</dl>
+
+<dl><dt><strong>PdmPhysicalDpiY</strong> = 10</dl>
+
+<dl><dt><strong>PdmWidth</strong> = 1</dl>
+
+<dl><dt><strong>PdmWidthMM</strong> = 3</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="SearchQueriesDialog-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="PyQt5.sip.html#wrappertype">sip.wrappertype</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SearchQueryTableModel">class <strong>SearchQueryTableModel</strong></a>(<a href="PyQt5.QtCore.html#QAbstractTableModel">PyQt5.QtCore.QAbstractTableModel</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#SearchQueryTableModel">SearchQueryTableModel</a>(queries:&nbsp;list[dict],&nbsp;parent:&nbsp;Optional[Any]&nbsp;=&nbsp;None)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Custom&nbsp;model&nbsp;for&nbsp;the&nbsp;search&nbsp;queries&nbsp;table&nbsp;view.&nbsp;It&nbsp;stores&nbsp;the&nbsp;search&nbsp;queries&nbsp;in&nbsp;a&nbsp;list&nbsp;of&nbsp;dictionaries.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.SearchQueriesDialog.html#SearchQueryTableModel">SearchQueryTableModel</a></dd>
+<dd><a href="PyQt5.QtCore.html#QAbstractTableModel">PyQt5.QtCore.QAbstractTableModel</a></dd>
+<dd><a href="PyQt5.QtCore.html#QAbstractItemModel">PyQt5.QtCore.QAbstractItemModel</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SearchQueryTableModel-__init__"><strong>__init__</strong></a>(self, queries: list[dict], parent: Optional[Any] = None) -&gt; None</dt><dd><tt>:param&nbsp;queries:&nbsp;List&nbsp;of&nbsp;dictionaries&nbsp;containing&nbsp;the&nbsp;search&nbsp;queries<br>
+:param&nbsp;parent:&nbsp;Parent&nbsp;widget</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-addQuery"><strong>addQuery</strong></a>(self, query: dict) -&gt; None</dt><dd><tt>Add&nbsp;a&nbsp;new&nbsp;query&nbsp;to&nbsp;the&nbsp;table&nbsp;view<br>
+:param&nbsp;query:&nbsp;Query&nbsp;to&nbsp;add<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-columnCount"><strong>columnCount</strong></a>(self, parent: PyQt5.QtCore.QModelIndex = &lt;PyQt5.QtCore.QModelIndex object at 0x000001D505E722E0&gt;) -&gt; int</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;columns&nbsp;in&nbsp;the&nbsp;table&nbsp;view<br>
+:param&nbsp;parent:&nbsp;Parent&nbsp;index<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-data"><strong>data</strong></a>(self, index: PyQt5.QtCore.QModelIndex, role: int = 0) -&gt; Union[PyQt5.QtCore.QVariant, str, dict]</dt><dd><tt>Return&nbsp;the&nbsp;data&nbsp;for&nbsp;the&nbsp;given&nbsp;index&nbsp;and&nbsp;role<br>
+:param&nbsp;index:&nbsp;Index&nbsp;of&nbsp;the&nbsp;item<br>
+:param&nbsp;role:&nbsp;Role&nbsp;of&nbsp;the&nbsp;item<br>
+:return:&nbsp;Value&nbsp;of&nbsp;the&nbsp;item</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-flags"><strong>flags</strong></a>(self, index: PyQt5.QtCore.QModelIndex) -&gt; PyQt5.QtCore.Qt.ItemFlags</dt><dd><tt>Return&nbsp;the&nbsp;flags&nbsp;for&nbsp;the&nbsp;given&nbsp;index<br>
+:param&nbsp;index:&nbsp;Index&nbsp;of&nbsp;the&nbsp;item<br>
+:return:&nbsp;Flags&nbsp;for&nbsp;the&nbsp;item</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-headerData"><strong>headerData</strong></a>(self, section: int, orientation: PyQt5.QtCore.Qt.Orientation, role: int = 0) -&gt; Union[str, PyQt5.QtCore.QVariant]</dt><dd><tt>Return&nbsp;the&nbsp;header&nbsp;data&nbsp;for&nbsp;the&nbsp;given&nbsp;section,&nbsp;orientation,&nbsp;and&nbsp;role<br>
+:param&nbsp;section:&nbsp;Section&nbsp;number<br>
+:param&nbsp;orientation:&nbsp;Orientation&nbsp;of&nbsp;the&nbsp;header<br>
+:param&nbsp;role:&nbsp;Role&nbsp;of&nbsp;the&nbsp;header<br>
+:return:&nbsp;Data&nbsp;of&nbsp;the&nbsp;header</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-removeQuery"><strong>removeQuery</strong></a>(self, row: int) -&gt; None</dt><dd><tt>Remove&nbsp;a&nbsp;query&nbsp;from&nbsp;the&nbsp;table&nbsp;view<br>
+:param&nbsp;row:&nbsp;Row&nbsp;number&nbsp;of&nbsp;the&nbsp;query&nbsp;to&nbsp;remove<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-remove_polish_signs"><strong>remove_polish_signs</strong></a>(self, text: str) -&gt; str</dt><dd><tt>Remove&nbsp;Polish&nbsp;signs&nbsp;from&nbsp;the&nbsp;text<br>
+:param&nbsp;text:&nbsp;Text&nbsp;to&nbsp;remove&nbsp;Polish&nbsp;signs&nbsp;from<br>
+:return:&nbsp;Text&nbsp;without&nbsp;Polish&nbsp;signs</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-rowCount"><strong>rowCount</strong></a>(self, parent: PyQt5.QtCore.QModelIndex = &lt;PyQt5.QtCore.QModelIndex object at 0x000001D505E72270&gt;) -&gt; int</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;rows&nbsp;in&nbsp;the&nbsp;table&nbsp;view<br>
+:param&nbsp;parent:&nbsp;Parent&nbsp;index<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-setData"><strong>setData</strong></a>(self, index: PyQt5.QtCore.QModelIndex, value: Any, role: int = 2) -&gt; bool</dt><dd><tt>Set&nbsp;the&nbsp;data&nbsp;for&nbsp;the&nbsp;given&nbsp;index&nbsp;and&nbsp;role<br>
+:param&nbsp;index:&nbsp;Index&nbsp;of&nbsp;the&nbsp;item<br>
+:param&nbsp;value:&nbsp;Value&nbsp;to&nbsp;set<br>
+:param&nbsp;role:&nbsp;Role&nbsp;of&nbsp;the&nbsp;item<br>
+:return:&nbsp;True&nbsp;if&nbsp;the&nbsp;data&nbsp;was&nbsp;set&nbsp;successfully,&nbsp;False&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-validate_input"><strong>validate_input</strong></a>(self, text: str) -&gt; bool</dt><dd><tt>Validate&nbsp;the&nbsp;input&nbsp;text&nbsp;to&nbsp;ensure&nbsp;it&nbsp;only&nbsp;contains&nbsp;characters&nbsp;that&nbsp;are&nbsp;valid&nbsp;for&nbsp;URLs<br>
+:param&nbsp;text:&nbsp;Text&nbsp;to&nbsp;validate<br>
+:return:&nbsp;True&nbsp;if&nbsp;the&nbsp;text&nbsp;is&nbsp;valid,&nbsp;False&nbsp;otherwise</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QAbstractTableModel">PyQt5.QtCore.QAbstractTableModel</a>:<br>
+<dl><dt><a name="SearchQueryTableModel-beginInsertColumns"><strong>beginInsertColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-beginInsertRows"><strong>beginInsertRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-beginMoveColumns"><strong>beginMoveColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-beginMoveRows"><strong>beginMoveRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-beginRemoveColumns"><strong>beginRemoveColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-beginRemoveRows"><strong>beginRemoveRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-beginResetModel"><strong>beginResetModel</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-changePersistentIndex"><strong>changePersistentIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-changePersistentIndexList"><strong>changePersistentIndexList</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-createIndex"><strong>createIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-decodeData"><strong>decodeData</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-dropMimeData"><strong>dropMimeData</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-dropMimeData">dropMimeData</a>(self,&nbsp;data:&nbsp;Optional[QMimeData],&nbsp;action:&nbsp;Qt.DropAction,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-encodeData"><strong>encodeData</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-endInsertColumns"><strong>endInsertColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-endInsertRows"><strong>endInsertRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-endMoveColumns"><strong>endMoveColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-endMoveRows"><strong>endMoveRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-endRemoveColumns"><strong>endRemoveColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-endRemoveRows"><strong>endRemoveRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-endResetModel"><strong>endResetModel</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-hasChildren"><strong>hasChildren</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-index"><strong>index</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-index">index</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;QModelIndex</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-parent"><strong>parent</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-persistentIndexList"><strong>persistentIndexList</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-resetInternalData"><strong>resetInternalData</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SearchQueryTableModel-sibling"><strong>sibling</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-sibling">sibling</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;idx:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;QModelIndex</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QAbstractItemModel">PyQt5.QtCore.QAbstractItemModel</a>:<br>
+<dl><dt><a name="SearchQueryTableModel-buddy"><strong>buddy</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-buddy">buddy</a>(self,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;QModelIndex</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-canDropMimeData"><strong>canDropMimeData</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-canDropMimeData">canDropMimeData</a>(self,&nbsp;data:&nbsp;Optional[QMimeData],&nbsp;action:&nbsp;Qt.DropAction,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-canFetchMore"><strong>canFetchMore</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-canFetchMore">canFetchMore</a>(self,&nbsp;parent:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-checkIndex"><strong>checkIndex</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-checkIndex">checkIndex</a>(self,&nbsp;index:&nbsp;QModelIndex,&nbsp;options:&nbsp;Union[QAbstractItemModel.CheckIndexOptions,&nbsp;QAbstractItemModel.CheckIndexOption]&nbsp;=&nbsp;QAbstractItemModel.CheckIndexOption.NoOption)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<strong>columnsAboutToBeInserted</strong> = &lt;unbound PYQT_SIGNAL columnsAboutToBeInserted(QModelIndex,int,int)&gt;
+<strong>columnsAboutToBeMoved</strong> = &lt;unbound PYQT_SIGNAL columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)&gt;
+<strong>columnsAboutToBeRemoved</strong> = &lt;unbound PYQT_SIGNAL columnsAboutToBeRemoved(QModelIndex,int,int)&gt;
+<strong>columnsInserted</strong> = &lt;unbound PYQT_SIGNAL columnsInserted(QModelIndex,int,int)&gt;
+<strong>columnsMoved</strong> = &lt;unbound PYQT_SIGNAL columnsMoved(QModelIndex,int,int,QModelIndex,int)&gt;
+<strong>columnsRemoved</strong> = &lt;unbound PYQT_SIGNAL columnsRemoved(QModelIndex,int,int)&gt;
+<strong>dataChanged</strong> = &lt;unbound PYQT_SIGNAL dataChanged(QModelIndex,QModelIndex,QVector&lt;int&gt;)&gt;
+<dl><dt><a name="SearchQueryTableModel-fetchMore"><strong>fetchMore</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-fetchMore">fetchMore</a>(self,&nbsp;parent:&nbsp;QModelIndex)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-hasIndex"><strong>hasIndex</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-hasIndex">hasIndex</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<strong>headerDataChanged</strong> = &lt;unbound PYQT_SIGNAL headerDataChanged(Qt::Orientation,int,int)&gt;
+<dl><dt><a name="SearchQueryTableModel-insertColumn"><strong>insertColumn</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-insertColumn">insertColumn</a>(self,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-insertColumns"><strong>insertColumns</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-insertColumns">insertColumns</a>(self,&nbsp;column:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-insertRow"><strong>insertRow</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-insertRow">insertRow</a>(self,&nbsp;row:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-insertRows"><strong>insertRows</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-insertRows">insertRows</a>(self,&nbsp;row:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-itemData"><strong>itemData</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-itemData">itemData</a>(self,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;Dict[int,&nbsp;Any]</tt></dd></dl>
+
+<strong>layoutAboutToBeChanged</strong> = &lt;unbound PYQT_SIGNAL layoutAboutToBeChanged(QLis...odelIndex&gt;,QAbstractItemModel::LayoutChangeHint)&gt;
+<strong>layoutChanged</strong> = &lt;unbound PYQT_SIGNAL layoutChanged(QList&lt;QPersis...odelIndex&gt;,QAbstractItemModel::LayoutChangeHint)&gt;
+<dl><dt><a name="SearchQueryTableModel-match"><strong>match</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-match">match</a>(self,&nbsp;start:&nbsp;QModelIndex,&nbsp;role:&nbsp;int,&nbsp;value:&nbsp;Any,&nbsp;hits:&nbsp;int&nbsp;=&nbsp;1,&nbsp;flags:&nbsp;Union[Qt.MatchFlags,&nbsp;Qt.MatchFlag]&nbsp;=&nbsp;Qt.MatchStartsWith|Qt.MatchWrap)&nbsp;-&gt;&nbsp;List[QModelIndex]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-mimeData"><strong>mimeData</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-mimeData">mimeData</a>(self,&nbsp;indexes:&nbsp;Iterable[QModelIndex])&nbsp;-&gt;&nbsp;Optional[QMimeData]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-mimeTypes"><strong>mimeTypes</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-mimeTypes">mimeTypes</a>(self)&nbsp;-&gt;&nbsp;List[str]</tt></dd></dl>
+
+<strong>modelAboutToBeReset</strong> = &lt;unbound PYQT_SIGNAL modelAboutToBeReset()&gt;
+<strong>modelReset</strong> = &lt;unbound PYQT_SIGNAL modelReset()&gt;
+<dl><dt><a name="SearchQueryTableModel-moveColumn"><strong>moveColumn</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-moveColumn">moveColumn</a>(self,&nbsp;sourceParent:&nbsp;QModelIndex,&nbsp;sourceColumn:&nbsp;int,&nbsp;destinationParent:&nbsp;QModelIndex,&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-moveColumns"><strong>moveColumns</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-moveColumns">moveColumns</a>(self,&nbsp;sourceParent:&nbsp;QModelIndex,&nbsp;sourceColumn:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;destinationParent:&nbsp;QModelIndex,&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-moveRow"><strong>moveRow</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-moveRow">moveRow</a>(self,&nbsp;sourceParent:&nbsp;QModelIndex,&nbsp;sourceRow:&nbsp;int,&nbsp;destinationParent:&nbsp;QModelIndex,&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-moveRows"><strong>moveRows</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-moveRows">moveRows</a>(self,&nbsp;sourceParent:&nbsp;QModelIndex,&nbsp;sourceRow:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;destinationParent:&nbsp;QModelIndex,&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-removeColumn"><strong>removeColumn</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-removeColumn">removeColumn</a>(self,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-removeColumns"><strong>removeColumns</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-removeColumns">removeColumns</a>(self,&nbsp;column:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-removeRow"><strong>removeRow</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-removeRow">removeRow</a>(self,&nbsp;row:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-removeRows"><strong>removeRows</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-removeRows">removeRows</a>(self,&nbsp;row:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-revert"><strong>revert</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-revert">revert</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-roleNames"><strong>roleNames</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-roleNames">roleNames</a>(self)&nbsp;-&gt;&nbsp;Dict[int,&nbsp;QByteArray]</tt></dd></dl>
+
+<strong>rowsAboutToBeInserted</strong> = &lt;unbound PYQT_SIGNAL rowsAboutToBeInserted(QModelIndex,int,int)&gt;
+<strong>rowsAboutToBeMoved</strong> = &lt;unbound PYQT_SIGNAL rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)&gt;
+<strong>rowsAboutToBeRemoved</strong> = &lt;unbound PYQT_SIGNAL rowsAboutToBeRemoved(QModelIndex,int,int)&gt;
+<strong>rowsInserted</strong> = &lt;unbound PYQT_SIGNAL rowsInserted(QModelIndex,int,int)&gt;
+<strong>rowsMoved</strong> = &lt;unbound PYQT_SIGNAL rowsMoved(QModelIndex,int,int,QModelIndex,int)&gt;
+<strong>rowsRemoved</strong> = &lt;unbound PYQT_SIGNAL rowsRemoved(QModelIndex,int,int)&gt;
+<dl><dt><a name="SearchQueryTableModel-setHeaderData"><strong>setHeaderData</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-setHeaderData">setHeaderData</a>(self,&nbsp;section:&nbsp;int,&nbsp;orientation:&nbsp;Qt.Orientation,&nbsp;value:&nbsp;Any,&nbsp;role:&nbsp;int&nbsp;=&nbsp;Qt.ItemDataRole.EditRole)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-setItemData"><strong>setItemData</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-setItemData">setItemData</a>(self,&nbsp;index:&nbsp;QModelIndex,&nbsp;roles:&nbsp;Dict[int,&nbsp;Any])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-sort"><strong>sort</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-sort">sort</a>(self,&nbsp;column:&nbsp;int,&nbsp;order:&nbsp;Qt.SortOrder&nbsp;=&nbsp;Qt.AscendingOrder)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-span"><strong>span</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-span">span</a>(self,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-submit"><strong>submit</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-submit">submit</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-supportedDragActions"><strong>supportedDragActions</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-supportedDragActions">supportedDragActions</a>(self)&nbsp;-&gt;&nbsp;Qt.DropActions</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-supportedDropActions"><strong>supportedDropActions</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-supportedDropActions">supportedDropActions</a>(self)&nbsp;-&gt;&nbsp;Qt.DropActions</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QAbstractItemModel">PyQt5.QtCore.QAbstractItemModel</a>:<br>
+<dl><dt><strong>CheckIndexOption</strong> = &lt;enum 'CheckIndexOption'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>CheckIndexOptions</strong> = &lt;class 'PyQt5.QtCore.QAbstractItemModel.CheckIndexOptions'&gt;<dd><tt>QAbstractItemModel.<a href="#SearchQueryTableModel-CheckIndexOptions">CheckIndexOptions</a>()<br>
+QAbstractItemModel.<a href="#SearchQueryTableModel-CheckIndexOptions">CheckIndexOptions</a>(f:&nbsp;Union[QAbstractItemModel.CheckIndexOptions,&nbsp;QAbstractItemModel.CheckIndexOption])<br>
+QAbstractItemModel.<a href="#SearchQueryTableModel-CheckIndexOptions">CheckIndexOptions</a>(a0:&nbsp;QAbstractItemModel.CheckIndexOptions)</tt></dl>
+
+<dl><dt><strong>HorizontalSortHint</strong> = 2</dl>
+
+<dl><dt><strong>LayoutChangeHint</strong> = &lt;class 'PyQt5.QtCore.QAbstractItemModel.LayoutChangeHint'&gt;</dl>
+
+<dl><dt><strong>NoLayoutChangeHint</strong> = 0</dl>
+
+<dl><dt><strong>VerticalSortHint</strong> = 1</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="SearchQueryTableModel-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-children"><strong>children</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-deleteLater">deleteLater</a>(self)</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="SearchQueryTableModel-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#SearchQueryTableModel-disconnect">disconnect</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-dumpObjectInfo">dumpObjectInfo</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-dumpObjectTree">dumpObjectTree</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-event"><strong>event</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-event">event</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#SearchQueryTableModel-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SearchQueryTableModel-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SearchQueryTableModel-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SearchQueryTableModel-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SearchQueryTableModel-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SearchQueryTableModel-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="SearchQueryTableModel-property"><strong>property</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><tt>QObject.<a href="#SearchQueryTableModel-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-setParent">setParent</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-thread"><strong>thread</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</tt></dd></dl>
+
+<dl><dt><a name="SearchQueryTableModel-tr"><strong>tr</strong></a>(...)</dt><dd><tt><a href="#SearchQueryTableModel-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="SearchQueryTableModel-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="PyQt5.sip.html#wrappertype">sip.wrappertype</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Any</strong> = typing.Any<br>
+<strong>Optional</strong> = typing.Optional<br>
+<strong>Union</strong> = typing.Union</td></tr></table>

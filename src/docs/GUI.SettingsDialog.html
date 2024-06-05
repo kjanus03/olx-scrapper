@@ -1,0 +1,827 @@
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="GUI.html"><font color="#ffffff">GUI</font></a>.SettingsDialog</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cgui%5Csettingsdialog.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\gui\settingsdialog.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>(<a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="GUI.SettingsDialog.html#SettingsDialog">SettingsDialog</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SettingsDialog">class <strong>SettingsDialog</strong></a>(<a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#SettingsDialog">SettingsDialog</a>(config_path:&nbsp;str,&nbsp;dark_mode:&nbsp;bool&nbsp;=&nbsp;False,&nbsp;parent=None)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Dialog&nbsp;for&nbsp;changing&nbsp;settings.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.SettingsDialog.html#SettingsDialog">SettingsDialog</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SettingsDialog-__init__"><strong>__init__</strong></a>(self, config_path: str, dark_mode: bool = False, parent=None) -&gt; None</dt><dd><tt>Initializes&nbsp;the&nbsp;settings&nbsp;dialog.<br>
+:param&nbsp;config_path:&nbsp;Configuration&nbsp;file&nbsp;path.<br>
+:param&nbsp;dark_mode:&nbsp;Dark&nbsp;mode&nbsp;enabled.<br>
+:param&nbsp;parent:&nbsp;Parent&nbsp;widget.</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-apply_dark_mode"><strong>apply_dark_mode</strong></a>(self) -&gt; None</dt><dd><tt>Applies&nbsp;dark&nbsp;mode&nbsp;to&nbsp;the&nbsp;dialog.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-init_ui"><strong>init_ui</strong></a>(self) -&gt; None</dt><dd><tt>Initializes&nbsp;the&nbsp;UI.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-load_config"><strong>load_config</strong></a>(self) -&gt; None</dt><dd><tt>Loads&nbsp;the&nbsp;configuration&nbsp;file.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-save_config"><strong>save_config</strong></a>(self) -&gt; None</dt><dd><tt>Saves&nbsp;the&nbsp;configuration&nbsp;file.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-save_settings"><strong>save_settings</strong></a>(self) -&gt; None</dt><dd><tt>Saves&nbsp;the&nbsp;settings.<br>
+:return:</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>:<br>
+<dl><dt><a name="SettingsDialog-accept"><strong>accept</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-accept">accept</a>(self)</tt></dd></dl>
+
+<strong>accepted</strong> = &lt;unbound PYQT_SIGNAL accepted()&gt;
+<dl><dt><a name="SettingsDialog-actionEvent"><strong>actionEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-changeEvent"><strong>changeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-closeEvent"><strong>closeEvent</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-closeEvent">closeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QCloseEvent])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-contextMenuEvent"><strong>contextMenuEvent</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-contextMenuEvent">contextMenuEvent</a>(self,&nbsp;a0:&nbsp;Optional[QContextMenuEvent])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-create"><strong>create</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-destroy"><strong>destroy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-done"><strong>done</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-done">done</a>(self,&nbsp;a0:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-dragEnterEvent"><strong>dragEnterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-dragLeaveEvent"><strong>dragLeaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-dragMoveEvent"><strong>dragMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-dropEvent"><strong>dropEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-enterEvent"><strong>enterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-event"><strong>event</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-exec"><strong>exec</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-exec">exec</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-exec_"><strong>exec_</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-exec_">exec_</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<strong>finished</strong> = &lt;unbound PYQT_SIGNAL finished(int)&gt;
+<dl><dt><a name="SettingsDialog-focusInEvent"><strong>focusInEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-focusNextChild"><strong>focusNextChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-focusNextPrevChild"><strong>focusNextPrevChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-focusOutEvent"><strong>focusOutEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-focusPreviousChild"><strong>focusPreviousChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-hideEvent"><strong>hideEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-initPainter"><strong>initPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-inputMethodEvent"><strong>inputMethodEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-isSizeGripEnabled"><strong>isSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isSizeGripEnabled">isSizeGripEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-keyPressEvent"><strong>keyPressEvent</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-keyPressEvent">keyPressEvent</a>(self,&nbsp;a0:&nbsp;Optional[QKeyEvent])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-keyReleaseEvent"><strong>keyReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-leaveEvent"><strong>leaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-metric"><strong>metric</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-minimumSizeHint"><strong>minimumSizeHint</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-minimumSizeHint">minimumSizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-mouseDoubleClickEvent"><strong>mouseDoubleClickEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-mouseMoveEvent"><strong>mouseMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-mousePressEvent"><strong>mousePressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-mouseReleaseEvent"><strong>mouseReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-moveEvent"><strong>moveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-nativeEvent"><strong>nativeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-open"><strong>open</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-open">open</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-paintEvent"><strong>paintEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-reject"><strong>reject</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-reject">reject</a>(self)</tt></dd></dl>
+
+<strong>rejected</strong> = &lt;unbound PYQT_SIGNAL rejected()&gt;
+<dl><dt><a name="SettingsDialog-resizeEvent"><strong>resizeEvent</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-resizeEvent">resizeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QResizeEvent])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-result"><strong>result</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-result">result</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-setModal"><strong>setModal</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setModal">setModal</a>(self,&nbsp;modal:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setResult"><strong>setResult</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setResult">setResult</a>(self,&nbsp;r:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setSizeGripEnabled"><strong>setSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setSizeGripEnabled">setSizeGripEnabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setVisible"><strong>setVisible</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setVisible">setVisible</a>(self,&nbsp;visible:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-sharedPainter"><strong>sharedPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-showEvent"><strong>showEvent</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-showEvent">showEvent</a>(self,&nbsp;a0:&nbsp;Optional[QShowEvent])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-sizeHint"><strong>sizeHint</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-sizeHint">sizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-tabletEvent"><strong>tabletEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-updateMicroFocus"><strong>updateMicroFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="SettingsDialog-wheelEvent"><strong>wheelEvent</strong></a>(...)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>:<br>
+<dl><dt><strong>Accepted</strong> = 1</dl>
+
+<dl><dt><strong>DialogCode</strong> = &lt;class 'PyQt5.QtWidgets.QDialog.DialogCode'&gt;</dl>
+
+<dl><dt><strong>Rejected</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><a name="SettingsDialog-acceptDrops"><strong>acceptDrops</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-acceptDrops">acceptDrops</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-accessibleDescription"><strong>accessibleDescription</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-accessibleDescription">accessibleDescription</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-accessibleName"><strong>accessibleName</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-accessibleName">accessibleName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-actions"><strong>actions</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-actions">actions</a>(self)&nbsp;-&gt;&nbsp;List[QAction]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-activateWindow"><strong>activateWindow</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-activateWindow">activateWindow</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-addAction"><strong>addAction</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-addAction">addAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-addActions"><strong>addActions</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-addActions">addActions</a>(self,&nbsp;actions:&nbsp;Iterable[QAction])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-adjustSize"><strong>adjustSize</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-adjustSize">adjustSize</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-autoFillBackground"><strong>autoFillBackground</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-autoFillBackground">autoFillBackground</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-backgroundRole"><strong>backgroundRole</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-backgroundRole">backgroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-baseSize"><strong>baseSize</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-baseSize">baseSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-childAt"><strong>childAt</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-childAt">childAt</a>(self,&nbsp;p:&nbsp;QPoint)&nbsp;-&gt;&nbsp;Optional[QWidget]<br>
+<a href="#SettingsDialog-childAt">childAt</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-childrenRect"><strong>childrenRect</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-childrenRect">childrenRect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-childrenRegion"><strong>childrenRegion</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-childrenRegion">childrenRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-clearFocus"><strong>clearFocus</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-clearFocus">clearFocus</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-clearMask"><strong>clearMask</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-clearMask">clearMask</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-close"><strong>close</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-close">close</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-contentsMargins"><strong>contentsMargins</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-contentsMargins">contentsMargins</a>(self)&nbsp;-&gt;&nbsp;QMargins</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-contentsRect"><strong>contentsRect</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-contentsRect">contentsRect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-contextMenuPolicy"><strong>contextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-contextMenuPolicy">contextMenuPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.ContextMenuPolicy</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-createWindowContainer"><strong>createWindowContainer</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-createWindowContainer">createWindowContainer</a>(window:&nbsp;Optional[QWindow],&nbsp;parent:&nbsp;Optional[QWidget]&nbsp;=&nbsp;None,&nbsp;flags:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType]&nbsp;=&nbsp;0)&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-cursor"><strong>cursor</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-cursor">cursor</a>(self)&nbsp;-&gt;&nbsp;QCursor</tt></dd></dl>
+
+<strong>customContextMenuRequested</strong> = &lt;unbound PYQT_SIGNAL customContextMenuRequested(QPoint)&gt;
+<dl><dt><a name="SettingsDialog-devType"><strong>devType</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-devType">devType</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-effectiveWinId"><strong>effectiveWinId</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-effectiveWinId">effectiveWinId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-ensurePolished"><strong>ensurePolished</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-ensurePolished">ensurePolished</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-find"><strong>find</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-find">find</a>(a0:&nbsp;PyQt5.sip.voidptr)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-focusPolicy"><strong>focusPolicy</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-focusPolicy">focusPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.FocusPolicy</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-focusProxy"><strong>focusProxy</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-focusProxy">focusProxy</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-focusWidget"><strong>focusWidget</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-focusWidget">focusWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-font"><strong>font</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-font">font</a>(self)&nbsp;-&gt;&nbsp;QFont</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-fontInfo"><strong>fontInfo</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-fontInfo">fontInfo</a>(self)&nbsp;-&gt;&nbsp;QFontInfo</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-fontMetrics"><strong>fontMetrics</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-fontMetrics">fontMetrics</a>(self)&nbsp;-&gt;&nbsp;QFontMetrics</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-foregroundRole"><strong>foregroundRole</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-foregroundRole">foregroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-frameGeometry"><strong>frameGeometry</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-frameGeometry">frameGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-frameSize"><strong>frameSize</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-frameSize">frameSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-geometry"><strong>geometry</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-geometry">geometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-getContentsMargins"><strong>getContentsMargins</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-getContentsMargins">getContentsMargins</a>(self)&nbsp;-&gt;&nbsp;(Optional[int],&nbsp;Optional[int],&nbsp;Optional[int],&nbsp;Optional[int])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-grab"><strong>grab</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-grab">grab</a>(self,&nbsp;rectangle:&nbsp;QRect&nbsp;=&nbsp;QRect(QPoint(0,&nbsp;0),&nbsp;QSize(-1,&nbsp;-1)))&nbsp;-&gt;&nbsp;QPixmap</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-grabGesture"><strong>grabGesture</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-grabGesture">grabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType,&nbsp;flags:&nbsp;Union[Qt.GestureFlags,&nbsp;Qt.GestureFlag]&nbsp;=&nbsp;Qt.GestureFlags())</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-grabKeyboard"><strong>grabKeyboard</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-grabKeyboard">grabKeyboard</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-grabMouse"><strong>grabMouse</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-grabMouse">grabMouse</a>(self)<br>
+<a href="#SettingsDialog-grabMouse">grabMouse</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-grabShortcut"><strong>grabShortcut</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-grabShortcut">grabShortcut</a>(self,&nbsp;key:&nbsp;Union[QKeySequence,&nbsp;QKeySequence.StandardKey,&nbsp;Optional[str],&nbsp;int],&nbsp;context:&nbsp;Qt.ShortcutContext&nbsp;=&nbsp;Qt.WindowShortcut)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-graphicsEffect"><strong>graphicsEffect</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-graphicsEffect">graphicsEffect</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsEffect]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-graphicsProxyWidget"><strong>graphicsProxyWidget</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-graphicsProxyWidget">graphicsProxyWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsProxyWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-hasFocus"><strong>hasFocus</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-hasFocus">hasFocus</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-hasHeightForWidth"><strong>hasHeightForWidth</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-hasHeightForWidth">hasHeightForWidth</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-hasMouseTracking"><strong>hasMouseTracking</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-hasMouseTracking">hasMouseTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-hasTabletTracking"><strong>hasTabletTracking</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-hasTabletTracking">hasTabletTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-height"><strong>height</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-height">height</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-heightForWidth"><strong>heightForWidth</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-heightForWidth">heightForWidth</a>(self,&nbsp;a0:&nbsp;int)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-hide"><strong>hide</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-hide">hide</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-inputMethodHints"><strong>inputMethodHints</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-inputMethodHints">inputMethodHints</a>(self)&nbsp;-&gt;&nbsp;Qt.InputMethodHints</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-inputMethodQuery"><strong>inputMethodQuery</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-inputMethodQuery">inputMethodQuery</a>(self,&nbsp;a0:&nbsp;Qt.InputMethodQuery)&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-insertAction"><strong>insertAction</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-insertAction">insertAction</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-insertActions"><strong>insertActions</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-insertActions">insertActions</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;actions:&nbsp;Iterable[QAction])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isActiveWindow"><strong>isActiveWindow</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isActiveWindow">isActiveWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isAncestorOf"><strong>isAncestorOf</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isAncestorOf">isAncestorOf</a>(self,&nbsp;child:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isEnabled"><strong>isEnabled</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isEnabled">isEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isEnabledTo"><strong>isEnabledTo</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isEnabledTo">isEnabledTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isFullScreen"><strong>isFullScreen</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isFullScreen">isFullScreen</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isHidden"><strong>isHidden</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isHidden">isHidden</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isLeftToRight"><strong>isLeftToRight</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isLeftToRight">isLeftToRight</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isMaximized"><strong>isMaximized</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isMaximized">isMaximized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isMinimized"><strong>isMinimized</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isMinimized">isMinimized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isModal"><strong>isModal</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isModal">isModal</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isRightToLeft"><strong>isRightToLeft</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isRightToLeft">isRightToLeft</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isVisible"><strong>isVisible</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isVisible">isVisible</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isVisibleTo"><strong>isVisibleTo</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isVisibleTo">isVisibleTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isWindow"><strong>isWindow</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isWindow">isWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isWindowModified"><strong>isWindowModified</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isWindowModified">isWindowModified</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-keyboardGrabber"><strong>keyboardGrabber</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-keyboardGrabber">keyboardGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-layout"><strong>layout</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-layout">layout</a>(self)&nbsp;-&gt;&nbsp;Optional[QLayout]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-layoutDirection"><strong>layoutDirection</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-layoutDirection">layoutDirection</a>(self)&nbsp;-&gt;&nbsp;Qt.LayoutDirection</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-locale"><strong>locale</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-locale">locale</a>(self)&nbsp;-&gt;&nbsp;QLocale</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-lower"><strong>lower</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-lower">lower</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-mapFrom"><strong>mapFrom</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-mapFrom">mapFrom</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-mapFromGlobal"><strong>mapFromGlobal</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-mapFromGlobal">mapFromGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-mapFromParent"><strong>mapFromParent</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-mapFromParent">mapFromParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-mapTo"><strong>mapTo</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-mapTo">mapTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-mapToGlobal"><strong>mapToGlobal</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-mapToGlobal">mapToGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-mapToParent"><strong>mapToParent</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-mapToParent">mapToParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-mask"><strong>mask</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-mask">mask</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-maximumHeight"><strong>maximumHeight</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-maximumHeight">maximumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-maximumSize"><strong>maximumSize</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-maximumSize">maximumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-maximumWidth"><strong>maximumWidth</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-maximumWidth">maximumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-minimumHeight"><strong>minimumHeight</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-minimumHeight">minimumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-minimumSize"><strong>minimumSize</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-minimumSize">minimumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-minimumWidth"><strong>minimumWidth</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-minimumWidth">minimumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-mouseGrabber"><strong>mouseGrabber</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-mouseGrabber">mouseGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-move"><strong>move</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-move">move</a>(self,&nbsp;a0:&nbsp;QPoint)<br>
+<a href="#SettingsDialog-move">move</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-nativeParentWidget"><strong>nativeParentWidget</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-nativeParentWidget">nativeParentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-nextInFocusChain"><strong>nextInFocusChain</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-nextInFocusChain">nextInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-normalGeometry"><strong>normalGeometry</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-normalGeometry">normalGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-overrideWindowFlags"><strong>overrideWindowFlags</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-overrideWindowFlags">overrideWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-overrideWindowState"><strong>overrideWindowState</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-overrideWindowState">overrideWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-paintEngine"><strong>paintEngine</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-paintEngine">paintEngine</a>(self)&nbsp;-&gt;&nbsp;Optional[QPaintEngine]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-palette"><strong>palette</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-palette">palette</a>(self)&nbsp;-&gt;&nbsp;QPalette</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-parentWidget"><strong>parentWidget</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-parentWidget">parentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-pos"><strong>pos</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-pos">pos</a>(self)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-previousInFocusChain"><strong>previousInFocusChain</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-previousInFocusChain">previousInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-raise_"><strong>raise_</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-raise_">raise_</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-rect"><strong>rect</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-rect">rect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-releaseKeyboard"><strong>releaseKeyboard</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-releaseKeyboard">releaseKeyboard</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-releaseMouse"><strong>releaseMouse</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-releaseMouse">releaseMouse</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-releaseShortcut"><strong>releaseShortcut</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-releaseShortcut">releaseShortcut</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-removeAction"><strong>removeAction</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-removeAction">removeAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-render"><strong>render</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-render">render</a>(self,&nbsp;target:&nbsp;Optional[QPaintDevice],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#SettingsDialog-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))<br>
+<a href="#SettingsDialog-render">render</a>(self,&nbsp;painter:&nbsp;Optional[QPainter],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#SettingsDialog-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-repaint"><strong>repaint</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-repaint">repaint</a>(self)<br>
+<a href="#SettingsDialog-repaint">repaint</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#SettingsDialog-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#SettingsDialog-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRegion)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-resize"><strong>resize</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-resize">resize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#SettingsDialog-resize">resize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-restoreGeometry"><strong>restoreGeometry</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-restoreGeometry">restoreGeometry</a>(self,&nbsp;geometry:&nbsp;Union[QByteArray,&nbsp;bytes,&nbsp;bytearray])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-saveGeometry"><strong>saveGeometry</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-saveGeometry">saveGeometry</a>(self)&nbsp;-&gt;&nbsp;QByteArray</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-screen"><strong>screen</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-screen">screen</a>(self)&nbsp;-&gt;&nbsp;Optional[QScreen]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-scroll"><strong>scroll</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int)<br>
+<a href="#SettingsDialog-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int,&nbsp;a2:&nbsp;QRect)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setAcceptDrops"><strong>setAcceptDrops</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setAcceptDrops">setAcceptDrops</a>(self,&nbsp;on:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setAccessibleDescription"><strong>setAccessibleDescription</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setAccessibleDescription">setAccessibleDescription</a>(self,&nbsp;description:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setAccessibleName"><strong>setAccessibleName</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setAccessibleName">setAccessibleName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setAttribute"><strong>setAttribute</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setAttribute">setAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setAutoFillBackground"><strong>setAutoFillBackground</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setAutoFillBackground">setAutoFillBackground</a>(self,&nbsp;enabled:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setBackgroundRole"><strong>setBackgroundRole</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setBackgroundRole">setBackgroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setBaseSize"><strong>setBaseSize</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setBaseSize">setBaseSize</a>(self,&nbsp;basew:&nbsp;int,&nbsp;baseh:&nbsp;int)<br>
+<a href="#SettingsDialog-setBaseSize">setBaseSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setContentsMargins"><strong>setContentsMargins</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setContentsMargins">setContentsMargins</a>(self,&nbsp;left:&nbsp;int,&nbsp;top:&nbsp;int,&nbsp;right:&nbsp;int,&nbsp;bottom:&nbsp;int)<br>
+<a href="#SettingsDialog-setContentsMargins">setContentsMargins</a>(self,&nbsp;margins:&nbsp;QMargins)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setContextMenuPolicy"><strong>setContextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setContextMenuPolicy">setContextMenuPolicy</a>(self,&nbsp;policy:&nbsp;Qt.ContextMenuPolicy)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setCursor"><strong>setCursor</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setCursor">setCursor</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setDisabled"><strong>setDisabled</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setDisabled">setDisabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setEnabled"><strong>setEnabled</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setEnabled">setEnabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setFixedHeight"><strong>setFixedHeight</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setFixedHeight">setFixedHeight</a>(self,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setFixedSize"><strong>setFixedSize</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setFixedSize">setFixedSize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#SettingsDialog-setFixedSize">setFixedSize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setFixedWidth"><strong>setFixedWidth</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setFixedWidth">setFixedWidth</a>(self,&nbsp;w:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setFocus"><strong>setFocus</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setFocus">setFocus</a>(self)<br>
+<a href="#SettingsDialog-setFocus">setFocus</a>(self,&nbsp;reason:&nbsp;Qt.FocusReason)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setFocusPolicy"><strong>setFocusPolicy</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setFocusPolicy">setFocusPolicy</a>(self,&nbsp;policy:&nbsp;Qt.FocusPolicy)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setFocusProxy"><strong>setFocusProxy</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setFocusProxy">setFocusProxy</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setFont"><strong>setFont</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setFont">setFont</a>(self,&nbsp;a0:&nbsp;QFont)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setForegroundRole"><strong>setForegroundRole</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setForegroundRole">setForegroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setGeometry"><strong>setGeometry</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setGeometry">setGeometry</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#SettingsDialog-setGeometry">setGeometry</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setGraphicsEffect"><strong>setGraphicsEffect</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setGraphicsEffect">setGraphicsEffect</a>(self,&nbsp;effect:&nbsp;Optional[QGraphicsEffect])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setHidden"><strong>setHidden</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setHidden">setHidden</a>(self,&nbsp;hidden:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setInputMethodHints"><strong>setInputMethodHints</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setInputMethodHints">setInputMethodHints</a>(self,&nbsp;hints:&nbsp;Union[Qt.InputMethodHints,&nbsp;Qt.InputMethodHint])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setLayout"><strong>setLayout</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setLayout">setLayout</a>(self,&nbsp;a0:&nbsp;Optional[QLayout])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setLayoutDirection"><strong>setLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setLayoutDirection">setLayoutDirection</a>(self,&nbsp;direction:&nbsp;Qt.LayoutDirection)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setLocale"><strong>setLocale</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setLocale">setLocale</a>(self,&nbsp;locale:&nbsp;QLocale)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setMask"><strong>setMask</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QBitmap)<br>
+<a href="#SettingsDialog-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QRegion)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setMaximumHeight"><strong>setMaximumHeight</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setMaximumHeight">setMaximumHeight</a>(self,&nbsp;maxh:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setMaximumSize"><strong>setMaximumSize</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setMaximumSize">setMaximumSize</a>(self,&nbsp;maxw:&nbsp;int,&nbsp;maxh:&nbsp;int)<br>
+<a href="#SettingsDialog-setMaximumSize">setMaximumSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setMaximumWidth"><strong>setMaximumWidth</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setMaximumWidth">setMaximumWidth</a>(self,&nbsp;maxw:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setMinimumHeight"><strong>setMinimumHeight</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setMinimumHeight">setMinimumHeight</a>(self,&nbsp;minh:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setMinimumSize"><strong>setMinimumSize</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setMinimumSize">setMinimumSize</a>(self,&nbsp;minw:&nbsp;int,&nbsp;minh:&nbsp;int)<br>
+<a href="#SettingsDialog-setMinimumSize">setMinimumSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setMinimumWidth"><strong>setMinimumWidth</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setMinimumWidth">setMinimumWidth</a>(self,&nbsp;minw:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setMouseTracking"><strong>setMouseTracking</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setMouseTracking">setMouseTracking</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setPalette"><strong>setPalette</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setPalette">setPalette</a>(self,&nbsp;a0:&nbsp;QPalette)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget])<br>
+<a href="#SettingsDialog-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget],&nbsp;f:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setShortcutAutoRepeat"><strong>setShortcutAutoRepeat</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setShortcutAutoRepeat">setShortcutAutoRepeat</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setShortcutEnabled"><strong>setShortcutEnabled</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setShortcutEnabled">setShortcutEnabled</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setSizeIncrement"><strong>setSizeIncrement</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#SettingsDialog-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setSizePolicy"><strong>setSizePolicy</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setSizePolicy">setSizePolicy</a>(self,&nbsp;a0:&nbsp;QSizePolicy)<br>
+<a href="#SettingsDialog-setSizePolicy">setSizePolicy</a>(self,&nbsp;hor:&nbsp;QSizePolicy.Policy,&nbsp;ver:&nbsp;QSizePolicy.Policy)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setStatusTip"><strong>setStatusTip</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setStatusTip">setStatusTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setStyle"><strong>setStyle</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setStyle">setStyle</a>(self,&nbsp;a0:&nbsp;Optional[QStyle])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setStyleSheet"><strong>setStyleSheet</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setStyleSheet">setStyleSheet</a>(self,&nbsp;styleSheet:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setTabOrder"><strong>setTabOrder</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setTabOrder">setTabOrder</a>(a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setTabletTracking"><strong>setTabletTracking</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setTabletTracking">setTabletTracking</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setToolTip"><strong>setToolTip</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setToolTip">setToolTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setToolTipDuration"><strong>setToolTipDuration</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setToolTipDuration">setToolTipDuration</a>(self,&nbsp;msec:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setUpdatesEnabled"><strong>setUpdatesEnabled</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setUpdatesEnabled">setUpdatesEnabled</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWhatsThis"><strong>setWhatsThis</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWhatsThis">setWhatsThis</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowFilePath"><strong>setWindowFilePath</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowFilePath">setWindowFilePath</a>(self,&nbsp;filePath:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowFlag"><strong>setWindowFlag</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowFlag">setWindowFlag</a>(self,&nbsp;a0:&nbsp;Qt.WindowType,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowFlags"><strong>setWindowFlags</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowFlags">setWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowIcon"><strong>setWindowIcon</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowIcon">setWindowIcon</a>(self,&nbsp;icon:&nbsp;QIcon)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowIconText"><strong>setWindowIconText</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowIconText">setWindowIconText</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowModality"><strong>setWindowModality</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowModality">setWindowModality</a>(self,&nbsp;windowModality:&nbsp;Qt.WindowModality)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowModified"><strong>setWindowModified</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowModified">setWindowModified</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowOpacity"><strong>setWindowOpacity</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowOpacity">setWindowOpacity</a>(self,&nbsp;level:&nbsp;float)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowRole"><strong>setWindowRole</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowRole">setWindowRole</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowState"><strong>setWindowState</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowState">setWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setWindowTitle"><strong>setWindowTitle</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setWindowTitle">setWindowTitle</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-show"><strong>show</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-show">show</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-showFullScreen"><strong>showFullScreen</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-showFullScreen">showFullScreen</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-showMaximized"><strong>showMaximized</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-showMaximized">showMaximized</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-showMinimized"><strong>showMinimized</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-showMinimized">showMinimized</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-showNormal"><strong>showNormal</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-showNormal">showNormal</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-size"><strong>size</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-size">size</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-sizeIncrement"><strong>sizeIncrement</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-sizeIncrement">sizeIncrement</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-sizePolicy"><strong>sizePolicy</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-sizePolicy">sizePolicy</a>(self)&nbsp;-&gt;&nbsp;QSizePolicy</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-stackUnder"><strong>stackUnder</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-stackUnder">stackUnder</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-statusTip"><strong>statusTip</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-statusTip">statusTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-style"><strong>style</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-style">style</a>(self)&nbsp;-&gt;&nbsp;Optional[QStyle]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-styleSheet"><strong>styleSheet</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-styleSheet">styleSheet</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-testAttribute"><strong>testAttribute</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-testAttribute">testAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-toolTip"><strong>toolTip</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-toolTip">toolTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-toolTipDuration"><strong>toolTipDuration</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-toolTipDuration">toolTipDuration</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-underMouse"><strong>underMouse</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-underMouse">underMouse</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-ungrabGesture"><strong>ungrabGesture</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-ungrabGesture">ungrabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-unsetCursor"><strong>unsetCursor</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-unsetCursor">unsetCursor</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-unsetLayoutDirection"><strong>unsetLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-unsetLayoutDirection">unsetLayoutDirection</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-unsetLocale"><strong>unsetLocale</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-unsetLocale">unsetLocale</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-update"><strong>update</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-update">update</a>(self)<br>
+<a href="#SettingsDialog-update">update</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#SettingsDialog-update">update</a>(self,&nbsp;a0:&nbsp;QRegion)<br>
+<a href="#SettingsDialog-update">update</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-updateGeometry"><strong>updateGeometry</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-updateGeometry">updateGeometry</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-updatesEnabled"><strong>updatesEnabled</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-updatesEnabled">updatesEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-visibleRegion"><strong>visibleRegion</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-visibleRegion">visibleRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-whatsThis"><strong>whatsThis</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-whatsThis">whatsThis</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-width"><strong>width</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-width">width</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-winId"><strong>winId</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-winId">winId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-window"><strong>window</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-window">window</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-windowFilePath"><strong>windowFilePath</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowFilePath">windowFilePath</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-windowFlags"><strong>windowFlags</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowFlags">windowFlags</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowFlags</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-windowHandle"><strong>windowHandle</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowHandle">windowHandle</a>(self)&nbsp;-&gt;&nbsp;Optional[QWindow]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-windowIcon"><strong>windowIcon</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowIcon">windowIcon</a>(self)&nbsp;-&gt;&nbsp;QIcon</tt></dd></dl>
+
+<strong>windowIconChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconChanged(QIcon)&gt;
+<dl><dt><a name="SettingsDialog-windowIconText"><strong>windowIconText</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowIconText">windowIconText</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowIconTextChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconTextChanged(QString)&gt;
+<dl><dt><a name="SettingsDialog-windowModality"><strong>windowModality</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowModality">windowModality</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowModality</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-windowOpacity"><strong>windowOpacity</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowOpacity">windowOpacity</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-windowRole"><strong>windowRole</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowRole">windowRole</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-windowState"><strong>windowState</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowState">windowState</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowStates</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-windowTitle"><strong>windowTitle</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowTitle">windowTitle</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowTitleChanged</strong> = &lt;unbound PYQT_SIGNAL windowTitleChanged(QString)&gt;
+<dl><dt><a name="SettingsDialog-windowType"><strong>windowType</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-windowType">windowType</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowType</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-x"><strong>x</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-x">x</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-y"><strong>y</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-y">y</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><strong>DrawChildren</strong> = 2</dl>
+
+<dl><dt><strong>DrawWindowBackground</strong> = 1</dl>
+
+<dl><dt><strong>IgnoreMask</strong> = 4</dl>
+
+<dl><dt><strong>RenderFlag</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlag'&gt;</dl>
+
+<dl><dt><strong>RenderFlags</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlags'&gt;<dd><tt>QWidget.<a href="#SettingsDialog-RenderFlags">RenderFlags</a>()<br>
+QWidget.<a href="#SettingsDialog-RenderFlags">RenderFlags</a>(f:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag])<br>
+QWidget.<a href="#SettingsDialog-RenderFlags">RenderFlags</a>(a0:&nbsp;QWidget.RenderFlags)</tt></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="SettingsDialog-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-children"><strong>children</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-deleteLater">deleteLater</a>(self)</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="SettingsDialog-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#SettingsDialog-disconnect">disconnect</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-dumpObjectInfo">dumpObjectInfo</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-dumpObjectTree">dumpObjectTree</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#SettingsDialog-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SettingsDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SettingsDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SettingsDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SettingsDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#SettingsDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="SettingsDialog-parent"><strong>parent</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-property"><strong>property</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><tt>QObject.<a href="#SettingsDialog-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-thread"><strong>thread</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-tr"><strong>tr</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="SettingsDialog-colorCount"><strong>colorCount</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-colorCount">colorCount</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-depth"><strong>depth</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-depth">depth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-devicePixelRatio"><strong>devicePixelRatio</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-devicePixelRatio">devicePixelRatio</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-devicePixelRatioF"><strong>devicePixelRatioF</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-devicePixelRatioF">devicePixelRatioF</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-devicePixelRatioFScale"><strong>devicePixelRatioFScale</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-devicePixelRatioFScale">devicePixelRatioFScale</a>()&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-heightMM"><strong>heightMM</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-heightMM">heightMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-logicalDpiX"><strong>logicalDpiX</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-logicalDpiX">logicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-logicalDpiY"><strong>logicalDpiY</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-logicalDpiY">logicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-paintingActive"><strong>paintingActive</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-paintingActive">paintingActive</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-physicalDpiX"><strong>physicalDpiX</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-physicalDpiX">physicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-physicalDpiY"><strong>physicalDpiY</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-physicalDpiY">physicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="SettingsDialog-widthMM"><strong>widthMM</strong></a>(...)</dt><dd><tt><a href="#SettingsDialog-widthMM">widthMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>PaintDeviceMetric</strong> = &lt;class 'PyQt5.QtGui.QPaintDevice.PaintDeviceMetric'&gt;</dl>
+
+<dl><dt><strong>PdmDepth</strong> = 6</dl>
+
+<dl><dt><strong>PdmDevicePixelRatio</strong> = 11</dl>
+
+<dl><dt><strong>PdmDevicePixelRatioScaled</strong> = 12</dl>
+
+<dl><dt><strong>PdmDpiX</strong> = 7</dl>
+
+<dl><dt><strong>PdmDpiY</strong> = 8</dl>
+
+<dl><dt><strong>PdmHeight</strong> = 2</dl>
+
+<dl><dt><strong>PdmHeightMM</strong> = 4</dl>
+
+<dl><dt><strong>PdmNumColors</strong> = 5</dl>
+
+<dl><dt><strong>PdmPhysicalDpiX</strong> = 9</dl>
+
+<dl><dt><strong>PdmPhysicalDpiY</strong> = 10</dl>
+
+<dl><dt><strong>PdmWidth</strong> = 1</dl>
+
+<dl><dt><strong>PdmWidthMM</strong> = 3</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="SettingsDialog-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="PyQt5.sip.html#wrappertype">sip.wrappertype</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table>

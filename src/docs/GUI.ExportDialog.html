@@ -1,0 +1,818 @@
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="GUI.html"><font color="#ffffff">GUI</font></a>.ExportDialog</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cgui%5Cexportdialog.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\gui\exportdialog.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>(<a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="GUI.ExportDialog.html#ExportDialog">ExportDialog</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExportDialog">class <strong>ExportDialog</strong></a>(<a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ExportDialog">ExportDialog</a>(parent:&nbsp;Optional[PyQt5.QtWidgets.QWidget]&nbsp;=&nbsp;None)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Dialog&nbsp;for&nbsp;exporting&nbsp;data&nbsp;to&nbsp;a&nbsp;file.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.ExportDialog.html#ExportDialog">ExportDialog</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ExportDialog-__init__"><strong>__init__</strong></a>(self, parent: Optional[PyQt5.QtWidgets.QWidget] = None) -&gt; None</dt><dd><tt>Initialize&nbsp;the&nbsp;dialog.<br>
+:param&nbsp;parent:&nbsp;Parent&nbsp;widget&nbsp;of&nbsp;the&nbsp;dialog.</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-browse_save_path"><strong>browse_save_path</strong></a>(self) -&gt; None</dt><dd><tt>Browse&nbsp;for&nbsp;a&nbsp;directory&nbsp;to&nbsp;save&nbsp;the&nbsp;file.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-get_export_details"><strong>get_export_details</strong></a>(self) -&gt; tuple[str, str]</dt><dd><tt>Get&nbsp;the&nbsp;export&nbsp;format&nbsp;and&nbsp;save&nbsp;path.<br>
+:return:</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-init_ui"><strong>init_ui</strong></a>(self) -&gt; None</dt><dd><tt>Initialize&nbsp;the&nbsp;UI&nbsp;of&nbsp;the&nbsp;dialog.<br>
+:return:</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>:<br>
+<dl><dt><a name="ExportDialog-accept"><strong>accept</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-accept">accept</a>(self)</tt></dd></dl>
+
+<strong>accepted</strong> = &lt;unbound PYQT_SIGNAL accepted()&gt;
+<dl><dt><a name="ExportDialog-actionEvent"><strong>actionEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-changeEvent"><strong>changeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-closeEvent"><strong>closeEvent</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-closeEvent">closeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QCloseEvent])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-contextMenuEvent"><strong>contextMenuEvent</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-contextMenuEvent">contextMenuEvent</a>(self,&nbsp;a0:&nbsp;Optional[QContextMenuEvent])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-create"><strong>create</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-destroy"><strong>destroy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-done"><strong>done</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-done">done</a>(self,&nbsp;a0:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-dragEnterEvent"><strong>dragEnterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-dragLeaveEvent"><strong>dragLeaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-dragMoveEvent"><strong>dragMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-dropEvent"><strong>dropEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-enterEvent"><strong>enterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-event"><strong>event</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-exec"><strong>exec</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-exec">exec</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-exec_"><strong>exec_</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-exec_">exec_</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<strong>finished</strong> = &lt;unbound PYQT_SIGNAL finished(int)&gt;
+<dl><dt><a name="ExportDialog-focusInEvent"><strong>focusInEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-focusNextChild"><strong>focusNextChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-focusNextPrevChild"><strong>focusNextPrevChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-focusOutEvent"><strong>focusOutEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-focusPreviousChild"><strong>focusPreviousChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-hideEvent"><strong>hideEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-initPainter"><strong>initPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-inputMethodEvent"><strong>inputMethodEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-isSizeGripEnabled"><strong>isSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isSizeGripEnabled">isSizeGripEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-keyPressEvent"><strong>keyPressEvent</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-keyPressEvent">keyPressEvent</a>(self,&nbsp;a0:&nbsp;Optional[QKeyEvent])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-keyReleaseEvent"><strong>keyReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-leaveEvent"><strong>leaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-metric"><strong>metric</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-minimumSizeHint"><strong>minimumSizeHint</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-minimumSizeHint">minimumSizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-mouseDoubleClickEvent"><strong>mouseDoubleClickEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-mouseMoveEvent"><strong>mouseMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-mousePressEvent"><strong>mousePressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-mouseReleaseEvent"><strong>mouseReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-moveEvent"><strong>moveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-nativeEvent"><strong>nativeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-open"><strong>open</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-open">open</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-paintEvent"><strong>paintEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-reject"><strong>reject</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-reject">reject</a>(self)</tt></dd></dl>
+
+<strong>rejected</strong> = &lt;unbound PYQT_SIGNAL rejected()&gt;
+<dl><dt><a name="ExportDialog-resizeEvent"><strong>resizeEvent</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-resizeEvent">resizeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QResizeEvent])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-result"><strong>result</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-result">result</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-setModal"><strong>setModal</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setModal">setModal</a>(self,&nbsp;modal:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setResult"><strong>setResult</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setResult">setResult</a>(self,&nbsp;r:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setSizeGripEnabled"><strong>setSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setSizeGripEnabled">setSizeGripEnabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setVisible"><strong>setVisible</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setVisible">setVisible</a>(self,&nbsp;visible:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-sharedPainter"><strong>sharedPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-showEvent"><strong>showEvent</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-showEvent">showEvent</a>(self,&nbsp;a0:&nbsp;Optional[QShowEvent])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-sizeHint"><strong>sizeHint</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-sizeHint">sizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-tabletEvent"><strong>tabletEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-updateMicroFocus"><strong>updateMicroFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ExportDialog-wheelEvent"><strong>wheelEvent</strong></a>(...)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QDialog">PyQt5.QtWidgets.QDialog</a>:<br>
+<dl><dt><strong>Accepted</strong> = 1</dl>
+
+<dl><dt><strong>DialogCode</strong> = &lt;class 'PyQt5.QtWidgets.QDialog.DialogCode'&gt;</dl>
+
+<dl><dt><strong>Rejected</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><a name="ExportDialog-acceptDrops"><strong>acceptDrops</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-acceptDrops">acceptDrops</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-accessibleDescription"><strong>accessibleDescription</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-accessibleDescription">accessibleDescription</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-accessibleName"><strong>accessibleName</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-accessibleName">accessibleName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-actions"><strong>actions</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-actions">actions</a>(self)&nbsp;-&gt;&nbsp;List[QAction]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-activateWindow"><strong>activateWindow</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-activateWindow">activateWindow</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-addAction"><strong>addAction</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-addAction">addAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-addActions"><strong>addActions</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-addActions">addActions</a>(self,&nbsp;actions:&nbsp;Iterable[QAction])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-adjustSize"><strong>adjustSize</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-adjustSize">adjustSize</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-autoFillBackground"><strong>autoFillBackground</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-autoFillBackground">autoFillBackground</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-backgroundRole"><strong>backgroundRole</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-backgroundRole">backgroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-baseSize"><strong>baseSize</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-baseSize">baseSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-childAt"><strong>childAt</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-childAt">childAt</a>(self,&nbsp;p:&nbsp;QPoint)&nbsp;-&gt;&nbsp;Optional[QWidget]<br>
+<a href="#ExportDialog-childAt">childAt</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-childrenRect"><strong>childrenRect</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-childrenRect">childrenRect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-childrenRegion"><strong>childrenRegion</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-childrenRegion">childrenRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-clearFocus"><strong>clearFocus</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-clearFocus">clearFocus</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-clearMask"><strong>clearMask</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-clearMask">clearMask</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-close"><strong>close</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-close">close</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-contentsMargins"><strong>contentsMargins</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-contentsMargins">contentsMargins</a>(self)&nbsp;-&gt;&nbsp;QMargins</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-contentsRect"><strong>contentsRect</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-contentsRect">contentsRect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-contextMenuPolicy"><strong>contextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-contextMenuPolicy">contextMenuPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.ContextMenuPolicy</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-createWindowContainer"><strong>createWindowContainer</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-createWindowContainer">createWindowContainer</a>(window:&nbsp;Optional[QWindow],&nbsp;parent:&nbsp;Optional[QWidget]&nbsp;=&nbsp;None,&nbsp;flags:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType]&nbsp;=&nbsp;0)&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-cursor"><strong>cursor</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-cursor">cursor</a>(self)&nbsp;-&gt;&nbsp;QCursor</tt></dd></dl>
+
+<strong>customContextMenuRequested</strong> = &lt;unbound PYQT_SIGNAL customContextMenuRequested(QPoint)&gt;
+<dl><dt><a name="ExportDialog-devType"><strong>devType</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-devType">devType</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-effectiveWinId"><strong>effectiveWinId</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-effectiveWinId">effectiveWinId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-ensurePolished"><strong>ensurePolished</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-ensurePolished">ensurePolished</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-find"><strong>find</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-find">find</a>(a0:&nbsp;PyQt5.sip.voidptr)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-focusPolicy"><strong>focusPolicy</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-focusPolicy">focusPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.FocusPolicy</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-focusProxy"><strong>focusProxy</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-focusProxy">focusProxy</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-focusWidget"><strong>focusWidget</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-focusWidget">focusWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-font"><strong>font</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-font">font</a>(self)&nbsp;-&gt;&nbsp;QFont</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-fontInfo"><strong>fontInfo</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-fontInfo">fontInfo</a>(self)&nbsp;-&gt;&nbsp;QFontInfo</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-fontMetrics"><strong>fontMetrics</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-fontMetrics">fontMetrics</a>(self)&nbsp;-&gt;&nbsp;QFontMetrics</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-foregroundRole"><strong>foregroundRole</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-foregroundRole">foregroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-frameGeometry"><strong>frameGeometry</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-frameGeometry">frameGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-frameSize"><strong>frameSize</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-frameSize">frameSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-geometry"><strong>geometry</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-geometry">geometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-getContentsMargins"><strong>getContentsMargins</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-getContentsMargins">getContentsMargins</a>(self)&nbsp;-&gt;&nbsp;(Optional[int],&nbsp;Optional[int],&nbsp;Optional[int],&nbsp;Optional[int])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-grab"><strong>grab</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-grab">grab</a>(self,&nbsp;rectangle:&nbsp;QRect&nbsp;=&nbsp;QRect(QPoint(0,&nbsp;0),&nbsp;QSize(-1,&nbsp;-1)))&nbsp;-&gt;&nbsp;QPixmap</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-grabGesture"><strong>grabGesture</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-grabGesture">grabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType,&nbsp;flags:&nbsp;Union[Qt.GestureFlags,&nbsp;Qt.GestureFlag]&nbsp;=&nbsp;Qt.GestureFlags())</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-grabKeyboard"><strong>grabKeyboard</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-grabKeyboard">grabKeyboard</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-grabMouse"><strong>grabMouse</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-grabMouse">grabMouse</a>(self)<br>
+<a href="#ExportDialog-grabMouse">grabMouse</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-grabShortcut"><strong>grabShortcut</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-grabShortcut">grabShortcut</a>(self,&nbsp;key:&nbsp;Union[QKeySequence,&nbsp;QKeySequence.StandardKey,&nbsp;Optional[str],&nbsp;int],&nbsp;context:&nbsp;Qt.ShortcutContext&nbsp;=&nbsp;Qt.WindowShortcut)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-graphicsEffect"><strong>graphicsEffect</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-graphicsEffect">graphicsEffect</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsEffect]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-graphicsProxyWidget"><strong>graphicsProxyWidget</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-graphicsProxyWidget">graphicsProxyWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsProxyWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-hasFocus"><strong>hasFocus</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-hasFocus">hasFocus</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-hasHeightForWidth"><strong>hasHeightForWidth</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-hasHeightForWidth">hasHeightForWidth</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-hasMouseTracking"><strong>hasMouseTracking</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-hasMouseTracking">hasMouseTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-hasTabletTracking"><strong>hasTabletTracking</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-hasTabletTracking">hasTabletTracking</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-height"><strong>height</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-height">height</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-heightForWidth"><strong>heightForWidth</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-heightForWidth">heightForWidth</a>(self,&nbsp;a0:&nbsp;int)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-hide"><strong>hide</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-hide">hide</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-inputMethodHints"><strong>inputMethodHints</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-inputMethodHints">inputMethodHints</a>(self)&nbsp;-&gt;&nbsp;Qt.InputMethodHints</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-inputMethodQuery"><strong>inputMethodQuery</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-inputMethodQuery">inputMethodQuery</a>(self,&nbsp;a0:&nbsp;Qt.InputMethodQuery)&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-insertAction"><strong>insertAction</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-insertAction">insertAction</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-insertActions"><strong>insertActions</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-insertActions">insertActions</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;actions:&nbsp;Iterable[QAction])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isActiveWindow"><strong>isActiveWindow</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isActiveWindow">isActiveWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isAncestorOf"><strong>isAncestorOf</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isAncestorOf">isAncestorOf</a>(self,&nbsp;child:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isEnabled"><strong>isEnabled</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isEnabled">isEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isEnabledTo"><strong>isEnabledTo</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isEnabledTo">isEnabledTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isFullScreen"><strong>isFullScreen</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isFullScreen">isFullScreen</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isHidden"><strong>isHidden</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isHidden">isHidden</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isLeftToRight"><strong>isLeftToRight</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isLeftToRight">isLeftToRight</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isMaximized"><strong>isMaximized</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isMaximized">isMaximized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isMinimized"><strong>isMinimized</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isMinimized">isMinimized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isModal"><strong>isModal</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isModal">isModal</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isRightToLeft"><strong>isRightToLeft</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isRightToLeft">isRightToLeft</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isVisible"><strong>isVisible</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isVisible">isVisible</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isVisibleTo"><strong>isVisibleTo</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isVisibleTo">isVisibleTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isWindow"><strong>isWindow</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isWindow">isWindow</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isWindowModified"><strong>isWindowModified</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isWindowModified">isWindowModified</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-keyboardGrabber"><strong>keyboardGrabber</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-keyboardGrabber">keyboardGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-layout"><strong>layout</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-layout">layout</a>(self)&nbsp;-&gt;&nbsp;Optional[QLayout]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-layoutDirection"><strong>layoutDirection</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-layoutDirection">layoutDirection</a>(self)&nbsp;-&gt;&nbsp;Qt.LayoutDirection</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-locale"><strong>locale</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-locale">locale</a>(self)&nbsp;-&gt;&nbsp;QLocale</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-lower"><strong>lower</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-lower">lower</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-mapFrom"><strong>mapFrom</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-mapFrom">mapFrom</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-mapFromGlobal"><strong>mapFromGlobal</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-mapFromGlobal">mapFromGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-mapFromParent"><strong>mapFromParent</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-mapFromParent">mapFromParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-mapTo"><strong>mapTo</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-mapTo">mapTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-mapToGlobal"><strong>mapToGlobal</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-mapToGlobal">mapToGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-mapToParent"><strong>mapToParent</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-mapToParent">mapToParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-mask"><strong>mask</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-mask">mask</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-maximumHeight"><strong>maximumHeight</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-maximumHeight">maximumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-maximumSize"><strong>maximumSize</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-maximumSize">maximumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-maximumWidth"><strong>maximumWidth</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-maximumWidth">maximumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-minimumHeight"><strong>minimumHeight</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-minimumHeight">minimumHeight</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-minimumSize"><strong>minimumSize</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-minimumSize">minimumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-minimumWidth"><strong>minimumWidth</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-minimumWidth">minimumWidth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-mouseGrabber"><strong>mouseGrabber</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-mouseGrabber">mouseGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-move"><strong>move</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-move">move</a>(self,&nbsp;a0:&nbsp;QPoint)<br>
+<a href="#ExportDialog-move">move</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-nativeParentWidget"><strong>nativeParentWidget</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-nativeParentWidget">nativeParentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-nextInFocusChain"><strong>nextInFocusChain</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-nextInFocusChain">nextInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-normalGeometry"><strong>normalGeometry</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-normalGeometry">normalGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-overrideWindowFlags"><strong>overrideWindowFlags</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-overrideWindowFlags">overrideWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-overrideWindowState"><strong>overrideWindowState</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-overrideWindowState">overrideWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-paintEngine"><strong>paintEngine</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-paintEngine">paintEngine</a>(self)&nbsp;-&gt;&nbsp;Optional[QPaintEngine]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-palette"><strong>palette</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-palette">palette</a>(self)&nbsp;-&gt;&nbsp;QPalette</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-parentWidget"><strong>parentWidget</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-parentWidget">parentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-pos"><strong>pos</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-pos">pos</a>(self)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-previousInFocusChain"><strong>previousInFocusChain</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-previousInFocusChain">previousInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-raise_"><strong>raise_</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-raise_">raise_</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-rect"><strong>rect</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-rect">rect</a>(self)&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-releaseKeyboard"><strong>releaseKeyboard</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-releaseKeyboard">releaseKeyboard</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-releaseMouse"><strong>releaseMouse</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-releaseMouse">releaseMouse</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-releaseShortcut"><strong>releaseShortcut</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-releaseShortcut">releaseShortcut</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-removeAction"><strong>removeAction</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-removeAction">removeAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-render"><strong>render</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-render">render</a>(self,&nbsp;target:&nbsp;Optional[QPaintDevice],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#ExportDialog-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))<br>
+<a href="#ExportDialog-render">render</a>(self,&nbsp;painter:&nbsp;Optional[QPainter],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#ExportDialog-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-repaint"><strong>repaint</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-repaint">repaint</a>(self)<br>
+<a href="#ExportDialog-repaint">repaint</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#ExportDialog-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#ExportDialog-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRegion)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-resize"><strong>resize</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-resize">resize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#ExportDialog-resize">resize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-restoreGeometry"><strong>restoreGeometry</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-restoreGeometry">restoreGeometry</a>(self,&nbsp;geometry:&nbsp;Union[QByteArray,&nbsp;bytes,&nbsp;bytearray])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-saveGeometry"><strong>saveGeometry</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-saveGeometry">saveGeometry</a>(self)&nbsp;-&gt;&nbsp;QByteArray</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-screen"><strong>screen</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-screen">screen</a>(self)&nbsp;-&gt;&nbsp;Optional[QScreen]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-scroll"><strong>scroll</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int)<br>
+<a href="#ExportDialog-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int,&nbsp;a2:&nbsp;QRect)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setAcceptDrops"><strong>setAcceptDrops</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setAcceptDrops">setAcceptDrops</a>(self,&nbsp;on:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setAccessibleDescription"><strong>setAccessibleDescription</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setAccessibleDescription">setAccessibleDescription</a>(self,&nbsp;description:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setAccessibleName"><strong>setAccessibleName</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setAccessibleName">setAccessibleName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setAttribute"><strong>setAttribute</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setAttribute">setAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setAutoFillBackground"><strong>setAutoFillBackground</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setAutoFillBackground">setAutoFillBackground</a>(self,&nbsp;enabled:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setBackgroundRole"><strong>setBackgroundRole</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setBackgroundRole">setBackgroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setBaseSize"><strong>setBaseSize</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setBaseSize">setBaseSize</a>(self,&nbsp;basew:&nbsp;int,&nbsp;baseh:&nbsp;int)<br>
+<a href="#ExportDialog-setBaseSize">setBaseSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setContentsMargins"><strong>setContentsMargins</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setContentsMargins">setContentsMargins</a>(self,&nbsp;left:&nbsp;int,&nbsp;top:&nbsp;int,&nbsp;right:&nbsp;int,&nbsp;bottom:&nbsp;int)<br>
+<a href="#ExportDialog-setContentsMargins">setContentsMargins</a>(self,&nbsp;margins:&nbsp;QMargins)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setContextMenuPolicy"><strong>setContextMenuPolicy</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setContextMenuPolicy">setContextMenuPolicy</a>(self,&nbsp;policy:&nbsp;Qt.ContextMenuPolicy)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setCursor"><strong>setCursor</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setCursor">setCursor</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setDisabled"><strong>setDisabled</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setDisabled">setDisabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setEnabled"><strong>setEnabled</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setEnabled">setEnabled</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setFixedHeight"><strong>setFixedHeight</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setFixedHeight">setFixedHeight</a>(self,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setFixedSize"><strong>setFixedSize</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setFixedSize">setFixedSize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#ExportDialog-setFixedSize">setFixedSize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setFixedWidth"><strong>setFixedWidth</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setFixedWidth">setFixedWidth</a>(self,&nbsp;w:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setFocus"><strong>setFocus</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setFocus">setFocus</a>(self)<br>
+<a href="#ExportDialog-setFocus">setFocus</a>(self,&nbsp;reason:&nbsp;Qt.FocusReason)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setFocusPolicy"><strong>setFocusPolicy</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setFocusPolicy">setFocusPolicy</a>(self,&nbsp;policy:&nbsp;Qt.FocusPolicy)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setFocusProxy"><strong>setFocusProxy</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setFocusProxy">setFocusProxy</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setFont"><strong>setFont</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setFont">setFont</a>(self,&nbsp;a0:&nbsp;QFont)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setForegroundRole"><strong>setForegroundRole</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setForegroundRole">setForegroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setGeometry"><strong>setGeometry</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setGeometry">setGeometry</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#ExportDialog-setGeometry">setGeometry</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setGraphicsEffect"><strong>setGraphicsEffect</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setGraphicsEffect">setGraphicsEffect</a>(self,&nbsp;effect:&nbsp;Optional[QGraphicsEffect])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setHidden"><strong>setHidden</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setHidden">setHidden</a>(self,&nbsp;hidden:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setInputMethodHints"><strong>setInputMethodHints</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setInputMethodHints">setInputMethodHints</a>(self,&nbsp;hints:&nbsp;Union[Qt.InputMethodHints,&nbsp;Qt.InputMethodHint])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setLayout"><strong>setLayout</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setLayout">setLayout</a>(self,&nbsp;a0:&nbsp;Optional[QLayout])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setLayoutDirection"><strong>setLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setLayoutDirection">setLayoutDirection</a>(self,&nbsp;direction:&nbsp;Qt.LayoutDirection)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setLocale"><strong>setLocale</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setLocale">setLocale</a>(self,&nbsp;locale:&nbsp;QLocale)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setMask"><strong>setMask</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QBitmap)<br>
+<a href="#ExportDialog-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QRegion)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setMaximumHeight"><strong>setMaximumHeight</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setMaximumHeight">setMaximumHeight</a>(self,&nbsp;maxh:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setMaximumSize"><strong>setMaximumSize</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setMaximumSize">setMaximumSize</a>(self,&nbsp;maxw:&nbsp;int,&nbsp;maxh:&nbsp;int)<br>
+<a href="#ExportDialog-setMaximumSize">setMaximumSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setMaximumWidth"><strong>setMaximumWidth</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setMaximumWidth">setMaximumWidth</a>(self,&nbsp;maxw:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setMinimumHeight"><strong>setMinimumHeight</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setMinimumHeight">setMinimumHeight</a>(self,&nbsp;minh:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setMinimumSize"><strong>setMinimumSize</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setMinimumSize">setMinimumSize</a>(self,&nbsp;minw:&nbsp;int,&nbsp;minh:&nbsp;int)<br>
+<a href="#ExportDialog-setMinimumSize">setMinimumSize</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setMinimumWidth"><strong>setMinimumWidth</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setMinimumWidth">setMinimumWidth</a>(self,&nbsp;minw:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setMouseTracking"><strong>setMouseTracking</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setMouseTracking">setMouseTracking</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setPalette"><strong>setPalette</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setPalette">setPalette</a>(self,&nbsp;a0:&nbsp;QPalette)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget])<br>
+<a href="#ExportDialog-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget],&nbsp;f:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setShortcutAutoRepeat"><strong>setShortcutAutoRepeat</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setShortcutAutoRepeat">setShortcutAutoRepeat</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setShortcutEnabled"><strong>setShortcutEnabled</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setShortcutEnabled">setShortcutEnabled</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setSizeIncrement"><strong>setSizeIncrement</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#ExportDialog-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;s:&nbsp;QSize)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setSizePolicy"><strong>setSizePolicy</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setSizePolicy">setSizePolicy</a>(self,&nbsp;a0:&nbsp;QSizePolicy)<br>
+<a href="#ExportDialog-setSizePolicy">setSizePolicy</a>(self,&nbsp;hor:&nbsp;QSizePolicy.Policy,&nbsp;ver:&nbsp;QSizePolicy.Policy)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setStatusTip"><strong>setStatusTip</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setStatusTip">setStatusTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setStyle"><strong>setStyle</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setStyle">setStyle</a>(self,&nbsp;a0:&nbsp;Optional[QStyle])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setStyleSheet"><strong>setStyleSheet</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setStyleSheet">setStyleSheet</a>(self,&nbsp;styleSheet:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setTabOrder"><strong>setTabOrder</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setTabOrder">setTabOrder</a>(a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setTabletTracking"><strong>setTabletTracking</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setTabletTracking">setTabletTracking</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setToolTip"><strong>setToolTip</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setToolTip">setToolTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setToolTipDuration"><strong>setToolTipDuration</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setToolTipDuration">setToolTipDuration</a>(self,&nbsp;msec:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setUpdatesEnabled"><strong>setUpdatesEnabled</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setUpdatesEnabled">setUpdatesEnabled</a>(self,&nbsp;enable:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWhatsThis"><strong>setWhatsThis</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWhatsThis">setWhatsThis</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowFilePath"><strong>setWindowFilePath</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowFilePath">setWindowFilePath</a>(self,&nbsp;filePath:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowFlag"><strong>setWindowFlag</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowFlag">setWindowFlag</a>(self,&nbsp;a0:&nbsp;Qt.WindowType,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowFlags"><strong>setWindowFlags</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowFlags">setWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowIcon"><strong>setWindowIcon</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowIcon">setWindowIcon</a>(self,&nbsp;icon:&nbsp;QIcon)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowIconText"><strong>setWindowIconText</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowIconText">setWindowIconText</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowModality"><strong>setWindowModality</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowModality">setWindowModality</a>(self,&nbsp;windowModality:&nbsp;Qt.WindowModality)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowModified"><strong>setWindowModified</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowModified">setWindowModified</a>(self,&nbsp;a0:&nbsp;bool)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowOpacity"><strong>setWindowOpacity</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowOpacity">setWindowOpacity</a>(self,&nbsp;level:&nbsp;float)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowRole"><strong>setWindowRole</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowRole">setWindowRole</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowState"><strong>setWindowState</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowState">setWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setWindowTitle"><strong>setWindowTitle</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setWindowTitle">setWindowTitle</a>(self,&nbsp;a0:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-show"><strong>show</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-show">show</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-showFullScreen"><strong>showFullScreen</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-showFullScreen">showFullScreen</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-showMaximized"><strong>showMaximized</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-showMaximized">showMaximized</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-showMinimized"><strong>showMinimized</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-showMinimized">showMinimized</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-showNormal"><strong>showNormal</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-showNormal">showNormal</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-size"><strong>size</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-size">size</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-sizeIncrement"><strong>sizeIncrement</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-sizeIncrement">sizeIncrement</a>(self)&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-sizePolicy"><strong>sizePolicy</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-sizePolicy">sizePolicy</a>(self)&nbsp;-&gt;&nbsp;QSizePolicy</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-stackUnder"><strong>stackUnder</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-stackUnder">stackUnder</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-statusTip"><strong>statusTip</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-statusTip">statusTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-style"><strong>style</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-style">style</a>(self)&nbsp;-&gt;&nbsp;Optional[QStyle]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-styleSheet"><strong>styleSheet</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-styleSheet">styleSheet</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-testAttribute"><strong>testAttribute</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-testAttribute">testAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-toolTip"><strong>toolTip</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-toolTip">toolTip</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-toolTipDuration"><strong>toolTipDuration</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-toolTipDuration">toolTipDuration</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-underMouse"><strong>underMouse</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-underMouse">underMouse</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-ungrabGesture"><strong>ungrabGesture</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-ungrabGesture">ungrabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-unsetCursor"><strong>unsetCursor</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-unsetCursor">unsetCursor</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-unsetLayoutDirection"><strong>unsetLayoutDirection</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-unsetLayoutDirection">unsetLayoutDirection</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-unsetLocale"><strong>unsetLocale</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-unsetLocale">unsetLocale</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-update"><strong>update</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-update">update</a>(self)<br>
+<a href="#ExportDialog-update">update</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#ExportDialog-update">update</a>(self,&nbsp;a0:&nbsp;QRegion)<br>
+<a href="#ExportDialog-update">update</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-updateGeometry"><strong>updateGeometry</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-updateGeometry">updateGeometry</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-updatesEnabled"><strong>updatesEnabled</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-updatesEnabled">updatesEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-visibleRegion"><strong>visibleRegion</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-visibleRegion">visibleRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-whatsThis"><strong>whatsThis</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-whatsThis">whatsThis</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-width"><strong>width</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-width">width</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-winId"><strong>winId</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-winId">winId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-window"><strong>window</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-window">window</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-windowFilePath"><strong>windowFilePath</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowFilePath">windowFilePath</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-windowFlags"><strong>windowFlags</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowFlags">windowFlags</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowFlags</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-windowHandle"><strong>windowHandle</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowHandle">windowHandle</a>(self)&nbsp;-&gt;&nbsp;Optional[QWindow]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-windowIcon"><strong>windowIcon</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowIcon">windowIcon</a>(self)&nbsp;-&gt;&nbsp;QIcon</tt></dd></dl>
+
+<strong>windowIconChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconChanged(QIcon)&gt;
+<dl><dt><a name="ExportDialog-windowIconText"><strong>windowIconText</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowIconText">windowIconText</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowIconTextChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconTextChanged(QString)&gt;
+<dl><dt><a name="ExportDialog-windowModality"><strong>windowModality</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowModality">windowModality</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowModality</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-windowOpacity"><strong>windowOpacity</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowOpacity">windowOpacity</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-windowRole"><strong>windowRole</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowRole">windowRole</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-windowState"><strong>windowState</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowState">windowState</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowStates</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-windowTitle"><strong>windowTitle</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowTitle">windowTitle</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>windowTitleChanged</strong> = &lt;unbound PYQT_SIGNAL windowTitleChanged(QString)&gt;
+<dl><dt><a name="ExportDialog-windowType"><strong>windowType</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-windowType">windowType</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowType</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-x"><strong>x</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-x">x</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-y"><strong>y</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-y">y</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><strong>DrawChildren</strong> = 2</dl>
+
+<dl><dt><strong>DrawWindowBackground</strong> = 1</dl>
+
+<dl><dt><strong>IgnoreMask</strong> = 4</dl>
+
+<dl><dt><strong>RenderFlag</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlag'&gt;</dl>
+
+<dl><dt><strong>RenderFlags</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlags'&gt;<dd><tt>QWidget.<a href="#ExportDialog-RenderFlags">RenderFlags</a>()<br>
+QWidget.<a href="#ExportDialog-RenderFlags">RenderFlags</a>(f:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag])<br>
+QWidget.<a href="#ExportDialog-RenderFlags">RenderFlags</a>(a0:&nbsp;QWidget.RenderFlags)</tt></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="ExportDialog-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-children"><strong>children</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-deleteLater">deleteLater</a>(self)</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="ExportDialog-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#ExportDialog-disconnect">disconnect</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-dumpObjectInfo">dumpObjectInfo</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-dumpObjectTree">dumpObjectTree</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#ExportDialog-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ExportDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ExportDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ExportDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ExportDialog-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ExportDialog-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="ExportDialog-parent"><strong>parent</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-property"><strong>property</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><tt>QObject.<a href="#ExportDialog-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-thread"><strong>thread</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-tr"><strong>tr</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="ExportDialog-colorCount"><strong>colorCount</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-colorCount">colorCount</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-depth"><strong>depth</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-depth">depth</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-devicePixelRatio"><strong>devicePixelRatio</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-devicePixelRatio">devicePixelRatio</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-devicePixelRatioF"><strong>devicePixelRatioF</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-devicePixelRatioF">devicePixelRatioF</a>(self)&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-devicePixelRatioFScale"><strong>devicePixelRatioFScale</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-devicePixelRatioFScale">devicePixelRatioFScale</a>()&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-heightMM"><strong>heightMM</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-heightMM">heightMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-logicalDpiX"><strong>logicalDpiX</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-logicalDpiX">logicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-logicalDpiY"><strong>logicalDpiY</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-logicalDpiY">logicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-paintingActive"><strong>paintingActive</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-paintingActive">paintingActive</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-physicalDpiX"><strong>physicalDpiX</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-physicalDpiX">physicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-physicalDpiY"><strong>physicalDpiY</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-physicalDpiY">physicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="ExportDialog-widthMM"><strong>widthMM</strong></a>(...)</dt><dd><tt><a href="#ExportDialog-widthMM">widthMM</a>(self)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>PaintDeviceMetric</strong> = &lt;class 'PyQt5.QtGui.QPaintDevice.PaintDeviceMetric'&gt;</dl>
+
+<dl><dt><strong>PdmDepth</strong> = 6</dl>
+
+<dl><dt><strong>PdmDevicePixelRatio</strong> = 11</dl>
+
+<dl><dt><strong>PdmDevicePixelRatioScaled</strong> = 12</dl>
+
+<dl><dt><strong>PdmDpiX</strong> = 7</dl>
+
+<dl><dt><strong>PdmDpiY</strong> = 8</dl>
+
+<dl><dt><strong>PdmHeight</strong> = 2</dl>
+
+<dl><dt><strong>PdmHeightMM</strong> = 4</dl>
+
+<dl><dt><strong>PdmNumColors</strong> = 5</dl>
+
+<dl><dt><strong>PdmPhysicalDpiX</strong> = 9</dl>
+
+<dl><dt><strong>PdmPhysicalDpiY</strong> = 10</dl>
+
+<dl><dt><strong>PdmWidth</strong> = 1</dl>
+
+<dl><dt><strong>PdmWidthMM</strong> = 3</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="ExportDialog-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="PyQt5.sip.html#wrappertype">sip.wrappertype</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Optional</strong> = typing.Optional</td></tr></table>
