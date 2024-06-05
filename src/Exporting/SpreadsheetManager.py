@@ -51,7 +51,7 @@ class SpreadsheetManager:
     @staticmethod
     def _format_columns(sheet) -> None:
         """Formats column widths to fit the longest text in the column."""
-        hyperlinked_columns = {"item_url", "photo"}
+        hyperlinked_columns = {"Item URL", "Photo"}
         hyperlinked_columns_width = 25
         for column_cells in sheet.columns:
             column_title = column_cells[0].value

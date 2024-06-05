@@ -10,6 +10,7 @@ from src.GUI.ClickableDelegate import ClickableDelegate
 from src.GUI.ExportDialog import ExportDialog
 from src.GUI.ImageDialog import ImageDialog
 from src.GUI.SettingsDialog import SettingsDialog
+from src.GUI.ScrapingHistoryDialog import ScrapingHistoryDialog
 import requests
 
 
@@ -42,6 +43,10 @@ class MainWindow(QMainWindow):
         reboot_act.setStatusTip('Reboot application')
         reboot_act.triggered.connect(reboot_application)
 
+        view_history_act = QAction('&View Scraping History', self)
+        view_history_act.setStatusTip('View the scraping history')
+        view_history_act.triggered.connect(self.show_scraping_history_dialog)
+
         self.statusBar()
 
         # Create menu bar and add exit action
@@ -49,6 +54,7 @@ class MainWindow(QMainWindow):
         file_menu = menubar.addMenu('&File')
         file_menu.addAction(exit_act)
         file_menu.addAction(reboot_act)
+        file_menu.addAction(view_history_act)
 
         # Set up the central widget and layout
         central_widget = QWidget(self)
@@ -334,3 +340,7 @@ class MainWindow(QMainWindow):
 
     def show_scraping_error(self, message: str) -> None:
         QMessageBox.critical(self, "Scraping Error", f"An error occurred during scraping: {message}")
+
+    def show_scraping_history_dialog(self) -> None:
+        history_dialog = ScrapingHistoryDialog('Resources/scraping_history.json', self)
+        history_dialog.exec_()

@@ -83,8 +83,8 @@ class Scraper:
         photo = item.find("img").get("src") if item.find("img") else ""
         item_url = urljoin("https://www.olx.pl", item.find("a").get("href"))
 
-        return {"title": title, "price": price, "location": location, "date": date, "item_url": item_url,
-                "photo": photo}
+        return {"Title": title, "Price": price, "Location": location, "Date": date, "Item URL": item_url,
+                "Photo": photo}
 
     def find_count(self, soup: BeautifulSoup) -> int:
         """Returns the number of listings found on the page."""
