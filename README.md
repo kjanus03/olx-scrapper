@@ -141,6 +141,28 @@ olx-scrapper
 ## Documentation
 
 The documentation for the project is available at the following links:
+## Documentation
+
+The documentation for the project is available at the following links:
+
+- [ExportManager](https://kjanus03.github.io/olx-scrapper/Exporting.ExportManager.html)
+- [Formatting](https://kjanus03.github.io/olx-scrapper/Exporting.formatting.html)
+- [SpreadsheetManager](https://kjanus03.github.io/olx-scrapper/Exporting.SpreadsheetManager.html)
+- [ClickableDelegate](https://kjanus03.github.io/olx-scrapper/GUI.ClickableDelegate.html)
+- [Controller](https://kjanus03.github.io/olx-scrapper/GUI.Controller.html)
+- [DataFrameModel](https://kjanus03.github.io/olx-scrapper/GUI.DataFrameModel.html)
+- [ExportDialog](https://kjanus03.github.io/olx-scrapper/GUI.ExportDialog.html)
+- [ImageDialog](https://kjanus03.github.io/olx-scrapper/GUI.ImageDialog.html)
+- [MainWindow](https://kjanus03.github.io/olx-scrapper/GUI.MainWindow.html)
+- [ScrapingHistoryDialog](https://kjanus03.github.io/olx-scrapper/GUI.ScrapingHistoryDialog.html)
+- [SearchQueriesDialog](https://kjanus03.github.io/olx-scrapper/GUI.SearchQueriesDialog.html)
+- [SettingsDialog](https://kjanus03.github.io/olx-scrapper/GUI.SettingsDialog.html)
+- [Input Validation](https://kjanus03.github.io/olx-scrapper/Resources.input_validation.html)
+- [Utils](https://kjanus03.github.io/olx-scrapper/Resources.utils.html)
+- [Scraper](https://kjanus03.github.io/olx-scrapper/Scraping.Scraper.html)
+- [URLBuilder](https://kjanus03.github.io/olx-scrapper/Scraping.URLBuilder.html)
+- [Main](https://kjanus03.github.io/olx-scrapper/main.html)
+
 
 
 ## Contributing
