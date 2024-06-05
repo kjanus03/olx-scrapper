@@ -1,9 +1,8 @@
 import sys
-
 from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QPushButton, QVBoxLayout, QWidget, QStackedLayout, QHBoxLayout, \
     QLabel, QDialog, QTableView, QProgressBar, QMenu, QToolButton, QMessageBox, QLayout
 from PyQt5.QtGui import QFont, QIcon, QPixmap
-from PyQt5.QtCore import Qt, QPoint, QModelIndex, QProcess
+from PyQt5.QtCore import Qt, QPoint, QModelIndex, QProcess, QTimer
 from src.GUI.DataFrameModel import DataFrameModel
 from src.GUI.Controller import Controller
 from src.GUI.ClickableDelegate import ClickableDelegate
@@ -123,7 +122,7 @@ class MainWindow(QMainWindow):
         self.button_layout.addWidget(self.next_button)
         self.next_button.setVisible(False)
 
-        self.scrape_button = self.create_button('Scrape Data', self.controller.scrape_data)
+        self.scrape_button = self.create_button('Scrape Data', self.start_scraping)
         self.button_layout.addWidget(self.scrape_button)
 
         self.view_button = self.create_button('View Data', lambda: self.show_data(), enabled=False)
@@ -178,6 +177,7 @@ class MainWindow(QMainWindow):
         menu = QMenu(menu_button)
 
         self.scrape_action = QAction('Scrape Data', self)
+        self.scrape_action.triggered.connect(self.show_progress_bar)
         self.scrape_action.triggered.connect(self.controller.scrape_data)
         menu.addAction(self.scrape_action)
 
@@ -302,6 +302,14 @@ class MainWindow(QMainWindow):
         self.update_button_layout_to_horizontal()
         if self.settings_dialog.dark_mode_toggle.isChecked():
             self.apply_dark_mode()
+
+    def start_scraping(self) -> None:
+        """
+        Starts the scraping process, showing the progress bar before beginning.
+        :return:
+        """
+        self.show_progress_bar()
+        QTimer.singleShot(0, self.controller.scrape_data)
 
     def show_next(self) -> None:
         """
