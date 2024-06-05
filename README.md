@@ -1,4 +1,4 @@
-or# OLX Scrapper
+# OLX Scrapper
 
 ## Project Description
 
