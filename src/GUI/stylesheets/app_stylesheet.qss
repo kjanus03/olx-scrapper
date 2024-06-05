@@ -1,0 +1,61 @@
+ QMainWindow, QDialog {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+}
+QLabel, QPushButton, QMenuBar, QMenu, QToolButton, QLineEdit, QTableView, QProgressBar, QCheckBox {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+}
+QPushButton {
+    background-color: #3a3a3a;
+    border: 1px solid #5c5c5c;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+QPushButton:hover {
+    background-color: #4d4d4d;
+}
+QToolButton {
+    background-color: #3a3a3a;
+    border: 1px solid #5c5c5c;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+QToolButton::menu-indicator {
+    image: none;
+}
+QTableView {
+    gridline-color: #555555;
+    selection-background-color: #555555;
+    alternate-background-color: #3a3a3a;
+}
+QHeaderView::section {
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    padding: 5px;
+    border: 1px solid #5c5c5c;
+}
+QProgressBar {
+    border: 1px solid #3a3a3a;
+    text-align: center;
+    color: #f0f0f0;
+    background-color: #3a3a3a;
+}
+QProgressBar::chunk {
+    background-color: #4caf50;
+}
+QMenu {
+    background-color: #3a3a3a;
+    border: 1px solid #5c5c5c;
+}
+QMenu::item {
+    background-color: transparent;
+    padding: 5px 10px;
+}
+QMenu::item:selected {
+    background-color: #4d4d4d;
+}
+QMessageBox {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+}

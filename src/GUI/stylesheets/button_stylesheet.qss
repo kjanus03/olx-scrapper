@@ -1,0 +1,54 @@
+QPushButton:hover {
+    background-color: #4d4d4d;
+}
+QPushButton:disabled {
+    background-color: #2e2e2e;
+    border: 1px solid #3a3a3a;
+    color: #7a7a7a;
+}
+QMenuBar {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    border: none;
+    font: 12pt "Montserrat";
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 5px 20px;  /* Increase padding */
+    spacing: 20px;  /* Increase spacing */
+}
+
+QMenuBar::item:selected {
+    background-color: #4d4d4d;
+}
+
+QMenu {
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    border: 4px solid #5c5c5c;
+    padding: 12px;  /* Increase padding */
+    font: 12pt "Montserrat";  /* Ensure consistent font */
+}
+
+QAction {
+    font: 12pt "Montserrat";  /* Ensure consistent font */
+    color: #f0f0f0;
+    padding: 10px;  /* Add padding */
+}
+QMenu::item {
+    padding:10px 25px 10px 10px;  /* Adjust the padding to create space between text and shortcut */
+    background-color: #3a3a3a;  /* Background color */
+    color: #f0f0f0;             /* Text color */
+}
+
+QMenu::item:selected {
+    background-color: #4d4d4d;  /* Background color when selected */
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #5c5c5c;
+    margin: 10px 0;
+}
+

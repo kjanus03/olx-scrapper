@@ -1,9 +1,9 @@
-from typing import Optional
+import sys
 
 from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QPushButton, QVBoxLayout, QWidget, QStackedLayout, QHBoxLayout, \
     QLabel, QDialog, QTableView, QProgressBar, QMenu, QToolButton, QMessageBox
 from PyQt5.QtGui import QFont, QIcon, QPixmap
-from PyQt5.QtCore import Qt, QPoint, QModelIndex
+from PyQt5.QtCore import Qt, QPoint, QModelIndex, QProcess
 from src.GUI.DataFrameModel import DataFrameModel
 from src.GUI.Controller import Controller
 from src.GUI.ClickableDelegate import ClickableDelegate
@@ -13,15 +13,21 @@ from src.GUI.SettingsDialog import SettingsDialog
 import requests
 
 
+def reboot_application():
+    """Reboots the application."""
+    qApp.quit()
+    QProcess.startDetached(sys.executable, sys.argv)
+
+
 class MainWindow(QMainWindow):
-    def __init__(self, title: str, width: int, height: int, controller: Controller, button_style: Optional[str] = None):
+    def __init__(self, title: str, width: int, height: int, controller: Controller):
         super().__init__()
         self.controller = controller
         self.controller.progress_updated.connect(self.update_progress_bar)
         self.controller.scraping_done.connect(self.update_last_scrape_label)
         self.controller.scraping_done.connect(self.enable_buttons)
-        self.button_style = button_style
-        self.settings_dialog=None
+        self.controller.scraping_failed.connect(self.show_scraping_error)
+        self.settings_dialog = SettingsDialog(config_path='Resources/config.json')
         self.init_ui(title, width, height)
 
     def init_ui(self, title: str, width: int, height: int):
@@ -31,12 +37,18 @@ class MainWindow(QMainWindow):
         exit_act.setStatusTip('Exit application')
         exit_act.triggered.connect(qApp.quit)
 
+        reboot_act = QAction('&Reboot', self)
+        reboot_act.setShortcut('Ctrl+R')
+        reboot_act.setStatusTip('Reboot application')
+        reboot_act.triggered.connect(reboot_application)
+
         self.statusBar()
 
         # Create menu bar and add exit action
         menubar = self.menuBar()
         file_menu = menubar.addMenu('&File')
         file_menu.addAction(exit_act)
+        file_menu.addAction(reboot_act)
 
         # Set up the central widget and layout
         central_widget = QWidget(self)
@@ -119,6 +131,11 @@ class MainWindow(QMainWindow):
         self.settings_action.triggered.connect(self.show_settings_dialog)
         self.menu.addAction(self.settings_action)
 
+        settings_action = QAction('Settings', self)
+        settings_action.triggered.connect(self.show_settings_dialog)
+        file_menu.addAction(settings_action)
+
+
         self.menu_button.setMenu(self.menu)
         self.menu_button.setVisible(False)  # Initially hidden
         self.button_layout.addWidget(self.menu_button)
@@ -138,9 +155,8 @@ class MainWindow(QMainWindow):
 
         self.setGeometry(100, 100, width, height)
         self.set_button_styles()
-        if self.settings_dialog:
-            if self.settings_dialog.dark_mode_toggle.isChecked():
-                self.apply_dark_mode()
+        if self.settings_dialog.dark_mode_toggle.isChecked():
+            self.apply_dark_mode()
         self.setWindowTitle(title)
         self.show()
 
@@ -223,9 +239,8 @@ class MainWindow(QMainWindow):
         self.view_search_queries_button.setVisible(False)
         self.settings_button.setVisible(False)
         self.update_button_layout_to_horizontal()
-        if self.settings_dialog:
-            if self.settings_dialog.dark_mode_toggle.isChecked():
-                self.apply_dark_mode()
+        if self.settings_dialog.dark_mode_toggle.isChecked():
+            self.apply_dark_mode()
 
     def show_next(self) -> None:
         current_index = self.stacked_layout.currentIndex()
@@ -302,151 +317,20 @@ class MainWindow(QMainWindow):
         model.removeRow(row)
 
     def set_button_styles(self):
-        self.scrape_button.setStyleSheet(self.button_style)
-        self.view_button.setStyleSheet(self.button_style)
-        self.export_button.setStyleSheet(self.button_style)
-        self.view_search_queries_button.setStyleSheet(self.button_style)
-        self.settings_button.setStyleSheet(self.button_style)
-        self.prev_button.setStyleSheet(self.button_style)
-        self.next_button.setStyleSheet(self.button_style)
-        self.menu_button.setStyleSheet(self.button_style)
+        with open('GUI/stylesheets/button_stylesheet.qss') as stylesheet:
+            button_style = stylesheet.read()
+            self.scrape_button.setStyleSheet(button_style)
+            self.view_button.setStyleSheet(button_style)
+            self.export_button.setStyleSheet(button_style)
+            self.view_search_queries_button.setStyleSheet(button_style)
+            self.settings_button.setStyleSheet(button_style)
+            self.prev_button.setStyleSheet(button_style)
+            self.next_button.setStyleSheet(button_style)
+            self.menu_button.setStyleSheet(button_style)
 
-    def apply_dark_mode(self):
-        self.setStyleSheet("""
-            QMainWindow, QDialog {
-                background-color: #2e2e2e;
-                color: #f0f0f0;
-            }
-            QLabel, QPushButton, QMenuBar, QMenu, QToolButton, QLineEdit, QTableView, QProgressBar, QCheckBox {
-                background-color: #2e2e2e;
-                color: #f0f0f0;
-            }
-            QPushButton {
-                background-color: #3a3a3a;
-                border: 1px solid #5c5c5c;
-                padding: 5px 10px;
-                border-radius: 5px;
-            }
-            QPushButton:hover {
-                background-color: #4d4d4d;
-            }
-            QToolButton {
-                background-color: #3a3a3a;
-                border: 1px solid #5c5c5c;
-                padding: 5px 10px;
-                border-radius: 5px;
-            }
-            QToolButton::menu-indicator {
-                image: none;
-            }
-            QTableView {
-                background-color: #2b2b2b;
-                alternate-background-color: #323232;
-                gridline-color: #444444;
-                color: #f0f0f0;
-                border: none;
-            }
-            QTableView QTableCornerButton::section {
-                background-color: #2b2b2b;
-            }
-            QTableView::item {
-                border: 1px solid #444444;
-            }
-            QHeaderView::section {
-                background-color: #3a3a3a;
-                color: #f0f0f0;
-                padding: 5px;
-                border: 1px solid #5c5c5c;
-            }
-            QScrollBar:vertical {
-                background-color: #2e2e2e;
-                width: 15px;
-                margin: 22px 0 22px 0;
-            }
-            QScrollBar::handle:vertical {
-                background-color: #5c5c5c;
-                min-height: 20px;
-                border-radius: 5px;
-            }
-            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-                background-color: #2e2e2e;
-                height: 20px;
-                subcontrol-origin: margin;
-                subcontrol-position: top;
-            }
-            QScrollBar::add-line:vertical:hover, QScrollBar::sub-line:vertical:hover {
-                background-color: #5c5c5c;
-            }
-            QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
-                background: none;
-            }
-            QScrollBar:horizontal {
-                background-color: #2e2e2e;
-                height: 15px;
-                margin: 0px 22px 0px 22px;
-            }
-            QScrollBar::handle:horizontal {
-                background-color: #5c5c5c;
-                min-width: 20px;
-                border-radius: 5px;
-            }
-            QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
-                background-color: #2e2e2e;
-                width: 20px;
-                subcontrol-origin: margin;
-                subcontrol-position: left;
-            }
-            QScrollBar::add-line:horizontal:hover, QScrollBar::sub-line:horizontal:hover {
-                background-color: #5c5c5c;
-            }
-            QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
-                background: none;
-            }
-            QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical,
-            QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
-                background: #5c5c5c;
-            }
-            QScrollBar::up-arrow:vertical:hover, QScrollBar::down-arrow:vertical:hover,
-            QScrollBar::left-arrow:horizontal:hover, QScrollBar::right-arrow:horizontal:hover {
-                background: #4d4d4d;
-            }
-            QProgressBar {
-                border: 1px solid #3a3a3a;
-                text-align: center;
-                color: #f0f0f0;
-                background-color: #3a3a3a;
-            }
-            QProgressBar::chunk {
-                background-color: #4caf50;
-            }
-            QMenu {
-                background-color: #3a3a3a;
-                border: 1px solid #5c5c5c;
-            }
-            QMenu::item {
-                background-color: transparent;
-                padding: 5px 10px;
-            }
-            QMenu::item:selected {
-                background-color: #4d4d4d;
-            }
-            QMessageBox {
-                background-color: #2e2e2e;
-                color: #f0f0f0;
-            }
-            QHeaderView {
-                background-color: #2b2b2b;
-                color: #f0f0f0;
-            }
-            QHeaderView::section {
-                background-color: #3a3a3a;
-                color: #f0f0f0;
-            }
-            QTableCornerButton::section {
-                background-color: #2b2b2b;
-                border: 1px solid #5c5c5c;
-            }
-        """)
+    def apply_dark_mode(self) -> None:
+        with open('GUI/stylesheets/main_window_stylesheet.qss') as stylesheet:
+            self.setStyleSheet(stylesheet.read())
 
-
-
+    def show_scraping_error(self, message: str) -> None:
+        QMessageBox.critical(self, "Scraping Error", f"An error occurred during scraping: {message}")

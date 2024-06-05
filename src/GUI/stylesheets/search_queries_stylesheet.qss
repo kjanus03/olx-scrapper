@@ -1,0 +1,102 @@
+QDialog {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+}
+
+QLabel {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    font-family: "Montserrat";
+    font-size: 12pt;
+}
+
+QPushButton {
+    background-color: #3a3a3a;
+    border: 1px solid #5c5c5c;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #f0f0f0;
+    font-family: "Montserrat";
+    font-size: 12pt;
+}
+
+QPushButton:hover {
+    background-color: #4d4d4d;
+}
+
+QTableView {
+    background-color: #2b2b2b;
+    alternate-background-color: #323232;
+    gridline-color: #444444;
+    color: #f0f0f0;
+    font-family: "Montserrat";
+    font-size: 12pt;
+}
+
+QHeaderView::section {
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    padding: 5px;
+    border: 1px solid #5c5c5c;
+    font-family: "Montserrat";
+    font-size: 12pt;
+}
+
+QScrollBar:vertical {
+    background-color: #2b2b2b;
+    width: 15px;
+    margin: 22px 0 22px 0;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #5c5c5c;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background-color: #2b2b2b;
+    height: 20px;
+    subcontrol-origin: margin;
+    subcontrol-position: top;
+}
+
+QScrollBar::add-line:vertical:hover, QScrollBar::sub-line:vertical:hover {
+    background-color: #5c5c5c;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    background-color: #2b2b2b;
+    height: 15px;
+    margin: 0px 22px 0px 22px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #5c5c5c;
+    min-width: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    background-color: #2b2b2b;
+    width: 20px;
+    subcontrol-origin: margin;
+    subcontrol-position: left;
+}
+
+QScrollBar::add-line:horizontal:hover, QScrollBar::sub-line:horizontal:hover {
+    background-color: #5c5c5c;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+QMessageBox {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+}

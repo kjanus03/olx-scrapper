@@ -95,6 +95,7 @@ class SearchQueriesDialog(QDialog):
         self.config_data: dict = {}  # To store the entire JSON data
         self.init_ui()
         self.load_queries()
+        self.apply_stylesheet()
         self.adjust_size()
 
     def init_ui(self) -> None:
@@ -175,3 +176,7 @@ class SearchQueriesDialog(QDialog):
         table_width = self.table_view.horizontalHeader().length()
 
         self.resize(table_width + 40, table_height + 140)
+
+    def apply_stylesheet(self) -> None:
+        with open('GUI/stylesheets/search_queries_stylesheet.qss') as stylesheet:
+            self.setStyleSheet(stylesheet.read())

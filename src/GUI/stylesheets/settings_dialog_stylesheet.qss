@@ -1,0 +1,8 @@
+QDialog {
+    background-color: #3e3e3e;
+    color: #f0f0f0;
+}
+QLabel, QLineEdit, QPushButton, QCheckBox {
+    background-color: #3e3e3e;
+    color: #f0f0f0;
+}

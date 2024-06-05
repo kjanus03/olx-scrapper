@@ -23,7 +23,8 @@ class Scraper:
         self.count_pattern = re.compile(r'Znaleźliśmy\s+(?:ponad\s+)?(\d+)\s+ogłosze(?:ń|nie|nia)')
         self.listings_counts = []
         self.resources_dir = os.path.join(os.path.dirname(__file__), '../Resources')
-        self.last_scrape_date = self.load_last_scrape_date()
+        self.scraping_history = self.load_scraping_history()
+        self.last_scrape_date = datetime.fromisoformat(self.scraping_history[-1]['scrape_date']) if self.scraping_history else None
 
     def add_url(self, url: URLBuilder) -> None:
         """Adds a new URL to the list of URLs to be scraped."""
@@ -47,8 +48,7 @@ class Scraper:
             if progress_callback:
                 progress_callback(int((i + 1) / num_urls * 50 + 50))
         self.last_scrape_date = datetime.now()
-        self.save_last_scrape_date()
-        print("scraped data")
+        self.save_scrape_date()
         return self.data_frames
 
     async def _fetch_data_from_url(self, url_builder: URLBuilder) -> pd.DataFrame:
@@ -69,8 +69,7 @@ class Scraper:
                             break  # Break if there are no more pages
                         page += 1
                     else:
-                        print(f"Error: {response.status} for {site_url.geturl()}")
-                        break
+                        raise Exception(f"Error: {response.status} for {site_url.geturl()}")
 
             return pd.DataFrame(self._process_item(item) for item in all_items) if all_items else pd.DataFrame()
 
@@ -94,18 +93,26 @@ class Scraper:
         self.listings_counts.append(count)
         return count
 
-    def save_last_scrape_date(self) -> None:
-        with open(os.path.join(self.resources_dir, 'last_scrape.json'), 'w') as file:
-            json.dump({'last_scrape_date': self.last_scrape_date.isoformat()}, file)
+    def save_scrape_date(self) -> None:
+        history_file_path = os.path.join(self.resources_dir, 'scraping_history.json')
+        scraping_entry = {'scrape_date': self.last_scrape_date.isoformat()}
 
-    def load_last_scrape_date(self) -> Union[datetime, None]:
         try:
-            with open(os.path.join(self.resources_dir, 'last_scrape.json'), 'r') as file:
-                data = json.load(file)
-                self.last_scrape_date = datetime.fromisoformat(data['last_scrape_date'])
-                return datetime.fromisoformat(data['last_scrape_date'])
-        except (FileNotFoundError, KeyError, ValueError):
-            return None
+            with open(history_file_path, 'r+') as file:
+                history = json.load(file)
+                history.append(scraping_entry)
+                file.seek(0)
+                json.dump(history, file, indent=4)
+        except (FileNotFoundError, json.JSONDecodeError):
+            with open(history_file_path, 'w') as file:
+                json.dump([scraping_entry], file, indent=4)
+
+    def load_scraping_history(self) -> list:
+        try:
+            with open(os.path.join(self.resources_dir, 'scraping_history.json'), 'r') as file:
+                return json.load(file)
+        except (FileNotFoundError, json.JSONDecodeError):
+            return []
 
     def update_url_list(self, config: dict) -> None:
         self.url_list = [URLBuilder(**query) for query in config['search_queries']]

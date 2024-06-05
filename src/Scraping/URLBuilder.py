@@ -26,4 +26,6 @@ class URLBuilder:
         key = f"{self.item_query.capitalize()}"
         if self.city:
             key += f" - {self.city.capitalize()}"
+        if self.distance:
+            key += f" - {self.distance}km"
         return key

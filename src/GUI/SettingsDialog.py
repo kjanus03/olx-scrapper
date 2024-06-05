@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QDialog, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit
 import json
 from src.Resources.input_validation import validate_filename, validate_page_limit, validate_dimension, validate_fontsize
 
+
 class SettingsDialog(QDialog):
     def __init__(self, config_path: str, dark_mode: bool = False, parent=None) -> None:
         super(SettingsDialog, self).__init__(parent)
@@ -85,16 +86,8 @@ class SettingsDialog(QDialog):
         layout.addLayout(button_layout)
 
     def apply_dark_mode(self):
-        self.setStyleSheet("""
-            QDialog {
-                background-color: #3e3e3e;
-                color: #f0f0f0;
-            }
-            QLabel, QLineEdit, QPushButton, QCheckBox {
-                background-color: #3e3e3e;
-                color: #f0f0f0;
-            }
-        """)
+        with open('GUI/stylesheets/settings_dialog_stylesheet.qss') as stylesheet:
+            self.setStyleSheet(stylesheet.read())
 
     def save_settings(self) -> None:
         """Validates and saves the settings."""

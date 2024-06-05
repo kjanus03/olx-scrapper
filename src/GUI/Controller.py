@@ -13,6 +13,7 @@ from src.GUI.SearchQueriesDialog import SearchQueriesDialog
 class Controller(QObject):
     progress_updated = pyqtSignal(int) # Signa to notify that progress updated
     scraping_done = pyqtSignal()  # Signal to notify when scraping is done
+    scraping_failed = pyqtSignal(str)
 
     def __init__(self, scraper: Scraper, output_config: dict[str]) -> None:
         super().__init__()
@@ -25,11 +26,17 @@ class Controller(QObject):
         # Ensure progress bar is visible and reset to 0
         self.progress_updated.emit(0)
         self.loop.run_until_complete(self.scrape_and_update_progress())
-        self.progress_updated.emit(100)  # Ensure progress is 100% when done
-        self.scraping_done.emit()  # Emit the signal when scraping is done
+        if self.scraping_failed:
+            self.progress_updated.emit(0)
+        else:
+            self.progress_updated.emit(100)
 
     async def scrape_and_update_progress(self) -> dict[str, pd.DataFrame]:
-        await self.scraper.scrape_data(self.progress_updated.emit)
+        try:
+            await self.scraper.scrape_data(self.progress_updated.emit)
+            self.scraping_done.emit()
+        except Exception as e:
+            self.scraping_failed.emit(str(e))
         return self.scraper.data_frames
 
     def export_data(self, format: str, directory: str) -> None:
@@ -44,5 +51,4 @@ class Controller(QObject):
         dialog = SearchQueriesDialog(config_path='Resources/config.json')
         dialog.exec_()
         if dialog.result() == dialog.Accepted:
-            print("Accepted")
             self.scraper.update_url_list(dialog.config_data)

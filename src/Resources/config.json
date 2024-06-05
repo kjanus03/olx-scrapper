@@ -1,11 +1,6 @@
 {
     "search_queries": [
         {
-            "item_query": "rower gravel",
-            "city": "zagan",
-            "distance": "10"
-        },
-        {
             "item_query": "rower trekkingowy",
             "city": "zagan",
             "distance": "30"
@@ -29,6 +24,16 @@
             "item_query": "rower zagan",
             "city": "",
             "distance": ""
+        },
+        {
+            "item_query": "rower gravel",
+            "city": "zagan",
+            "distance": "45"
+        },
+        {
+            "item_query": "rower elektryczny",
+            "city": "zagan",
+            "distance": "50"
         }
     ],
     "output_config": {
