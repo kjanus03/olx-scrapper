@@ -3,7 +3,12 @@ from PyQt5.QtWidgets import QDialog, QVBoxLayout, QListWidget, QPushButton, QHBo
 
 
 class ScrapingHistoryDialog(QDialog):
+    """Dialog to display the scraping history of the application."""
     def __init__(self, history_path: str, parent=None) -> None:
+        """
+        :param history_path: Path to the file containing the scraping history.
+        :param parent: Parent widget.
+        """
         super(ScrapingHistoryDialog, self).__init__(parent)
         self.setWindowTitle("Scraping History")
         self.setModal(True)
@@ -13,6 +18,10 @@ class ScrapingHistoryDialog(QDialog):
         self.apply_stylesheet()
 
     def load_history(self) -> list[str]:
+        """
+        Load the scraping history from the file.
+        :return:
+        """
         try:
             with open(self.history_path, 'r') as file:
                 return [date_dict['scrape_date'].replace('T', ' ')[:-7] for date_dict in json.load(file)]
@@ -21,6 +30,10 @@ class ScrapingHistoryDialog(QDialog):
             return []
 
     def init_ui(self) -> None:
+        """
+        Initialize the UI.
+        :return:
+        """
         layout = QVBoxLayout(self)
 
         self.list_widget = QListWidget()
@@ -39,5 +52,9 @@ class ScrapingHistoryDialog(QDialog):
         self.setLayout(layout)
 
     def apply_stylesheet(self):
+        """
+        Apply the stylesheet to the dialog.
+        :return:
+        """
         with open('GUI/stylesheets/scraping_history_dialog_stylesheet.qss') as stylesheet:
             self.setStyleSheet(stylesheet.read())

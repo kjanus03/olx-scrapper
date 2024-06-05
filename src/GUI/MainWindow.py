@@ -1,7 +1,7 @@
 import sys
 
 from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QPushButton, QVBoxLayout, QWidget, QStackedLayout, QHBoxLayout, \
-    QLabel, QDialog, QTableView, QProgressBar, QMenu, QToolButton, QMessageBox
+    QLabel, QDialog, QTableView, QProgressBar, QMenu, QToolButton, QMessageBox, QLayout
 from PyQt5.QtGui import QFont, QIcon, QPixmap
 from PyQt5.QtCore import Qt, QPoint, QModelIndex, QProcess
 from src.GUI.DataFrameModel import DataFrameModel
@@ -14,14 +14,25 @@ from src.GUI.ScrapingHistoryDialog import ScrapingHistoryDialog
 import requests
 
 
-def reboot_application():
-    """Reboots the application."""
+def reboot_application() -> None:
+    """
+    Reboots the application.
+    :return:
+    """
     qApp.quit()
     QProcess.startDetached(sys.executable, sys.argv)
 
 
 class MainWindow(QMainWindow):
-    def __init__(self, title: str, width: int, height: int, controller: Controller):
+    """Main window of the application."""
+    def __init__(self, title: str, width: int, height: int, controller: Controller) -> None:
+        """
+        Initializes the main window.
+        :param title: Title of the window.
+        :param width: Width of the window.
+        :param height: Height of the window.
+        :param controller: Controller object, connecting the GUI to the backend Scraper.
+        """
         super().__init__()
         self.controller = controller
         self.controller.progress_updated.connect(self.update_progress_bar)
@@ -31,8 +42,48 @@ class MainWindow(QMainWindow):
         self.settings_dialog = SettingsDialog(config_path='Resources/config.json')
         self.init_ui(title, width, height)
 
-    def init_ui(self, title: str, width: int, height: int):
-        # Setup action to exit the application
+    def init_ui(self, title: str, width: int, height: int) -> None:
+        """
+        Initializes the user interface.
+        :param title: Title of the window.
+        :param width: Width of the window.
+        :param height: Height of the window.
+        :return:
+        """
+        self.setup_menu()
+
+        central_widget = QWidget(self)
+        self.setCentralWidget(central_widget)
+        main_layout = QVBoxLayout(central_widget)
+
+        self.last_scrape_label = QLabel(self)
+        self.update_last_scrape_label()
+
+        self.button_layout = QVBoxLayout()
+        main_layout.addLayout(self.button_layout)
+
+        self.setup_buttons()
+
+        self.menu_button = self.create_menu_button()
+        self.button_layout.addWidget(self.menu_button)
+
+        self.stacked_layout = QStackedLayout()
+        main_layout.addLayout(self.stacked_layout)
+
+        self.setup_progress_bar(main_layout)
+
+        self.setGeometry(100, 100, width, height)
+        self.set_button_styles()
+        if self.settings_dialog.dark_mode_toggle.isChecked():
+            self.apply_dark_mode()
+        self.setWindowTitle(title)
+        self.show()
+
+    def setup_menu(self) -> None:
+        """
+        Sets up the menu bar.
+        :return:
+        """
         exit_act = QAction(QIcon('exit.png'), '&Exit', self)
         exit_act.setShortcut('Ctrl+Q')
         exit_act.setStatusTip('Exit application')
@@ -47,132 +98,129 @@ class MainWindow(QMainWindow):
         view_history_act.setStatusTip('View the scraping history')
         view_history_act.triggered.connect(self.show_scraping_history_dialog)
 
+        settings_act = QAction('Settings', self)
+        settings_act.triggered.connect(self.show_settings_dialog)
+
         self.statusBar()
 
-        # Create menu bar and add exit action
         menubar = self.menuBar()
         file_menu = menubar.addMenu('&File')
         file_menu.addAction(exit_act)
         file_menu.addAction(reboot_act)
         file_menu.addAction(view_history_act)
+        file_menu.addAction(settings_act)
 
-        # Set up the central widget and layout
-        central_widget = QWidget(self)
-        self.setCentralWidget(central_widget)
-        main_layout = QVBoxLayout(central_widget)
-
-        # Add a label to display the last scrape date
-        self.last_scrape_label = QLabel(self)
-        self.update_last_scrape_label()
-
-        # Navigation and action buttons layout
-        self.button_layout = QVBoxLayout()
-        main_layout.addLayout(self.button_layout)
-
-        self.prev_button = QPushButton("Previous", self)
-        self.prev_button.clicked.connect(self.show_previous)
-        self.prev_button.setVisible(False)  # Initially hidden
+    def setup_buttons(self) -> None:
+        """
+        Sets up the buttons in the GUI.
+        :return:
+        """
+        self.prev_button = self.create_button("Previous", self.show_previous)
         self.button_layout.addWidget(self.prev_button)
+        self.prev_button.setVisible(False)
 
-        self.next_button = QPushButton("Next", self)
-        self.next_button.clicked.connect(self.show_next)
-        self.next_button.setVisible(False)  # Initially hidden
+        self.next_button = self.create_button("Next", self.show_next)
         self.button_layout.addWidget(self.next_button)
+        self.next_button.setVisible(False)
 
-        self.scrape_button = QPushButton('Scrape Data', self)
-        self.scrape_button.setToolTip('Start scraping data from OLX')
-        self.scrape_button.clicked.connect(self.show_progress_bar)
-        self.scrape_button.clicked.connect(self.controller.scrape_data)
-        self.scrape_button.clicked.connect(self.update_last_scrape_label)
+        self.scrape_button = self.create_button('Scrape Data', self.controller.scrape_data)
         self.button_layout.addWidget(self.scrape_button)
 
-        self.view_button = QPushButton('View Data', self)
-        self.view_button.setToolTip('View the scraped data')
-        self.view_button.setEnabled(False)  # Initially disabled
-        self.view_button.clicked.connect(lambda: self.show_data())
+        self.view_button = self.create_button('View Data', lambda: self.show_data(), enabled=False)
         self.button_layout.addWidget(self.view_button)
 
-        self.export_button = QPushButton('Export Data', self)
-        self.export_button.setToolTip('Export the scraped data')
-        self.export_button.setEnabled(False)  # Initially disabled
-        self.export_button.clicked.connect(self.show_export_dialog)
+        self.export_button = self.create_button('Export Data', self.show_export_dialog, enabled=False)
         self.button_layout.addWidget(self.export_button)
 
-        self.view_search_queries_button = QPushButton('View Search Queries', self)
-        self.view_search_queries_button.setToolTip('View the search queries')
-        self.view_search_queries_button.clicked.connect(self.controller.view_search_queries)
+        self.view_search_queries_button = self.create_button('View Search Queries', self.controller.view_search_queries)
         self.button_layout.addWidget(self.view_search_queries_button)
 
-        self.settings_button = QPushButton('Settings', self)
-        self.settings_button.setToolTip('Modify settings')
-        self.settings_button.clicked.connect(self.show_settings_dialog)
+        self.settings_button = self.create_button('Settings', self.show_settings_dialog)
         self.button_layout.addWidget(self.settings_button)
 
-        # Create the drop-down menu button
-        self.menu_button = QToolButton(self)
-        self.menu_button.setText('Menu')
-        self.menu_button.setPopupMode(QToolButton.InstantPopup)
-        self.menu_button.setMinimumSize(100, 50)  # Adjust these values as needed
-        self.menu = QMenu(self.menu_button)
+    def create_button(self, text, callback, enabled=True) -> QPushButton:
+        """
+        Creates a button.
+        :param text: Text of the button.
+        :param callback: Callback function to be called when the button is clicked.
+        :param enabled: Enabled state of the button.
+        :return: Button object.
+        """
+        button = QPushButton(text, self)
+        button.setToolTip(text)
+        button.setEnabled(enabled)
+        button.clicked.connect(callback)
+        return button
+
+    def setup_progress_bar(self, layout: QLayout) -> None:
+        """
+        Sets up the progress bar.
+        :param layout: Layout to add the progress bar to.
+        :return:
+        """
+        self.progress_bar = QProgressBar(self)
+        self.progress_bar.setMaximum(100)
+        self.progress_bar.setVisible(False)
+        self.progress_layout = QHBoxLayout()
+        self.progress_layout.addWidget(self.last_scrape_label)
+        self.progress_layout.addWidget(self.progress_bar)
+        layout.addLayout(self.progress_layout)
+
+    def create_menu_button(self) -> QToolButton:
+        """
+        Creates a menu button.
+        :return: The menu button.
+        """
+        menu_button = QToolButton(self)
+        menu_button.setText('Menu')
+        menu_button.setPopupMode(QToolButton.InstantPopup)
+        menu_button.setMinimumSize(100, 50)
+        menu = QMenu(menu_button)
 
         self.scrape_action = QAction('Scrape Data', self)
         self.scrape_action.triggered.connect(self.controller.scrape_data)
-        self.scrape_action.triggered.connect(self.update_last_scrape_label)
-        self.scrape_action.triggered.connect(self.show_progress_bar)
-        self.menu.addAction(self.scrape_action)
+        menu.addAction(self.scrape_action)
 
         self.view_action = QAction('View Data', self)
         self.view_action.triggered.connect(lambda: self.show_data())
-        self.menu.addAction(self.view_action)
+        menu.addAction(self.view_action)
 
         self.export_action = QAction('Export Data', self)
         self.export_action.triggered.connect(self.show_export_dialog)
-        self.menu.addAction(self.export_action)
+        menu.addAction(self.export_action)
 
         self.view_search_queries_action = QAction('View Search Queries', self)
         self.view_search_queries_action.triggered.connect(self.controller.view_search_queries)
-        self.menu.addAction(self.view_search_queries_action)
+        menu.addAction(self.view_search_queries_action)
 
         self.settings_action = QAction('Settings', self)
         self.settings_action.triggered.connect(self.show_settings_dialog)
-        self.menu.addAction(self.settings_action)
+        menu.addAction(self.settings_action)
 
-        settings_action = QAction('Settings', self)
-        settings_action.triggered.connect(self.show_settings_dialog)
-        file_menu.addAction(settings_action)
-
-
-        self.menu_button.setMenu(self.menu)
-        self.menu_button.setVisible(False)  # Initially hidden
-        self.button_layout.addWidget(self.menu_button)
-
-        # Initialize QStackedLayout for table views
-        self.stacked_layout = QStackedLayout()
-        main_layout.addLayout(self.stacked_layout)
-
-        # Progress bar layout
-        self.progress_layout = QHBoxLayout()
-        self.progress_bar = QProgressBar(self)
-        self.progress_bar.setMaximum(100)
-        self.progress_bar.setVisible(False)  # Initially hidden
-        self.progress_layout.addWidget(self.last_scrape_label)
-        self.progress_layout.addWidget(self.progress_bar)
-        main_layout.addLayout(self.progress_layout)
-
-        self.setGeometry(100, 100, width, height)
-        self.set_button_styles()
-        if self.settings_dialog.dark_mode_toggle.isChecked():
-            self.apply_dark_mode()
-        self.setWindowTitle(title)
-        self.show()
+        menu_button.setMenu(menu)
+        menu_button.setVisible(False)
+        return menu_button
 
     def show_progress_bar(self) -> None:
+        """
+        Shows the progress bar.
+        :return:
+        """
         self.progress_bar.setVisible(True)
 
     def update_progress_bar(self, value: float) -> None:
+        """
+        Updates the progress bar.
+        :param value: Value to set the progress bar to.
+        :return:
+        """
         self.progress_bar.setValue(value)
 
     def show_export_dialog(self) -> None:
+        """
+        Shows the export dialog.
+        :return:
+        """
         export_dialog = ExportDialog(self)
         if export_dialog.exec_() == QDialog.Accepted:
             export_format, save_path = export_dialog.get_export_details()
@@ -180,6 +228,10 @@ class MainWindow(QMainWindow):
                 self.controller.export_data(export_format.lower(), save_path)
 
     def update_last_scrape_label(self) -> None:
+        """
+        Updates the last scrape label.
+        :return:
+        """
         last_scrape_date = self.controller.scraper.last_scrape_date
         if last_scrape_date:
             self.last_scrape_label.setText(f"Last Scrape: {last_scrape_date.strftime('%Y-%m-%d %H:%M:%S')}")
@@ -187,6 +239,10 @@ class MainWindow(QMainWindow):
             self.last_scrape_label.setText("Last Scrape: Never")
 
     def show_data(self) -> None:
+        """
+        Shows the scraped data.
+        :return:
+        """
         if not self.controller.scraper.data_frames:
             return
 
@@ -219,7 +275,6 @@ class MainWindow(QMainWindow):
             table_view.resizeRowsToContents()
 
             table_view.setShowGrid(True)
-            # table_view.setAlternatingRowColors(True)
             table_view.setEditTriggers(QTableView.NoEditTriggers)
 
             # Set up the context menu
@@ -249,16 +304,28 @@ class MainWindow(QMainWindow):
             self.apply_dark_mode()
 
     def show_next(self) -> None:
+        """
+        Shows the next table.
+        :return:
+        """
         current_index = self.stacked_layout.currentIndex()
         if current_index < self.stacked_layout.count() - 1:
             self.stacked_layout.setCurrentIndex(current_index + 1)
 
     def show_previous(self) -> None:
+        """
+        Shows the previous table.
+        :return:
+        """
         current_index = self.stacked_layout.currentIndex()
         if current_index > 0:
             self.stacked_layout.setCurrentIndex(current_index - 1)
 
     def update_button_layout_to_horizontal(self) -> None:
+        """
+        Updates the button layout to horizontal.
+        :return:
+        """
         # Clear current button layout
         while self.button_layout.count():
             button = self.button_layout.takeAt(0).widget()
@@ -272,6 +339,11 @@ class MainWindow(QMainWindow):
         self.button_layout.addLayout(horizontal_layout)
 
     def show_context_menu(self, position: QPoint) -> None:
+        """
+        Shows the context menu for the table view.
+        :param position: Position of the left upper corner of the context menu.
+        :return:
+        """
         indexes = self.sender().selectedIndexes()
         if indexes:
             context_menu = QMenu(self)
@@ -287,18 +359,27 @@ class MainWindow(QMainWindow):
             context_menu.exec_(self.sender().viewport().mapToGlobal(position))
 
     def show_settings_dialog(self) -> None:
+        """
+        Shows the settings dialog.
+        :return:
+        """
         self.settings_dialog = SettingsDialog(config_path='Resources/config.json')
         self.settings_dialog.exec_()
 
     def show_image(self, index: QModelIndex) -> None:
-        # Extract the image URL from the selected row
+        """
+        Shows the image in a dialog.
+        :param index: Index of the selected row.
+        :return:
+        """
+
         image_url = index.sibling(index.row(), 5).data()
 
         if not image_url:
             QMessageBox.warning(self, "No Image", "No image URL found in the selected row.")
             return
 
-        # Fetch and display the image
+        # Fetches and displays the image
         try:
             response = requests.get(image_url)
             response.raise_for_status()
@@ -314,15 +395,28 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(self, "Error", f"Could not load image: {e}")
 
     def enable_buttons(self):
+        """
+        Enables the view and export buttons.
+        :return:
+        """
         self.view_button.setEnabled(True)
         self.export_button.setEnabled(True)
 
     def delete_row(self, index: QModelIndex) -> None:
+        """
+        Deletes the selected row.
+        :param index: Index of the selected row.
+        :return:
+        """
         row = index.row()
         model = index.model()
         model.removeRow(row)
 
-    def set_button_styles(self):
+    def set_button_styles(self) -> None:
+        """
+        Sets the styles of the buttons.
+        :return:
+        """
         with open('GUI/stylesheets/button_stylesheet.qss') as stylesheet:
             button_style = stylesheet.read()
             self.scrape_button.setStyleSheet(button_style)
@@ -335,12 +429,25 @@ class MainWindow(QMainWindow):
             self.menu_button.setStyleSheet(button_style)
 
     def apply_dark_mode(self) -> None:
+        """
+        Applies the dark mode stylesheet.
+        :return:
+        """
         with open('GUI/stylesheets/main_window_stylesheet.qss') as stylesheet:
             self.setStyleSheet(stylesheet.read())
 
     def show_scraping_error(self, message: str) -> None:
+        """
+        Shows a message box with a scraping error.
+        :param message: String message to display.
+        :return:
+        """
         QMessageBox.critical(self, "Scraping Error", f"An error occurred during scraping: {message}")
 
     def show_scraping_history_dialog(self) -> None:
+        """
+        Shows the scraping history dialog.
+        :return:
+        """
         history_dialog = ScrapingHistoryDialog('Resources/scraping_history.json', self)
         history_dialog.exec_()

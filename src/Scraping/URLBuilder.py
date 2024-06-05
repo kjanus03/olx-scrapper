@@ -3,11 +3,17 @@ from dataclasses import dataclass
 
 @dataclass
 class URLBuilder:
+    """Dataclass for building URL for OLX search query."""
     item_query: str
     city: str = None
     distance: int = 100
 
     def build_url(self, page: int = 1) -> str:
+        """
+        Build URL for OLX search query.
+        :param page: Page number.
+        :return: URL for OLX search query.
+        """
         if self.city is None:
             city = "oferty"
             distance_string = ""
@@ -23,6 +29,10 @@ class URLBuilder:
         return url
 
     def generate_data_key(self) -> str:
+        """
+        Generate key for data dictionary.
+        :return: Generated key.
+        """
         key = f"{self.item_query.capitalize()}"
         if self.city:
             key += f" - {self.city.capitalize()}"

@@ -4,7 +4,15 @@ from src.Resources.input_validation import validate_filename, validate_page_limi
 
 
 class SettingsDialog(QDialog):
+    """Dialog for changing settings."""
+
     def __init__(self, config_path: str, dark_mode: bool = False, parent=None) -> None:
+        """
+        Initializes the settings dialog.
+        :param config_path: Configuration file path.
+        :param dark_mode: Dark mode enabled.
+        :param parent: Parent widget.
+        """
         super(SettingsDialog, self).__init__(parent)
         self.config_path = config_path
         self.dark_mode = dark_mode
@@ -15,14 +23,26 @@ class SettingsDialog(QDialog):
             self.apply_dark_mode()
 
     def load_config(self) -> None:
+        """
+        Loads the configuration file.
+        :return:
+        """
         with open(self.config_path, 'r') as file:
             self.config = json.load(file)
 
     def save_config(self) -> None:
+        """
+        Saves the configuration file.
+        :return:
+        """
         with open(self.config_path, 'w') as file:
             json.dump(self.config, file, indent=4)
 
     def init_ui(self) -> None:
+        """
+        Initializes the UI.
+        :return:
+        """
         self.setWindowTitle("Settings")
         layout = QVBoxLayout(self)
 
@@ -85,12 +105,19 @@ class SettingsDialog(QDialog):
         button_layout.addWidget(cancel_button)
         layout.addLayout(button_layout)
 
-    def apply_dark_mode(self):
+    def apply_dark_mode(self) -> None:
+        """
+        Applies dark mode to the dialog.
+        :return:
+        """
         with open('GUI/stylesheets/settings_dialog_stylesheet.qss') as stylesheet:
             self.setStyleSheet(stylesheet.read())
 
     def save_settings(self) -> None:
-        """Validates and saves the settings."""
+        """
+        Saves the settings.
+        :return:
+        """
         try:
             output_filename = validate_filename(self.output_filename_input.text())
             page_limit = validate_page_limit(int(self.page_limit_input.text()))

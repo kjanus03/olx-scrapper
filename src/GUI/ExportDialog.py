@@ -6,13 +6,22 @@ from src.Exporting.ExportManager import ExportFormat
 
 
 class ExportDialog(QDialog):
+    """Dialog for exporting data to a file."""
     def __init__(self, parent: Optional[QWidget] = None) -> None:
+        """
+        Initialize the dialog.
+        :param parent: Parent widget of the dialog.
+        """
         super().__init__(parent)
         self.setWindowTitle("Export Data")
         self.setModal(True)
         self.init_ui()
 
     def init_ui(self) -> None:
+        """
+        Initialize the UI of the dialog.
+        :return:
+        """
         layout = QVBoxLayout(self)
 
         # Format selection
@@ -48,10 +57,18 @@ class ExportDialog(QDialog):
         self.setLayout(layout)
 
     def browse_save_path(self) -> None:
+        """
+        Browse for a directory to save the file.
+        :return:
+        """
         options = QFileDialog.Options()
         directory = QFileDialog.getExistingDirectory(self, "Select Directory", options=options)
         if directory:
             self.path_line_edit.setText(directory)
 
     def get_export_details(self) -> tuple[str, str]:
+        """
+        Get the export format and save path.
+        :return:
+        """
         return self.format_combo.currentText(), self.path_line_edit.text()

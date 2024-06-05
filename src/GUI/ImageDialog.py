@@ -1,10 +1,16 @@
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QWheelEvent
 from PyQt5.QtWidgets import QDialog, QWidget, QGraphicsView, QGraphicsScene, QGraphicsPixmapItem, QVBoxLayout
 
 
 class ImageDialog(QDialog):
+    """Dialog for displaying an image."""
     def __init__(self, parent: QWidget, pixmap: QPixmap) -> None:
+        """
+        Initialize the dialog.
+        :param parent: Parent widget of the dialog.
+        :param pixmap: Pixel map to display in the dialog.
+        """
         super().__init__(parent)
         self.setWindowTitle("Image")
         self.graphics_view = QGraphicsView(self)
@@ -27,7 +33,12 @@ class ImageDialog(QDialog):
         self.graphics_view.setBackgroundBrush(Qt.black)
         self.graphics_view.setFrameShape(QGraphicsView.NoFrame)
 
-    def wheelEvent(self, event):
+    def wheelEvent(self, event: QWheelEvent) -> None:
+        """
+        Handle the wheel event.
+        :param event: Wheel event.
+        :return:
+        """
         zoom_in_factor = 1.25
         zoom_out_factor = 1 / zoom_in_factor
 
