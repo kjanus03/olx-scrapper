@@ -1,22 +1,49 @@
 {
     "search_queries": [
-        {"item_query": "wzmacniacz gitarowy", "city": "legnica", "distance": 100},
-        {"item_query": "kolumna gitarowa", "city": "legnica", "distance": 100},
-        {"item_query": "orange gitarowy", "city": "legnica", "distance": 100},
-        {"item_query": "wzmacniacz gitarowy", "city": "zagan", "distance":  100},
-        {"item_query": "kolumna gitarowa", "city": "zagan", "distance": 100},
-
-        {"item_query": "boss chorus"},
-        {"item_query": "electro-harmonix small clone"},
-        {"item_query": "mxr micro amp"},
-        {"item_query": "mxr chorus"},
-        {"item_query": "electro-harmonix holy grail reverb"},
-        {"item_query": "boss reverb"},
-        {"item_query": "boss delay"}
+        {
+            "item_query": "rower gravel",
+            "city": "zagan",
+            "distance": "10"
+        },
+        {
+            "item_query": "rower trekkingowy",
+            "city": "zagan",
+            "distance": "30"
+        },
+        {
+            "item_query": "rower elektryczny",
+            "city": "legnica",
+            "distance": "50"
+        },
+        {
+            "item_query": "rower gravel",
+            "city": "",
+            "distance": ""
+        },
+        {
+            "item_query": "rower gorski",
+            "city": "warszawa",
+            "distance": ""
+        },
+        {
+            "item_query": "rower zagan",
+            "city": "",
+            "distance": ""
+        }
     ],
     "output": {
         "filename": "scraped_data",
         "format_column_widths": true,
-        "hyperlinked_columns": ["item_url", "photo"]
+        "hyperlinked_columns": [
+            "item_url",
+            "photo"
+        ]
+    },
+    "gui_config": {
+        "app_title": "olx-scrapper",
+        "fontsize": 12,
+        "width": 1400,
+        "height": 900,
+        "page_limit": 2
     }
 }

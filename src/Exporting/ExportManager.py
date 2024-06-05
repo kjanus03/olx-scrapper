@@ -65,7 +65,6 @@ class ExportManager:
 
             col_widths = {}
             for key, df in self.data_frames.items():
-                # Calculate column widths
                 for col in df.columns:
                     max_length = max(df[col].astype(str).map(len).max(), len(col)) + 2
                     col_widths[col] = pdf.get_string_width(col) + 4  # Column name width + padding

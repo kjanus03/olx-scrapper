@@ -2,6 +2,7 @@ from typing import Optional, Union
 
 from PyQt5 import QtCore
 import pandas as pd
+from PyQt5.QtCore import QModelIndex
 
 
 class DataFrameModel(QtCore.QAbstractTableModel):
@@ -56,7 +57,8 @@ class DataFrameModel(QtCore.QAbstractTableModel):
         val = self._dataframe.iloc[index.row(), index.column()]
 
         if role == QtCore.Qt.DisplayRole:
-            if isinstance(val, str) and (val.startswith("http://") or val.startswith("https://") or val.startswith("/app")):
+            if isinstance(val, str) and (
+                    val.startswith("http://") or val.startswith("https://") or val.startswith("/app")):
                 return val  # For simplicity, just return the URL. Custom delegate will handle it
             return str(val)
         elif role == DataFrameModel.ValueRole:
@@ -98,3 +100,11 @@ class DataFrameModel(QtCore.QAbstractTableModel):
         roles = {QtCore.Qt.DisplayRole: b'display', DataFrameModel.DtypeRole: b'dtype',
                  DataFrameModel.ValueRole: b'value'}
         return roles
+
+    def removeRow(self, row: int, parent: QModelIndex = QModelIndex()) -> bool:
+        if 0 <= row < self.rowCount():
+            self.beginRemoveRows(parent, row, row)
+            self._dataframe.drop(self._dataframe.index[row], inplace=True)
+            self.endRemoveRows()
+            return True
+        return False

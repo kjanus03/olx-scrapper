@@ -6,6 +6,7 @@ from src.GUI.DataFrameModel import DataFrameModel
 from src.GUI.Controller import Controller
 from src.GUI.ClickableDelegate import ClickableDelegate
 from src.GUI.ExportDialog import ExportDialog
+from src.GUI.ImageDialog import ImageDialog
 import requests
 
 
@@ -14,6 +15,8 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.controller = controller
         self.controller.progress_updated.connect(self.update_progress_bar)
+        self.controller.scraping_done.connect(self.update_last_scrape_label)
+        self.controller.scraping_done.connect(self.enable_buttons)
         self.init_ui(title, width, height)
 
     def init_ui(self, title: str, width: int, height: int):
@@ -63,11 +66,13 @@ class MainWindow(QMainWindow):
         self.view_button = QPushButton('View Data', self)
         self.view_button.setToolTip('View the scraped data')
         self.view_button.clicked.connect(lambda: self.show_data())
+        self.view_button.setEnabled(False)  # Initially disabled
         self.button_layout.addWidget(self.view_button)
 
         self.export_button = QPushButton('Export Data', self)
         self.export_button.setToolTip('Export the scraped data')
         self.export_button.clicked.connect(self.show_export_dialog)
+        self.export_button.setEnabled(False)  # Initially disabled
         self.button_layout.addWidget(self.export_button)
 
         self.view_search_queries_button = QPushButton('View Search Queries', self)
@@ -227,19 +232,26 @@ class MainWindow(QMainWindow):
         indexes = self.sender().selectedIndexes()
         if indexes:
             context_menu = QMenu(self)
+
             show_image_action = QAction('Show Image', self)
             show_image_action.triggered.connect(lambda: self.show_image(indexes[0]))
             context_menu.addAction(show_image_action)
+
+            delete_row_action = QAction('Delete Item', self)
+            delete_row_action.triggered.connect(lambda: self.delete_row(indexes[0]))
+            context_menu.addAction(delete_row_action)
+
             context_menu.exec_(self.sender().viewport().mapToGlobal(position))
 
     def show_image(self, index: QModelIndex) -> None:
-        """Show the image from the selected row in a dialog."""
+        # Extract the image URL from the selected row
         image_url = index.sibling(index.row(), 5).data()
 
         if not image_url:
             QMessageBox.warning(self, "No Image", "No image URL found in the selected row.")
             return
 
+        # Fetch and display the image
         try:
             response = requests.get(image_url)
             response.raise_for_status()
@@ -248,13 +260,17 @@ class MainWindow(QMainWindow):
             pixmap = QPixmap()
             pixmap.loadFromData(image_data)
 
-            image_dialog = QDialog(self)
-            image_dialog.setWindowTitle("Image")
-            image_label = QLabel(image_dialog)
-            image_label.setPixmap(pixmap)
-            image_dialog.setLayout(QVBoxLayout())
-            image_dialog.layout().addWidget(image_label)
+            image_dialog = ImageDialog(self, pixmap)
             image_dialog.exec_()
 
         except Exception as e:
             QMessageBox.critical(self, "Error", f"Could not load image: {e}")
+
+    def enable_buttons(self):
+        self.view_button.setEnabled(True)
+        self.export_button.setEnabled(True)
+
+    def delete_row(self, index: QModelIndex) -> None:
+        row = index.row()
+        model = index.model()
+        model.removeRow(row)
