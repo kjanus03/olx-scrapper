@@ -35,6 +35,7 @@ class ScrapingHistoryDialog(QDialog):
         :return:
         """
         layout = QVBoxLayout(self)
+        self.resize(400, 500)
 
         self.list_widget = QListWidget()
         for entry in self.history_data:

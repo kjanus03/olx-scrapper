@@ -2,7 +2,7 @@
     "search_queries": [
         {
             "item_query": "rower trekkingowy",
-            "city": "zagan",
+            "city": "wroclaw",
             "distance": "30"
         },
         {
@@ -17,18 +17,18 @@
         },
         {
             "item_query": "rower gorski",
-            "city": "warszawa",
+            "city": "szczecin",
             "distance": ""
         },
         {
             "item_query": "rower gravel",
-            "city": "zagan",
-            "distance": "45"
+            "city": "katy wroclawskie",
+            "distance": "10"
         },
         {
             "item_query": "rower elektryczny",
-            "city": "zagan",
-            "distance": "50"
+            "city": "olesnica",
+            "distance": "15"
         }
     ],
     "output_config": {
@@ -36,8 +36,8 @@
         "format": "csv",
         "format_column_widths": true,
         "hyperlinked_columns": [
-            "item_url",
-            "photo"
+            "Item URL",
+            "Photo"
         ]
     },
     "gui_config": {

@@ -176,9 +176,9 @@ class SearchQueriesDialog(QDialog):
         self.table_view.resizeColumnsToContents()
         self.table_view.resizeRowsToContents()
 
-        self.table_view.setColumnWidth(0, 200)  # Width for "Item Query"
-        self.table_view.setColumnWidth(1, 150)  # Width for "City"
-        self.table_view.setColumnWidth(2, 100)
+        self.table_view.setColumnWidth(0, 300)  # Width for "Item Query"
+        self.table_view.setColumnWidth(1, 250)  # Width for "City"
+        self.table_view.setColumnWidth(2, 200)
 
         layout.addWidget(self.table_view)
 

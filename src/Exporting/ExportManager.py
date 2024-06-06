@@ -79,10 +79,10 @@ class ExportManager:
         :return:
         """
         try:
-            pdf = FPDF()
+            pdf = FPDF(orientation='L', unit='mm', format=(594, 841))  # A1 dimensions: 594 mm x 841 mm
             pdf.add_page()
-            pdf.add_font('DejaVu', '', 'DejaVuSans.ttf', uni=True)
-            pdf.set_font('DejaVu', '', 12)
+            pdf.set_font('Arial', 'B', 12)
+
             pdf.set_auto_page_break(auto=True, margin=15)
 
             col_widths = {}
@@ -95,21 +95,22 @@ class ExportManager:
                             col_widths[col] = col_width
 
                 pdf.add_page()
-                pdf.set_font('DejaVu', '', 12)
-                pdf.cell(200, 10, txt=str(key), ln=True, align='C')
+                pdf.set_font('Arial', '', 10)
+                pdf.cell(400, 10, txt=str(key), ln=True, align='C')
 
                 for col in df.columns:
-                    pdf.cell(col_widths[col], 10, col, border=1)
+                    pdf.cell(col_widths[col], 10, col.encode('latin1', 'replace').decode('latin1'), border=1)
                 pdf.ln()
 
                 for index, row in df.iterrows():
                     if pdf.get_y() > pdf.page_break_trigger - 20:
                         pdf.add_page()
                         for col in df.columns:
-                            pdf.cell(col_widths[col], 10, col, border=1)
+                            pdf.cell(col_widths[col], 10, col.encode('latin1', 'replace').decode('latin1'), border=1)
                         pdf.ln()
                     for col in df.columns:
-                        pdf.cell(col_widths[col], 10, str(row[col]), border=1)
+                        pdf.cell(col_widths[col], 10, str(row[col]).encode('latin1', 'replace').decode('latin1'),
+                                 border=1)
                     pdf.ln()
 
             pdf_output_path = f"{self.output_filename}.pdf"
