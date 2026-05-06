@@ -1,8 +1,10 @@
 # OLX Scrapper
 
+<img width="1601" height="936" alt="image" src="https://github.com/user-attachments/assets/938a01f9-5146-4b1e-9c75-a26c7b4617eb" />
+
 ## Project Description
 
-OLX Scraper is a Python-based application designed to scrape data from OLX, a popular classifieds website. The application provides a graphical user interface (GUI) created using PyQt5 to manage and view the scraped data, export it, and modify scraping settings. The project uses asynchronous web scraping to efficiently gather data.
+OLX Scraper is a Python-based application designed to scrape data from OLX, a popular classifieds website. Provides a graphical user interface (GUI) created with PyQt5 to manage and view the scraped data, export it, and modify scraping settings. The project uses asynchronous web scraping to efficiently gather data.
 
 ## Features
 
@@ -34,6 +36,11 @@ OLX Scraper is a Python-based application designed to scrape data from OLX, a po
    pip install -r requirements.txt
    ```
 
+4. **Run the Application!**
+   ```bash
+   python -m src/main.py
+   ```
+
 ## Project Overview
 
 ### Scraping
@@ -52,54 +59,51 @@ The Resources directory contains essential configuration files and utility scrip
 - **scraping_history.json**: JSON file storing the history of scraping sessions.
 - **input_validation.py**: Utility functions for validating user inputs in the menu.
 
-## Running the Application
-
-1. **Start the application**:
-   ```bash
-   python src/main.py
-   ```
-
 ## Usage Example
 
 ### Manage Search Queries
-Click on the 'View Search Queries' button to edit the scrape queries.
+Click on the 'Search Queries' button to edit the scrape queries.
 
-![image](https://github.com/kjanus03/olx-scrapper/assets/61358355/0280c5ab-eec9-45d8-be66-664ef7b04485)
-![image](https://github.com/kjanus03/olx-scrapper/assets/61358355/c6ea207b-7cb4-439c-8c8d-273441c08eea)
+<img width="1603" height="937" alt="image" src="https://github.com/user-attachments/assets/ed024ce1-1831-4886-8b8c-291e3e5469b3" />
+<img width="1604" height="942" alt="image" src="https://github.com/user-attachments/assets/c4de479b-bcce-4efe-b968-270074032da6" />
 
 ### Scrape Data
 Click on the 'Scrape Data' button to start scraping data based on the search queries.
 
-![image](https://github.com/kjanus03/olx-scrapper/assets/61358355/e459ad0e-20c7-462d-8754-74cfebd3f14c)
+<img width="1607" height="938" alt="image" src="https://github.com/user-attachments/assets/4cf37371-2ef3-49dd-8e9b-c196b87c2279" />
 
 ### View Data
-Click on the 'View Data' button to view the sortable table with the scraped data.
+View the scrapped data in sortable tables.
 
-![image](https://github.com/kjanus03/olx-scrapper/assets/61358355/74538c80-409c-4a0c-94b3-0b9172f1fe9e)
+<img width="1597" height="934" alt="image" src="https://github.com/user-attachments/assets/463ece32-d230-4c2b-8f32-75733197bf96" />
 
 ### Export Data
-Use the "Export Data" button to save the data in the tables. Pick the desired export format from a dropdown menu and specify the path to the output.
+Use the "Export" button to save the data in the tables. Pick the desired export format from a dropdown menu and specify the path to the output.
 
-![image](https://github.com/kjanus03/olx-scrapper/assets/61358355/4731001a-3543-4830-9bf1-b969a70f36d6)
+<img width="540" height="790" alt="image" src="https://github.com/user-attachments/assets/08928768-bb0b-481e-9d02-c9c549be74f4" />
 
 ### Edit Settings
 Use the "Settings" button to change output filename, page limit, and GUI dimensions. Toggle the Dark Mode checkbox in accordance with your preferences.
 
-![image](https://github.com/kjanus03/olx-scrapper/assets/61358355/4a580b79-2ad6-4bd4-a632-ad491375dd5e)
+<img width="512" height="771" alt="image" src="https://github.com/user-attachments/assets/d91f8652-68dd-4ac8-9179-75ff41050f1c" />
 
 ## Project Structure
 
 ```
 olx-scrapper
-│
-├── src
-│   ├── Exporting
+├── README.md
+├── generate_tree.py
+├── requirements.txt
+├── src/
+│   ├── .cache
+│   ├── generate_docs.py
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── Exporting/
 │   │   ├── ExportManager.py
-│   │   ├── formatting.py
-│   │   └── SpreadsheetManager.py
-│   ├── GUI
-│   │   ├── icons
-│   │   ├── stylesheets
+│   │   ├── SpreadsheetManager.py
+│   │   └── formatting.py
+│   ├── GUI/
 │   │   ├── ClickableDelegate.py
 │   │   ├── Controller.py
 │   │   ├── DataFrameModel.py
@@ -108,55 +112,109 @@ olx-scrapper
 │   │   ├── MainWindow.py
 │   │   ├── ScrapingHistoryDialog.py
 │   │   ├── SearchQueriesDialog.py
-│   │   └── SettingsDialog.py
-│   ├── Resources
+│   │   ├── SettingsDialog.py
+│   │   ├── icons/
+│   │   │   ├── add_icon.png
+│   │   │   ├── remove_icon.png
+│   │   │   ├── scraper_icon.png
+│   │   │   ├── svg/
+│   │   │   │   ├── alert.svg
+│   │   │   │   ├── arrow-left.svg
+│   │   │   │   ├── arrow-right.svg
+│   │   │   │   ├── check-circle.svg
+│   │   │   │   ├── check.svg
+│   │   │   │   ├── clock.svg
+│   │   │   │   ├── download.svg
+│   │   │   │   ├── external.svg
+│   │   │   │   ├── folder.svg
+│   │   │   │   ├── home.svg
+│   │   │   │   ├── image.svg
+│   │   │   │   ├── inbox.svg
+│   │   │   │   ├── info.svg
+│   │   │   │   ├── moon.svg
+│   │   │   │   ├── play.svg
+│   │   │   │   ├── plus.svg
+│   │   │   │   ├── search.svg
+│   │   │   │   ├── settings.svg
+│   │   │   │   ├── shopping-bag.svg
+│   │   │   │   ├── sun.svg
+│   │   │   │   ├── table.svg
+│   │   │   │   ├── trash.svg
+│   │   │   │   └── x.svg
+│   │   ├── stylesheets/
+│   │   │   ├── modern_dark.qss
+│   │   │   └── modern_light.qss
+│   │   ├── widgets/
+│   │   │   ├── CellDelegates.py
+│   │   │   ├── EmptyState.py
+│   │   │   ├── IconProvider.py
+│   │   │   ├── SearchBar.py
+│   │   │   ├── Toast.py
+│   │   │   └── __init__.py
+│   ├── Output/
+│   │   ├── scraped_data.pdf
+│   │   └── scraped_data.xlsx
+│   ├── Resources/
 │   │   ├── config.json
 │   │   ├── input_validation.py
 │   │   ├── scraping_history.json
+│   │   ├── seen_listings.json
 │   │   └── utils.py
-│   ├── Scraping
+│   ├── Scraping/
 │   │   ├── Scraper.py
 │   │   └── URLBuilder.py
-│   ├── Output
-│   ├── requirements.txt
-│   └── main.py
-├── .gitignore 
-└── README.md
 ```
 
 ## Requirements
 
-- Python 3.9+
 - aiohttp==3.9.0
+- aiosignal==1.4.0
+- attrs==26.1.0
 - beautifulsoup4==4.11.1
+- certifi==2026.4.22
+- charset-normalizer==3.4.7
 - dicttoxml==1.7.16
+- et_xmlfile==2.0.0
 - fpdf==1.7.2
+- frozenlist==1.8.0
+- idna==3.13
+- multidict==6.7.1
+- numpy==2.4.4
 - openpyxl==3.1.2
-- pandas==1.4.4
+- pandas==3.0.2
+- propcache==0.4.1
 - PyQt5==5.15.10
+- PyQt5-Qt5==5.15.2
 - PyQt5_sip==12.13.0
-- Requests==2.32.3
+- python-dateutil==2.9.0.post0
+- requests==2.32.3
+- setuptools==69.5.1
+- six==1.17.0
+- soupsieve==2.8.3
+- tzdata==2026.2
+- urllib3==2.6.3
+- yarl==1.23.0
 
 ## Documentation
 
 The documentation for the project is available at the following links:
 
-- [ExportManager](https://kjanus03.github.io/olx-scrapper/Exporting/Exporting.ExportManager.html)
-- [Formatting](https://kjanus03.github.io/olx-scrapper/Exporting/Exporting.formatting.html)
-- [SpreadsheetManager](https://kjanus03.github.io/olx-scrapper/Exporting/Exporting.SpreadsheetManager.html)
-- [ClickableDelegate](https://kjanus03.github.io/olx-scrapper/GUI/GUI.ClickableDelegate.html)
-- [Controller](https://kjanus03.github.io/olx-scrapper/GUI/GUI.Controller.html)
-- [DataFrameModel](https://kjanus03.github.io/olx-scrapper/GUI/GUI.DataFrameModel.html)
-- [ExportDialog](https://kjanus03.github.io/olx-scrapper/GUI/GUI.ExportDialog.html)
-- [ImageDialog](https://kjanus03.github.io/olx-scrapper/GUI/GUI.ImageDialog.html)
-- [MainWindow](https://kjanus03.github.io/olx-scrapper/GUI/GUI.MainWindow.html)
-- [ScrapingHistoryDialog](https://kjanus03.github.io/olx-scrapper/GUI/GUI.ScrapingHistoryDialog.html)
-- [SearchQueriesDialog](https://kjanus03.github.io/olx-scrapper/GUI/GUI.SearchQueriesDialog.html)
-- [SettingsDialog](https://kjanus03.github.io/olx-scrapper/GUI/GUI.SettingsDialog.html)
-- [Input Validation](https://kjanus03.github.io/olx-scrapper/Resources/Resources.input_validation.html)
-- [Utils](https://kjanus03.github.io/olx-scrapper/Resources/Resources.utils.html)
-- [Scraper](https://kjanus03.github.io/olx-scrapper/Scraping/Scraping.Scraper.html)
-- [URLBuilder](https://kjanus03.github.io/olx-scrapper/Scraping/Scraping.URLBuilder.html)
+- [ExportManager](https://kjanus03.github.io/olx-scrapper/Exporting.ExportManager.html)
+- [Formatting](https://kjanus03.github.io/olx-scrapper/Exporting.formatting.html)
+- [SpreadsheetManager](https://kjanus03.github.io/olx-scrapper/Exporting.SpreadsheetManager.html)
+- [ClickableDelegate](https://kjanus03.github.io/olx-scrapper/GUI.ClickableDelegate.html)
+- [Controller](https://kjanus03.github.io/olx-scrapper/GUI.Controller.html)
+- [DataFrameModel](https://kjanus03.github.io/olx-scrapper/GUI.DataFrameModel.html)
+- [ExportDialog](https://kjanus03.github.io/olx-scrapper/GUI.ExportDialog.html)
+- [ImageDialog](https://kjanus03.github.io/olx-scrapper/GUI.ImageDialog.html)
+- [MainWindow](https://kjanus03.github.io/olx-scrapper/GUI.MainWindow.html)
+- [ScrapingHistoryDialog](https://kjanus03.github.io/olx-scrapper/GUI.ScrapingHistoryDialog.html)
+- [SearchQueriesDialog](https://kjanus03.github.io/olx-scrapper/GUI.SearchQueriesDialog.html)
+- [SettingsDialog](https://kjanus03.github.io/olx-scrapper/GUI.SettingsDialog.html)
+- [Input Validation](https://kjanus03.github.io/olx-scrapper/Resources.input_validation.html)
+- [Utils](https://kjanus03.github.io/olx-scrapper/Resources.utils.html)
+- [Scraper](https://kjanus03.github.io/olx-scrapper/Scraping.Scraper.html)
+- [URLBuilder](https://kjanus03.github.io/olx-scrapper/Scraping.URLBuilder.html)
 - [Main](https://kjanus03.github.io/olx-scrapper/main.html)
 
 
