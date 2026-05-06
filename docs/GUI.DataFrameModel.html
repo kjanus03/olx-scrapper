@@ -1,0 +1,390 @@
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="GUI.html" class="white">GUI</a>.DataFrameModel</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cgui%5Cdataframemodel.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\gui\dataframemodel.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="PyQt5.QtCore.html">PyQt5.QtCore</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="PyQt5.QtCore.html#QAbstractTableModel">PyQt5.QtCore.QAbstractTableModel</a>(<a href="PyQt5.QtCore.html#QAbstractItemModel">PyQt5.QtCore.QAbstractItemModel</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="GUI.DataFrameModel.html#DataFrameModel">DataFrameModel</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="DataFrameModel">class <strong>DataFrameModel</strong></a>(<a href="PyQt5.QtCore.html#QAbstractTableModel">PyQt5.QtCore.QAbstractTableModel</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#DataFrameModel">DataFrameModel</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;df:&nbsp;Optional[pd.DataFrame]&nbsp;=&nbsp;None,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;parent:&nbsp;Optional[QtCore.QObject]&nbsp;=&nbsp;None<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Pandas&nbsp;DataFrame&nbsp;-&gt;&nbsp;Qt&nbsp;model&nbsp;with&nbsp;column-aware&nbsp;rendering.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.DataFrameModel.html#DataFrameModel">DataFrameModel</a></dd>
+<dd><a href="PyQt5.QtCore.html#QAbstractTableModel">PyQt5.QtCore.QAbstractTableModel</a></dd>
+<dd><a href="PyQt5.QtCore.html#QAbstractItemModel">PyQt5.QtCore.QAbstractItemModel</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="DataFrameModel-__init__"><strong>__init__</strong></a>(
+    self,
+    df: Optional[pd.DataFrame] = None,
+    parent: Optional[QtCore.QObject] = None
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-columnCount"><strong>columnCount</strong></a>(
+    self,
+    parent: QModelIndex = &lt;PyQt5.QtCore.QModelIndex object at 0x000001FF22916890&gt;
+) -&gt; int</dt><dd><span class="code"><a href="#DataFrameModel-columnCount">columnCount</a>(self,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-data"><strong>data</strong></a>(self, index: QModelIndex, role: int = 0) -&gt; Union[str, QtCore.QVariant]</dt><dd><span class="code"><a href="#DataFrameModel-data">data</a>(self,&nbsp;index:&nbsp;QModelIndex,&nbsp;role:&nbsp;int&nbsp;=&nbsp;Qt.ItemDataRole.DisplayRole)&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-data_frame"><strong>data_frame</strong></a>(self) -&gt; pd.DataFrame</dt></dl>
+
+<dl><dt><a name="DataFrameModel-headerData"><strong>headerData</strong></a>(
+    self,
+    section: int,
+    orientation: QtCore.Qt.Orientation,
+    role: int = 0
+) -&gt; Union[str, QtCore.QVariant]</dt><dd><span class="code"><a href="#DataFrameModel-headerData">headerData</a>(self,&nbsp;section:&nbsp;int,&nbsp;orientation:&nbsp;Qt.Orientation,&nbsp;role:&nbsp;int&nbsp;=&nbsp;Qt.ItemDataRole.DisplayRole)&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-match_count"><strong>match_count</strong></a>(self) -&gt; int</dt></dl>
+
+<dl><dt><a name="DataFrameModel-median_match_price"><strong>median_match_price</strong></a>(self) -&gt; int</dt><dd><span class="code">Median&nbsp;price&nbsp;of&nbsp;rows&nbsp;that&nbsp;pass&nbsp;the&nbsp;relevance&nbsp;filter&nbsp;(Is&nbsp;Match=True).<br>
+Returns&nbsp;0&nbsp;if&nbsp;no&nbsp;usable&nbsp;rows&nbsp;exist.</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-removeRow"><strong>removeRow</strong></a>(
+    self,
+    row: int,
+    parent: Optional[QModelIndex] = &lt;PyQt5.QtCore.QModelIndex object at 0x000001FF22916900&gt;
+) -&gt; bool</dt><dd><span class="code"><a href="#DataFrameModel-removeRow">removeRow</a>(self,&nbsp;row:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-reset_sorting"><strong>reset_sorting</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="DataFrameModel-roleNames"><strong>roleNames</strong></a>(self) -&gt; dict</dt><dd><span class="code"><a href="#DataFrameModel-roleNames">roleNames</a>(self)&nbsp;-&gt;&nbsp;Dict[int,&nbsp;QByteArray]</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-rowCount"><strong>rowCount</strong></a>(
+    self,
+    parent: QModelIndex = &lt;PyQt5.QtCore.QModelIndex object at 0x000001FF22916820&gt;
+) -&gt; int</dt><dd><span class="code"><a href="#DataFrameModel-rowCount">rowCount</a>(self,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-set_data_frame"><strong>set_data_frame</strong></a>(self, dataframe: pd.DataFrame) -&gt; None</dt><dd><span class="code">#&nbsp;----------------&nbsp;Data&nbsp;ops&nbsp;---------------------------------------------</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-set_palette"><strong>set_palette</strong></a>(self, palette: Dict[str, str]) -&gt; None</dt><dd><span class="code">Update&nbsp;foreground&nbsp;colors&nbsp;for&nbsp;muted/accent/price&nbsp;cells.<br>
+&nbsp;<br>
+The&nbsp;dict&nbsp;values&nbsp;may&nbsp;be&nbsp;QColor&nbsp;or&nbsp;hex&nbsp;strings.</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-sort"><strong>sort</strong></a>(self, column: int, order: Optional[QtCore.Qt.SortOrder] = 0) -&gt; None</dt><dd><span class="code"><a href="#DataFrameModel-sort">sort</a>(self,&nbsp;column:&nbsp;int,&nbsp;order:&nbsp;Qt.SortOrder&nbsp;=&nbsp;Qt.AscendingOrder)</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>dataFrame</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DtypeRole</strong> = 1256</dl>
+
+<dl><dt><strong>IsDealRole</strong> = 1260</dl>
+
+<dl><dt><strong>IsMatchRole</strong> = 1261</dl>
+
+<dl><dt><strong>IsNewRole</strong> = 1259</dl>
+
+<dl><dt><strong>SortRole</strong> = 1258</dl>
+
+<dl><dt><strong>ValueRole</strong> = 1257</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QAbstractTableModel">PyQt5.QtCore.QAbstractTableModel</a>:<br>
+<dl><dt><a name="DataFrameModel-beginInsertColumns"><strong>beginInsertColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-beginInsertRows"><strong>beginInsertRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-beginMoveColumns"><strong>beginMoveColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-beginMoveRows"><strong>beginMoveRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-beginRemoveColumns"><strong>beginRemoveColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-beginRemoveRows"><strong>beginRemoveRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-beginResetModel"><strong>beginResetModel</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-changePersistentIndex"><strong>changePersistentIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-changePersistentIndexList"><strong>changePersistentIndexList</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-createIndex"><strong>createIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-decodeData"><strong>decodeData</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-dropMimeData"><strong>dropMimeData</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-dropMimeData">dropMimeData</a>(self,&nbsp;data:&nbsp;Optional[QMimeData],&nbsp;action:&nbsp;Qt.DropAction,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-encodeData"><strong>encodeData</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-endInsertColumns"><strong>endInsertColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-endInsertRows"><strong>endInsertRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-endMoveColumns"><strong>endMoveColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-endMoveRows"><strong>endMoveRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-endRemoveColumns"><strong>endRemoveColumns</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-endRemoveRows"><strong>endRemoveRows</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-endResetModel"><strong>endResetModel</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-flags"><strong>flags</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-flags">flags</a>(self,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;Qt.ItemFlags</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-hasChildren"><strong>hasChildren</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-index"><strong>index</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-index">index</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;QModelIndex</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-parent"><strong>parent</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-persistentIndexList"><strong>persistentIndexList</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-resetInternalData"><strong>resetInternalData</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="DataFrameModel-sibling"><strong>sibling</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-sibling">sibling</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;idx:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;QModelIndex</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QAbstractItemModel">PyQt5.QtCore.QAbstractItemModel</a>:<br>
+<dl><dt><a name="DataFrameModel-buddy"><strong>buddy</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-buddy">buddy</a>(self,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;QModelIndex</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-canDropMimeData"><strong>canDropMimeData</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-canDropMimeData">canDropMimeData</a>(self,&nbsp;data:&nbsp;Optional[QMimeData],&nbsp;action:&nbsp;Qt.DropAction,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-canFetchMore"><strong>canFetchMore</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-canFetchMore">canFetchMore</a>(self,&nbsp;parent:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-checkIndex"><strong>checkIndex</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-checkIndex">checkIndex</a>(self,&nbsp;index:&nbsp;QModelIndex,&nbsp;options:&nbsp;Union[QAbstractItemModel.CheckIndexOptions,&nbsp;QAbstractItemModel.CheckIndexOption]&nbsp;=&nbsp;QAbstractItemModel.CheckIndexOption.NoOption)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<strong>columnsAboutToBeInserted</strong> = &lt;unbound PYQT_SIGNAL columnsAboutToBeInserted(QModelIndex,int,int)&gt;
+<strong>columnsAboutToBeMoved</strong> = &lt;unbound PYQT_SIGNAL columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)&gt;
+<strong>columnsAboutToBeRemoved</strong> = &lt;unbound PYQT_SIGNAL columnsAboutToBeRemoved(QModelIndex,int,int)&gt;
+<strong>columnsInserted</strong> = &lt;unbound PYQT_SIGNAL columnsInserted(QModelIndex,int,int)&gt;
+<strong>columnsMoved</strong> = &lt;unbound PYQT_SIGNAL columnsMoved(QModelIndex,int,int,QModelIndex,int)&gt;
+<strong>columnsRemoved</strong> = &lt;unbound PYQT_SIGNAL columnsRemoved(QModelIndex,int,int)&gt;
+<strong>dataChanged</strong> = &lt;unbound PYQT_SIGNAL dataChanged(QModelIndex,QModelIndex,QVector&lt;int&gt;)&gt;
+<dl><dt><a name="DataFrameModel-fetchMore"><strong>fetchMore</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-fetchMore">fetchMore</a>(self,&nbsp;parent:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-hasIndex"><strong>hasIndex</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-hasIndex">hasIndex</a>(self,&nbsp;row:&nbsp;int,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<strong>headerDataChanged</strong> = &lt;unbound PYQT_SIGNAL headerDataChanged(Qt::Orientation,int,int)&gt;
+<dl><dt><a name="DataFrameModel-insertColumn"><strong>insertColumn</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-insertColumn">insertColumn</a>(self,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-insertColumns"><strong>insertColumns</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-insertColumns">insertColumns</a>(self,&nbsp;column:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-insertRow"><strong>insertRow</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-insertRow">insertRow</a>(self,&nbsp;row:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-insertRows"><strong>insertRows</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-insertRows">insertRows</a>(self,&nbsp;row:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-itemData"><strong>itemData</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-itemData">itemData</a>(self,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;Dict[int,&nbsp;Any]</span></dd></dl>
+
+<strong>layoutAboutToBeChanged</strong> = &lt;unbound PYQT_SIGNAL layoutAboutToBeChanged(QLis...odelIndex&gt;,QAbstractItemModel::LayoutChangeHint)&gt;
+<strong>layoutChanged</strong> = &lt;unbound PYQT_SIGNAL layoutChanged(QList&lt;QPersis...odelIndex&gt;,QAbstractItemModel::LayoutChangeHint)&gt;
+<dl><dt><a name="DataFrameModel-match"><strong>match</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-match">match</a>(self,&nbsp;start:&nbsp;QModelIndex,&nbsp;role:&nbsp;int,&nbsp;value:&nbsp;Any,&nbsp;hits:&nbsp;int&nbsp;=&nbsp;1,&nbsp;flags:&nbsp;Union[Qt.MatchFlags,&nbsp;Qt.MatchFlag]&nbsp;=&nbsp;Qt.MatchStartsWith|Qt.MatchWrap)&nbsp;-&gt;&nbsp;List[QModelIndex]</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-mimeData"><strong>mimeData</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-mimeData">mimeData</a>(self,&nbsp;indexes:&nbsp;Iterable[QModelIndex])&nbsp;-&gt;&nbsp;Optional[QMimeData]</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-mimeTypes"><strong>mimeTypes</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-mimeTypes">mimeTypes</a>(self)&nbsp;-&gt;&nbsp;List[str]</span></dd></dl>
+
+<strong>modelAboutToBeReset</strong> = &lt;unbound PYQT_SIGNAL modelAboutToBeReset()&gt;
+<strong>modelReset</strong> = &lt;unbound PYQT_SIGNAL modelReset()&gt;
+<dl><dt><a name="DataFrameModel-moveColumn"><strong>moveColumn</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-moveColumn">moveColumn</a>(self,&nbsp;sourceParent:&nbsp;QModelIndex,&nbsp;sourceColumn:&nbsp;int,&nbsp;destinationParent:&nbsp;QModelIndex,&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-moveColumns"><strong>moveColumns</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-moveColumns">moveColumns</a>(self,&nbsp;sourceParent:&nbsp;QModelIndex,&nbsp;sourceColumn:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;destinationParent:&nbsp;QModelIndex,&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-moveRow"><strong>moveRow</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-moveRow">moveRow</a>(self,&nbsp;sourceParent:&nbsp;QModelIndex,&nbsp;sourceRow:&nbsp;int,&nbsp;destinationParent:&nbsp;QModelIndex,&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-moveRows"><strong>moveRows</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-moveRows">moveRows</a>(self,&nbsp;sourceParent:&nbsp;QModelIndex,&nbsp;sourceRow:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;destinationParent:&nbsp;QModelIndex,&nbsp;destinationChild:&nbsp;int)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-removeColumn"><strong>removeColumn</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-removeColumn">removeColumn</a>(self,&nbsp;column:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-removeColumns"><strong>removeColumns</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-removeColumns">removeColumns</a>(self,&nbsp;column:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-removeRows"><strong>removeRows</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-removeRows">removeRows</a>(self,&nbsp;row:&nbsp;int,&nbsp;count:&nbsp;int,&nbsp;parent:&nbsp;QModelIndex&nbsp;=&nbsp;QModelIndex())&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-revert"><strong>revert</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-revert">revert</a>(self)</span></dd></dl>
+
+<strong>rowsAboutToBeInserted</strong> = &lt;unbound PYQT_SIGNAL rowsAboutToBeInserted(QModelIndex,int,int)&gt;
+<strong>rowsAboutToBeMoved</strong> = &lt;unbound PYQT_SIGNAL rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)&gt;
+<strong>rowsAboutToBeRemoved</strong> = &lt;unbound PYQT_SIGNAL rowsAboutToBeRemoved(QModelIndex,int,int)&gt;
+<strong>rowsInserted</strong> = &lt;unbound PYQT_SIGNAL rowsInserted(QModelIndex,int,int)&gt;
+<strong>rowsMoved</strong> = &lt;unbound PYQT_SIGNAL rowsMoved(QModelIndex,int,int,QModelIndex,int)&gt;
+<strong>rowsRemoved</strong> = &lt;unbound PYQT_SIGNAL rowsRemoved(QModelIndex,int,int)&gt;
+<dl><dt><a name="DataFrameModel-setData"><strong>setData</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-setData">setData</a>(self,&nbsp;index:&nbsp;QModelIndex,&nbsp;value:&nbsp;Any,&nbsp;role:&nbsp;int&nbsp;=&nbsp;Qt.ItemDataRole.EditRole)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-setHeaderData"><strong>setHeaderData</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-setHeaderData">setHeaderData</a>(self,&nbsp;section:&nbsp;int,&nbsp;orientation:&nbsp;Qt.Orientation,&nbsp;value:&nbsp;Any,&nbsp;role:&nbsp;int&nbsp;=&nbsp;Qt.ItemDataRole.EditRole)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-setItemData"><strong>setItemData</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-setItemData">setItemData</a>(self,&nbsp;index:&nbsp;QModelIndex,&nbsp;roles:&nbsp;Dict[int,&nbsp;Any])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-span"><strong>span</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-span">span</a>(self,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-submit"><strong>submit</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-submit">submit</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-supportedDragActions"><strong>supportedDragActions</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-supportedDragActions">supportedDragActions</a>(self)&nbsp;-&gt;&nbsp;Qt.DropActions</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-supportedDropActions"><strong>supportedDropActions</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-supportedDropActions">supportedDropActions</a>(self)&nbsp;-&gt;&nbsp;Qt.DropActions</span></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QAbstractItemModel">PyQt5.QtCore.QAbstractItemModel</a>:<br>
+<dl><dt><strong>CheckIndexOption</strong> = &lt;enum 'CheckIndexOption'&gt;</dl>
+
+<dl><dt><strong>CheckIndexOptions</strong> = &lt;class 'PyQt5.QtCore.QAbstractItemModel.CheckIndexOptions'&gt;<dd><span class="code">QAbstractItemModel.<a href="#DataFrameModel-CheckIndexOptions">CheckIndexOptions</a>()<br>
+QAbstractItemModel.<a href="#DataFrameModel-CheckIndexOptions">CheckIndexOptions</a>(f:&nbsp;Union[QAbstractItemModel.CheckIndexOptions,&nbsp;QAbstractItemModel.CheckIndexOption])<br>
+QAbstractItemModel.<a href="#DataFrameModel-CheckIndexOptions">CheckIndexOptions</a>(a0:&nbsp;QAbstractItemModel.CheckIndexOptions)</span></dl>
+
+<dl><dt><strong>HorizontalSortHint</strong> = 2</dl>
+
+<dl><dt><strong>LayoutChangeHint</strong> = &lt;class 'PyQt5.QtCore.QAbstractItemModel.LayoutChangeHint'&gt;</dl>
+
+<dl><dt><strong>NoLayoutChangeHint</strong> = 0</dl>
+
+<dl><dt><strong>VerticalSortHint</strong> = 1</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="DataFrameModel-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-children"><strong>children</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-deleteLater">deleteLater</a>(self)</span></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="DataFrameModel-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#DataFrameModel-disconnect">disconnect</a>(self)</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-dumpObjectInfo">dumpObjectInfo</a>(self)</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-dumpObjectTree">dumpObjectTree</a>(self)</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-event"><strong>event</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-event">event</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-findChild"><strong>findChild</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#DataFrameModel-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#DataFrameModel-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#DataFrameModel-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#DataFrameModel-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#DataFrameModel-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#DataFrameModel-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-inherits"><strong>inherits</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-objectName"><strong>objectName</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="DataFrameModel-property"><strong>property</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><span class="code">QObject.<a href="#DataFrameModel-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-setParent"><strong>setParent</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-setParent">setParent</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-thread"><strong>thread</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</span></dd></dl>
+
+<dl><dt><a name="DataFrameModel-tr"><strong>tr</strong></a>(...)</dt><dd><span class="code"><a href="#DataFrameModel-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="DataFrameModel-__new__"><strong>__new__</strong></a>(*args, **kwargs)<span class="grey"><span class="heading-text"> class method of <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></span></span></dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>Dict</strong> = typing.Dict<br>
+<strong>Optional</strong> = typing.Optional</td></tr></table>

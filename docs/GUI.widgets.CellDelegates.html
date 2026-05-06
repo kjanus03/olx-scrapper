@@ -1,0 +1,454 @@
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="GUI.html" class="white">GUI</a>.<a href="GUI.widgets.html" class="white">widgets</a>.CellDelegates</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cgui%5Cwidgets%5Ccelldelegates.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\gui\widgets\celldelegates.py</a></td></tr></table>
+    <p><span class="code">Custom&nbsp;cell&nbsp;delegates&nbsp;for&nbsp;the&nbsp;data&nbsp;table.<br>
+&nbsp;<br>
+Two&nbsp;delegates&nbsp;ship&nbsp;here:<br>
+&nbsp;<br>
+1.&nbsp;**<a href="#LinkChipDelegate">LinkChipDelegate</a>**&nbsp;—&nbsp;renders&nbsp;a&nbsp;URL&nbsp;as&nbsp;an&nbsp;accent-tinted&nbsp;"Open&nbsp;↗"&nbsp;pill<br>
+&nbsp;&nbsp;&nbsp;instead&nbsp;of&nbsp;the&nbsp;raw&nbsp;URL.&nbsp;Click&nbsp;anywhere&nbsp;on&nbsp;the&nbsp;chip&nbsp;opens&nbsp;the&nbsp;URL&nbsp;in&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;user's&nbsp;browser.<br>
+&nbsp;<br>
+2.&nbsp;**<a href="#ThumbnailDelegate">ThumbnailDelegate</a>**&nbsp;—&nbsp;renders&nbsp;a&nbsp;small&nbsp;rounded&nbsp;thumbnail.&nbsp;Images&nbsp;are<br>
+&nbsp;&nbsp;&nbsp;fetched&nbsp;lazily&nbsp;on&nbsp;a&nbsp;background&nbsp;thread&nbsp;(QThreadPool)&nbsp;keyed&nbsp;by&nbsp;URL,&nbsp;then<br>
+&nbsp;&nbsp;&nbsp;cached.&nbsp;Cells&nbsp;that&nbsp;don't&nbsp;have&nbsp;a&nbsp;fetchable&nbsp;URL&nbsp;(relative&nbsp;`/app/static/...`<br>
+&nbsp;&nbsp;&nbsp;placeholders)&nbsp;just&nbsp;show&nbsp;a&nbsp;generic&nbsp;image&nbsp;icon.&nbsp;Clicking&nbsp;the&nbsp;cell&nbsp;opens&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;full-size&nbsp;image&nbsp;in&nbsp;`ImageDialog`.<br>
+&nbsp;<br>
+Both&nbsp;delegates&nbsp;accept&nbsp;a&nbsp;`palette`&nbsp;dict&nbsp;so&nbsp;they&nbsp;can&nbsp;re-tint&nbsp;themselves&nbsp;on<br>
+theme&nbsp;switch&nbsp;(see&nbsp;MainWindow.apply_theme).</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="requests.html">requests</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="PyQt5.QtWidgets.html#QStyledItemDelegate">PyQt5.QtWidgets.QStyledItemDelegate</a>(<a href="PyQt5.QtWidgets.html#QAbstractItemDelegate">PyQt5.QtWidgets.QAbstractItemDelegate</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="GUI.widgets.CellDelegates.html#LinkChipDelegate">LinkChipDelegate</a>
+</dt><dt class="heading-text"><a href="GUI.widgets.CellDelegates.html#ThumbnailDelegate">ThumbnailDelegate</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="LinkChipDelegate">class <strong>LinkChipDelegate</strong></a>(<a href="PyQt5.QtWidgets.html#QStyledItemDelegate">PyQt5.QtWidgets.QStyledItemDelegate</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#LinkChipDelegate">LinkChipDelegate</a>(parent:&nbsp;Optional[QObject]&nbsp;=&nbsp;None)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Render&nbsp;the&nbsp;cell&nbsp;as&nbsp;an&nbsp;accent&nbsp;pill&nbsp;labelled&nbsp;"Open&nbsp;↗".<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.widgets.CellDelegates.html#LinkChipDelegate">LinkChipDelegate</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QStyledItemDelegate">PyQt5.QtWidgets.QStyledItemDelegate</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QAbstractItemDelegate">PyQt5.QtWidgets.QAbstractItemDelegate</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LinkChipDelegate-__init__"><strong>__init__</strong></a>(self, parent: Optional[QObject] = None) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-editorEvent"><strong>editorEvent</strong></a>(self, event, model, option, index)</dt><dd><span class="code"><a href="#LinkChipDelegate-editorEvent">editorEvent</a>(self,&nbsp;event:&nbsp;Optional[QEvent],&nbsp;model:&nbsp;Optional[QAbstractItemModel],&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-paint"><strong>paint</strong></a>(self, painter: QPainter, option: QStyleOptionViewItem, index: QModelIndex) -&gt; None</dt><dd><span class="code"><a href="#LinkChipDelegate-paint">paint</a>(self,&nbsp;painter:&nbsp;Optional[QPainter],&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-set_palette"><strong>set_palette</strong></a>(self, palette: Dict[str, str]) -&gt; None</dt></dl>
+
+<dl><dt><a name="LinkChipDelegate-sizeHint"><strong>sizeHint</strong></a>(self, option: QStyleOptionViewItem, index: QModelIndex) -&gt; QSize</dt><dd><span class="code"><a href="#LinkChipDelegate-sizeHint">sizeHint</a>(self,&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DEFAULT_PALETTE</strong> = {'chip_bg': '#2d3142', 'chip_border': '#2d3142', 'chip_text': '#a5b4fc', 'selection': '#2d3142'}</dl>
+
+<dl><dt><strong>__annotations__</strong> = {'DEFAULT_PALETTE': 'Dict[str, str]'}</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QStyledItemDelegate">PyQt5.QtWidgets.QStyledItemDelegate</a>:<br>
+<dl><dt><a name="LinkChipDelegate-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="LinkChipDelegate-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="LinkChipDelegate-createEditor"><strong>createEditor</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-createEditor">createEditor</a>(self,&nbsp;parent:&nbsp;Optional[QWidget],&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="LinkChipDelegate-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="LinkChipDelegate-displayText"><strong>displayText</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-displayText">displayText</a>(self,&nbsp;value:&nbsp;Any,&nbsp;locale:&nbsp;QLocale)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-eventFilter">eventFilter</a>(self,&nbsp;object:&nbsp;Optional[QObject],&nbsp;event:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-initStyleOption"><strong>initStyleOption</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-initStyleOption">initStyleOption</a>(self,&nbsp;option:&nbsp;Optional[QStyleOptionViewItem],&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="LinkChipDelegate-itemEditorFactory"><strong>itemEditorFactory</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-itemEditorFactory">itemEditorFactory</a>(self)&nbsp;-&gt;&nbsp;Optional[QItemEditorFactory]</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="LinkChipDelegate-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="LinkChipDelegate-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="LinkChipDelegate-setEditorData"><strong>setEditorData</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-setEditorData">setEditorData</a>(self,&nbsp;editor:&nbsp;Optional[QWidget],&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-setItemEditorFactory"><strong>setItemEditorFactory</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-setItemEditorFactory">setItemEditorFactory</a>(self,&nbsp;factory:&nbsp;Optional[QItemEditorFactory])</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-setModelData"><strong>setModelData</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-setModelData">setModelData</a>(self,&nbsp;editor:&nbsp;Optional[QWidget],&nbsp;model:&nbsp;Optional[QAbstractItemModel],&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="LinkChipDelegate-updateEditorGeometry"><strong>updateEditorGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-updateEditorGeometry">updateEditorGeometry</a>(self,&nbsp;editor:&nbsp;Optional[QWidget],&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QAbstractItemDelegate">PyQt5.QtWidgets.QAbstractItemDelegate</a>:<br>
+<strong>closeEditor</strong> = &lt;unbound PYQT_SIGNAL closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)&gt;
+<strong>commitData</strong> = &lt;unbound PYQT_SIGNAL commitData(QWidget*)&gt;
+<dl><dt><a name="LinkChipDelegate-destroyEditor"><strong>destroyEditor</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-destroyEditor">destroyEditor</a>(self,&nbsp;editor:&nbsp;Optional[QWidget],&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-helpEvent"><strong>helpEvent</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-helpEvent">helpEvent</a>(self,&nbsp;event:&nbsp;Optional[QHelpEvent],&nbsp;view:&nbsp;Optional[QAbstractItemView],&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<strong>sizeHintChanged</strong> = &lt;unbound PYQT_SIGNAL sizeHintChanged(QModelIndex)&gt;
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QAbstractItemDelegate">PyQt5.QtWidgets.QAbstractItemDelegate</a>:<br>
+<dl><dt><strong>EditNextItem</strong> = 1</dl>
+
+<dl><dt><strong>EditPreviousItem</strong> = 2</dl>
+
+<dl><dt><strong>EndEditHint</strong> = &lt;class 'PyQt5.QtWidgets.QAbstractItemDelegate.EndEditHint'&gt;</dl>
+
+<dl><dt><strong>NoHint</strong> = 0</dl>
+
+<dl><dt><strong>RevertModelCache</strong> = 4</dl>
+
+<dl><dt><strong>SubmitModelCache</strong> = 3</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="LinkChipDelegate-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-children"><strong>children</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-deleteLater">deleteLater</a>(self)</span></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="LinkChipDelegate-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#LinkChipDelegate-disconnect">disconnect</a>(self)</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-dumpObjectInfo">dumpObjectInfo</a>(self)</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-dumpObjectTree">dumpObjectTree</a>(self)</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-event"><strong>event</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-event">event</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-findChild"><strong>findChild</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#LinkChipDelegate-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#LinkChipDelegate-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#LinkChipDelegate-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#LinkChipDelegate-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#LinkChipDelegate-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#LinkChipDelegate-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-inherits"><strong>inherits</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-objectName"><strong>objectName</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="LinkChipDelegate-parent"><strong>parent</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-property"><strong>property</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><span class="code">QObject.<a href="#LinkChipDelegate-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-setParent"><strong>setParent</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-setParent">setParent</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-thread"><strong>thread</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</span></dd></dl>
+
+<dl><dt><a name="LinkChipDelegate-tr"><strong>tr</strong></a>(...)</dt><dd><span class="code"><a href="#LinkChipDelegate-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="LinkChipDelegate-__new__"><strong>__new__</strong></a>(*args, **kwargs)<span class="grey"><span class="heading-text"> class method of <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></span></span></dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ThumbnailDelegate">class <strong>ThumbnailDelegate</strong></a>(<a href="PyQt5.QtWidgets.html#QStyledItemDelegate">PyQt5.QtWidgets.QStyledItemDelegate</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#ThumbnailDelegate">ThumbnailDelegate</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;on_open:&nbsp;Callable[[QModelIndex],&nbsp;None],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;parent:&nbsp;Optional[QObject]&nbsp;=&nbsp;None<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Renders&nbsp;a&nbsp;48×48&nbsp;rounded&nbsp;thumbnail&nbsp;per&nbsp;row,&nbsp;lazy-loaded&nbsp;by&nbsp;URL.<br>
+&nbsp;<br>
+A&nbsp;single&nbsp;instance&nbsp;can&nbsp;serve&nbsp;every&nbsp;Photo&nbsp;cell&nbsp;in&nbsp;the&nbsp;app&nbsp;—&nbsp;the&nbsp;cache&nbsp;and<br>
+the&nbsp;fetch&nbsp;queue&nbsp;are&nbsp;shared&nbsp;so&nbsp;the&nbsp;same&nbsp;image&nbsp;is&nbsp;never&nbsp;fetched&nbsp;twice.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.widgets.CellDelegates.html#ThumbnailDelegate">ThumbnailDelegate</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QStyledItemDelegate">PyQt5.QtWidgets.QStyledItemDelegate</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QAbstractItemDelegate">PyQt5.QtWidgets.QAbstractItemDelegate</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ThumbnailDelegate-__init__"><strong>__init__</strong></a>(
+    self,
+    on_open: Callable[[QModelIndex], None],
+    parent: Optional[QObject] = None
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-editorEvent"><strong>editorEvent</strong></a>(self, event, model, option, index)</dt><dd><span class="code"><a href="#ThumbnailDelegate-editorEvent">editorEvent</a>(self,&nbsp;event:&nbsp;Optional[QEvent],&nbsp;model:&nbsp;Optional[QAbstractItemModel],&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-paint"><strong>paint</strong></a>(self, painter: QPainter, option: QStyleOptionViewItem, index: QModelIndex) -&gt; None</dt><dd><span class="code"><a href="#ThumbnailDelegate-paint">paint</a>(self,&nbsp;painter:&nbsp;Optional[QPainter],&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-register_view"><strong>register_view</strong></a>(self, view) -&gt; None</dt></dl>
+
+<dl><dt><a name="ThumbnailDelegate-set_palette"><strong>set_palette</strong></a>(self, palette: Dict[str, str]) -&gt; None</dt><dd><span class="code">#&nbsp;------------------------------------------------------------------</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-sizeHint"><strong>sizeHint</strong></a>(self, option: QStyleOptionViewItem, index: QModelIndex) -&gt; QSize</dt><dd><span class="code"><a href="#ThumbnailDelegate-sizeHint">sizeHint</a>(self,&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>CELL_SIZE</strong> = PyQt5.QtCore.QSize(74, 60)</dl>
+
+<dl><dt><strong>DEFAULT_PALETTE</strong> = {'placeholder_bg': '#25262b', 'placeholder_border': '#373a40', 'placeholder_icon': '#6c6f75', 'selection': '#2d3142'}</dl>
+
+<dl><dt><strong>THUMB</strong> = 48</dl>
+
+<dl><dt><strong>__annotations__</strong> = {'DEFAULT_PALETTE': 'Dict[str, str]'}</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QStyledItemDelegate">PyQt5.QtWidgets.QStyledItemDelegate</a>:<br>
+<dl><dt><a name="ThumbnailDelegate-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ThumbnailDelegate-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ThumbnailDelegate-createEditor"><strong>createEditor</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-createEditor">createEditor</a>(self,&nbsp;parent:&nbsp;Optional[QWidget],&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ThumbnailDelegate-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ThumbnailDelegate-displayText"><strong>displayText</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-displayText">displayText</a>(self,&nbsp;value:&nbsp;Any,&nbsp;locale:&nbsp;QLocale)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-eventFilter">eventFilter</a>(self,&nbsp;object:&nbsp;Optional[QObject],&nbsp;event:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-initStyleOption"><strong>initStyleOption</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-initStyleOption">initStyleOption</a>(self,&nbsp;option:&nbsp;Optional[QStyleOptionViewItem],&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ThumbnailDelegate-itemEditorFactory"><strong>itemEditorFactory</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-itemEditorFactory">itemEditorFactory</a>(self)&nbsp;-&gt;&nbsp;Optional[QItemEditorFactory]</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ThumbnailDelegate-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ThumbnailDelegate-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ThumbnailDelegate-setEditorData"><strong>setEditorData</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-setEditorData">setEditorData</a>(self,&nbsp;editor:&nbsp;Optional[QWidget],&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-setItemEditorFactory"><strong>setItemEditorFactory</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-setItemEditorFactory">setItemEditorFactory</a>(self,&nbsp;factory:&nbsp;Optional[QItemEditorFactory])</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-setModelData"><strong>setModelData</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-setModelData">setModelData</a>(self,&nbsp;editor:&nbsp;Optional[QWidget],&nbsp;model:&nbsp;Optional[QAbstractItemModel],&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ThumbnailDelegate-updateEditorGeometry"><strong>updateEditorGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-updateEditorGeometry">updateEditorGeometry</a>(self,&nbsp;editor:&nbsp;Optional[QWidget],&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QAbstractItemDelegate">PyQt5.QtWidgets.QAbstractItemDelegate</a>:<br>
+<strong>closeEditor</strong> = &lt;unbound PYQT_SIGNAL closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)&gt;
+<strong>commitData</strong> = &lt;unbound PYQT_SIGNAL commitData(QWidget*)&gt;
+<dl><dt><a name="ThumbnailDelegate-destroyEditor"><strong>destroyEditor</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-destroyEditor">destroyEditor</a>(self,&nbsp;editor:&nbsp;Optional[QWidget],&nbsp;index:&nbsp;QModelIndex)</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-helpEvent"><strong>helpEvent</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-helpEvent">helpEvent</a>(self,&nbsp;event:&nbsp;Optional[QHelpEvent],&nbsp;view:&nbsp;Optional[QAbstractItemView],&nbsp;option:&nbsp;QStyleOptionViewItem,&nbsp;index:&nbsp;QModelIndex)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<strong>sizeHintChanged</strong> = &lt;unbound PYQT_SIGNAL sizeHintChanged(QModelIndex)&gt;
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QAbstractItemDelegate">PyQt5.QtWidgets.QAbstractItemDelegate</a>:<br>
+<dl><dt><strong>EditNextItem</strong> = 1</dl>
+
+<dl><dt><strong>EditPreviousItem</strong> = 2</dl>
+
+<dl><dt><strong>EndEditHint</strong> = &lt;class 'PyQt5.QtWidgets.QAbstractItemDelegate.EndEditHint'&gt;</dl>
+
+<dl><dt><strong>NoHint</strong> = 0</dl>
+
+<dl><dt><strong>RevertModelCache</strong> = 4</dl>
+
+<dl><dt><strong>SubmitModelCache</strong> = 3</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="ThumbnailDelegate-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-children"><strong>children</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-deleteLater">deleteLater</a>(self)</span></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="ThumbnailDelegate-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#ThumbnailDelegate-disconnect">disconnect</a>(self)</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-dumpObjectInfo">dumpObjectInfo</a>(self)</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-dumpObjectTree">dumpObjectTree</a>(self)</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-event"><strong>event</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-event">event</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-findChild"><strong>findChild</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#ThumbnailDelegate-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ThumbnailDelegate-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ThumbnailDelegate-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ThumbnailDelegate-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ThumbnailDelegate-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#ThumbnailDelegate-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-inherits"><strong>inherits</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-objectName"><strong>objectName</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="ThumbnailDelegate-parent"><strong>parent</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-property"><strong>property</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><span class="code">QObject.<a href="#ThumbnailDelegate-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-setParent"><strong>setParent</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-setParent">setParent</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-thread"><strong>thread</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</span></dd></dl>
+
+<dl><dt><a name="ThumbnailDelegate-tr"><strong>tr</strong></a>(...)</dt><dd><span class="code"><a href="#ThumbnailDelegate-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="ThumbnailDelegate-__new__"><strong>__new__</strong></a>(*args, **kwargs)<span class="grey"><span class="heading-text"> class method of <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></span></span></dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>Callable</strong> = typing.Callable<br>
+<strong>Dict</strong> = typing.Dict<br>
+<strong>Optional</strong> = typing.Optional<br>
+<strong>Set</strong> = typing.Set<br>
+<strong>icons</strong> = &lt;src.GUI.widgets.IconProvider.IconProvider object&gt;</td></tr></table>

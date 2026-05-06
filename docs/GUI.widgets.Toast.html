@@ -1,0 +1,1783 @@
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="GUI.html" class="white">GUI</a>.<a href="GUI.widgets.html" class="white">widgets</a>.Toast</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cgui%5Cwidgets%5Ctoast.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\gui\widgets\toast.py</a></td></tr></table>
+    <p><span class="code">Non-blocking&nbsp;toast/banner&nbsp;notifications.<br>
+&nbsp;<br>
+A&nbsp;`<a href="#ToastManager">ToastManager</a>`&nbsp;lives&nbsp;on&nbsp;the&nbsp;MainWindow.&nbsp;Call&nbsp;`show_toast(title,&nbsp;body,&nbsp;kind)`<br>
+to&nbsp;drop&nbsp;a&nbsp;toast&nbsp;in&nbsp;the&nbsp;top-right&nbsp;of&nbsp;the&nbsp;parent.&nbsp;They&nbsp;auto-dismiss&nbsp;after&nbsp;a&nbsp;few<br>
+seconds&nbsp;with&nbsp;a&nbsp;fade&nbsp;animation.&nbsp;Multiple&nbsp;toasts&nbsp;stack&nbsp;vertically.</span></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="PyQt5.QtWidgets.html#QFrame">PyQt5.QtWidgets.QFrame</a>(<a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="GUI.widgets.Toast.html#Banner">Banner</a>
+</dt><dt class="heading-text"><a href="GUI.widgets.Toast.html#Toast">Toast</a>
+</dt></dl>
+</dd>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="GUI.widgets.Toast.html#ToastManager">ToastManager</a>
+</dt></dl>
+</dd>
+<dt class="heading-text"><a href="enum.html#Enum">enum.Enum</a>(<a href="builtins.html#object">builtins.object</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="GUI.widgets.Toast.html#ToastKind">ToastKind</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Banner">class <strong>Banner</strong></a>(<a href="PyQt5.QtWidgets.html#QFrame">PyQt5.QtWidgets.QFrame</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Banner">Banner</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;body:&nbsp;str&nbsp;=&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;kind:&nbsp;<a href="#ToastKind">ToastKind</a>&nbsp;=&nbsp;&amp;lt;<a href="#ToastKind">ToastKind</a>.INFO:&nbsp;'info'&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;parent:&nbsp;Optional[QWidget]&nbsp;=&nbsp;None<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+A&nbsp;persistent,&nbsp;in-flow&nbsp;banner&nbsp;for&nbsp;blocking&nbsp;errors/info&nbsp;messages.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.widgets.Toast.html#Banner">Banner</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QFrame">PyQt5.QtWidgets.QFrame</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Banner-__init__"><strong>__init__</strong></a>(
+    self,
+    title: str,
+    body: str = '',
+    kind: ToastKind = &lt;ToastKind.INFO: 'info'&gt;,
+    parent: Optional[QWidget] = None
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QFrame">PyQt5.QtWidgets.QFrame</a>:<br>
+<dl><dt><a name="Banner-actionEvent"><strong>actionEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-changeEvent"><strong>changeEvent</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-changeEvent">changeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])</span></dd></dl>
+
+<dl><dt><a name="Banner-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-closeEvent"><strong>closeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-contextMenuEvent"><strong>contextMenuEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-create"><strong>create</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-destroy"><strong>destroy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-dragEnterEvent"><strong>dragEnterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-dragLeaveEvent"><strong>dragLeaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-dragMoveEvent"><strong>dragMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-drawFrame"><strong>drawFrame</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-drawFrame">drawFrame</a>(self,&nbsp;a0:&nbsp;Optional[QPainter])</span></dd></dl>
+
+<dl><dt><a name="Banner-dropEvent"><strong>dropEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-enterEvent"><strong>enterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-event"><strong>event</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-event">event</a>(self,&nbsp;e:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-focusInEvent"><strong>focusInEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-focusNextChild"><strong>focusNextChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-focusNextPrevChild"><strong>focusNextPrevChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-focusOutEvent"><strong>focusOutEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-focusPreviousChild"><strong>focusPreviousChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-frameRect"><strong>frameRect</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-frameRect">frameRect</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Banner-frameShadow"><strong>frameShadow</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-frameShadow">frameShadow</a>(self)&nbsp;-&gt;&nbsp;<a href="PyQt5.QtWidgets.html#QFrame">QFrame</a>.Shadow</span></dd></dl>
+
+<dl><dt><a name="Banner-frameShape"><strong>frameShape</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-frameShape">frameShape</a>(self)&nbsp;-&gt;&nbsp;<a href="PyQt5.QtWidgets.html#QFrame">QFrame</a>.Shape</span></dd></dl>
+
+<dl><dt><a name="Banner-frameStyle"><strong>frameStyle</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-frameStyle">frameStyle</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-frameWidth"><strong>frameWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-frameWidth">frameWidth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-hideEvent"><strong>hideEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-initPainter"><strong>initPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-initStyleOption"><strong>initStyleOption</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-initStyleOption">initStyleOption</a>(self,&nbsp;option:&nbsp;Optional[QStyleOptionFrame])</span></dd></dl>
+
+<dl><dt><a name="Banner-inputMethodEvent"><strong>inputMethodEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-keyPressEvent"><strong>keyPressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-keyReleaseEvent"><strong>keyReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-leaveEvent"><strong>leaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-lineWidth"><strong>lineWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-lineWidth">lineWidth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-metric"><strong>metric</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-midLineWidth"><strong>midLineWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-midLineWidth">midLineWidth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-mouseDoubleClickEvent"><strong>mouseDoubleClickEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-mouseMoveEvent"><strong>mouseMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-mousePressEvent"><strong>mousePressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-mouseReleaseEvent"><strong>mouseReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-moveEvent"><strong>moveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-nativeEvent"><strong>nativeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-paintEvent"><strong>paintEvent</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-paintEvent">paintEvent</a>(self,&nbsp;a0:&nbsp;Optional[QPaintEvent])</span></dd></dl>
+
+<dl><dt><a name="Banner-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-resizeEvent"><strong>resizeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-setFrameRect"><strong>setFrameRect</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFrameRect">setFrameRect</a>(self,&nbsp;a0:&nbsp;QRect)</span></dd></dl>
+
+<dl><dt><a name="Banner-setFrameShadow"><strong>setFrameShadow</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFrameShadow">setFrameShadow</a>(self,&nbsp;a0:&nbsp;<a href="PyQt5.QtWidgets.html#QFrame">QFrame</a>.Shadow)</span></dd></dl>
+
+<dl><dt><a name="Banner-setFrameShape"><strong>setFrameShape</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFrameShape">setFrameShape</a>(self,&nbsp;a0:&nbsp;<a href="PyQt5.QtWidgets.html#QFrame">QFrame</a>.Shape)</span></dd></dl>
+
+<dl><dt><a name="Banner-setFrameStyle"><strong>setFrameStyle</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFrameStyle">setFrameStyle</a>(self,&nbsp;a0:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setLineWidth"><strong>setLineWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setLineWidth">setLineWidth</a>(self,&nbsp;a0:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setMidLineWidth"><strong>setMidLineWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setMidLineWidth">setMidLineWidth</a>(self,&nbsp;a0:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-sharedPainter"><strong>sharedPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-showEvent"><strong>showEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-sizeHint"><strong>sizeHint</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-sizeHint">sizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Banner-tabletEvent"><strong>tabletEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-updateMicroFocus"><strong>updateMicroFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Banner-wheelEvent"><strong>wheelEvent</strong></a>(...)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QFrame">PyQt5.QtWidgets.QFrame</a>:<br>
+<dl><dt><strong>Box</strong> = 1</dl>
+
+<dl><dt><strong>HLine</strong> = 4</dl>
+
+<dl><dt><strong>NoFrame</strong> = 0</dl>
+
+<dl><dt><strong>Panel</strong> = 2</dl>
+
+<dl><dt><strong>Plain</strong> = 16</dl>
+
+<dl><dt><strong>Raised</strong> = 32</dl>
+
+<dl><dt><strong>Shadow</strong> = &lt;class 'PyQt5.QtWidgets.QFrame.Shadow'&gt;</dl>
+
+<dl><dt><strong>Shadow_Mask</strong> = 240</dl>
+
+<dl><dt><strong>Shape</strong> = &lt;class 'PyQt5.QtWidgets.QFrame.Shape'&gt;</dl>
+
+<dl><dt><strong>Shape_Mask</strong> = 15</dl>
+
+<dl><dt><strong>StyleMask</strong> = &lt;class 'PyQt5.QtWidgets.QFrame.StyleMask'&gt;</dl>
+
+<dl><dt><strong>StyledPanel</strong> = 6</dl>
+
+<dl><dt><strong>Sunken</strong> = 48</dl>
+
+<dl><dt><strong>VLine</strong> = 5</dl>
+
+<dl><dt><strong>WinPanel</strong> = 3</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><a name="Banner-acceptDrops"><strong>acceptDrops</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-acceptDrops">acceptDrops</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-accessibleDescription"><strong>accessibleDescription</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-accessibleDescription">accessibleDescription</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Banner-accessibleName"><strong>accessibleName</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-accessibleName">accessibleName</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Banner-actions"><strong>actions</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-actions">actions</a>(self)&nbsp;-&gt;&nbsp;List[QAction]</span></dd></dl>
+
+<dl><dt><a name="Banner-activateWindow"><strong>activateWindow</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-activateWindow">activateWindow</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-addAction"><strong>addAction</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-addAction">addAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</span></dd></dl>
+
+<dl><dt><a name="Banner-addActions"><strong>addActions</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-addActions">addActions</a>(self,&nbsp;actions:&nbsp;Iterable[QAction])</span></dd></dl>
+
+<dl><dt><a name="Banner-adjustSize"><strong>adjustSize</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-adjustSize">adjustSize</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-autoFillBackground"><strong>autoFillBackground</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-autoFillBackground">autoFillBackground</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-backgroundRole"><strong>backgroundRole</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-backgroundRole">backgroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</span></dd></dl>
+
+<dl><dt><a name="Banner-baseSize"><strong>baseSize</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-baseSize">baseSize</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Banner-childAt"><strong>childAt</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-childAt">childAt</a>(self,&nbsp;p:&nbsp;QPoint)&nbsp;-&gt;&nbsp;Optional[QWidget]<br>
+<a href="#Banner-childAt">childAt</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-childrenRect"><strong>childrenRect</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-childrenRect">childrenRect</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Banner-childrenRegion"><strong>childrenRegion</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-childrenRegion">childrenRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</span></dd></dl>
+
+<dl><dt><a name="Banner-clearFocus"><strong>clearFocus</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-clearFocus">clearFocus</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-clearMask"><strong>clearMask</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-clearMask">clearMask</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-close"><strong>close</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-close">close</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-contentsMargins"><strong>contentsMargins</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-contentsMargins">contentsMargins</a>(self)&nbsp;-&gt;&nbsp;QMargins</span></dd></dl>
+
+<dl><dt><a name="Banner-contentsRect"><strong>contentsRect</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-contentsRect">contentsRect</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Banner-contextMenuPolicy"><strong>contextMenuPolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-contextMenuPolicy">contextMenuPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.ContextMenuPolicy</span></dd></dl>
+
+<dl><dt><a name="Banner-createWindowContainer"><strong>createWindowContainer</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-createWindowContainer">createWindowContainer</a>(window:&nbsp;Optional[QWindow],&nbsp;parent:&nbsp;Optional[QWidget]&nbsp;=&nbsp;None,&nbsp;flags:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType]&nbsp;=&nbsp;0)&nbsp;-&gt;&nbsp;QWidget</span></dd></dl>
+
+<dl><dt><a name="Banner-cursor"><strong>cursor</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-cursor">cursor</a>(self)&nbsp;-&gt;&nbsp;QCursor</span></dd></dl>
+
+<strong>customContextMenuRequested</strong> = &lt;unbound PYQT_SIGNAL customContextMenuRequested(QPoint)&gt;
+<dl><dt><a name="Banner-devType"><strong>devType</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-devType">devType</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-effectiveWinId"><strong>effectiveWinId</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-effectiveWinId">effectiveWinId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</span></dd></dl>
+
+<dl><dt><a name="Banner-ensurePolished"><strong>ensurePolished</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-ensurePolished">ensurePolished</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-find"><strong>find</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-find">find</a>(a0:&nbsp;PyQt5.sip.voidptr)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-focusPolicy"><strong>focusPolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-focusPolicy">focusPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.FocusPolicy</span></dd></dl>
+
+<dl><dt><a name="Banner-focusProxy"><strong>focusProxy</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-focusProxy">focusProxy</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-focusWidget"><strong>focusWidget</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-focusWidget">focusWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-font"><strong>font</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-font">font</a>(self)&nbsp;-&gt;&nbsp;QFont</span></dd></dl>
+
+<dl><dt><a name="Banner-fontInfo"><strong>fontInfo</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-fontInfo">fontInfo</a>(self)&nbsp;-&gt;&nbsp;QFontInfo</span></dd></dl>
+
+<dl><dt><a name="Banner-fontMetrics"><strong>fontMetrics</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-fontMetrics">fontMetrics</a>(self)&nbsp;-&gt;&nbsp;QFontMetrics</span></dd></dl>
+
+<dl><dt><a name="Banner-foregroundRole"><strong>foregroundRole</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-foregroundRole">foregroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</span></dd></dl>
+
+<dl><dt><a name="Banner-frameGeometry"><strong>frameGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-frameGeometry">frameGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Banner-frameSize"><strong>frameSize</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-frameSize">frameSize</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Banner-geometry"><strong>geometry</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-geometry">geometry</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Banner-getContentsMargins"><strong>getContentsMargins</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-getContentsMargins">getContentsMargins</a>(self)&nbsp;-&gt;&nbsp;(Optional[int],&nbsp;Optional[int],&nbsp;Optional[int],&nbsp;Optional[int])</span></dd></dl>
+
+<dl><dt><a name="Banner-grab"><strong>grab</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-grab">grab</a>(self,&nbsp;rectangle:&nbsp;QRect&nbsp;=&nbsp;QRect(QPoint(0,&nbsp;0),&nbsp;QSize(-1,&nbsp;-1)))&nbsp;-&gt;&nbsp;QPixmap</span></dd></dl>
+
+<dl><dt><a name="Banner-grabGesture"><strong>grabGesture</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-grabGesture">grabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType,&nbsp;flags:&nbsp;Union[Qt.GestureFlags,&nbsp;Qt.GestureFlag]&nbsp;=&nbsp;Qt.GestureFlags())</span></dd></dl>
+
+<dl><dt><a name="Banner-grabKeyboard"><strong>grabKeyboard</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-grabKeyboard">grabKeyboard</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-grabMouse"><strong>grabMouse</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-grabMouse">grabMouse</a>(self)<br>
+<a href="#Banner-grabMouse">grabMouse</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</span></dd></dl>
+
+<dl><dt><a name="Banner-grabShortcut"><strong>grabShortcut</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-grabShortcut">grabShortcut</a>(self,&nbsp;key:&nbsp;Union[QKeySequence,&nbsp;QKeySequence.StandardKey,&nbsp;Optional[str],&nbsp;int],&nbsp;context:&nbsp;Qt.ShortcutContext&nbsp;=&nbsp;Qt.WindowShortcut)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-graphicsEffect"><strong>graphicsEffect</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-graphicsEffect">graphicsEffect</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsEffect]</span></dd></dl>
+
+<dl><dt><a name="Banner-graphicsProxyWidget"><strong>graphicsProxyWidget</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-graphicsProxyWidget">graphicsProxyWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsProxyWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-hasFocus"><strong>hasFocus</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-hasFocus">hasFocus</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-hasHeightForWidth"><strong>hasHeightForWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-hasHeightForWidth">hasHeightForWidth</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-hasMouseTracking"><strong>hasMouseTracking</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-hasMouseTracking">hasMouseTracking</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-hasTabletTracking"><strong>hasTabletTracking</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-hasTabletTracking">hasTabletTracking</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-height"><strong>height</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-height">height</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-heightForWidth"><strong>heightForWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-heightForWidth">heightForWidth</a>(self,&nbsp;a0:&nbsp;int)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-hide"><strong>hide</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-hide">hide</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-inputMethodHints"><strong>inputMethodHints</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-inputMethodHints">inputMethodHints</a>(self)&nbsp;-&gt;&nbsp;Qt.InputMethodHints</span></dd></dl>
+
+<dl><dt><a name="Banner-inputMethodQuery"><strong>inputMethodQuery</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-inputMethodQuery">inputMethodQuery</a>(self,&nbsp;a0:&nbsp;Qt.InputMethodQuery)&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="Banner-insertAction"><strong>insertAction</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-insertAction">insertAction</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;action:&nbsp;Optional[QAction])</span></dd></dl>
+
+<dl><dt><a name="Banner-insertActions"><strong>insertActions</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-insertActions">insertActions</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;actions:&nbsp;Iterable[QAction])</span></dd></dl>
+
+<dl><dt><a name="Banner-isActiveWindow"><strong>isActiveWindow</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isActiveWindow">isActiveWindow</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isAncestorOf"><strong>isAncestorOf</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isAncestorOf">isAncestorOf</a>(self,&nbsp;child:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isEnabled"><strong>isEnabled</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isEnabled">isEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isEnabledTo"><strong>isEnabledTo</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isEnabledTo">isEnabledTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isFullScreen"><strong>isFullScreen</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isFullScreen">isFullScreen</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isHidden"><strong>isHidden</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isHidden">isHidden</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isLeftToRight"><strong>isLeftToRight</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isLeftToRight">isLeftToRight</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isMaximized"><strong>isMaximized</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isMaximized">isMaximized</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isMinimized"><strong>isMinimized</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isMinimized">isMinimized</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isModal"><strong>isModal</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isModal">isModal</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isRightToLeft"><strong>isRightToLeft</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isRightToLeft">isRightToLeft</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isVisible"><strong>isVisible</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isVisible">isVisible</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isVisibleTo"><strong>isVisibleTo</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isVisibleTo">isVisibleTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isWindow"><strong>isWindow</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isWindow">isWindow</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isWindowModified"><strong>isWindowModified</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isWindowModified">isWindowModified</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-keyboardGrabber"><strong>keyboardGrabber</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-keyboardGrabber">keyboardGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-layout"><strong>layout</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-layout">layout</a>(self)&nbsp;-&gt;&nbsp;Optional[QLayout]</span></dd></dl>
+
+<dl><dt><a name="Banner-layoutDirection"><strong>layoutDirection</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-layoutDirection">layoutDirection</a>(self)&nbsp;-&gt;&nbsp;Qt.LayoutDirection</span></dd></dl>
+
+<dl><dt><a name="Banner-locale"><strong>locale</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-locale">locale</a>(self)&nbsp;-&gt;&nbsp;QLocale</span></dd></dl>
+
+<dl><dt><a name="Banner-lower"><strong>lower</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-lower">lower</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-mapFrom"><strong>mapFrom</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-mapFrom">mapFrom</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Banner-mapFromGlobal"><strong>mapFromGlobal</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-mapFromGlobal">mapFromGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Banner-mapFromParent"><strong>mapFromParent</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-mapFromParent">mapFromParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Banner-mapTo"><strong>mapTo</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-mapTo">mapTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Banner-mapToGlobal"><strong>mapToGlobal</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-mapToGlobal">mapToGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Banner-mapToParent"><strong>mapToParent</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-mapToParent">mapToParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Banner-mask"><strong>mask</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-mask">mask</a>(self)&nbsp;-&gt;&nbsp;QRegion</span></dd></dl>
+
+<dl><dt><a name="Banner-maximumHeight"><strong>maximumHeight</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-maximumHeight">maximumHeight</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-maximumSize"><strong>maximumSize</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-maximumSize">maximumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Banner-maximumWidth"><strong>maximumWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-maximumWidth">maximumWidth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-minimumHeight"><strong>minimumHeight</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-minimumHeight">minimumHeight</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-minimumSize"><strong>minimumSize</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-minimumSize">minimumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Banner-minimumSizeHint"><strong>minimumSizeHint</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-minimumSizeHint">minimumSizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Banner-minimumWidth"><strong>minimumWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-minimumWidth">minimumWidth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-mouseGrabber"><strong>mouseGrabber</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-mouseGrabber">mouseGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-move"><strong>move</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-move">move</a>(self,&nbsp;a0:&nbsp;QPoint)<br>
+<a href="#Banner-move">move</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-nativeParentWidget"><strong>nativeParentWidget</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-nativeParentWidget">nativeParentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-nextInFocusChain"><strong>nextInFocusChain</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-nextInFocusChain">nextInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-normalGeometry"><strong>normalGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-normalGeometry">normalGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Banner-overrideWindowFlags"><strong>overrideWindowFlags</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-overrideWindowFlags">overrideWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</span></dd></dl>
+
+<dl><dt><a name="Banner-overrideWindowState"><strong>overrideWindowState</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-overrideWindowState">overrideWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</span></dd></dl>
+
+<dl><dt><a name="Banner-paintEngine"><strong>paintEngine</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-paintEngine">paintEngine</a>(self)&nbsp;-&gt;&nbsp;Optional[QPaintEngine]</span></dd></dl>
+
+<dl><dt><a name="Banner-palette"><strong>palette</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-palette">palette</a>(self)&nbsp;-&gt;&nbsp;QPalette</span></dd></dl>
+
+<dl><dt><a name="Banner-parentWidget"><strong>parentWidget</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-parentWidget">parentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-pos"><strong>pos</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-pos">pos</a>(self)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Banner-previousInFocusChain"><strong>previousInFocusChain</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-previousInFocusChain">previousInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-raise_"><strong>raise_</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-raise_">raise_</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-rect"><strong>rect</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-rect">rect</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Banner-releaseKeyboard"><strong>releaseKeyboard</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-releaseKeyboard">releaseKeyboard</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-releaseMouse"><strong>releaseMouse</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-releaseMouse">releaseMouse</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-releaseShortcut"><strong>releaseShortcut</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-releaseShortcut">releaseShortcut</a>(self,&nbsp;id:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-removeAction"><strong>removeAction</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-removeAction">removeAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</span></dd></dl>
+
+<dl><dt><a name="Banner-render"><strong>render</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-render">render</a>(self,&nbsp;target:&nbsp;Optional[QPaintDevice],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#Banner-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))<br>
+<a href="#Banner-render">render</a>(self,&nbsp;painter:&nbsp;Optional[QPainter],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#Banner-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))</span></dd></dl>
+
+<dl><dt><a name="Banner-repaint"><strong>repaint</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-repaint">repaint</a>(self)<br>
+<a href="#Banner-repaint">repaint</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#Banner-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#Banner-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRegion)</span></dd></dl>
+
+<dl><dt><a name="Banner-resize"><strong>resize</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-resize">resize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#Banner-resize">resize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-restoreGeometry"><strong>restoreGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-restoreGeometry">restoreGeometry</a>(self,&nbsp;geometry:&nbsp;Union[QByteArray,&nbsp;bytes,&nbsp;bytearray])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-saveGeometry"><strong>saveGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-saveGeometry">saveGeometry</a>(self)&nbsp;-&gt;&nbsp;QByteArray</span></dd></dl>
+
+<dl><dt><a name="Banner-screen"><strong>screen</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-screen">screen</a>(self)&nbsp;-&gt;&nbsp;Optional[QScreen]</span></dd></dl>
+
+<dl><dt><a name="Banner-scroll"><strong>scroll</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int)<br>
+<a href="#Banner-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int,&nbsp;a2:&nbsp;QRect)</span></dd></dl>
+
+<dl><dt><a name="Banner-setAcceptDrops"><strong>setAcceptDrops</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setAcceptDrops">setAcceptDrops</a>(self,&nbsp;on:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Banner-setAccessibleDescription"><strong>setAccessibleDescription</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setAccessibleDescription">setAccessibleDescription</a>(self,&nbsp;description:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-setAccessibleName"><strong>setAccessibleName</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setAccessibleName">setAccessibleName</a>(self,&nbsp;name:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-setAttribute"><strong>setAttribute</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setAttribute">setAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</span></dd></dl>
+
+<dl><dt><a name="Banner-setAutoFillBackground"><strong>setAutoFillBackground</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setAutoFillBackground">setAutoFillBackground</a>(self,&nbsp;enabled:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Banner-setBackgroundRole"><strong>setBackgroundRole</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setBackgroundRole">setBackgroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</span></dd></dl>
+
+<dl><dt><a name="Banner-setBaseSize"><strong>setBaseSize</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setBaseSize">setBaseSize</a>(self,&nbsp;basew:&nbsp;int,&nbsp;baseh:&nbsp;int)<br>
+<a href="#Banner-setBaseSize">setBaseSize</a>(self,&nbsp;s:&nbsp;QSize)</span></dd></dl>
+
+<dl><dt><a name="Banner-setContentsMargins"><strong>setContentsMargins</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setContentsMargins">setContentsMargins</a>(self,&nbsp;left:&nbsp;int,&nbsp;top:&nbsp;int,&nbsp;right:&nbsp;int,&nbsp;bottom:&nbsp;int)<br>
+<a href="#Banner-setContentsMargins">setContentsMargins</a>(self,&nbsp;margins:&nbsp;QMargins)</span></dd></dl>
+
+<dl><dt><a name="Banner-setContextMenuPolicy"><strong>setContextMenuPolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setContextMenuPolicy">setContextMenuPolicy</a>(self,&nbsp;policy:&nbsp;Qt.ContextMenuPolicy)</span></dd></dl>
+
+<dl><dt><a name="Banner-setCursor"><strong>setCursor</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setCursor">setCursor</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</span></dd></dl>
+
+<dl><dt><a name="Banner-setDisabled"><strong>setDisabled</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setDisabled">setDisabled</a>(self,&nbsp;a0:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Banner-setEnabled"><strong>setEnabled</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setEnabled">setEnabled</a>(self,&nbsp;a0:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Banner-setFixedHeight"><strong>setFixedHeight</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFixedHeight">setFixedHeight</a>(self,&nbsp;h:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setFixedSize"><strong>setFixedSize</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFixedSize">setFixedSize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#Banner-setFixedSize">setFixedSize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setFixedWidth"><strong>setFixedWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFixedWidth">setFixedWidth</a>(self,&nbsp;w:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setFocus"><strong>setFocus</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFocus">setFocus</a>(self)<br>
+<a href="#Banner-setFocus">setFocus</a>(self,&nbsp;reason:&nbsp;Qt.FocusReason)</span></dd></dl>
+
+<dl><dt><a name="Banner-setFocusPolicy"><strong>setFocusPolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFocusPolicy">setFocusPolicy</a>(self,&nbsp;policy:&nbsp;Qt.FocusPolicy)</span></dd></dl>
+
+<dl><dt><a name="Banner-setFocusProxy"><strong>setFocusProxy</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFocusProxy">setFocusProxy</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</span></dd></dl>
+
+<dl><dt><a name="Banner-setFont"><strong>setFont</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setFont">setFont</a>(self,&nbsp;a0:&nbsp;QFont)</span></dd></dl>
+
+<dl><dt><a name="Banner-setForegroundRole"><strong>setForegroundRole</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setForegroundRole">setForegroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</span></dd></dl>
+
+<dl><dt><a name="Banner-setGeometry"><strong>setGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setGeometry">setGeometry</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#Banner-setGeometry">setGeometry</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setGraphicsEffect"><strong>setGraphicsEffect</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setGraphicsEffect">setGraphicsEffect</a>(self,&nbsp;effect:&nbsp;Optional[QGraphicsEffect])</span></dd></dl>
+
+<dl><dt><a name="Banner-setHidden"><strong>setHidden</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setHidden">setHidden</a>(self,&nbsp;hidden:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Banner-setInputMethodHints"><strong>setInputMethodHints</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setInputMethodHints">setInputMethodHints</a>(self,&nbsp;hints:&nbsp;Union[Qt.InputMethodHints,&nbsp;Qt.InputMethodHint])</span></dd></dl>
+
+<dl><dt><a name="Banner-setLayout"><strong>setLayout</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setLayout">setLayout</a>(self,&nbsp;a0:&nbsp;Optional[QLayout])</span></dd></dl>
+
+<dl><dt><a name="Banner-setLayoutDirection"><strong>setLayoutDirection</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setLayoutDirection">setLayoutDirection</a>(self,&nbsp;direction:&nbsp;Qt.LayoutDirection)</span></dd></dl>
+
+<dl><dt><a name="Banner-setLocale"><strong>setLocale</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setLocale">setLocale</a>(self,&nbsp;locale:&nbsp;QLocale)</span></dd></dl>
+
+<dl><dt><a name="Banner-setMask"><strong>setMask</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QBitmap)<br>
+<a href="#Banner-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QRegion)</span></dd></dl>
+
+<dl><dt><a name="Banner-setMaximumHeight"><strong>setMaximumHeight</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setMaximumHeight">setMaximumHeight</a>(self,&nbsp;maxh:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setMaximumSize"><strong>setMaximumSize</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setMaximumSize">setMaximumSize</a>(self,&nbsp;maxw:&nbsp;int,&nbsp;maxh:&nbsp;int)<br>
+<a href="#Banner-setMaximumSize">setMaximumSize</a>(self,&nbsp;s:&nbsp;QSize)</span></dd></dl>
+
+<dl><dt><a name="Banner-setMaximumWidth"><strong>setMaximumWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setMaximumWidth">setMaximumWidth</a>(self,&nbsp;maxw:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setMinimumHeight"><strong>setMinimumHeight</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setMinimumHeight">setMinimumHeight</a>(self,&nbsp;minh:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setMinimumSize"><strong>setMinimumSize</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setMinimumSize">setMinimumSize</a>(self,&nbsp;minw:&nbsp;int,&nbsp;minh:&nbsp;int)<br>
+<a href="#Banner-setMinimumSize">setMinimumSize</a>(self,&nbsp;s:&nbsp;QSize)</span></dd></dl>
+
+<dl><dt><a name="Banner-setMinimumWidth"><strong>setMinimumWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setMinimumWidth">setMinimumWidth</a>(self,&nbsp;minw:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setMouseTracking"><strong>setMouseTracking</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setMouseTracking">setMouseTracking</a>(self,&nbsp;enable:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Banner-setPalette"><strong>setPalette</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setPalette">setPalette</a>(self,&nbsp;a0:&nbsp;QPalette)</span></dd></dl>
+
+<dl><dt><a name="Banner-setParent"><strong>setParent</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget])<br>
+<a href="#Banner-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget],&nbsp;f:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</span></dd></dl>
+
+<dl><dt><a name="Banner-setShortcutAutoRepeat"><strong>setShortcutAutoRepeat</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setShortcutAutoRepeat">setShortcutAutoRepeat</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</span></dd></dl>
+
+<dl><dt><a name="Banner-setShortcutEnabled"><strong>setShortcutEnabled</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setShortcutEnabled">setShortcutEnabled</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</span></dd></dl>
+
+<dl><dt><a name="Banner-setSizeIncrement"><strong>setSizeIncrement</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#Banner-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;s:&nbsp;QSize)</span></dd></dl>
+
+<dl><dt><a name="Banner-setSizePolicy"><strong>setSizePolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setSizePolicy">setSizePolicy</a>(self,&nbsp;a0:&nbsp;QSizePolicy)<br>
+<a href="#Banner-setSizePolicy">setSizePolicy</a>(self,&nbsp;hor:&nbsp;QSizePolicy.Policy,&nbsp;ver:&nbsp;QSizePolicy.Policy)</span></dd></dl>
+
+<dl><dt><a name="Banner-setStatusTip"><strong>setStatusTip</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setStatusTip">setStatusTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-setStyle"><strong>setStyle</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setStyle">setStyle</a>(self,&nbsp;a0:&nbsp;Optional[QStyle])</span></dd></dl>
+
+<dl><dt><a name="Banner-setStyleSheet"><strong>setStyleSheet</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setStyleSheet">setStyleSheet</a>(self,&nbsp;styleSheet:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-setTabOrder"><strong>setTabOrder</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setTabOrder">setTabOrder</a>(a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;Optional[QWidget])</span></dd></dl>
+
+<dl><dt><a name="Banner-setTabletTracking"><strong>setTabletTracking</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setTabletTracking">setTabletTracking</a>(self,&nbsp;enable:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Banner-setToolTip"><strong>setToolTip</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setToolTip">setToolTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-setToolTipDuration"><strong>setToolTipDuration</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setToolTipDuration">setToolTipDuration</a>(self,&nbsp;msec:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-setUpdatesEnabled"><strong>setUpdatesEnabled</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setUpdatesEnabled">setUpdatesEnabled</a>(self,&nbsp;enable:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Banner-setVisible"><strong>setVisible</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setVisible">setVisible</a>(self,&nbsp;visible:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Banner-setWhatsThis"><strong>setWhatsThis</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWhatsThis">setWhatsThis</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowFilePath"><strong>setWindowFilePath</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowFilePath">setWindowFilePath</a>(self,&nbsp;filePath:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowFlag"><strong>setWindowFlag</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowFlag">setWindowFlag</a>(self,&nbsp;a0:&nbsp;Qt.WindowType,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowFlags"><strong>setWindowFlags</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowFlags">setWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowIcon"><strong>setWindowIcon</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowIcon">setWindowIcon</a>(self,&nbsp;icon:&nbsp;QIcon)</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowIconText"><strong>setWindowIconText</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowIconText">setWindowIconText</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowModality"><strong>setWindowModality</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowModality">setWindowModality</a>(self,&nbsp;windowModality:&nbsp;Qt.WindowModality)</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowModified"><strong>setWindowModified</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowModified">setWindowModified</a>(self,&nbsp;a0:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowOpacity"><strong>setWindowOpacity</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowOpacity">setWindowOpacity</a>(self,&nbsp;level:&nbsp;float)</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowRole"><strong>setWindowRole</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowRole">setWindowRole</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowState"><strong>setWindowState</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowState">setWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</span></dd></dl>
+
+<dl><dt><a name="Banner-setWindowTitle"><strong>setWindowTitle</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setWindowTitle">setWindowTitle</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-show"><strong>show</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-show">show</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-showFullScreen"><strong>showFullScreen</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-showFullScreen">showFullScreen</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-showMaximized"><strong>showMaximized</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-showMaximized">showMaximized</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-showMinimized"><strong>showMinimized</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-showMinimized">showMinimized</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-showNormal"><strong>showNormal</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-showNormal">showNormal</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-size"><strong>size</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-size">size</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Banner-sizeIncrement"><strong>sizeIncrement</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-sizeIncrement">sizeIncrement</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Banner-sizePolicy"><strong>sizePolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-sizePolicy">sizePolicy</a>(self)&nbsp;-&gt;&nbsp;QSizePolicy</span></dd></dl>
+
+<dl><dt><a name="Banner-stackUnder"><strong>stackUnder</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-stackUnder">stackUnder</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</span></dd></dl>
+
+<dl><dt><a name="Banner-statusTip"><strong>statusTip</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-statusTip">statusTip</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Banner-style"><strong>style</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-style">style</a>(self)&nbsp;-&gt;&nbsp;Optional[QStyle]</span></dd></dl>
+
+<dl><dt><a name="Banner-styleSheet"><strong>styleSheet</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-styleSheet">styleSheet</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Banner-testAttribute"><strong>testAttribute</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-testAttribute">testAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-toolTip"><strong>toolTip</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-toolTip">toolTip</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Banner-toolTipDuration"><strong>toolTipDuration</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-toolTipDuration">toolTipDuration</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-underMouse"><strong>underMouse</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-underMouse">underMouse</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-ungrabGesture"><strong>ungrabGesture</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-ungrabGesture">ungrabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType)</span></dd></dl>
+
+<dl><dt><a name="Banner-unsetCursor"><strong>unsetCursor</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-unsetCursor">unsetCursor</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-unsetLayoutDirection"><strong>unsetLayoutDirection</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-unsetLayoutDirection">unsetLayoutDirection</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-unsetLocale"><strong>unsetLocale</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-unsetLocale">unsetLocale</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-update"><strong>update</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-update">update</a>(self)<br>
+<a href="#Banner-update">update</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#Banner-update">update</a>(self,&nbsp;a0:&nbsp;QRegion)<br>
+<a href="#Banner-update">update</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-updateGeometry"><strong>updateGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-updateGeometry">updateGeometry</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-updatesEnabled"><strong>updatesEnabled</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-updatesEnabled">updatesEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-visibleRegion"><strong>visibleRegion</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-visibleRegion">visibleRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</span></dd></dl>
+
+<dl><dt><a name="Banner-whatsThis"><strong>whatsThis</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-whatsThis">whatsThis</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Banner-width"><strong>width</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-width">width</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-winId"><strong>winId</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-winId">winId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</span></dd></dl>
+
+<dl><dt><a name="Banner-window"><strong>window</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-window">window</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Banner-windowFilePath"><strong>windowFilePath</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowFilePath">windowFilePath</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Banner-windowFlags"><strong>windowFlags</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowFlags">windowFlags</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowFlags</span></dd></dl>
+
+<dl><dt><a name="Banner-windowHandle"><strong>windowHandle</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowHandle">windowHandle</a>(self)&nbsp;-&gt;&nbsp;Optional[QWindow]</span></dd></dl>
+
+<dl><dt><a name="Banner-windowIcon"><strong>windowIcon</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowIcon">windowIcon</a>(self)&nbsp;-&gt;&nbsp;QIcon</span></dd></dl>
+
+<strong>windowIconChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconChanged(QIcon)&gt;
+<dl><dt><a name="Banner-windowIconText"><strong>windowIconText</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowIconText">windowIconText</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<strong>windowIconTextChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconTextChanged(QString)&gt;
+<dl><dt><a name="Banner-windowModality"><strong>windowModality</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowModality">windowModality</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowModality</span></dd></dl>
+
+<dl><dt><a name="Banner-windowOpacity"><strong>windowOpacity</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowOpacity">windowOpacity</a>(self)&nbsp;-&gt;&nbsp;float</span></dd></dl>
+
+<dl><dt><a name="Banner-windowRole"><strong>windowRole</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowRole">windowRole</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Banner-windowState"><strong>windowState</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowState">windowState</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowStates</span></dd></dl>
+
+<dl><dt><a name="Banner-windowTitle"><strong>windowTitle</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowTitle">windowTitle</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<strong>windowTitleChanged</strong> = &lt;unbound PYQT_SIGNAL windowTitleChanged(QString)&gt;
+<dl><dt><a name="Banner-windowType"><strong>windowType</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-windowType">windowType</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowType</span></dd></dl>
+
+<dl><dt><a name="Banner-x"><strong>x</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-x">x</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-y"><strong>y</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-y">y</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><strong>DrawChildren</strong> = 2</dl>
+
+<dl><dt><strong>DrawWindowBackground</strong> = 1</dl>
+
+<dl><dt><strong>IgnoreMask</strong> = 4</dl>
+
+<dl><dt><strong>RenderFlag</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlag'&gt;</dl>
+
+<dl><dt><strong>RenderFlags</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlags'&gt;<dd><span class="code">QWidget.<a href="#Banner-RenderFlags">RenderFlags</a>()<br>
+QWidget.<a href="#Banner-RenderFlags">RenderFlags</a>(f:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag])<br>
+QWidget.<a href="#Banner-RenderFlags">RenderFlags</a>(a0:&nbsp;QWidget.RenderFlags)</span></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="Banner-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="Banner-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-children"><strong>children</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</span></dd></dl>
+
+<dl><dt><a name="Banner-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-deleteLater">deleteLater</a>(self)</span></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="Banner-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#Banner-disconnect">disconnect</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-dumpObjectInfo">dumpObjectInfo</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-dumpObjectTree">dumpObjectTree</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Banner-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</span></dd></dl>
+
+<dl><dt><a name="Banner-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-findChild"><strong>findChild</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#Banner-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</span></dd></dl>
+
+<dl><dt><a name="Banner-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Banner-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Banner-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Banner-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Banner-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Banner-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</span></dd></dl>
+
+<dl><dt><a name="Banner-inherits"><strong>inherits</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="Banner-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Banner-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</span></dd></dl>
+
+<dl><dt><a name="Banner-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</span></dd></dl>
+
+<dl><dt><a name="Banner-objectName"><strong>objectName</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="Banner-parent"><strong>parent</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</span></dd></dl>
+
+<dl><dt><a name="Banner-property"><strong>property</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="Banner-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><span class="code">QObject.<a href="#Banner-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</span></dd></dl>
+
+<dl><dt><a name="Banner-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="Banner-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Banner-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-thread"><strong>thread</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</span></dd></dl>
+
+<dl><dt><a name="Banner-tr"><strong>tr</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="Banner-colorCount"><strong>colorCount</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-colorCount">colorCount</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-depth"><strong>depth</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-depth">depth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-devicePixelRatio"><strong>devicePixelRatio</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-devicePixelRatio">devicePixelRatio</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-devicePixelRatioF"><strong>devicePixelRatioF</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-devicePixelRatioF">devicePixelRatioF</a>(self)&nbsp;-&gt;&nbsp;float</span></dd></dl>
+
+<dl><dt><a name="Banner-devicePixelRatioFScale"><strong>devicePixelRatioFScale</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-devicePixelRatioFScale">devicePixelRatioFScale</a>()&nbsp;-&gt;&nbsp;float</span></dd></dl>
+
+<dl><dt><a name="Banner-heightMM"><strong>heightMM</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-heightMM">heightMM</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-logicalDpiX"><strong>logicalDpiX</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-logicalDpiX">logicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-logicalDpiY"><strong>logicalDpiY</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-logicalDpiY">logicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-paintingActive"><strong>paintingActive</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-paintingActive">paintingActive</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Banner-physicalDpiX"><strong>physicalDpiX</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-physicalDpiX">physicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-physicalDpiY"><strong>physicalDpiY</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-physicalDpiY">physicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Banner-widthMM"><strong>widthMM</strong></a>(...)</dt><dd><span class="code"><a href="#Banner-widthMM">widthMM</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>PaintDeviceMetric</strong> = &lt;class 'PyQt5.QtGui.QPaintDevice.PaintDeviceMetric'&gt;</dl>
+
+<dl><dt><strong>PdmDepth</strong> = 6</dl>
+
+<dl><dt><strong>PdmDevicePixelRatio</strong> = 11</dl>
+
+<dl><dt><strong>PdmDevicePixelRatioScaled</strong> = 12</dl>
+
+<dl><dt><strong>PdmDpiX</strong> = 7</dl>
+
+<dl><dt><strong>PdmDpiY</strong> = 8</dl>
+
+<dl><dt><strong>PdmHeight</strong> = 2</dl>
+
+<dl><dt><strong>PdmHeightMM</strong> = 4</dl>
+
+<dl><dt><strong>PdmNumColors</strong> = 5</dl>
+
+<dl><dt><strong>PdmPhysicalDpiX</strong> = 9</dl>
+
+<dl><dt><strong>PdmPhysicalDpiY</strong> = 10</dl>
+
+<dl><dt><strong>PdmWidth</strong> = 1</dl>
+
+<dl><dt><strong>PdmWidthMM</strong> = 3</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="Banner-__new__"><strong>__new__</strong></a>(*args, **kwargs)<span class="grey"><span class="heading-text"> class method of <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></span></span></dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Toast">class <strong>Toast</strong></a>(<a href="PyQt5.QtWidgets.html#QFrame">PyQt5.QtWidgets.QFrame</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Toast">Toast</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;parent:&nbsp;QWidget,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title:&nbsp;str,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;body:&nbsp;str&nbsp;=&nbsp;'',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;kind:&nbsp;<a href="#ToastKind">ToastKind</a>&nbsp;=&nbsp;&amp;lt;<a href="#ToastKind">ToastKind</a>.INFO:&nbsp;'info'&amp;gt;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;duration_ms:&nbsp;int&nbsp;=&nbsp;3800<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+A&nbsp;single&nbsp;toast.&nbsp;Owns&nbsp;its&nbsp;fade-in/out&nbsp;animation&nbsp;and&nbsp;lifetime.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.widgets.Toast.html#Toast">Toast</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QFrame">PyQt5.QtWidgets.QFrame</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Toast-__init__"><strong>__init__</strong></a>(
+    self,
+    parent: QWidget,
+    title: str,
+    body: str = '',
+    kind: ToastKind = &lt;ToastKind.INFO: 'info'&gt;,
+    duration_ms: int = 3800
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Toast-dismiss"><strong>dismiss</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="Toast-show_with_fade"><strong>show_with_fade</strong></a>(self) -&gt; None</dt><dd><span class="code">#&nbsp;--------------------------------------------------------------</span></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {'_mgr': "Optional['ToastManager']"}</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QFrame">PyQt5.QtWidgets.QFrame</a>:<br>
+<dl><dt><a name="Toast-actionEvent"><strong>actionEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-changeEvent"><strong>changeEvent</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-changeEvent">changeEvent</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])</span></dd></dl>
+
+<dl><dt><a name="Toast-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-closeEvent"><strong>closeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-contextMenuEvent"><strong>contextMenuEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-create"><strong>create</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-destroy"><strong>destroy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-dragEnterEvent"><strong>dragEnterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-dragLeaveEvent"><strong>dragLeaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-dragMoveEvent"><strong>dragMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-drawFrame"><strong>drawFrame</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-drawFrame">drawFrame</a>(self,&nbsp;a0:&nbsp;Optional[QPainter])</span></dd></dl>
+
+<dl><dt><a name="Toast-dropEvent"><strong>dropEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-enterEvent"><strong>enterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-event"><strong>event</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-event">event</a>(self,&nbsp;e:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-focusInEvent"><strong>focusInEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-focusNextChild"><strong>focusNextChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-focusNextPrevChild"><strong>focusNextPrevChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-focusOutEvent"><strong>focusOutEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-focusPreviousChild"><strong>focusPreviousChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-frameRect"><strong>frameRect</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-frameRect">frameRect</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Toast-frameShadow"><strong>frameShadow</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-frameShadow">frameShadow</a>(self)&nbsp;-&gt;&nbsp;<a href="PyQt5.QtWidgets.html#QFrame">QFrame</a>.Shadow</span></dd></dl>
+
+<dl><dt><a name="Toast-frameShape"><strong>frameShape</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-frameShape">frameShape</a>(self)&nbsp;-&gt;&nbsp;<a href="PyQt5.QtWidgets.html#QFrame">QFrame</a>.Shape</span></dd></dl>
+
+<dl><dt><a name="Toast-frameStyle"><strong>frameStyle</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-frameStyle">frameStyle</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-frameWidth"><strong>frameWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-frameWidth">frameWidth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-hideEvent"><strong>hideEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-initPainter"><strong>initPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-initStyleOption"><strong>initStyleOption</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-initStyleOption">initStyleOption</a>(self,&nbsp;option:&nbsp;Optional[QStyleOptionFrame])</span></dd></dl>
+
+<dl><dt><a name="Toast-inputMethodEvent"><strong>inputMethodEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-keyPressEvent"><strong>keyPressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-keyReleaseEvent"><strong>keyReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-leaveEvent"><strong>leaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-lineWidth"><strong>lineWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-lineWidth">lineWidth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-metric"><strong>metric</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-midLineWidth"><strong>midLineWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-midLineWidth">midLineWidth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-mouseDoubleClickEvent"><strong>mouseDoubleClickEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-mouseMoveEvent"><strong>mouseMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-mousePressEvent"><strong>mousePressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-mouseReleaseEvent"><strong>mouseReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-moveEvent"><strong>moveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-nativeEvent"><strong>nativeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-paintEvent"><strong>paintEvent</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-paintEvent">paintEvent</a>(self,&nbsp;a0:&nbsp;Optional[QPaintEvent])</span></dd></dl>
+
+<dl><dt><a name="Toast-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-resizeEvent"><strong>resizeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-setFrameRect"><strong>setFrameRect</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFrameRect">setFrameRect</a>(self,&nbsp;a0:&nbsp;QRect)</span></dd></dl>
+
+<dl><dt><a name="Toast-setFrameShadow"><strong>setFrameShadow</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFrameShadow">setFrameShadow</a>(self,&nbsp;a0:&nbsp;<a href="PyQt5.QtWidgets.html#QFrame">QFrame</a>.Shadow)</span></dd></dl>
+
+<dl><dt><a name="Toast-setFrameShape"><strong>setFrameShape</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFrameShape">setFrameShape</a>(self,&nbsp;a0:&nbsp;<a href="PyQt5.QtWidgets.html#QFrame">QFrame</a>.Shape)</span></dd></dl>
+
+<dl><dt><a name="Toast-setFrameStyle"><strong>setFrameStyle</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFrameStyle">setFrameStyle</a>(self,&nbsp;a0:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setLineWidth"><strong>setLineWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setLineWidth">setLineWidth</a>(self,&nbsp;a0:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setMidLineWidth"><strong>setMidLineWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setMidLineWidth">setMidLineWidth</a>(self,&nbsp;a0:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-sharedPainter"><strong>sharedPainter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-showEvent"><strong>showEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-sizeHint"><strong>sizeHint</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-sizeHint">sizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Toast-tabletEvent"><strong>tabletEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-updateMicroFocus"><strong>updateMicroFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Toast-wheelEvent"><strong>wheelEvent</strong></a>(...)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QFrame">PyQt5.QtWidgets.QFrame</a>:<br>
+<dl><dt><strong>Box</strong> = 1</dl>
+
+<dl><dt><strong>HLine</strong> = 4</dl>
+
+<dl><dt><strong>NoFrame</strong> = 0</dl>
+
+<dl><dt><strong>Panel</strong> = 2</dl>
+
+<dl><dt><strong>Plain</strong> = 16</dl>
+
+<dl><dt><strong>Raised</strong> = 32</dl>
+
+<dl><dt><strong>Shadow</strong> = &lt;class 'PyQt5.QtWidgets.QFrame.Shadow'&gt;</dl>
+
+<dl><dt><strong>Shadow_Mask</strong> = 240</dl>
+
+<dl><dt><strong>Shape</strong> = &lt;class 'PyQt5.QtWidgets.QFrame.Shape'&gt;</dl>
+
+<dl><dt><strong>Shape_Mask</strong> = 15</dl>
+
+<dl><dt><strong>StyleMask</strong> = &lt;class 'PyQt5.QtWidgets.QFrame.StyleMask'&gt;</dl>
+
+<dl><dt><strong>StyledPanel</strong> = 6</dl>
+
+<dl><dt><strong>Sunken</strong> = 48</dl>
+
+<dl><dt><strong>VLine</strong> = 5</dl>
+
+<dl><dt><strong>WinPanel</strong> = 3</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><a name="Toast-acceptDrops"><strong>acceptDrops</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-acceptDrops">acceptDrops</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-accessibleDescription"><strong>accessibleDescription</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-accessibleDescription">accessibleDescription</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Toast-accessibleName"><strong>accessibleName</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-accessibleName">accessibleName</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Toast-actions"><strong>actions</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-actions">actions</a>(self)&nbsp;-&gt;&nbsp;List[QAction]</span></dd></dl>
+
+<dl><dt><a name="Toast-activateWindow"><strong>activateWindow</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-activateWindow">activateWindow</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-addAction"><strong>addAction</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-addAction">addAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</span></dd></dl>
+
+<dl><dt><a name="Toast-addActions"><strong>addActions</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-addActions">addActions</a>(self,&nbsp;actions:&nbsp;Iterable[QAction])</span></dd></dl>
+
+<dl><dt><a name="Toast-adjustSize"><strong>adjustSize</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-adjustSize">adjustSize</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-autoFillBackground"><strong>autoFillBackground</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-autoFillBackground">autoFillBackground</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-backgroundRole"><strong>backgroundRole</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-backgroundRole">backgroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</span></dd></dl>
+
+<dl><dt><a name="Toast-baseSize"><strong>baseSize</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-baseSize">baseSize</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Toast-childAt"><strong>childAt</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-childAt">childAt</a>(self,&nbsp;p:&nbsp;QPoint)&nbsp;-&gt;&nbsp;Optional[QWidget]<br>
+<a href="#Toast-childAt">childAt</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-childrenRect"><strong>childrenRect</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-childrenRect">childrenRect</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Toast-childrenRegion"><strong>childrenRegion</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-childrenRegion">childrenRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</span></dd></dl>
+
+<dl><dt><a name="Toast-clearFocus"><strong>clearFocus</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-clearFocus">clearFocus</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-clearMask"><strong>clearMask</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-clearMask">clearMask</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-close"><strong>close</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-close">close</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-contentsMargins"><strong>contentsMargins</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-contentsMargins">contentsMargins</a>(self)&nbsp;-&gt;&nbsp;QMargins</span></dd></dl>
+
+<dl><dt><a name="Toast-contentsRect"><strong>contentsRect</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-contentsRect">contentsRect</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Toast-contextMenuPolicy"><strong>contextMenuPolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-contextMenuPolicy">contextMenuPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.ContextMenuPolicy</span></dd></dl>
+
+<dl><dt><a name="Toast-createWindowContainer"><strong>createWindowContainer</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-createWindowContainer">createWindowContainer</a>(window:&nbsp;Optional[QWindow],&nbsp;parent:&nbsp;Optional[QWidget]&nbsp;=&nbsp;None,&nbsp;flags:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType]&nbsp;=&nbsp;0)&nbsp;-&gt;&nbsp;QWidget</span></dd></dl>
+
+<dl><dt><a name="Toast-cursor"><strong>cursor</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-cursor">cursor</a>(self)&nbsp;-&gt;&nbsp;QCursor</span></dd></dl>
+
+<strong>customContextMenuRequested</strong> = &lt;unbound PYQT_SIGNAL customContextMenuRequested(QPoint)&gt;
+<dl><dt><a name="Toast-devType"><strong>devType</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-devType">devType</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-effectiveWinId"><strong>effectiveWinId</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-effectiveWinId">effectiveWinId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</span></dd></dl>
+
+<dl><dt><a name="Toast-ensurePolished"><strong>ensurePolished</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-ensurePolished">ensurePolished</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-find"><strong>find</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-find">find</a>(a0:&nbsp;PyQt5.sip.voidptr)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-focusPolicy"><strong>focusPolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-focusPolicy">focusPolicy</a>(self)&nbsp;-&gt;&nbsp;Qt.FocusPolicy</span></dd></dl>
+
+<dl><dt><a name="Toast-focusProxy"><strong>focusProxy</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-focusProxy">focusProxy</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-focusWidget"><strong>focusWidget</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-focusWidget">focusWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-font"><strong>font</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-font">font</a>(self)&nbsp;-&gt;&nbsp;QFont</span></dd></dl>
+
+<dl><dt><a name="Toast-fontInfo"><strong>fontInfo</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-fontInfo">fontInfo</a>(self)&nbsp;-&gt;&nbsp;QFontInfo</span></dd></dl>
+
+<dl><dt><a name="Toast-fontMetrics"><strong>fontMetrics</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-fontMetrics">fontMetrics</a>(self)&nbsp;-&gt;&nbsp;QFontMetrics</span></dd></dl>
+
+<dl><dt><a name="Toast-foregroundRole"><strong>foregroundRole</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-foregroundRole">foregroundRole</a>(self)&nbsp;-&gt;&nbsp;QPalette.ColorRole</span></dd></dl>
+
+<dl><dt><a name="Toast-frameGeometry"><strong>frameGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-frameGeometry">frameGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Toast-frameSize"><strong>frameSize</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-frameSize">frameSize</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Toast-geometry"><strong>geometry</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-geometry">geometry</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Toast-getContentsMargins"><strong>getContentsMargins</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-getContentsMargins">getContentsMargins</a>(self)&nbsp;-&gt;&nbsp;(Optional[int],&nbsp;Optional[int],&nbsp;Optional[int],&nbsp;Optional[int])</span></dd></dl>
+
+<dl><dt><a name="Toast-grab"><strong>grab</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-grab">grab</a>(self,&nbsp;rectangle:&nbsp;QRect&nbsp;=&nbsp;QRect(QPoint(0,&nbsp;0),&nbsp;QSize(-1,&nbsp;-1)))&nbsp;-&gt;&nbsp;QPixmap</span></dd></dl>
+
+<dl><dt><a name="Toast-grabGesture"><strong>grabGesture</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-grabGesture">grabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType,&nbsp;flags:&nbsp;Union[Qt.GestureFlags,&nbsp;Qt.GestureFlag]&nbsp;=&nbsp;Qt.GestureFlags())</span></dd></dl>
+
+<dl><dt><a name="Toast-grabKeyboard"><strong>grabKeyboard</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-grabKeyboard">grabKeyboard</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-grabMouse"><strong>grabMouse</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-grabMouse">grabMouse</a>(self)<br>
+<a href="#Toast-grabMouse">grabMouse</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</span></dd></dl>
+
+<dl><dt><a name="Toast-grabShortcut"><strong>grabShortcut</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-grabShortcut">grabShortcut</a>(self,&nbsp;key:&nbsp;Union[QKeySequence,&nbsp;QKeySequence.StandardKey,&nbsp;Optional[str],&nbsp;int],&nbsp;context:&nbsp;Qt.ShortcutContext&nbsp;=&nbsp;Qt.WindowShortcut)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-graphicsEffect"><strong>graphicsEffect</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-graphicsEffect">graphicsEffect</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsEffect]</span></dd></dl>
+
+<dl><dt><a name="Toast-graphicsProxyWidget"><strong>graphicsProxyWidget</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-graphicsProxyWidget">graphicsProxyWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QGraphicsProxyWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-hasFocus"><strong>hasFocus</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-hasFocus">hasFocus</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-hasHeightForWidth"><strong>hasHeightForWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-hasHeightForWidth">hasHeightForWidth</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-hasMouseTracking"><strong>hasMouseTracking</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-hasMouseTracking">hasMouseTracking</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-hasTabletTracking"><strong>hasTabletTracking</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-hasTabletTracking">hasTabletTracking</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-height"><strong>height</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-height">height</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-heightForWidth"><strong>heightForWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-heightForWidth">heightForWidth</a>(self,&nbsp;a0:&nbsp;int)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-hide"><strong>hide</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-hide">hide</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-inputMethodHints"><strong>inputMethodHints</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-inputMethodHints">inputMethodHints</a>(self)&nbsp;-&gt;&nbsp;Qt.InputMethodHints</span></dd></dl>
+
+<dl><dt><a name="Toast-inputMethodQuery"><strong>inputMethodQuery</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-inputMethodQuery">inputMethodQuery</a>(self,&nbsp;a0:&nbsp;Qt.InputMethodQuery)&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="Toast-insertAction"><strong>insertAction</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-insertAction">insertAction</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;action:&nbsp;Optional[QAction])</span></dd></dl>
+
+<dl><dt><a name="Toast-insertActions"><strong>insertActions</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-insertActions">insertActions</a>(self,&nbsp;before:&nbsp;Optional[QAction],&nbsp;actions:&nbsp;Iterable[QAction])</span></dd></dl>
+
+<dl><dt><a name="Toast-isActiveWindow"><strong>isActiveWindow</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isActiveWindow">isActiveWindow</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isAncestorOf"><strong>isAncestorOf</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isAncestorOf">isAncestorOf</a>(self,&nbsp;child:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isEnabled"><strong>isEnabled</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isEnabled">isEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isEnabledTo"><strong>isEnabledTo</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isEnabledTo">isEnabledTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isFullScreen"><strong>isFullScreen</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isFullScreen">isFullScreen</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isHidden"><strong>isHidden</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isHidden">isHidden</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isLeftToRight"><strong>isLeftToRight</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isLeftToRight">isLeftToRight</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isMaximized"><strong>isMaximized</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isMaximized">isMaximized</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isMinimized"><strong>isMinimized</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isMinimized">isMinimized</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isModal"><strong>isModal</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isModal">isModal</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isRightToLeft"><strong>isRightToLeft</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isRightToLeft">isRightToLeft</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isVisible"><strong>isVisible</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isVisible">isVisible</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isVisibleTo"><strong>isVisibleTo</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isVisibleTo">isVisibleTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isWindow"><strong>isWindow</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isWindow">isWindow</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isWindowModified"><strong>isWindowModified</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isWindowModified">isWindowModified</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-keyboardGrabber"><strong>keyboardGrabber</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-keyboardGrabber">keyboardGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-layout"><strong>layout</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-layout">layout</a>(self)&nbsp;-&gt;&nbsp;Optional[QLayout]</span></dd></dl>
+
+<dl><dt><a name="Toast-layoutDirection"><strong>layoutDirection</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-layoutDirection">layoutDirection</a>(self)&nbsp;-&gt;&nbsp;Qt.LayoutDirection</span></dd></dl>
+
+<dl><dt><a name="Toast-locale"><strong>locale</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-locale">locale</a>(self)&nbsp;-&gt;&nbsp;QLocale</span></dd></dl>
+
+<dl><dt><a name="Toast-lower"><strong>lower</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-lower">lower</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-mapFrom"><strong>mapFrom</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-mapFrom">mapFrom</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Toast-mapFromGlobal"><strong>mapFromGlobal</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-mapFromGlobal">mapFromGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Toast-mapFromParent"><strong>mapFromParent</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-mapFromParent">mapFromParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Toast-mapTo"><strong>mapTo</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-mapTo">mapTo</a>(self,&nbsp;a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Toast-mapToGlobal"><strong>mapToGlobal</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-mapToGlobal">mapToGlobal</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Toast-mapToParent"><strong>mapToParent</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-mapToParent">mapToParent</a>(self,&nbsp;a0:&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Toast-mask"><strong>mask</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-mask">mask</a>(self)&nbsp;-&gt;&nbsp;QRegion</span></dd></dl>
+
+<dl><dt><a name="Toast-maximumHeight"><strong>maximumHeight</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-maximumHeight">maximumHeight</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-maximumSize"><strong>maximumSize</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-maximumSize">maximumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Toast-maximumWidth"><strong>maximumWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-maximumWidth">maximumWidth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-minimumHeight"><strong>minimumHeight</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-minimumHeight">minimumHeight</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-minimumSize"><strong>minimumSize</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-minimumSize">minimumSize</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Toast-minimumSizeHint"><strong>minimumSizeHint</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-minimumSizeHint">minimumSizeHint</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Toast-minimumWidth"><strong>minimumWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-minimumWidth">minimumWidth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-mouseGrabber"><strong>mouseGrabber</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-mouseGrabber">mouseGrabber</a>()&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-move"><strong>move</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-move">move</a>(self,&nbsp;a0:&nbsp;QPoint)<br>
+<a href="#Toast-move">move</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-nativeParentWidget"><strong>nativeParentWidget</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-nativeParentWidget">nativeParentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-nextInFocusChain"><strong>nextInFocusChain</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-nextInFocusChain">nextInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-normalGeometry"><strong>normalGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-normalGeometry">normalGeometry</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Toast-overrideWindowFlags"><strong>overrideWindowFlags</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-overrideWindowFlags">overrideWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</span></dd></dl>
+
+<dl><dt><a name="Toast-overrideWindowState"><strong>overrideWindowState</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-overrideWindowState">overrideWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</span></dd></dl>
+
+<dl><dt><a name="Toast-paintEngine"><strong>paintEngine</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-paintEngine">paintEngine</a>(self)&nbsp;-&gt;&nbsp;Optional[QPaintEngine]</span></dd></dl>
+
+<dl><dt><a name="Toast-palette"><strong>palette</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-palette">palette</a>(self)&nbsp;-&gt;&nbsp;QPalette</span></dd></dl>
+
+<dl><dt><a name="Toast-parentWidget"><strong>parentWidget</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-parentWidget">parentWidget</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-pos"><strong>pos</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-pos">pos</a>(self)&nbsp;-&gt;&nbsp;QPoint</span></dd></dl>
+
+<dl><dt><a name="Toast-previousInFocusChain"><strong>previousInFocusChain</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-previousInFocusChain">previousInFocusChain</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-raise_"><strong>raise_</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-raise_">raise_</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-rect"><strong>rect</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-rect">rect</a>(self)&nbsp;-&gt;&nbsp;QRect</span></dd></dl>
+
+<dl><dt><a name="Toast-releaseKeyboard"><strong>releaseKeyboard</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-releaseKeyboard">releaseKeyboard</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-releaseMouse"><strong>releaseMouse</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-releaseMouse">releaseMouse</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-releaseShortcut"><strong>releaseShortcut</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-releaseShortcut">releaseShortcut</a>(self,&nbsp;id:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-removeAction"><strong>removeAction</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-removeAction">removeAction</a>(self,&nbsp;action:&nbsp;Optional[QAction])</span></dd></dl>
+
+<dl><dt><a name="Toast-render"><strong>render</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-render">render</a>(self,&nbsp;target:&nbsp;Optional[QPaintDevice],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#Toast-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))<br>
+<a href="#Toast-render">render</a>(self,&nbsp;painter:&nbsp;Optional[QPainter],&nbsp;targetOffset:&nbsp;QPoint&nbsp;=&nbsp;QPoint(),&nbsp;sourceRegion:&nbsp;QRegion&nbsp;=&nbsp;QRegion(),&nbsp;flags:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag]&nbsp;=&nbsp;QWidget.<a href="#Toast-RenderFlags">RenderFlags</a>(QWidget.RenderFlag.DrawWindowBackground|QWidget.RenderFlag.DrawChildren))</span></dd></dl>
+
+<dl><dt><a name="Toast-repaint"><strong>repaint</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-repaint">repaint</a>(self)<br>
+<a href="#Toast-repaint">repaint</a>(self,&nbsp;x:&nbsp;int,&nbsp;y:&nbsp;int,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#Toast-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#Toast-repaint">repaint</a>(self,&nbsp;a0:&nbsp;QRegion)</span></dd></dl>
+
+<dl><dt><a name="Toast-resize"><strong>resize</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-resize">resize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#Toast-resize">resize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-restoreGeometry"><strong>restoreGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-restoreGeometry">restoreGeometry</a>(self,&nbsp;geometry:&nbsp;Union[QByteArray,&nbsp;bytes,&nbsp;bytearray])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-saveGeometry"><strong>saveGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-saveGeometry">saveGeometry</a>(self)&nbsp;-&gt;&nbsp;QByteArray</span></dd></dl>
+
+<dl><dt><a name="Toast-screen"><strong>screen</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-screen">screen</a>(self)&nbsp;-&gt;&nbsp;Optional[QScreen]</span></dd></dl>
+
+<dl><dt><a name="Toast-scroll"><strong>scroll</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int)<br>
+<a href="#Toast-scroll">scroll</a>(self,&nbsp;dx:&nbsp;int,&nbsp;dy:&nbsp;int,&nbsp;a2:&nbsp;QRect)</span></dd></dl>
+
+<dl><dt><a name="Toast-setAcceptDrops"><strong>setAcceptDrops</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setAcceptDrops">setAcceptDrops</a>(self,&nbsp;on:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Toast-setAccessibleDescription"><strong>setAccessibleDescription</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setAccessibleDescription">setAccessibleDescription</a>(self,&nbsp;description:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-setAccessibleName"><strong>setAccessibleName</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setAccessibleName">setAccessibleName</a>(self,&nbsp;name:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-setAttribute"><strong>setAttribute</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setAttribute">setAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</span></dd></dl>
+
+<dl><dt><a name="Toast-setAutoFillBackground"><strong>setAutoFillBackground</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setAutoFillBackground">setAutoFillBackground</a>(self,&nbsp;enabled:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Toast-setBackgroundRole"><strong>setBackgroundRole</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setBackgroundRole">setBackgroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</span></dd></dl>
+
+<dl><dt><a name="Toast-setBaseSize"><strong>setBaseSize</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setBaseSize">setBaseSize</a>(self,&nbsp;basew:&nbsp;int,&nbsp;baseh:&nbsp;int)<br>
+<a href="#Toast-setBaseSize">setBaseSize</a>(self,&nbsp;s:&nbsp;QSize)</span></dd></dl>
+
+<dl><dt><a name="Toast-setContentsMargins"><strong>setContentsMargins</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setContentsMargins">setContentsMargins</a>(self,&nbsp;left:&nbsp;int,&nbsp;top:&nbsp;int,&nbsp;right:&nbsp;int,&nbsp;bottom:&nbsp;int)<br>
+<a href="#Toast-setContentsMargins">setContentsMargins</a>(self,&nbsp;margins:&nbsp;QMargins)</span></dd></dl>
+
+<dl><dt><a name="Toast-setContextMenuPolicy"><strong>setContextMenuPolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setContextMenuPolicy">setContextMenuPolicy</a>(self,&nbsp;policy:&nbsp;Qt.ContextMenuPolicy)</span></dd></dl>
+
+<dl><dt><a name="Toast-setCursor"><strong>setCursor</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setCursor">setCursor</a>(self,&nbsp;a0:&nbsp;Union[QCursor,&nbsp;Qt.CursorShape])</span></dd></dl>
+
+<dl><dt><a name="Toast-setDisabled"><strong>setDisabled</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setDisabled">setDisabled</a>(self,&nbsp;a0:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Toast-setEnabled"><strong>setEnabled</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setEnabled">setEnabled</a>(self,&nbsp;a0:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Toast-setFixedHeight"><strong>setFixedHeight</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFixedHeight">setFixedHeight</a>(self,&nbsp;h:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setFixedSize"><strong>setFixedSize</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFixedSize">setFixedSize</a>(self,&nbsp;a0:&nbsp;QSize)<br>
+<a href="#Toast-setFixedSize">setFixedSize</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setFixedWidth"><strong>setFixedWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFixedWidth">setFixedWidth</a>(self,&nbsp;w:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setFocus"><strong>setFocus</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFocus">setFocus</a>(self)<br>
+<a href="#Toast-setFocus">setFocus</a>(self,&nbsp;reason:&nbsp;Qt.FocusReason)</span></dd></dl>
+
+<dl><dt><a name="Toast-setFocusPolicy"><strong>setFocusPolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFocusPolicy">setFocusPolicy</a>(self,&nbsp;policy:&nbsp;Qt.FocusPolicy)</span></dd></dl>
+
+<dl><dt><a name="Toast-setFocusProxy"><strong>setFocusProxy</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFocusProxy">setFocusProxy</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</span></dd></dl>
+
+<dl><dt><a name="Toast-setFont"><strong>setFont</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setFont">setFont</a>(self,&nbsp;a0:&nbsp;QFont)</span></dd></dl>
+
+<dl><dt><a name="Toast-setForegroundRole"><strong>setForegroundRole</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setForegroundRole">setForegroundRole</a>(self,&nbsp;a0:&nbsp;QPalette.ColorRole)</span></dd></dl>
+
+<dl><dt><a name="Toast-setGeometry"><strong>setGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setGeometry">setGeometry</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#Toast-setGeometry">setGeometry</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setGraphicsEffect"><strong>setGraphicsEffect</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setGraphicsEffect">setGraphicsEffect</a>(self,&nbsp;effect:&nbsp;Optional[QGraphicsEffect])</span></dd></dl>
+
+<dl><dt><a name="Toast-setHidden"><strong>setHidden</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setHidden">setHidden</a>(self,&nbsp;hidden:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Toast-setInputMethodHints"><strong>setInputMethodHints</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setInputMethodHints">setInputMethodHints</a>(self,&nbsp;hints:&nbsp;Union[Qt.InputMethodHints,&nbsp;Qt.InputMethodHint])</span></dd></dl>
+
+<dl><dt><a name="Toast-setLayout"><strong>setLayout</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setLayout">setLayout</a>(self,&nbsp;a0:&nbsp;Optional[QLayout])</span></dd></dl>
+
+<dl><dt><a name="Toast-setLayoutDirection"><strong>setLayoutDirection</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setLayoutDirection">setLayoutDirection</a>(self,&nbsp;direction:&nbsp;Qt.LayoutDirection)</span></dd></dl>
+
+<dl><dt><a name="Toast-setLocale"><strong>setLocale</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setLocale">setLocale</a>(self,&nbsp;locale:&nbsp;QLocale)</span></dd></dl>
+
+<dl><dt><a name="Toast-setMask"><strong>setMask</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QBitmap)<br>
+<a href="#Toast-setMask">setMask</a>(self,&nbsp;a0:&nbsp;QRegion)</span></dd></dl>
+
+<dl><dt><a name="Toast-setMaximumHeight"><strong>setMaximumHeight</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setMaximumHeight">setMaximumHeight</a>(self,&nbsp;maxh:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setMaximumSize"><strong>setMaximumSize</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setMaximumSize">setMaximumSize</a>(self,&nbsp;maxw:&nbsp;int,&nbsp;maxh:&nbsp;int)<br>
+<a href="#Toast-setMaximumSize">setMaximumSize</a>(self,&nbsp;s:&nbsp;QSize)</span></dd></dl>
+
+<dl><dt><a name="Toast-setMaximumWidth"><strong>setMaximumWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setMaximumWidth">setMaximumWidth</a>(self,&nbsp;maxw:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setMinimumHeight"><strong>setMinimumHeight</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setMinimumHeight">setMinimumHeight</a>(self,&nbsp;minh:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setMinimumSize"><strong>setMinimumSize</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setMinimumSize">setMinimumSize</a>(self,&nbsp;minw:&nbsp;int,&nbsp;minh:&nbsp;int)<br>
+<a href="#Toast-setMinimumSize">setMinimumSize</a>(self,&nbsp;s:&nbsp;QSize)</span></dd></dl>
+
+<dl><dt><a name="Toast-setMinimumWidth"><strong>setMinimumWidth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setMinimumWidth">setMinimumWidth</a>(self,&nbsp;minw:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setMouseTracking"><strong>setMouseTracking</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setMouseTracking">setMouseTracking</a>(self,&nbsp;enable:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Toast-setPalette"><strong>setPalette</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setPalette">setPalette</a>(self,&nbsp;a0:&nbsp;QPalette)</span></dd></dl>
+
+<dl><dt><a name="Toast-setParent"><strong>setParent</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget])<br>
+<a href="#Toast-setParent">setParent</a>(self,&nbsp;parent:&nbsp;Optional[QWidget],&nbsp;f:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</span></dd></dl>
+
+<dl><dt><a name="Toast-setShortcutAutoRepeat"><strong>setShortcutAutoRepeat</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setShortcutAutoRepeat">setShortcutAutoRepeat</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</span></dd></dl>
+
+<dl><dt><a name="Toast-setShortcutEnabled"><strong>setShortcutEnabled</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setShortcutEnabled">setShortcutEnabled</a>(self,&nbsp;id:&nbsp;int,&nbsp;enabled:&nbsp;bool&nbsp;=&nbsp;True)</span></dd></dl>
+
+<dl><dt><a name="Toast-setSizeIncrement"><strong>setSizeIncrement</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;w:&nbsp;int,&nbsp;h:&nbsp;int)<br>
+<a href="#Toast-setSizeIncrement">setSizeIncrement</a>(self,&nbsp;s:&nbsp;QSize)</span></dd></dl>
+
+<dl><dt><a name="Toast-setSizePolicy"><strong>setSizePolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setSizePolicy">setSizePolicy</a>(self,&nbsp;a0:&nbsp;QSizePolicy)<br>
+<a href="#Toast-setSizePolicy">setSizePolicy</a>(self,&nbsp;hor:&nbsp;QSizePolicy.Policy,&nbsp;ver:&nbsp;QSizePolicy.Policy)</span></dd></dl>
+
+<dl><dt><a name="Toast-setStatusTip"><strong>setStatusTip</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setStatusTip">setStatusTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-setStyle"><strong>setStyle</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setStyle">setStyle</a>(self,&nbsp;a0:&nbsp;Optional[QStyle])</span></dd></dl>
+
+<dl><dt><a name="Toast-setStyleSheet"><strong>setStyleSheet</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setStyleSheet">setStyleSheet</a>(self,&nbsp;styleSheet:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-setTabOrder"><strong>setTabOrder</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setTabOrder">setTabOrder</a>(a0:&nbsp;Optional[QWidget],&nbsp;a1:&nbsp;Optional[QWidget])</span></dd></dl>
+
+<dl><dt><a name="Toast-setTabletTracking"><strong>setTabletTracking</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setTabletTracking">setTabletTracking</a>(self,&nbsp;enable:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Toast-setToolTip"><strong>setToolTip</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setToolTip">setToolTip</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-setToolTipDuration"><strong>setToolTipDuration</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setToolTipDuration">setToolTipDuration</a>(self,&nbsp;msec:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-setUpdatesEnabled"><strong>setUpdatesEnabled</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setUpdatesEnabled">setUpdatesEnabled</a>(self,&nbsp;enable:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Toast-setVisible"><strong>setVisible</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setVisible">setVisible</a>(self,&nbsp;visible:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Toast-setWhatsThis"><strong>setWhatsThis</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWhatsThis">setWhatsThis</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowFilePath"><strong>setWindowFilePath</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowFilePath">setWindowFilePath</a>(self,&nbsp;filePath:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowFlag"><strong>setWindowFlag</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowFlag">setWindowFlag</a>(self,&nbsp;a0:&nbsp;Qt.WindowType,&nbsp;on:&nbsp;bool&nbsp;=&nbsp;True)</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowFlags"><strong>setWindowFlags</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowFlags">setWindowFlags</a>(self,&nbsp;type:&nbsp;Union[Qt.WindowFlags,&nbsp;Qt.WindowType])</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowIcon"><strong>setWindowIcon</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowIcon">setWindowIcon</a>(self,&nbsp;icon:&nbsp;QIcon)</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowIconText"><strong>setWindowIconText</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowIconText">setWindowIconText</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowModality"><strong>setWindowModality</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowModality">setWindowModality</a>(self,&nbsp;windowModality:&nbsp;Qt.WindowModality)</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowModified"><strong>setWindowModified</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowModified">setWindowModified</a>(self,&nbsp;a0:&nbsp;bool)</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowOpacity"><strong>setWindowOpacity</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowOpacity">setWindowOpacity</a>(self,&nbsp;level:&nbsp;float)</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowRole"><strong>setWindowRole</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowRole">setWindowRole</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowState"><strong>setWindowState</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowState">setWindowState</a>(self,&nbsp;state:&nbsp;Union[Qt.WindowStates,&nbsp;Qt.WindowState])</span></dd></dl>
+
+<dl><dt><a name="Toast-setWindowTitle"><strong>setWindowTitle</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setWindowTitle">setWindowTitle</a>(self,&nbsp;a0:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-show"><strong>show</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-show">show</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-showFullScreen"><strong>showFullScreen</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-showFullScreen">showFullScreen</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-showMaximized"><strong>showMaximized</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-showMaximized">showMaximized</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-showMinimized"><strong>showMinimized</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-showMinimized">showMinimized</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-showNormal"><strong>showNormal</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-showNormal">showNormal</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-size"><strong>size</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-size">size</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Toast-sizeIncrement"><strong>sizeIncrement</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-sizeIncrement">sizeIncrement</a>(self)&nbsp;-&gt;&nbsp;QSize</span></dd></dl>
+
+<dl><dt><a name="Toast-sizePolicy"><strong>sizePolicy</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-sizePolicy">sizePolicy</a>(self)&nbsp;-&gt;&nbsp;QSizePolicy</span></dd></dl>
+
+<dl><dt><a name="Toast-stackUnder"><strong>stackUnder</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-stackUnder">stackUnder</a>(self,&nbsp;a0:&nbsp;Optional[QWidget])</span></dd></dl>
+
+<dl><dt><a name="Toast-statusTip"><strong>statusTip</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-statusTip">statusTip</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Toast-style"><strong>style</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-style">style</a>(self)&nbsp;-&gt;&nbsp;Optional[QStyle]</span></dd></dl>
+
+<dl><dt><a name="Toast-styleSheet"><strong>styleSheet</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-styleSheet">styleSheet</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Toast-testAttribute"><strong>testAttribute</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-testAttribute">testAttribute</a>(self,&nbsp;attribute:&nbsp;Qt.WidgetAttribute)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-toolTip"><strong>toolTip</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-toolTip">toolTip</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Toast-toolTipDuration"><strong>toolTipDuration</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-toolTipDuration">toolTipDuration</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-underMouse"><strong>underMouse</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-underMouse">underMouse</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-ungrabGesture"><strong>ungrabGesture</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-ungrabGesture">ungrabGesture</a>(self,&nbsp;type:&nbsp;Qt.GestureType)</span></dd></dl>
+
+<dl><dt><a name="Toast-unsetCursor"><strong>unsetCursor</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-unsetCursor">unsetCursor</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-unsetLayoutDirection"><strong>unsetLayoutDirection</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-unsetLayoutDirection">unsetLayoutDirection</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-unsetLocale"><strong>unsetLocale</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-unsetLocale">unsetLocale</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-update"><strong>update</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-update">update</a>(self)<br>
+<a href="#Toast-update">update</a>(self,&nbsp;a0:&nbsp;QRect)<br>
+<a href="#Toast-update">update</a>(self,&nbsp;a0:&nbsp;QRegion)<br>
+<a href="#Toast-update">update</a>(self,&nbsp;ax:&nbsp;int,&nbsp;ay:&nbsp;int,&nbsp;aw:&nbsp;int,&nbsp;ah:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-updateGeometry"><strong>updateGeometry</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-updateGeometry">updateGeometry</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-updatesEnabled"><strong>updatesEnabled</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-updatesEnabled">updatesEnabled</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-visibleRegion"><strong>visibleRegion</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-visibleRegion">visibleRegion</a>(self)&nbsp;-&gt;&nbsp;QRegion</span></dd></dl>
+
+<dl><dt><a name="Toast-whatsThis"><strong>whatsThis</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-whatsThis">whatsThis</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Toast-width"><strong>width</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-width">width</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-winId"><strong>winId</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-winId">winId</a>(self)&nbsp;-&gt;&nbsp;PyQt5.sip.voidptr</span></dd></dl>
+
+<dl><dt><a name="Toast-window"><strong>window</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-window">window</a>(self)&nbsp;-&gt;&nbsp;Optional[QWidget]</span></dd></dl>
+
+<dl><dt><a name="Toast-windowFilePath"><strong>windowFilePath</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowFilePath">windowFilePath</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Toast-windowFlags"><strong>windowFlags</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowFlags">windowFlags</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowFlags</span></dd></dl>
+
+<dl><dt><a name="Toast-windowHandle"><strong>windowHandle</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowHandle">windowHandle</a>(self)&nbsp;-&gt;&nbsp;Optional[QWindow]</span></dd></dl>
+
+<dl><dt><a name="Toast-windowIcon"><strong>windowIcon</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowIcon">windowIcon</a>(self)&nbsp;-&gt;&nbsp;QIcon</span></dd></dl>
+
+<strong>windowIconChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconChanged(QIcon)&gt;
+<dl><dt><a name="Toast-windowIconText"><strong>windowIconText</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowIconText">windowIconText</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<strong>windowIconTextChanged</strong> = &lt;unbound PYQT_SIGNAL windowIconTextChanged(QString)&gt;
+<dl><dt><a name="Toast-windowModality"><strong>windowModality</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowModality">windowModality</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowModality</span></dd></dl>
+
+<dl><dt><a name="Toast-windowOpacity"><strong>windowOpacity</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowOpacity">windowOpacity</a>(self)&nbsp;-&gt;&nbsp;float</span></dd></dl>
+
+<dl><dt><a name="Toast-windowRole"><strong>windowRole</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowRole">windowRole</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<dl><dt><a name="Toast-windowState"><strong>windowState</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowState">windowState</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowStates</span></dd></dl>
+
+<dl><dt><a name="Toast-windowTitle"><strong>windowTitle</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowTitle">windowTitle</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<strong>windowTitleChanged</strong> = &lt;unbound PYQT_SIGNAL windowTitleChanged(QString)&gt;
+<dl><dt><a name="Toast-windowType"><strong>windowType</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-windowType">windowType</a>(self)&nbsp;-&gt;&nbsp;Qt.WindowType</span></dd></dl>
+
+<dl><dt><a name="Toast-x"><strong>x</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-x">x</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-y"><strong>y</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-y">y</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>:<br>
+<dl><dt><strong>DrawChildren</strong> = 2</dl>
+
+<dl><dt><strong>DrawWindowBackground</strong> = 1</dl>
+
+<dl><dt><strong>IgnoreMask</strong> = 4</dl>
+
+<dl><dt><strong>RenderFlag</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlag'&gt;</dl>
+
+<dl><dt><strong>RenderFlags</strong> = &lt;class 'PyQt5.QtWidgets.QWidget.RenderFlags'&gt;<dd><span class="code">QWidget.<a href="#Toast-RenderFlags">RenderFlags</a>()<br>
+QWidget.<a href="#Toast-RenderFlags">RenderFlags</a>(f:&nbsp;Union[QWidget.RenderFlags,&nbsp;QWidget.RenderFlag])<br>
+QWidget.<a href="#Toast-RenderFlags">RenderFlags</a>(a0:&nbsp;QWidget.RenderFlags)</span></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="Toast-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="Toast-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-children"><strong>children</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-children">children</a>(self)&nbsp;-&gt;&nbsp;List[QObject]</span></dd></dl>
+
+<dl><dt><a name="Toast-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-deleteLater">deleteLater</a>(self)</span></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="Toast-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#Toast-disconnect">disconnect</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-dumpObjectInfo">dumpObjectInfo</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-dumpObjectTree">dumpObjectTree</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Toast-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</span></dd></dl>
+
+<dl><dt><a name="Toast-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-findChild"><strong>findChild</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#Toast-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</span></dd></dl>
+
+<dl><dt><a name="Toast-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Toast-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Toast-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Toast-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Toast-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Toast-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</span></dd></dl>
+
+<dl><dt><a name="Toast-inherits"><strong>inherits</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="Toast-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Toast-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</span></dd></dl>
+
+<dl><dt><a name="Toast-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</span></dd></dl>
+
+<dl><dt><a name="Toast-objectName"><strong>objectName</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="Toast-parent"><strong>parent</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[QObject]</span></dd></dl>
+
+<dl><dt><a name="Toast-property"><strong>property</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="Toast-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><span class="code">QObject.<a href="#Toast-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</span></dd></dl>
+
+<dl><dt><a name="Toast-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[QObject])</span></dd></dl>
+
+<dl><dt><a name="Toast-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Toast-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-thread"><strong>thread</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</span></dd></dl>
+
+<dl><dt><a name="Toast-tr"><strong>tr</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="Toast-colorCount"><strong>colorCount</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-colorCount">colorCount</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-depth"><strong>depth</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-depth">depth</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-devicePixelRatio"><strong>devicePixelRatio</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-devicePixelRatio">devicePixelRatio</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-devicePixelRatioF"><strong>devicePixelRatioF</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-devicePixelRatioF">devicePixelRatioF</a>(self)&nbsp;-&gt;&nbsp;float</span></dd></dl>
+
+<dl><dt><a name="Toast-devicePixelRatioFScale"><strong>devicePixelRatioFScale</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-devicePixelRatioFScale">devicePixelRatioFScale</a>()&nbsp;-&gt;&nbsp;float</span></dd></dl>
+
+<dl><dt><a name="Toast-heightMM"><strong>heightMM</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-heightMM">heightMM</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-logicalDpiX"><strong>logicalDpiX</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-logicalDpiX">logicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-logicalDpiY"><strong>logicalDpiY</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-logicalDpiY">logicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-paintingActive"><strong>paintingActive</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-paintingActive">paintingActive</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Toast-physicalDpiX"><strong>physicalDpiX</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-physicalDpiX">physicalDpiX</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-physicalDpiY"><strong>physicalDpiY</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-physicalDpiY">physicalDpiY</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Toast-widthMM"><strong>widthMM</strong></a>(...)</dt><dd><span class="code"><a href="#Toast-widthMM">widthMM</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>PaintDeviceMetric</strong> = &lt;class 'PyQt5.QtGui.QPaintDevice.PaintDeviceMetric'&gt;</dl>
+
+<dl><dt><strong>PdmDepth</strong> = 6</dl>
+
+<dl><dt><strong>PdmDevicePixelRatio</strong> = 11</dl>
+
+<dl><dt><strong>PdmDevicePixelRatioScaled</strong> = 12</dl>
+
+<dl><dt><strong>PdmDpiX</strong> = 7</dl>
+
+<dl><dt><strong>PdmDpiY</strong> = 8</dl>
+
+<dl><dt><strong>PdmHeight</strong> = 2</dl>
+
+<dl><dt><strong>PdmHeightMM</strong> = 4</dl>
+
+<dl><dt><strong>PdmNumColors</strong> = 5</dl>
+
+<dl><dt><strong>PdmPhysicalDpiX</strong> = 9</dl>
+
+<dl><dt><strong>PdmPhysicalDpiY</strong> = 10</dl>
+
+<dl><dt><strong>PdmWidth</strong> = 1</dl>
+
+<dl><dt><strong>PdmWidthMM</strong> = 3</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="Toast-__new__"><strong>__new__</strong></a>(*args, **kwargs)<span class="grey"><span class="heading-text"> class method of <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></span></span></dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ToastKind">class <strong>ToastKind</strong></a>(<a href="enum.html#Enum">enum.Enum</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#ToastKind">ToastKind</a>(*values)<br>
+&nbsp;<br>
+<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.widgets.Toast.html#ToastKind">ToastKind</a></dd>
+<dd><a href="enum.html#Enum">enum.Enum</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>ERROR</strong> = &lt;ToastKind.ERROR: 'error'&gt;</dl>
+
+<dl><dt><strong>INFO</strong> = &lt;ToastKind.INFO: 'info'&gt;</dl>
+
+<dl><dt><strong>SUCCESS</strong> = &lt;ToastKind.SUCCESS: 'success'&gt;</dl>
+
+<hr>
+Data descriptors inherited from <a href="enum.html#Enum">enum.Enum</a>:<br>
+<dl><dt><strong>name</strong></dt>
+<dd><span class="code">The&nbsp;name&nbsp;of&nbsp;the&nbsp;Enum&nbsp;member.</span></dd>
+</dl>
+<dl><dt><strong>value</strong></dt>
+<dd><span class="code">The&nbsp;value&nbsp;of&nbsp;the&nbsp;Enum&nbsp;member.</span></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="enum.html#EnumType">enum.EnumType</a>:<br>
+<dl><dt><a name="ToastKind-__contains__"><strong>__contains__</strong></a>(value)</dt><dd><span class="code">Return&nbsp;True&nbsp;if&nbsp;`value`&nbsp;is&nbsp;in&nbsp;`cls`.<br>
+&nbsp;<br>
+`value`&nbsp;is&nbsp;in&nbsp;`cls`&nbsp;if:<br>
+1)&nbsp;`value`&nbsp;is&nbsp;a&nbsp;member&nbsp;of&nbsp;`cls`,&nbsp;or<br>
+2)&nbsp;`value`&nbsp;is&nbsp;the&nbsp;value&nbsp;of&nbsp;one&nbsp;of&nbsp;the&nbsp;`cls`'s&nbsp;members.<br>
+3)&nbsp;`value`&nbsp;is&nbsp;a&nbsp;pseudo-member&nbsp;(flags)</span></dd></dl>
+
+<dl><dt><a name="ToastKind-__getitem__"><strong>__getitem__</strong></a>(name)</dt><dd><span class="code">Return&nbsp;the&nbsp;member&nbsp;matching&nbsp;`name`.</span></dd></dl>
+
+<dl><dt><a name="ToastKind-__iter__"><strong>__iter__</strong></a>()</dt><dd><span class="code">Return&nbsp;members&nbsp;in&nbsp;definition&nbsp;order.</span></dd></dl>
+
+<dl><dt><a name="ToastKind-__len__"><strong>__len__</strong></a>()</dt><dd><span class="code">Return&nbsp;the&nbsp;number&nbsp;of&nbsp;members&nbsp;(no&nbsp;aliases)</span></dd></dl>
+
+<hr>
+Readonly properties inherited from <a href="enum.html#EnumType">enum.EnumType</a>:<br>
+<dl><dt><strong>__members__</strong></dt>
+<dd><span class="code">Returns&nbsp;a&nbsp;mapping&nbsp;of&nbsp;member&nbsp;name-&gt;value.<br>
+&nbsp;<br>
+This&nbsp;mapping&nbsp;lists&nbsp;all&nbsp;enum&nbsp;members,&nbsp;including&nbsp;aliases.&nbsp;Note&nbsp;that&nbsp;this<br>
+is&nbsp;a&nbsp;read-only&nbsp;view&nbsp;of&nbsp;the&nbsp;internal&nbsp;mapping.</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ToastManager">class <strong>ToastManager</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#ToastManager">ToastManager</a>(host:&nbsp;QWidget)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Stacks&nbsp;toasts&nbsp;in&nbsp;the&nbsp;top-right&nbsp;of&nbsp;a&nbsp;host&nbsp;widget.&nbsp;Re-flows&nbsp;on&nbsp;resize.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="ToastManager-__init__"><strong>__init__</strong></a>(self, host: QWidget) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="ToastManager-error"><strong>error</strong></a>(self, title: str, body: str = '') -&gt; Toast</dt></dl>
+
+<dl><dt><a name="ToastManager-info"><strong>info</strong></a>(self, title: str, body: str = '') -&gt; Toast</dt></dl>
+
+<dl><dt><a name="ToastManager-show"><strong>show</strong></a>(
+    self,
+    title: str,
+    body: str = '',
+    kind: ToastKind = &lt;ToastKind.INFO: 'info'&gt;,
+    duration_ms: int = 3800
+) -&gt; Toast</dt></dl>
+
+<dl><dt><a name="ToastManager-success"><strong>success</strong></a>(self, title: str, body: str = '') -&gt; Toast</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>GAP</strong> = 10</dl>
+
+<dl><dt><strong>MARGIN</strong> = 18</dl>
+
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>List</strong> = typing.List<br>
+<strong>Optional</strong> = typing.Optional<br>
+<strong>icons</strong> = &lt;src.GUI.widgets.IconProvider.IconProvider object&gt;</td></tr></table>

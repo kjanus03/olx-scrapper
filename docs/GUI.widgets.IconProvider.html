@@ -1,0 +1,72 @@
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="GUI.html" class="white">GUI</a>.<a href="GUI.widgets.html" class="white">widgets</a>.IconProvider</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cgui%5Cwidgets%5Ciconprovider.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\gui\widgets\iconprovider.py</a></td></tr></table>
+    <p><span class="code">Theme-aware&nbsp;SVG&nbsp;icon&nbsp;loader.<br>
+&nbsp;<br>
+Icons&nbsp;live&nbsp;in&nbsp;`src/GUI/icons/svg/&lt;name&gt;.svg`&nbsp;and&nbsp;use&nbsp;`currentColor`&nbsp;as&nbsp;a<br>
+placeholder&nbsp;for&nbsp;the&nbsp;stroke/fill.&nbsp;`<a href="#IconProvider">IconProvider</a>.icon(name,&nbsp;color)`&nbsp;reads&nbsp;the<br>
+SVG,&nbsp;swaps&nbsp;in&nbsp;the&nbsp;requested&nbsp;color,&nbsp;renders&nbsp;to&nbsp;a&nbsp;QPixmap,&nbsp;and&nbsp;returns&nbsp;a&nbsp;QIcon.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="GUI.widgets.IconProvider.html#IconProvider">IconProvider</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="IconProvider">class <strong>IconProvider</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#IconProvider">IconProvider</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;svg_dir:&nbsp;str&nbsp;=&nbsp;'C:\\Users\\adamj\\OneDrive\\Pulpit\\olx-scrapper\\src\\GUI\\widgets\\..\\icons\\svg'<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Loads&nbsp;SVGs&nbsp;once,&nbsp;tints&nbsp;them&nbsp;on&nbsp;demand,&nbsp;caches&nbsp;the&nbsp;rendered&nbsp;pixmaps.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="IconProvider-__init__"><strong>__init__</strong></a>(
+    self,
+    svg_dir: str = 'C:\\Users\\adamj\\OneDrive\\Pulpit\\olx-scrapper\\src\\GUI\\widgets\\..\\icons\\svg'
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="IconProvider-clear_cache"><strong>clear_cache</strong></a>(self) -&gt; None</dt></dl>
+
+<dl><dt><a name="IconProvider-icon"><strong>icon</strong></a>(self, name: str, color: str = '#e9ecef', size: int = 18) -&gt; QIcon</dt></dl>
+
+<dl><dt><a name="IconProvider-pixmap"><strong>pixmap</strong></a>(self, name: str, color: str = '#e9ecef', size: int = 18) -&gt; QPixmap</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>Dict</strong> = typing.Dict<br>
+<strong>Tuple</strong> = typing.Tuple<br>
+<strong>icons</strong> = &lt;GUI.widgets.IconProvider.IconProvider object&gt;</td></tr></table>

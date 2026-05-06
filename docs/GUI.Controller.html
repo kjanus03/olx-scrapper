@@ -1,0 +1,197 @@
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="GUI.html" class="white">GUI</a>.Controller</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cgui%5Ccontroller.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\gui\controller.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="asyncio.html">asyncio</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>(<a href="PyQt5.sip.html#wrapper">sip.wrapper</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="GUI.Controller.html#Controller">Controller</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Controller">class <strong>Controller</strong></a>(<a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Controller">Controller</a>(scraper:&nbsp;Scraper,&nbsp;output_config:&nbsp;dict[str])&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<a href="#Controller">Controller</a>&nbsp;class&nbsp;to&nbsp;handle&nbsp;the&nbsp;communication&nbsp;between&nbsp;the&nbsp;GUI&nbsp;and&nbsp;the&nbsp;Scraper.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="GUI.Controller.html#Controller">Controller</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Controller-__init__"><strong>__init__</strong></a>(self, scraper: Scraper, output_config: dict[str]) -&gt; None</dt><dd><span class="code">Initialize&nbsp;the&nbsp;<a href="#Controller">Controller</a>&nbsp;object.<br>
+:param&nbsp;scraper:&nbsp;Scraper&nbsp;object&nbsp;to&nbsp;scrape&nbsp;data<br>
+:param&nbsp;output_config:&nbsp;Configuration&nbsp;for&nbsp;the&nbsp;output&nbsp;file</span></dd></dl>
+
+<dl><dt><a name="Controller-export_data"><strong>export_data</strong></a>(self, format: str, directory: str) -&gt; None</dt><dd><span class="code">Export&nbsp;the&nbsp;scraped&nbsp;data&nbsp;to&nbsp;a&nbsp;file.<br>
+:param&nbsp;format:&nbsp;Format&nbsp;of&nbsp;the&nbsp;output&nbsp;file<br>
+:param&nbsp;directory:&nbsp;Directory&nbsp;to&nbsp;save&nbsp;the&nbsp;output&nbsp;file<br>
+:return:</span></dd></dl>
+
+<strong>progress_updated</strong> = &lt;unbound PYQT_SIGNAL progress_updated(int)&gt;
+<dl><dt>async <a name="Controller-scrape_and_update_progress"><strong>scrape_and_update_progress</strong></a>(self) -&gt; dict[str, pd.DataFrame]</dt><dd><span class="code">Scrape&nbsp;data&nbsp;from&nbsp;the&nbsp;URLs&nbsp;and&nbsp;update&nbsp;the&nbsp;progress&nbsp;bar.<br>
+:return:&nbsp;Data&nbsp;frames&nbsp;of&nbsp;the&nbsp;scraped&nbsp;data</span></dd></dl>
+
+<dl><dt><a name="Controller-scrape_data"><strong>scrape_data</strong></a>(self) -&gt; None</dt><dd><span class="code">Scrape&nbsp;data&nbsp;from&nbsp;the&nbsp;URLs&nbsp;and&nbsp;update&nbsp;the&nbsp;progress&nbsp;bar.<br>
+:return:</span></dd></dl>
+
+<strong>scraping_done</strong> = &lt;unbound PYQT_SIGNAL scraping_done()&gt;
+<strong>scraping_failed</strong> = &lt;unbound PYQT_SIGNAL scraping_failed(QString)&gt;
+<dl><dt><a name="Controller-view_search_queries"><strong>view_search_queries</strong></a>(self) -&gt; None</dt><dd><span class="code">Open&nbsp;the&nbsp;dialog&nbsp;to&nbsp;view&nbsp;and&nbsp;view/edit&nbsp;the&nbsp;search&nbsp;queries.<br>
+:return:</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><a name="Controller-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-__getattr__">__getattr__</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="Controller-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-blockSignals">blockSignals</a>(self,&nbsp;b:&nbsp;bool)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Controller-childEvent"><strong>childEvent</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-childEvent">childEvent</a>(self,&nbsp;a0:&nbsp;Optional[QChildEvent])</span></dd></dl>
+
+<dl><dt><a name="Controller-children"><strong>children</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-children">children</a>(self)&nbsp;-&gt;&nbsp;List[<a href="PyQt5.QtCore.html#QObject">QObject</a>]</span></dd></dl>
+
+<dl><dt><a name="Controller-connectNotify"><strong>connectNotify</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-connectNotify">connectNotify</a>(self,&nbsp;signal:&nbsp;QMetaMethod)</span></dd></dl>
+
+<dl><dt><a name="Controller-customEvent"><strong>customEvent</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-customEvent">customEvent</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])</span></dd></dl>
+
+<dl><dt><a name="Controller-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-deleteLater">deleteLater</a>(self)</span></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound PYQT_SIGNAL destroyed(QObject*)&gt;
+<dl><dt><a name="Controller-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-disconnect">disconnect</a>(a0:&nbsp;QMetaObject.Connection)&nbsp;-&gt;&nbsp;bool<br>
+<a href="#Controller-disconnect">disconnect</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Controller-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-disconnectNotify">disconnectNotify</a>(self,&nbsp;signal:&nbsp;QMetaMethod)</span></dd></dl>
+
+<dl><dt><a name="Controller-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-dumpObjectInfo">dumpObjectInfo</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Controller-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-dumpObjectTree">dumpObjectTree</a>(self)</span></dd></dl>
+
+<dl><dt><a name="Controller-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-dynamicPropertyNames">dynamicPropertyNames</a>(self)&nbsp;-&gt;&nbsp;List[QByteArray]</span></dd></dl>
+
+<dl><dt><a name="Controller-event"><strong>event</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-event">event</a>(self,&nbsp;a0:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Controller-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-eventFilter">eventFilter</a>(self,&nbsp;a0:&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>],&nbsp;a1:&nbsp;Optional[QEvent])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Controller-findChild"><strong>findChild</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-findChild">findChild</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT<br>
+<a href="#Controller-findChild">findChild</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;QObjectT</span></dd></dl>
+
+<dl><dt><a name="Controller-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Controller-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;name:&nbsp;Optional[str]&nbsp;=&nbsp;'',&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Controller-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Controller-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;regExp:&nbsp;QRegExp,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Controller-findChildren">findChildren</a>(self,&nbsp;type:&nbsp;Type[QObjectT],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]<br>
+<a href="#Controller-findChildren">findChildren</a>(self,&nbsp;types:&nbsp;Tuple[Type[QObjectT],&nbsp;...],&nbsp;re:&nbsp;QRegularExpression,&nbsp;options:&nbsp;Union[Qt.FindChildOptions,&nbsp;Qt.FindChildOption]&nbsp;=&nbsp;Qt.FindChildrenRecursively)&nbsp;-&gt;&nbsp;List[QObjectT]</span></dd></dl>
+
+<dl><dt><a name="Controller-inherits"><strong>inherits</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-inherits">inherits</a>(self,&nbsp;classname:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Controller-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-installEventFilter">installEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>])</span></dd></dl>
+
+<dl><dt><a name="Controller-isSignalConnected"><strong>isSignalConnected</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-isSignalConnected">isSignalConnected</a>(self,&nbsp;signal:&nbsp;QMetaMethod)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Controller-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-isWidgetType">isWidgetType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Controller-isWindowType"><strong>isWindowType</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-isWindowType">isWindowType</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Controller-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-killTimer">killTimer</a>(self,&nbsp;id:&nbsp;int)</span></dd></dl>
+
+<dl><dt><a name="Controller-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-metaObject">metaObject</a>(self)&nbsp;-&gt;&nbsp;Optional[QMetaObject]</span></dd></dl>
+
+<dl><dt><a name="Controller-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-moveToThread">moveToThread</a>(self,&nbsp;thread:&nbsp;Optional[QThread])</span></dd></dl>
+
+<dl><dt><a name="Controller-objectName"><strong>objectName</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-objectName">objectName</a>(self)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<strong>objectNameChanged</strong> = &lt;unbound PYQT_SIGNAL objectNameChanged(QString)&gt;
+<dl><dt><a name="Controller-parent"><strong>parent</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-parent">parent</a>(self)&nbsp;-&gt;&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>]</span></dd></dl>
+
+<dl><dt><a name="Controller-property"><strong>property</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-property">property</a>(self,&nbsp;name:&nbsp;Optional[str])&nbsp;-&gt;&nbsp;Any</span></dd></dl>
+
+<dl><dt><a name="Controller-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><span class="code"><a href="PyQt5.QtCore.html#QObject">QObject</a>.<a href="#Controller-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</span></dd></dl>
+
+<dl><dt><a name="Controller-receivers"><strong>receivers</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-receivers">receivers</a>(self,&nbsp;signal:&nbsp;PYQT_SIGNAL)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Controller-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-removeEventFilter">removeEventFilter</a>(self,&nbsp;a0:&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>])</span></dd></dl>
+
+<dl><dt><a name="Controller-sender"><strong>sender</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-sender">sender</a>(self)&nbsp;-&gt;&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>]</span></dd></dl>
+
+<dl><dt><a name="Controller-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-senderSignalIndex">senderSignalIndex</a>(self)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Controller-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-setObjectName">setObjectName</a>(self,&nbsp;name:&nbsp;Optional[str])</span></dd></dl>
+
+<dl><dt><a name="Controller-setParent"><strong>setParent</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-setParent">setParent</a>(self,&nbsp;a0:&nbsp;Optional[<a href="PyQt5.QtCore.html#QObject">QObject</a>])</span></dd></dl>
+
+<dl><dt><a name="Controller-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-setProperty">setProperty</a>(self,&nbsp;name:&nbsp;Optional[str],&nbsp;value:&nbsp;Any)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Controller-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-signalsBlocked">signalsBlocked</a>(self)&nbsp;-&gt;&nbsp;bool</span></dd></dl>
+
+<dl><dt><a name="Controller-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-startTimer">startTimer</a>(self,&nbsp;interval:&nbsp;int,&nbsp;timerType:&nbsp;Qt.TimerType&nbsp;=&nbsp;Qt.CoarseTimer)&nbsp;-&gt;&nbsp;int</span></dd></dl>
+
+<dl><dt><a name="Controller-thread"><strong>thread</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-thread">thread</a>(self)&nbsp;-&gt;&nbsp;Optional[QThread]</span></dd></dl>
+
+<dl><dt><a name="Controller-timerEvent"><strong>timerEvent</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-timerEvent">timerEvent</a>(self,&nbsp;a0:&nbsp;Optional[QTimerEvent])</span></dd></dl>
+
+<dl><dt><a name="Controller-tr"><strong>tr</strong></a>(...)</dt><dd><span class="code"><a href="#Controller-tr">tr</a>(self,&nbsp;sourceText:&nbsp;Optional[str],&nbsp;disambiguation:&nbsp;Optional[str]&nbsp;=&nbsp;None,&nbsp;n:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&gt;&nbsp;str</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt5.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Static methods inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="Controller-__new__"><strong>__new__</strong></a>(*args, **kwargs)<span class="grey"><span class="heading-text"> class method of <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></span></span></dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-pyqtSlot"><strong>pyqtSlot</strong></a>(...)</dt><dd><span class="code">@<a href="#-pyqtSlot">pyqtSlot</a>(*types,&nbsp;name:&nbsp;Optional[str],&nbsp;result:&nbsp;Optional[str])<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;a&nbsp;decorator&nbsp;applied&nbsp;to&nbsp;Python&nbsp;methods&nbsp;of&nbsp;a&nbsp;<a href="PyQt5.QtCore.html#QObject">QObject</a>&nbsp;that&nbsp;marks&nbsp;them<br>
+as&nbsp;Qt&nbsp;slots.<br>
+The&nbsp;non-keyword&nbsp;arguments&nbsp;are&nbsp;the&nbsp;types&nbsp;of&nbsp;the&nbsp;slot&nbsp;arguments&nbsp;and&nbsp;each&nbsp;may<br>
+be&nbsp;a&nbsp;Python&nbsp;type&nbsp;object&nbsp;or&nbsp;a&nbsp;string&nbsp;specifying&nbsp;a&nbsp;C++&nbsp;type.<br>
+name&nbsp;is&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;slot&nbsp;and&nbsp;defaults&nbsp;to&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;method.<br>
+result&nbsp;is&nbsp;type&nbsp;of&nbsp;the&nbsp;value&nbsp;returned&nbsp;by&nbsp;the&nbsp;slot.</span></dd></dl>
+</td></tr></table>

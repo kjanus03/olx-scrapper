@@ -1,0 +1,78 @@
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="Scraping.html" class="white">Scraping</a>.Scraper</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadamj%5Conedrive%5Cpulpit%5Colx-scrapper%5Csrc%5Cscraping%5Cscraper.py">c:\users\adamj\onedrive\pulpit\olx-scrapper\src\scraping\scraper.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="aiohttp.html">aiohttp</a><br>
+<a href="asyncio.html">asyncio</a><br>
+</td><td class="multicolumn"><a href="bs4.html">bs4</a><br>
+<a href="json.html">json</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+<a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"><a href="re.html">re</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="Scraping.Scraper.html#Scraper">Scraper</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Scraper">class <strong>Scraper</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Scraper">Scraper</a>(url_strings:&nbsp;list[URLBuilder],&nbsp;page_limit:&nbsp;int)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Scraper-__init__"><strong>__init__</strong></a>(self, url_strings: list[URLBuilder], page_limit: int) -&gt; None</dt><dd><span class="code"><a href="#Scraper">Scraper</a>&nbsp;class&nbsp;for&nbsp;scraping&nbsp;data&nbsp;from&nbsp;OLX.<br>
+:param&nbsp;url_strings:&nbsp;List&nbsp;of&nbsp;URLBuilder&nbsp;objects&nbsp;for&nbsp;scraping&nbsp;data.<br>
+:param&nbsp;page_limit:&nbsp;Limit&nbsp;of&nbsp;pages&nbsp;to&nbsp;scrape&nbsp;for&nbsp;each&nbsp;URL.</span></dd></dl>
+
+<dl><dt><a name="Scraper-add_url"><strong>add_url</strong></a>(self, url: URLBuilder) -&gt; None</dt><dd><span class="code">Adds&nbsp;a&nbsp;URLBuilder&nbsp;<a href="builtins.html#object">object</a>&nbsp;to&nbsp;the&nbsp;list&nbsp;of&nbsp;URLs&nbsp;to&nbsp;scrape.</span></dd></dl>
+
+<dl><dt><a name="Scraper-find_count"><strong>find_count</strong></a>(self, soup: BeautifulSoup) -&gt; int</dt><dd><span class="code">Finds&nbsp;the&nbsp;number&nbsp;of&nbsp;listings&nbsp;on&nbsp;the&nbsp;page.<br>
+Returns&nbsp;a&nbsp;large&nbsp;number&nbsp;on&nbsp;failure&nbsp;so&nbsp;we&nbsp;don't&nbsp;break&nbsp;out&nbsp;of&nbsp;pagination<br>
+prematurely&nbsp;just&nbsp;because&nbsp;the&nbsp;count&nbsp;element&nbsp;changed.</span></dd></dl>
+
+<dl><dt><a name="Scraper-load_scraping_history"><strong>load_scraping_history</strong></a>(self) -&gt; list[dict[str, Union[str, datetime]]]</dt><dd><span class="code">Loads&nbsp;the&nbsp;scraping&nbsp;history&nbsp;from&nbsp;the&nbsp;scraping&nbsp;history&nbsp;file.</span></dd></dl>
+
+<dl><dt><a name="Scraper-save_scrape_date"><strong>save_scrape_date</strong></a>(self) -&gt; None</dt><dd><span class="code">Saves&nbsp;the&nbsp;date&nbsp;of&nbsp;the&nbsp;last&nbsp;scrape&nbsp;to&nbsp;the&nbsp;scraping&nbsp;history&nbsp;file.</span></dd></dl>
+
+<dl><dt>async <a name="Scraper-scrape_data"><strong>scrape_data</strong></a>(self, progress_callback: Callable[[int], None] = None) -&gt; dict[str, pd.DataFrame]</dt><dd><span class="code">Scrapes&nbsp;data&nbsp;from&nbsp;the&nbsp;URLs&nbsp;asynchronously.</span></dd></dl>
+
+<dl><dt><a name="Scraper-update_url_list"><strong>update_url_list</strong></a>(self, config: dict) -&gt; None</dt><dd><span class="code">Updates&nbsp;the&nbsp;URL&nbsp;list&nbsp;with&nbsp;the&nbsp;given&nbsp;configuration.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>Callable</strong> = typing.Callable<br>
+<strong>Optional</strong> = typing.Optional</td></tr></table>
