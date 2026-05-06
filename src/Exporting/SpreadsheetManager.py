@@ -5,6 +5,7 @@ import openpyxl
 
 
 class SpreadsheetManager:
+    """Manages the creation of Excel spreadsheets."""
     def __init__(self, data_frames: pd.Series(dtype=object), filename: str) -> None:
         """
         Initializes the SpreadsheetManager object.

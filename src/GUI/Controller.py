@@ -25,7 +25,11 @@ class Controller(QObject):
         """
         super().__init__()
         self.scraper = scraper
-        self.loop = asyncio.get_event_loop()
+        try:
+            self.loop = asyncio.get_event_loop()
+        except RuntimeError:
+            self.loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(self.loop)
         self.output_config = output_config
 
     @pyqtSlot()
@@ -72,7 +76,7 @@ class Controller(QObject):
         Open the dialog to view and view/edit the search queries.
         :return:
         """
-        dialog = SearchQueriesDialog(config_path='Resources/config.json')
+        dialog = SearchQueriesDialog(config_path='src/Resources/config.json')
         dialog.exec_()
         if dialog.result() == dialog.Accepted:
             self.scraper.update_url_list(dialog.config_data)
