@@ -118,29 +118,6 @@ olx-scrapper
 │   │   │   ├── remove_icon.png
 │   │   │   ├── scraper_icon.png
 │   │   │   ├── svg/
-│   │   │   │   ├── alert.svg
-│   │   │   │   ├── arrow-left.svg
-│   │   │   │   ├── arrow-right.svg
-│   │   │   │   ├── check-circle.svg
-│   │   │   │   ├── check.svg
-│   │   │   │   ├── clock.svg
-│   │   │   │   ├── download.svg
-│   │   │   │   ├── external.svg
-│   │   │   │   ├── folder.svg
-│   │   │   │   ├── home.svg
-│   │   │   │   ├── image.svg
-│   │   │   │   ├── inbox.svg
-│   │   │   │   ├── info.svg
-│   │   │   │   ├── moon.svg
-│   │   │   │   ├── play.svg
-│   │   │   │   ├── plus.svg
-│   │   │   │   ├── search.svg
-│   │   │   │   ├── settings.svg
-│   │   │   │   ├── shopping-bag.svg
-│   │   │   │   ├── sun.svg
-│   │   │   │   ├── table.svg
-│   │   │   │   ├── trash.svg
-│   │   │   │   └── x.svg
 │   │   ├── stylesheets/
 │   │   │   ├── modern_dark.qss
 │   │   │   └── modern_light.qss
